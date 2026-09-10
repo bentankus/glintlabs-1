@@ -16,7 +16,7 @@ Use this skill when the user asks to:
 - analyze a Viva Glint export
 - produce descriptives, correlations, factor analysis, cycle comparisons, by-attribute analysis, or attrition analysis
 - generate an analysis manifest for downstream interpretation
-- prepare outputs for `interpret-analysis`, `analysis-qa`, or `manager-action-taking`
+- prepare outputs for `interpret-analysis` or `analysis-qa`
 
 Do not use this skill when the user only wants an interpretation of existing results. Use `interpret-analysis` instead.
 
@@ -95,7 +95,6 @@ This skill may summarize execution status and obvious data warnings. It should n
 
 1. `analysis-qa` to check validity and safety.
 2. `interpret-analysis` to synthesize findings.
-3. `manager-action-taking` only after QA passes.
 
 ## Privacy
 

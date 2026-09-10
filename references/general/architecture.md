@@ -11,18 +11,17 @@ The core separation is:
 | `vivaglint` | Statistical analysis, data import helpers, codebook logic, package tests. |
 | `eve-people-science` scripts | Thin orchestration, config parsing, artifact writing, manifest generation. |
 | `analysis-manifest.json` | Stable contract between analysis execution and interpretation skills. |
-| Skills | User-facing workflows: run, QA, interpret, and manager action taking. |
+| Skills | User-facing workflows: run, QA, and interpret. |
 | Skill references | First-priority context in `references/skills/<skill-name>/`. |
 | General references | Second-priority shared People Science context in `references/general/`. |
 
 ## Why not one giant skill
 
-A single skill that runs analysis, validates results, interprets findings, writes manager guidance, and builds customer artifacts would be difficult to route, test, and maintain. The better pattern is composable skills:
+A single skill that runs analysis, validates results, interprets findings, and builds customer artifacts would be difficult to route, test, and maintain. The better pattern is composable skills:
 
 1. `analyze-survey` produces outputs.
 2. `analysis-qa` determines whether outputs are safe to interpret.
 3. `interpret-analysis` produces People Science findings.
-4. `manager-action-taking` creates manager-facing guidance.
 
 Each skill should know its job, the shared contract, and which references to load.
 

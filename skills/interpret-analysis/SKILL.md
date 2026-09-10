@@ -32,8 +32,6 @@ Then load:
 - `references/general/interpretation-guardrails.md`
 - `references/general/privacy-and-minimum-n.md`
 
-If manager-facing guidance is requested, switch to or pair with `manager-action-taking`.
-
 ## Interpretation process
 
 1. Start with QA status. If no QA exists, perform a lightweight readiness check or recommend `analysis-qa`.

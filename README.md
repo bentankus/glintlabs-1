@@ -9,6 +9,7 @@ This plugin provides a set of focused skills that share a common analysis contra
 1. `analyze-survey` runs a standard set of `vivaglint` codebooks and writes an `analysis-manifest.json`.
 2. `analysis-qa` reviews output validity, privacy thresholds, and interpretation readiness.
 3. `interpret-analysis` turns codebook outputs into People Science findings and caveats.
+4. `people-science-knowledge-vault` finds and synthesizes externally published People Science knowledge using a strict two-tier source hierarchy.
 
 The plugin deliberately does not duplicate the `vivaglint` analysis package. It calls a pinned package version and treats the output manifest as the stable interface between execution and interpretation.
 
@@ -36,6 +37,7 @@ appropriate skill. Examples:
 - "Run the standard People Science analysis on this Viva Glint export."
 - "Check whether this analysis manifest is safe to interpret."
 - "Interpret the strongest findings and caveats in these survey results."
+- "What published People Science guidance exists on this topic?"
 
 ## Reference priority
 
@@ -79,6 +81,15 @@ Schema: `schemas/analysis-manifest.schema.json`
 | `analyze-survey` | The user has survey data and wants the standard analysis package run. |
 | `analysis-qa` | The user needs to know whether outputs are valid and safe to interpret. |
 | `interpret-analysis` | The user has output files/manifests and wants People Science interpretation. |
+| `people-science-knowledge-vault` | The user wants externally shareable People Science articles or an evidence-backed synthesis of published guidance. |
+
+### Knowledge vault status
+
+`people-science-knowledge-vault` is an initial scaffold. It gives first priority to
+all articles discoverable from the Microsoft Viva Blog category and second priority
+only to records in the source workbook's `External` worksheet. Future work can add a
+generated article catalog, automated refresh, topic aliases, and retrieval-quality
+tests without changing this source hierarchy.
 
 ## Demo data
 

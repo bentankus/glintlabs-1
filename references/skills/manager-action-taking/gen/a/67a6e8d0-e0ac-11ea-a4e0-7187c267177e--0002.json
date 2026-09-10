@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_MODELING"
+  ],
+  "source_question_id_cell": "[Q_GPS_MODELING]",
+  "action_plan_template_uuid": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e",
+  "template_name": "Glint Modeling - GPS",
+  "sequence": 2,
+  "focus_area_title": "Engaging your Board of Directors in Patient Safety Conversations",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Ensuring your board of directors are well-versed in safety and quality issues and regularly engages in these discussions is an excellent action to take to prioritize safety.   \n\n### Why is it important?\n\nA 2013 review of 122 studies found that high-performing hospitals-defined as those ranking highly on objective measures of quality and safety-had board members who were more skilled in quality and safety issues and who devoted more time to discussion of quality and safety during board meetings. Traditionally, safety and quality evaluations and improvements have not been a key responsibility for board members.  \n\n**Several studies have looked at the relationship between board performance engagement in safety and quality and hospital performance. Here are some suggestions for action based on these research findings:**\n\n- **Ensure your board members are well-versed and trained in safety and quality issues and measurement metrics**  \nIn a 2010 survey of board members from 1,000 hospitals, researchers found that fewer than half viewed safety as one of their top priorities and only a minority had received any safety/quality training.\n\n- **Using safety quality metrics to to track hospital performance**  \nInvestigators found that high-performing hospital boards paid more attention to quality and explicitly used quality metrics to assess management performance than lower performing hospitals. The Institute for Healthcare Improvement (IHI) recommends tracking Medical Harm per 1,000 patient days and risk-adjusted mortality rates over time amongst others.  \n\n- **Board involvement in setting safety goals**  \nHigher-performing hospitals used stronger management practices, i.e., they consistently set quality goals and had a greater focus on hospital operations.  Set clear goals for improving patient safety and quality.\n\n- **Board use of safety and quality metrics to evaluate the performance of high-level executives**\n\n- **Seek Data and Personal Stories**  \nThe IHI recommends the board randomly audit 20 patient charts where harm occurred doing a \"deep dive\" into each and interviewing the affected patient, family, and staff.\n\n- **Encourage organizational and personal learning**  \nThe IHI recommends that boards identify the capabilities and achievements of the best hospital boards and apply that standard to themselves and all staff.\n\n>*Sources:*\n\n>Jha A, Epstein A. Hospital governance and the quality of care. Health affairs (Project Hope). 2010;29(1):182-7. doi:10.1377/hlthaff.2009.0297. Retrieved from LINK\n\n>Tsai TC, Jha AK, Gawande AA, et al. Hospital board and management practices are strongly related to hospital performance on clinical quality metrics. Health affairs (Project Hope). 2015;34(8):1304-11. doi:10.1377/hlthaff.2014.1282.\n\n>\"The power of having the board on board.\" The Institute for Healthcare Improvement. Online article.  \n\n>Millar R, Mannion R, Freeman T, et al. Hospital board oversight of quality and patient safety: a narrative review and synthesis of recent empirical research. The Milbank quarterly. 2013;91(4):738-70. doi:10.1111/1468-0009.12032.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:22:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/Publications/Leading-a-Culture-of-Safety-A-Blueprint-for-Success.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=snaLG-zx5fk",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/storytelling-a-leadership-competency-for-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.myamericannurse.com/inspire-transformational-leadership/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/topics-library/sea_57_safety_culture_leadership_0317pdf.pdf?db=web&hash=10CEAE0FD05B6C3A4A1F040F7B69EBE9",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://ojin.nursingworld.org/MainMenuCategories/ANAMarketplace/ANAPeriodicals/OJIN/TableofContents/Vol-16-2011/No3-Sept-2011/Patient-Safety-Culture-and-Nursing-Unit-Leader.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/the-safety-journey-leaders-building-and-sustaining-momentum/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/leadership-role-improving-safety",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 637,
+    "source_record_number": "633"
+  }
+}

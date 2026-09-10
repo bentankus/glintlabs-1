@@ -1,0 +1,134 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "8f73a960-6761-11e7-9adb-eb26b800804d:9",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_TEAM_COMMUNICATION]",
+  "action_plan_template_uuid": "8f73a960-6761-11e7-9adb-eb26b800804d",
+  "template_name": "Glint Communication Team",
+  "sequence": 9,
+  "focus_area_title": "Learn to Give Input Like a Pro",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "Giving good input is a communication skill you learn through practice. The goal here is for team members to learn the basic rules of giving good input and practice with each other until they get good at it.\n\n### One step at a time\n\nBegin by reviewing the [Rules for Giving Input](Team_Rules_for_Giving_Input). As a group, choose one area where you'd like to see the team improve and begin practicing it. Re-evaluate regularly. Once the team feels progress has been made, move on to another area. \n\nTry to cover all of the areas over time so the team gets better at giving each other high quality input.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/08/make-getting-feedback-less-stressful",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2013/11/dont-get-defensive-communication-tips-for-the-vigilant",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-raise-sensitive-issues-during-a-virtual-meeting",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/07/figure-out-your-managers-communication-style",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2013/10/how-to-listen-when-your-communication-styles-dont-match",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/work-in-progress/2015/10/07/how-to-give-concise-positive-feedback/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/06/3-situations-where-cross-cultural-communication-breaks-down",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/theyec/2014/10/03/4-steps-for-building-a-culture-of-open-communication",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Rules for Giving Input",
+      "url": "",
+      "target": "Team_Rules_for_Giving_Input",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 369,
+    "source_record_number": "365"
+  }
+}

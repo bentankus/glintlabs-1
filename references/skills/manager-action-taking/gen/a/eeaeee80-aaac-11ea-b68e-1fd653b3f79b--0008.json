@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ENCOURAGES_TEAMWORK_360"
+  ],
+  "source_question_id_cell": "[Q_ENCOURAGES_TEAMWORK_360]",
+  "action_plan_template_uuid": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b",
+  "template_name": "Glint 360 Encourages Teamwork",
+  "sequence": 8,
+  "focus_area_title": "Create connections opportunities with your team",
+  "content_type": "discussion_prompt",
+  "action_type": "general_action",
+  "selection_signals": [
+    "general_action",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "Get to know each team member better. Consider having lunch with a different person each week or organizing casual team events.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T09:54:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/christinecomaford/2014/03/12/bust-workplace-bullies-and-clear-conflict-in-3-essential-steps",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3033275/3-types-of-dysfunctional-teams-and-how-to-fix-them",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/09/3-ways-to-encourage-smarter-teamwork",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/06/six-common-misperceptions-abou/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3047784/how-to-be-a-success-at-everything/how-leaders-can-ask-for-help-and-keep-their-teams-confiden",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1818737/collaboration-takes-work-and-starts-top",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 110,
+    "source_record_number": "106"
+  }
+}

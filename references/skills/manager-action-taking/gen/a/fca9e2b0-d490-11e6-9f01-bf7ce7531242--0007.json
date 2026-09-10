@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fca9e2b0-d490-11e6-9f01-bf7ce7531242:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_MOTIVATION"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_MOTIVATION]",
+  "action_plan_template_uuid": "fca9e2b0-d490-11e6-9f01-bf7ce7531242",
+  "template_name": "Glint Motivation",
+  "sequence": 7,
+  "focus_area_title": "Help Your Team Flex Their Creative Muscles",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Creativity flows when companies support people's natural ability to explore ideas. The goal is to find ways to balance execution and creativity so that people can be inventive at work.\n\n ### Alternate challenging work with straightforward tasks\n\n Help your team explore their creative side by giving them a mix of intense and easy tasks. Intense tasks limit their mental resources to be creative, so by adding easier tasks, their minds can rest and wander and allow creative thoughts to come out. Do this with each team member over the next two weeks.\n\n ### Make time for mental breaks\n\n Encourage team members to take breaks throughout the day to help keep their minds open and flexible. A short walk or a snack break can help people recharge their creativity. Do this once with each of your team members over the next two weeks.\n\n For more tips, read this article on how to [Promote Creative Thinking](https://www.fastcompany.com/3028465/10-surprising-ways-to-transform-your-creative-thinking).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-29T12:03:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/joefolkman/2014/04/22/8-ways-to-ensure-your-vision-is-valued/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3002877/employee-motivation-checklist",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/05/from-purpose-to-impact",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/karlmoore/2014/12/11/change-is-pain-why-your-employees-resist-it-and-what-to-do-about-it/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/ilya-pozin/14-highly-effective-ways-to-motivate-employees.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3000998/5-rules-making-your-vision-stick",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Promote Creative Thinking",
+      "url": "https://www.fastcompany.com/3028465/10-surprising-ways-to-transform-your-creative-thinking",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 649,
+    "source_record_number": "645"
+  }
+}

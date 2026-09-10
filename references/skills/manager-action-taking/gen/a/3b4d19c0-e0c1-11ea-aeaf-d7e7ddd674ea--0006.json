@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_PSYCHOLOGICAL_SAFETY"
+  ],
+  "source_question_id_cell": "[Q_GPS_PSYCHOLOGICAL_SAFETY]",
+  "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+  "template_name": "Glint Psychological Safety - GPS",
+  "sequence": 6,
+  "focus_area_title": "Appreciate input and suggestions from all",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/managing-a-diverse-team/appreciate-input-and-suggestions-from-all-18910095?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:23:00+00:00",
+  "video_extract": "LiL3_Input_from_All",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Appreciate input and suggestions from all",
+      "url": "https://www.linkedin.com/learning/embed/managing-a-diverse-team/appreciate-input-and-suggestions-from-all-18910095?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.hopkinsmedicine.org/news/newsroom/news-releases/study-at-johns-hopkins-hospital-leads-to-changes-in-reporting-patient-safety-concerns",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/WIHI-Speak-Up-For-Safety.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 685,
+    "source_record_number": "681"
+  }
+}

@@ -1,0 +1,4387 @@
+{
+  "schema_version": "2.0.0",
+  "source": {
+    "workbook": "plugins/eve-people-science/references/skills/manager-action-taking/Action Planning Taxonomy.xlsx",
+    "source_url": "https://microsoft.sharepoint-df.com/:x:/r/teams/EVE/_layouts/15/Doc.aspx?sourcedoc=%7B0F15DEAC-2FD9-4324-9CDC-DADF01AED66C%7D&file=Action%20Planning%20Taxonomy.xlsx&action=default&mobileredirect=true&share=cQqs3hUP2S8kQ5zc2t8BrtZsEgUC16tQCPV2ZNTnlKYSFg7kWQ&CID=D800A8D6-41EE-4F68-AB87-33B90E17CF69",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408"
+  },
+  "summary": {
+    "source_rows": 827,
+    "question_ids": 224,
+    "candidate_sets": 150,
+    "action_plan_records": 827,
+    "expanded_question_record_relationships": 1681
+  },
+  "questions": {
+    "Q_ACCEPTANCE": {
+      "question_id": "Q_ACCEPTANCE",
+      "display_question_id": "[Q_ACCEPTANCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "da6152f0-6921-11ea-b3eb-e56c269e1f76",
+          "template_name": "Glint Acceptance",
+          "action_plan_record_ids": [
+            "da6152f0-6921-11ea-b3eb-e56c269e1f76:1"
+          ]
+        }
+      ]
+    },
+    "Q_ACCEPTS_FEEDBACK_360": {
+      "question_id": "Q_ACCEPTS_FEEDBACK_360",
+      "display_question_id": "[Q_ACCEPTS_FEEDBACK_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "600bea70-ab92-11ea-bbfe-3f218b594687",
+          "template_name": "Glint 360 Accepts Feedback",
+          "action_plan_record_ids": [
+            "600bea70-ab92-11ea-bbfe-3f218b594687:1",
+            "600bea70-ab92-11ea-bbfe-3f218b594687:2",
+            "600bea70-ab92-11ea-bbfe-3f218b594687:3",
+            "600bea70-ab92-11ea-bbfe-3f218b594687:4"
+          ]
+        }
+      ]
+    },
+    "Q_ACCOMPLISHMENT": {
+      "question_id": "Q_ACCOMPLISHMENT",
+      "display_question_id": "[Q_ACCOMPLISHMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_ACCOUNTABILITY": {
+      "question_id": "Q_ACCOUNTABILITY",
+      "display_question_id": "[Q_ACCOUNTABILITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9",
+          "template_name": "Glint Accountability",
+          "action_plan_record_ids": [
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:1",
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:2",
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:3",
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:4",
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:5",
+            "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:6"
+          ]
+        }
+      ]
+    },
+    "Q_ACTION_TAKING": {
+      "question_id": "Q_ACTION_TAKING",
+      "display_question_id": "[Q_ACTION_TAKING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb",
+          "template_name": "Glint Action Taking",
+          "action_plan_record_ids": [
+            "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb:1",
+            "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb:2",
+            "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb:3",
+            "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb:4"
+          ]
+        }
+      ]
+    },
+    "Q_ACTS_ETHICALLY_360": {
+      "question_id": "Q_ACTS_ETHICALLY_360",
+      "display_question_id": "[Q_ACTS_ETHICALLY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "6d3563f0-ab8f-11ea-9fe9-25ab166456c3",
+          "template_name": "Glint 360 Acts Ethically",
+          "action_plan_record_ids": [
+            "6d3563f0-ab8f-11ea-9fe9-25ab166456c3:1",
+            "6d3563f0-ab8f-11ea-9fe9-25ab166456c3:2",
+            "6d3563f0-ab8f-11ea-9fe9-25ab166456c3:3"
+          ]
+        }
+      ]
+    },
+    "Q_ADAPTS_APPROACH_360": {
+      "question_id": "Q_ADAPTS_APPROACH_360",
+      "display_question_id": "[Q_ADAPTS_APPROACH_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2",
+          "template_name": "Glint 360 Adapts Approach",
+          "action_plan_record_ids": [
+            "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2:1",
+            "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2:2",
+            "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2:3",
+            "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2:4"
+          ]
+        }
+      ]
+    },
+    "Q_ADJUSTS_RAPIDLY_360": {
+      "question_id": "Q_ADJUSTS_RAPIDLY_360",
+      "display_question_id": "[Q_ADJUSTS_RAPIDLY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "e9266e80-ab1e-11ea-96a6-339e433451e0",
+          "template_name": "Glint 360 Adjusts Rapidly",
+          "action_plan_record_ids": [
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:1",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:2",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:3",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:4",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:5",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:6",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:7",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:8",
+            "e9266e80-ab1e-11ea-96a6-339e433451e0:9"
+          ]
+        }
+      ]
+    },
+    "Q_APPRECIATE_DIFFERENCES": {
+      "question_id": "Q_APPRECIATE_DIFFERENCES",
+      "display_question_id": "[Q_APPRECIATE_DIFFERENCES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "80138970-6922-11ea-9955-87e9dfbb508d",
+          "template_name": "Glint Appreciate Differences",
+          "action_plan_record_ids": [
+            "80138970-6922-11ea-9955-87e9dfbb508d:1",
+            "80138970-6922-11ea-9955-87e9dfbb508d:2"
+          ]
+        }
+      ]
+    },
+    "Q_APPROACHABLE_LEADERS": {
+      "question_id": "Q_APPROACHABLE_LEADERS",
+      "display_question_id": "[Q_APPROACHABLE_LEADERS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_AUTHENTICITY": {
+      "question_id": "Q_AUTHENTICITY",
+      "display_question_id": "[Q_AUTHENTICITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "f22136d0-7bcb-11e7-991b-7fda66c32098",
+          "template_name": "Glint Authenticity",
+          "action_plan_record_ids": [
+            "f22136d0-7bcb-11e7-991b-7fda66c32098:1",
+            "f22136d0-7bcb-11e7-991b-7fda66c32098:2",
+            "f22136d0-7bcb-11e7-991b-7fda66c32098:3",
+            "f22136d0-7bcb-11e7-991b-7fda66c32098:4",
+            "f22136d0-7bcb-11e7-991b-7fda66c32098:5"
+          ]
+        }
+      ]
+    },
+    "Q_BARRIERS_TO_EXECUTE": {
+      "question_id": "Q_BARRIERS_TO_EXECUTE",
+      "display_question_id": "[Q_BARRIERS_TO_EXECUTE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fdc14e80-3683-11e8-ba3e-771905cfa54f",
+          "template_name": "Glint Barriers to Execution",
+          "action_plan_record_ids": [
+            "fdc14e80-3683-11e8-ba3e-771905cfa54f:1",
+            "fdc14e80-3683-11e8-ba3e-771905cfa54f:2",
+            "fdc14e80-3683-11e8-ba3e-771905cfa54f:3",
+            "fdc14e80-3683-11e8-ba3e-771905cfa54f:4"
+          ]
+        }
+      ]
+    },
+    "Q_BELONGING": {
+      "question_id": "Q_BELONGING",
+      "display_question_id": "[Q_BELONGING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "1f508ad0-3c93-11e6-a006-97265ceaa2da",
+          "template_name": "Glint Belonging",
+          "action_plan_record_ids": [
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:1",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:2",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:3",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:4",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:5",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:6",
+            "1f508ad0-3c93-11e6-a006-97265ceaa2da:7"
+          ]
+        }
+      ]
+    },
+    "Q_BENEFITS": {
+      "question_id": "Q_BENEFITS",
+      "display_question_id": "[Q_BENEFITS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_BONUS": {
+      "question_id": "Q_BONUS",
+      "display_question_id": "[Q_BONUS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_BOUNDARIES": {
+      "question_id": "Q_BOUNDARIES",
+      "display_question_id": "[Q_BOUNDARIES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_BRAND": {
+      "question_id": "Q_BRAND",
+      "display_question_id": "[Q_BRAND]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_BUILDS_DIVERSE_TEAMS_360": {
+      "question_id": "Q_BUILDS_DIVERSE_TEAMS_360",
+      "display_question_id": "[Q_BUILDS_DIVERSE_TEAMS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fce9f280-aabe-11ea-9df2-8b8249621425",
+          "template_name": "Glint 360 Builds Diverse Teams",
+          "action_plan_record_ids": [
+            "fce9f280-aabe-11ea-9df2-8b8249621425:1",
+            "fce9f280-aabe-11ea-9df2-8b8249621425:2",
+            "fce9f280-aabe-11ea-9df2-8b8249621425:3",
+            "fce9f280-aabe-11ea-9df2-8b8249621425:4"
+          ]
+        }
+      ]
+    },
+    "Q_BUILDS_RAPPORT_360": {
+      "question_id": "Q_BUILDS_RAPPORT_360",
+      "display_question_id": "[Q_BUILDS_RAPPORT_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "275b09c0-aabd-11ea-b056-a519d2528c44",
+          "template_name": "Glint 360 Builds Rapport",
+          "action_plan_record_ids": [
+            "275b09c0-aabd-11ea-b056-a519d2528c44:1",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:2",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:3",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:4",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:5",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:6",
+            "275b09c0-aabd-11ea-b056-a519d2528c44:7"
+          ]
+        }
+      ]
+    },
+    "Q_BUSINESS_PERF": {
+      "question_id": "Q_BUSINESS_PERF",
+      "display_question_id": "[Q_BUSINESS_PERF]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CALMS_OTHERS_360": {
+      "question_id": "Q_CALMS_OTHERS_360",
+      "display_question_id": "[Q_CALMS_OTHERS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "e336cb70-ab94-11ea-afdb-c9ac8d0924cc",
+          "template_name": "Glint 360 Calms Others",
+          "action_plan_record_ids": [
+            "e336cb70-ab94-11ea-afdb-c9ac8d0924cc:1",
+            "e336cb70-ab94-11ea-afdb-c9ac8d0924cc:2",
+            "e336cb70-ab94-11ea-afdb-c9ac8d0924cc:3",
+            "e336cb70-ab94-11ea-afdb-c9ac8d0924cc:4",
+            "e336cb70-ab94-11ea-afdb-c9ac8d0924cc:5"
+          ]
+        }
+      ]
+    },
+    "Q_CAPABILITIES": {
+      "question_id": "Q_CAPABILITIES",
+      "display_question_id": "[Q_CAPABILITIES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CARE": {
+      "question_id": "Q_CARE",
+      "display_question_id": "[Q_CARE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5fca44c0-d437-11e6-b133-37f4050e693f",
+          "template_name": "Glint Care",
+          "action_plan_record_ids": [
+            "5fca44c0-d437-11e6-b133-37f4050e693f:1",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:2",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:3",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:4",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:5",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:6",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:7",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:8",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:9",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:10",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:11",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:12",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:13",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:14"
+          ]
+        }
+      ]
+    },
+    "Q_CAREER": {
+      "question_id": "Q_CAREER",
+      "display_question_id": "[Q_CAREER]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "f58bdca0-0901-11e6-8759-3b8460ed0dcb",
+          "template_name": "Glint Career",
+          "action_plan_record_ids": [
+            "f58bdca0-0901-11e6-8759-3b8460ed0dcb:1",
+            "f58bdca0-0901-11e6-8759-3b8460ed0dcb:2",
+            "f58bdca0-0901-11e6-8759-3b8460ed0dcb:3",
+            "f58bdca0-0901-11e6-8759-3b8460ed0dcb:4"
+          ]
+        }
+      ]
+    },
+    "Q_CAREER_DEVELOPMENT_360": {
+      "question_id": "Q_CAREER_DEVELOPMENT_360",
+      "display_question_id": "[Q_CAREER_DEVELOPMENT_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "afa84ae0-ab8a-11ea-b2f1-6d6534e57fd2",
+          "template_name": "Glint 360 Career Development",
+          "action_plan_record_ids": [
+            "afa84ae0-ab8a-11ea-b2f1-6d6534e57fd2:1"
+          ]
+        }
+      ]
+    },
+    "Q_CAREER_GOALS": {
+      "question_id": "Q_CAREER_GOALS",
+      "display_question_id": "[Q_CAREER_GOALS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CAREER_PATH": {
+      "question_id": "Q_CAREER_PATH",
+      "display_question_id": "[Q_CAREER_PATH]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a601cf80-7bd0-11e7-8517-63521c71a395",
+          "template_name": "Glint Career Path",
+          "action_plan_record_ids": [
+            "a601cf80-7bd0-11e7-8517-63521c71a395:1",
+            "a601cf80-7bd0-11e7-8517-63521c71a395:2",
+            "a601cf80-7bd0-11e7-8517-63521c71a395:3"
+          ]
+        }
+      ]
+    },
+    "Q_CELEBRATION": {
+      "question_id": "Q_CELEBRATION",
+      "display_question_id": "[Q_CELEBRATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CHALLENGE": {
+      "question_id": "Q_CHALLENGE",
+      "display_question_id": "[Q_CHALLENGE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CHALLENGE_STATUS_QUO": {
+      "question_id": "Q_CHALLENGE_STATUS_QUO",
+      "display_question_id": "[Q_CHALLENGE_STATUS_QUO]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "1e625650-7bce-11e7-873a-7573321a5a60",
+          "template_name": "Glint Questioning",
+          "action_plan_record_ids": [
+            "1e625650-7bce-11e7-873a-7573321a5a60:1",
+            "1e625650-7bce-11e7-873a-7573321a5a60:2",
+            "1e625650-7bce-11e7-873a-7573321a5a60:3",
+            "1e625650-7bce-11e7-873a-7573321a5a60:4",
+            "1e625650-7bce-11e7-873a-7573321a5a60:5",
+            "1e625650-7bce-11e7-873a-7573321a5a60:6"
+          ]
+        }
+      ]
+    },
+    "Q_CHANGE_ADAPTATION": {
+      "question_id": "Q_CHANGE_ADAPTATION",
+      "display_question_id": "[Q_CHANGE_ADAPTATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "98a54040-6923-11ea-afdc-b98820df85fe",
+          "template_name": "Glint Change Adaptation",
+          "action_plan_record_ids": [
+            "98a54040-6923-11ea-afdc-b98820df85fe:1",
+            "98a54040-6923-11ea-afdc-b98820df85fe:2"
+          ]
+        }
+      ]
+    },
+    "Q_CHANGE_COMMUNICATION": {
+      "question_id": "Q_CHANGE_COMMUNICATION",
+      "display_question_id": "[Q_CHANGE_COMMUNICATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+          "template_name": "Glint Change Communication",
+          "action_plan_record_ids": [
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:1",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:2",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:3",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:4",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:5",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:6",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:7",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:8",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:9",
+            "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:10"
+          ]
+        }
+      ]
+    },
+    "Q_CLARIFIES_ROLES_360": {
+      "question_id": "Q_CLARIFIES_ROLES_360",
+      "display_question_id": "[Q_CLARIFIES_ROLES_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "2c545330-aa79-11ea-bdd0-7328cdcaa7d6",
+          "template_name": "Glint 360 Clarifies Roles",
+          "action_plan_record_ids": [
+            "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:1",
+            "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:2",
+            "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:3",
+            "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:4",
+            "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:5"
+          ]
+        }
+      ]
+    },
+    "Q_COACHING": {
+      "question_id": "Q_COACHING",
+      "display_question_id": "[Q_COACHING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "34f77c40-23b4-11e8-9037-5f50e2ce5aa6",
+          "template_name": "Glint Coaching",
+          "action_plan_record_ids": [
+            "34f77c40-23b4-11e8-9037-5f50e2ce5aa6:1"
+          ]
+        }
+      ]
+    },
+    "Q_COLLABORATIVE_PROBLEM_SOLVING_360": {
+      "question_id": "Q_COLLABORATIVE_PROBLEM_SOLVING_360",
+      "display_question_id": "[Q_COLLABORATIVE_PROBLEM_SOLVING_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "f3d625c0-aa68-11ea-b056-a519d2528c44",
+          "template_name": "Glint 360 Collaborative Problem Solving",
+          "action_plan_record_ids": [
+            "f3d625c0-aa68-11ea-b056-a519d2528c44:1",
+            "f3d625c0-aa68-11ea-b056-a519d2528c44:2",
+            "f3d625c0-aa68-11ea-b056-a519d2528c44:3",
+            "f3d625c0-aa68-11ea-b056-a519d2528c44:4",
+            "f3d625c0-aa68-11ea-b056-a519d2528c44:5"
+          ]
+        }
+      ]
+    },
+    "Q_COMMUNICATES_CLEARLY_360": {
+      "question_id": "Q_COMMUNICATES_CLEARLY_360",
+      "display_question_id": "[Q_COMMUNICATES_CLEARLY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b817d590-aa65-11ea-96a6-339e433451e0",
+          "template_name": "Glint 360 Communicates Clearly",
+          "action_plan_record_ids": [
+            "b817d590-aa65-11ea-96a6-339e433451e0:1",
+            "b817d590-aa65-11ea-96a6-339e433451e0:2",
+            "b817d590-aa65-11ea-96a6-339e433451e0:3",
+            "b817d590-aa65-11ea-96a6-339e433451e0:4",
+            "b817d590-aa65-11ea-96a6-339e433451e0:5",
+            "b817d590-aa65-11ea-96a6-339e433451e0:6",
+            "b817d590-aa65-11ea-96a6-339e433451e0:7",
+            "b817d590-aa65-11ea-96a6-339e433451e0:8",
+            "b817d590-aa65-11ea-96a6-339e433451e0:9"
+          ]
+        }
+      ]
+    },
+    "Q_COMMUNICATION_FLOW": {
+      "question_id": "Q_COMMUNICATION_FLOW",
+      "display_question_id": "[Q_COMMUNICATION_FLOW]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b5fe2350-f950-11e6-bd5a-b364c473df9c",
+          "template_name": "Glint Communication Flow",
+          "action_plan_record_ids": [
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:1",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:2",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:3",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:4",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:5",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:6",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:7",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:8",
+            "b5fe2350-f950-11e6-bd5a-b364c473df9c:9"
+          ]
+        }
+      ]
+    },
+    "Q_COMPANY_DIRECTION": {
+      "question_id": "Q_COMPANY_DIRECTION",
+      "display_question_id": "[Q_COMPANY_DIRECTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c79351d0-81f9-11e7-987b-0755ac383f0c",
+          "template_name": "Glint Vision",
+          "action_plan_record_ids": [
+            "c79351d0-81f9-11e7-987b-0755ac383f0c:1",
+            "c79351d0-81f9-11e7-987b-0755ac383f0c:2",
+            "c79351d0-81f9-11e7-987b-0755ac383f0c:3",
+            "c79351d0-81f9-11e7-987b-0755ac383f0c:4"
+          ]
+        }
+      ]
+    },
+    "Q_COMPANY_PROSPECTS": {
+      "question_id": "Q_COMPANY_PROSPECTS",
+      "display_question_id": "[Q_COMPANY_PROSPECTS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "84e07300-0904-11e6-8759-3b8460ed0dcb",
+          "template_name": "Glint Prospects",
+          "action_plan_record_ids": [
+            "84e07300-0904-11e6-8759-3b8460ed0dcb:1",
+            "84e07300-0904-11e6-8759-3b8460ed0dcb:2",
+            "84e07300-0904-11e6-8759-3b8460ed0dcb:3",
+            "84e07300-0904-11e6-8759-3b8460ed0dcb:4",
+            "84e07300-0904-11e6-8759-3b8460ed0dcb:5"
+          ]
+        }
+      ]
+    },
+    "Q_COMPETENCE": {
+      "question_id": "Q_COMPETENCE",
+      "display_question_id": "[Q_COMPETENCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_COMP_PLAN": {
+      "question_id": "Q_COMP_PLAN",
+      "display_question_id": "[Q_COMP_PLAN]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CONSISTENCY": {
+      "question_id": "Q_CONSISTENCY",
+      "display_question_id": "[Q_CONSISTENCY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CONTINUOUS_IMPROVEMENT": {
+      "question_id": "Q_CONTINUOUS_IMPROVEMENT",
+      "display_question_id": "[Q_CONTINUOUS_IMPROVEMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CONTRIBUTION": {
+      "question_id": "Q_CONTRIBUTION",
+      "display_question_id": "[Q_CONTRIBUTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "0448baf0-efd4-11e7-b712-cb98ceb7b694",
+          "template_name": "Glint Contribution",
+          "action_plan_record_ids": [
+            "0448baf0-efd4-11e7-b712-cb98ceb7b694:1",
+            "0448baf0-efd4-11e7-b712-cb98ceb7b694:2",
+            "0448baf0-efd4-11e7-b712-cb98ceb7b694:3",
+            "0448baf0-efd4-11e7-b712-cb98ceb7b694:4"
+          ]
+        }
+      ]
+    },
+    "Q_CORPORATE_CITIZENSHIP": {
+      "question_id": "Q_CORPORATE_CITIZENSHIP",
+      "display_question_id": "[Q_CORPORATE_CITIZENSHIP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_CULTURE": {
+      "question_id": "Q_CULTURE",
+      "display_question_id": "[Q_CULTURE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "7f7cbb50-212b-11e6-a177-7f43a1a92440",
+          "template_name": "Glint Culture",
+          "action_plan_record_ids": [
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:1",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:2",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:3",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:4",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:5",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:6",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:7",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:8",
+            "7f7cbb50-212b-11e6-a177-7f43a1a92440:9"
+          ]
+        }
+      ]
+    },
+    "Q_CULTURE_DIVERSITY": {
+      "question_id": "Q_CULTURE_DIVERSITY",
+      "display_question_id": "[Q_CULTURE_DIVERSITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3",
+          "template_name": "Glint Diversity",
+          "action_plan_record_ids": [
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:1",
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:2",
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:3",
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:4",
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:5",
+            "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3:6"
+          ]
+        }
+      ]
+    },
+    "Q_CULTURE_RECOGNITION": {
+      "question_id": "Q_CULTURE_RECOGNITION",
+      "display_question_id": "[Q_CULTURE_RECOGNITION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ba63a510-0594-11e6-bacf-170ba1b0fcba",
+          "template_name": "Glint Recognition",
+          "action_plan_record_ids": [
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:1",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:2",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:3",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:4",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:5",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:6"
+          ]
+        }
+      ]
+    },
+    "Q_CULTURE_WORKLIFE": {
+      "question_id": "Q_CULTURE_WORKLIFE",
+      "display_question_id": "[Q_CULTURE_WORKLIFE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "9e9efef0-08e2-11e6-bacf-170ba1b0fcba",
+          "template_name": "Glint Balance",
+          "action_plan_record_ids": [
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:1",
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:2",
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:3",
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:4",
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:5",
+            "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:6"
+          ]
+        }
+      ]
+    },
+    "Q_CUSTOMER_FOCUS": {
+      "question_id": "Q_CUSTOMER_FOCUS",
+      "display_question_id": "[Q_CUSTOMER_FOCUS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "bfab9760-df79-11e7-9579-af1d9262a2c0",
+          "template_name": "Glint Customer Focus",
+          "action_plan_record_ids": [
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:1",
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:2",
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:3",
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:4",
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:5",
+            "bfab9760-df79-11e7-9579-af1d9262a2c0:6"
+          ]
+        }
+      ]
+    },
+    "Q_DECISION_INFLUENCE": {
+      "question_id": "Q_DECISION_INFLUENCE",
+      "display_question_id": "[Q_DECISION_INFLUENCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "7e9c5a20-691f-11ea-94e8-ff0d75349a17",
+          "template_name": "Glint Influence",
+          "action_plan_record_ids": [
+            "7e9c5a20-691f-11ea-94e8-ff0d75349a17:1",
+            "7e9c5a20-691f-11ea-94e8-ff0d75349a17:2"
+          ]
+        }
+      ]
+    },
+    "Q_DECISION_MAKING": {
+      "question_id": "Q_DECISION_MAKING",
+      "display_question_id": "[Q_DECISION_MAKING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "14d7fd10-d48f-11e6-b21c-e7fd2e716528",
+          "template_name": "Glint Decisions",
+          "action_plan_record_ids": [
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:1",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:2",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:3",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:4",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:5",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:6",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:7",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:8",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:9"
+          ]
+        }
+      ]
+    },
+    "Q_DECISION_PROCESS": {
+      "question_id": "Q_DECISION_PROCESS",
+      "display_question_id": "[Q_DECISION_PROCESS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_DECISION_PROXIMITY": {
+      "question_id": "Q_DECISION_PROXIMITY",
+      "display_question_id": "[Q_DECISION_PROXIMITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_DECISION_SPEED": {
+      "question_id": "Q_DECISION_SPEED",
+      "display_question_id": "[Q_DECISION_SPEED]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_DEMONSTRATES_CAPABILITY_360": {
+      "question_id": "Q_DEMONSTRATES_CAPABILITY_360",
+      "display_question_id": "[Q_DEMONSTRATES_CAPABILITY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "cade6230-ab95-11ea-95c3-534fd79c55fa",
+          "template_name": "Glint 360 Demonstrates Capability",
+          "action_plan_record_ids": [
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:1",
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:2",
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:3",
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:4",
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:5",
+            "cade6230-ab95-11ea-95c3-534fd79c55fa:6"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_COMMUNICATIONS": {
+      "question_id": "Q_DISTRESS_COMMUNICATIONS",
+      "display_question_id": "[Q_DISTRESS_COMMUNICATIONS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "59021f90-85ce-11ea-a8d2-9b8c31bca5f4",
+          "template_name": "Glint Distress - Communications",
+          "action_plan_record_ids": [
+            "59021f90-85ce-11ea-a8d2-9b8c31bca5f4:1",
+            "59021f90-85ce-11ea-a8d2-9b8c31bca5f4:2",
+            "59021f90-85ce-11ea-a8d2-9b8c31bca5f4:3",
+            "59021f90-85ce-11ea-a8d2-9b8c31bca5f4:4"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_CONNECTION": {
+      "question_id": "Q_DISTRESS_CONNECTION",
+      "display_question_id": "[Q_DISTRESS_CONNECTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "d3bbfc80-85c7-11ea-b26f-65755f450b88",
+          "template_name": "Glint Distress - Employee Connection",
+          "action_plan_record_ids": [
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:1",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:2",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:3",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:4",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:5",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:6",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:7",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:8",
+            "d3bbfc80-85c7-11ea-b26f-65755f450b88:9"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_CONTRIBUTION": {
+      "question_id": "Q_DISTRESS_CONTRIBUTION",
+      "display_question_id": "[Q_DISTRESS_CONTRIBUTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "6c05bf40-85cc-11ea-a8d2-9b8c31bca5f4",
+          "template_name": "Glint Distress - Contribution",
+          "action_plan_record_ids": [
+            "6c05bf40-85cc-11ea-a8d2-9b8c31bca5f4:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_CUSTOMER": {
+      "question_id": "Q_DISTRESS_CUSTOMER",
+      "display_question_id": "[Q_DISTRESS_CUSTOMER]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "93f90fd0-85cb-11ea-8b87-95289f1d2f38",
+          "template_name": "Glint Distress - Customer",
+          "action_plan_record_ids": [
+            "93f90fd0-85cb-11ea-8b87-95289f1d2f38:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_MANAGER_SUPPORT": {
+      "question_id": "Q_DISTRESS_MANAGER_SUPPORT",
+      "display_question_id": "[Q_DISTRESS_MANAGER_SUPPORT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+          "template_name": "Glint Distress - Manager Support",
+          "action_plan_record_ids": [
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:1",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:2",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:3",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:4",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:5",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:6",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:7",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:8",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:9",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:10",
+            "2ef718f0-85d7-11ea-afa7-4d1a01993311:11"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_PLAN": {
+      "question_id": "Q_DISTRESS_PLAN",
+      "display_question_id": "[Q_DISTRESS_PLAN]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "d3d7b220-85d8-11ea-bb67-457d9eb9179a",
+          "template_name": "Glint Distress - Plan",
+          "action_plan_record_ids": [
+            "d3d7b220-85d8-11ea-bb67-457d9eb9179a:1",
+            "d3d7b220-85d8-11ea-bb67-457d9eb9179a:2",
+            "d3d7b220-85d8-11ea-bb67-457d9eb9179a:3"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_PRECAUTIONS": {
+      "question_id": "Q_DISTRESS_PRECAUTIONS",
+      "display_question_id": "[Q_DISTRESS_PRECAUTIONS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "0d2aa470-85d8-11ea-9f69-517edbcc1832",
+          "template_name": "Glint Distress - Team Precautions",
+          "action_plan_record_ids": [
+            "0d2aa470-85d8-11ea-9f69-517edbcc1832:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_PRIORITIZATION": {
+      "question_id": "Q_DISTRESS_PRIORITIZATION",
+      "display_question_id": "[Q_DISTRESS_PRIORITIZATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0",
+          "template_name": "Glint Distress - Prioritization",
+          "action_plan_record_ids": [
+            "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0:1",
+            "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0:2"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_REMOTE": {
+      "question_id": "Q_DISTRESS_REMOTE",
+      "display_question_id": "[Q_DISTRESS_REMOTE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fa2f8e10-85ca-11ea-901c-7fbffdda303a",
+          "template_name": "Glint Distress - Remote work",
+          "action_plan_record_ids": [
+            "fa2f8e10-85ca-11ea-901c-7fbffdda303a:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_RESOURCES": {
+      "question_id": "Q_DISTRESS_RESOURCES",
+      "display_question_id": "[Q_DISTRESS_RESOURCES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "540f9810-85be-11ea-a001-6f8f3b362169",
+          "template_name": "Glint Distress - Resources",
+          "action_plan_record_ids": [
+            "540f9810-85be-11ea-a001-6f8f3b362169:1",
+            "540f9810-85be-11ea-a001-6f8f3b362169:2",
+            "540f9810-85be-11ea-a001-6f8f3b362169:3",
+            "540f9810-85be-11ea-a001-6f8f3b362169:4"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_RESPONSE": {
+      "question_id": "Q_DISTRESS_RESPONSE",
+      "display_question_id": "[Q_DISTRESS_RESPONSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+          "template_name": "CrisisFBSurvey_Default_Action_Template",
+          "action_plan_record_ids": [
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:1",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:2",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:3",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:4",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:5",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:6",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:7",
+            "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:8"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_TEAM_PRIORITIES": {
+      "question_id": "Q_DISTRESS_TEAM_PRIORITIES",
+      "display_question_id": "[Q_DISTRESS_TEAM_PRIORITIES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4f74ca80-85cf-11ea-b656-755d0b0a2fda",
+          "template_name": "Glint Distress - Team Priorities",
+          "action_plan_record_ids": [
+            "4f74ca80-85cf-11ea-b656-755d0b0a2fda:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_TECHNOLOGY": {
+      "question_id": "Q_DISTRESS_TECHNOLOGY",
+      "display_question_id": "[Q_DISTRESS_TECHNOLOGY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "f8dba490-85cf-11ea-ba74-a5bc37fb230b",
+          "template_name": "Glint Distress - Technology",
+          "action_plan_record_ids": [
+            "f8dba490-85cf-11ea-ba74-a5bc37fb230b:1"
+          ]
+        }
+      ]
+    },
+    "Q_DISTRESS_WELL-BEING": {
+      "question_id": "Q_DISTRESS_WELL-BEING",
+      "display_question_id": "[Q_DISTRESS_WELL-BEING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a6ccd8d0-85bc-11ea-9f69-517edbcc1832",
+          "template_name": "Glint Distress - Well-being",
+          "action_plan_record_ids": [
+            "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:1",
+            "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:2",
+            "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:3",
+            "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:4",
+            "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:5"
+          ]
+        }
+      ]
+    },
+    "Q_DIVERSITY_COMMITMENT": {
+      "question_id": "Q_DIVERSITY_COMMITMENT",
+      "display_question_id": "[Q_DIVERSITY_COMMITMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c0a784f0-6922-11ea-b20b-c743470f944a",
+          "template_name": "Glint Diversity Commitment",
+          "action_plan_record_ids": [
+            "c0a784f0-6922-11ea-b20b-c743470f944a:1"
+          ]
+        }
+      ]
+    },
+    "Q_DRIVES_ACCOUNTABILITY_360": {
+      "question_id": "Q_DRIVES_ACCOUNTABILITY_360",
+      "display_question_id": "[Q_DRIVES_ACCOUNTABILITY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72",
+          "template_name": "Glint 360 Drives Accountability",
+          "action_plan_record_ids": [
+            "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:1",
+            "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:2",
+            "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:3",
+            "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:4",
+            "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:5"
+          ]
+        }
+      ]
+    },
+    "Q_EFFECTIVE_MANAGEMENT": {
+      "question_id": "Q_EFFECTIVE_MANAGEMENT",
+      "display_question_id": "[Q_EFFECTIVE_MANAGEMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_EMPATHIZES_360": {
+      "question_id": "Q_EMPATHIZES_360",
+      "display_question_id": "[Q_EMPATHIZES_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2",
+          "template_name": "Glint 360 Empathizes",
+          "action_plan_record_ids": [
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:1",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:2",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:3",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:4",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:5",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:6",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:7",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:8",
+            "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:9"
+          ]
+        }
+      ]
+    },
+    "Q_EMPOWERS_OTHERS_360": {
+      "question_id": "Q_EMPOWERS_OTHERS_360",
+      "display_question_id": "[Q_EMPOWERS_OTHERS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b940c380-ab89-11ea-b68e-1fd653b3f79b",
+          "template_name": "Glint 360 Empowers Others",
+          "action_plan_record_ids": [
+            "b940c380-ab89-11ea-b68e-1fd653b3f79b:1",
+            "b940c380-ab89-11ea-b68e-1fd653b3f79b:2",
+            "b940c380-ab89-11ea-b68e-1fd653b3f79b:3",
+            "b940c380-ab89-11ea-b68e-1fd653b3f79b:4",
+            "b940c380-ab89-11ea-b68e-1fd653b3f79b:5"
+          ]
+        }
+      ]
+    },
+    "Q_ENCOURAGES_INITIATIVE_360": {
+      "question_id": "Q_ENCOURAGES_INITIATIVE_360",
+      "display_question_id": "[Q_ENCOURAGES_INITIATIVE_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "48c81010-aa83-11ea-ac0e-23649c6ec811",
+          "template_name": "Glint 360 Encourages Initiative",
+          "action_plan_record_ids": [
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:1",
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:2",
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:3",
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:4",
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:5",
+            "48c81010-aa83-11ea-ac0e-23649c6ec811:6"
+          ]
+        }
+      ]
+    },
+    "Q_ENCOURAGES_TEAMWORK_360": {
+      "question_id": "Q_ENCOURAGES_TEAMWORK_360",
+      "display_question_id": "[Q_ENCOURAGES_TEAMWORK_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b",
+          "template_name": "Glint 360 Encourages Teamwork",
+          "action_plan_record_ids": [
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:1",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:2",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:3",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:4",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:5",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:6",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:7",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:8",
+            "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:9"
+          ]
+        }
+      ]
+    },
+    "Q_ENERGY": {
+      "question_id": "Q_ENERGY",
+      "display_question_id": "[Q_ENERGY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_EQUAL_OPPORTUNITY": {
+      "question_id": "Q_EQUAL_OPPORTUNITY",
+      "display_question_id": "[Q_EQUAL_OPPORTUNITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "04ed9680-6924-11ea-8475-cd33436c2365",
+          "template_name": "Glint Equal Opportunity",
+          "action_plan_record_ids": [
+            "04ed9680-6924-11ea-8475-cd33436c2365:1"
+          ]
+        }
+      ]
+    },
+    "Q_EQUITY": {
+      "question_id": "Q_EQUITY",
+      "display_question_id": "[Q_EQUITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_ETHICS": {
+      "question_id": "Q_ETHICS",
+      "display_question_id": "[Q_ETHICS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "6e5e0360-3687-11e8-a72e-f7e9fe66949f",
+          "template_name": "Glint Ethics",
+          "action_plan_record_ids": [
+            "6e5e0360-3687-11e8-a72e-f7e9fe66949f:1",
+            "6e5e0360-3687-11e8-a72e-f7e9fe66949f:2"
+          ]
+        }
+      ]
+    },
+    "Q_EXCELLENCE": {
+      "question_id": "Q_EXCELLENCE",
+      "display_question_id": "[Q_EXCELLENCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4302eb70-3c94-11e6-a006-97265ceaa2da",
+          "template_name": "Glint Excellence",
+          "action_plan_record_ids": [
+            "4302eb70-3c94-11e6-a006-97265ceaa2da:1",
+            "4302eb70-3c94-11e6-a006-97265ceaa2da:2",
+            "4302eb70-3c94-11e6-a006-97265ceaa2da:3",
+            "4302eb70-3c94-11e6-a006-97265ceaa2da:4"
+          ]
+        }
+      ]
+    },
+    "Q_EXECUTION": {
+      "question_id": "Q_EXECUTION",
+      "display_question_id": "[Q_EXECUTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "61957d40-2cd2-11e6-bdd7-1bc20811d880",
+          "template_name": "Glint Execution",
+          "action_plan_record_ids": [
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:1",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:2",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:3",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:4",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:5",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:6",
+            "61957d40-2cd2-11e6-bdd7-1bc20811d880:7"
+          ]
+        }
+      ]
+    },
+    "Q_EXPERIMENT": {
+      "question_id": "Q_EXPERIMENT",
+      "display_question_id": "[Q_EXPERIMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_EXPRESSING_OPINIONS": {
+      "question_id": "Q_EXPRESSING_OPINIONS",
+      "display_question_id": "[Q_EXPRESSING_OPINIONS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "205b2f00-6923-11ea-8666-33f1ce05bf6b",
+          "template_name": "Glint Expressing Opinions",
+          "action_plan_record_ids": [
+            "205b2f00-6923-11ea-8666-33f1ce05bf6b:1",
+            "205b2f00-6923-11ea-8666-33f1ce05bf6b:2"
+          ]
+        }
+      ]
+    },
+    "Q_FAIR_EVALUATION": {
+      "question_id": "Q_FAIR_EVALUATION",
+      "display_question_id": "[Q_FAIR_EVALUATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_FLEXIBILITY": {
+      "question_id": "Q_FLEXIBILITY",
+      "display_question_id": "[Q_FLEXIBILITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_FOCUSES_UNDER_STRESS_360": {
+      "question_id": "Q_FOCUSES_UNDER_STRESS_360",
+      "display_question_id": "[Q_FOCUSES_UNDER_STRESS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c62a4220-aaa7-11ea-b72f-0bf711a114a9",
+          "template_name": "Glint 360 Focuses Under Stress",
+          "action_plan_record_ids": [
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:1",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:2",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:3",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:4",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:5",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:6",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:7",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:8",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:9",
+            "c62a4220-aaa7-11ea-b72f-0bf711a114a9:10"
+          ]
+        }
+      ]
+    },
+    "Q_FOLLOW_THROUGH": {
+      "question_id": "Q_FOLLOW_THROUGH",
+      "display_question_id": "[Q_FOLLOW_THROUGH]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_FUN": {
+      "question_id": "Q_FUN",
+      "display_question_id": "[Q_FUN]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_GAINS_SUPPORT_360": {
+      "question_id": "Q_GAINS_SUPPORT_360",
+      "display_question_id": "[Q_GAINS_SUPPORT_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "813516e0-ab8d-11ea-b61d-47fc60103d85",
+          "template_name": "Glint 360 Gains Support",
+          "action_plan_record_ids": [
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:1",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:2",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:3",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:4",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:5",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:6",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:7",
+            "813516e0-ab8d-11ea-b61d-47fc60103d85:8"
+          ]
+        }
+      ]
+    },
+    "Q_GAINS_TRUST_360": {
+      "question_id": "Q_GAINS_TRUST_360",
+      "display_question_id": "[Q_GAINS_TRUST_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "78f15bb0-aa84-11ea-8ced-c9ca65ff29de",
+          "template_name": "Glint 360 Gains Trust",
+          "action_plan_record_ids": [
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:1",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:2",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:3",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:4",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:5",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:6",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:7",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:8",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:9",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:10",
+            "78f15bb0-aa84-11ea-8ced-c9ca65ff29de:11"
+          ]
+        }
+      ]
+    },
+    "Q_GLINT_EXEC_LEADERSHIP": {
+      "question_id": "Q_GLINT_EXEC_LEADERSHIP",
+      "display_question_id": "[Q_GLINT_EXEC_LEADERSHIP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a98f2fc0-1881-11e6-8135-4f9e7469f586",
+          "template_name": "Glint Leadership",
+          "action_plan_record_ids": [
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:1",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:2",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:3",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:4",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:5",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:6",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:7",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:8",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:9",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:10"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_CHANGE_WILLINGNESS": {
+      "question_id": "Q_GPS_CHANGE_WILLINGNESS",
+      "display_question_id": "[Q_GPS_CHANGE_WILLINGNESS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b566b580-e0ae-11ea-8681-a907b687abac",
+          "template_name": "Glint Change Willingness - GPS",
+          "action_plan_record_ids": [
+            "b566b580-e0ae-11ea-8681-a907b687abac:1",
+            "b566b580-e0ae-11ea-8681-a907b687abac:2",
+            "b566b580-e0ae-11ea-8681-a907b687abac:3",
+            "b566b580-e0ae-11ea-8681-a907b687abac:4",
+            "b566b580-e0ae-11ea-8681-a907b687abac:5",
+            "b566b580-e0ae-11ea-8681-a907b687abac:6"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_COMMUNICATION": {
+      "question_id": "Q_GPS_COMMUNICATION",
+      "display_question_id": "[Q_GPS_COMMUNICATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "484c23b0-e0c5-11ea-a4b1-79e76de49060",
+          "template_name": "Glint Communication - GPS",
+          "action_plan_record_ids": [
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:1",
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:2",
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:3",
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:4",
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:5",
+            "484c23b0-e0c5-11ea-a4b1-79e76de49060:6"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_EXCHANGE": {
+      "question_id": "Q_GPS_EXCHANGE",
+      "display_question_id": "[Q_GPS_EXCHANGE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "271c6dc0-e0ad-11ea-87c3-8d13e17facb4",
+          "template_name": "Glint Exchange - GPS",
+          "action_plan_record_ids": [
+            "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:1",
+            "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:2",
+            "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:3",
+            "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:4",
+            "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:5"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_JUST_RESPONSE": {
+      "question_id": "Q_GPS_JUST_RESPONSE",
+      "display_question_id": "[Q_GPS_JUST_RESPONSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4",
+          "template_name": "Glint Just Response - GPS",
+          "action_plan_record_ids": [
+            "5aea00e0-e0bc-11ea-87c3-8d13e17facb4:1",
+            "5aea00e0-e0bc-11ea-87c3-8d13e17facb4:2"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_LEARN_FROM_MISTAKES": {
+      "question_id": "Q_GPS_LEARN_FROM_MISTAKES",
+      "display_question_id": "[Q_GPS_LEARN_FROM_MISTAKES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4ace8ad0-e0af-11ea-a4b1-79e76de49060",
+          "template_name": "Glint Learning From Mistakes - GPS",
+          "action_plan_record_ids": [
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:1",
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:2",
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:3",
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:4",
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:5",
+            "4ace8ad0-e0af-11ea-a4b1-79e76de49060:6"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_MODELING": {
+      "question_id": "Q_GPS_MODELING",
+      "display_question_id": "[Q_GPS_MODELING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e",
+          "template_name": "Glint Modeling - GPS",
+          "action_plan_record_ids": [
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:1",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:2",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:3",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:4",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:5",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:6",
+            "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:7"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_OWNERSHIP": {
+      "question_id": "Q_GPS_OWNERSHIP",
+      "display_question_id": "[Q_GPS_OWNERSHIP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8df82fe0-e0b0-11ea-9cee-93fe3d70741a",
+          "template_name": "Glint Ownership - GPS",
+          "action_plan_record_ids": [
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:1",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:2",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:3",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:4",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:5",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:6",
+            "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:7"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_PSYCHOLOGICAL_SAFETY": {
+      "question_id": "Q_GPS_PSYCHOLOGICAL_SAFETY",
+      "display_question_id": "[Q_GPS_PSYCHOLOGICAL_SAFETY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+          "template_name": "Glint Psychological Safety - GPS",
+          "action_plan_record_ids": [
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:1",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:2",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:3",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:4",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:5",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:6",
+            "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:7"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_RECOGNITION": {
+      "question_id": "Q_GPS_RECOGNITION",
+      "display_question_id": "[Q_GPS_RECOGNITION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327",
+          "template_name": "Glint Recognition - GPS",
+          "action_plan_record_ids": [
+            "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:1",
+            "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:2",
+            "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:3",
+            "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:4",
+            "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:5"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_RESOURCES": {
+      "question_id": "Q_GPS_RESOURCES",
+      "display_question_id": "[Q_GPS_RESOURCES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ec611500-e0b1-11ea-a714-4f73648ca930",
+          "template_name": "Glint Resources - GPS",
+          "action_plan_record_ids": [
+            "ec611500-e0b1-11ea-a714-4f73648ca930:1",
+            "ec611500-e0b1-11ea-a714-4f73648ca930:2",
+            "ec611500-e0b1-11ea-a714-4f73648ca930:3",
+            "ec611500-e0b1-11ea-a714-4f73648ca930:4",
+            "ec611500-e0b1-11ea-a714-4f73648ca930:5"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_ROOT_CAUSE": {
+      "question_id": "Q_GPS_ROOT_CAUSE",
+      "display_question_id": "[Q_GPS_ROOT_CAUSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "da797b60-e0ad-11ea-9614-2b26f428f070",
+          "template_name": "Glint Root Cause - GPS",
+          "action_plan_record_ids": [
+            "da797b60-e0ad-11ea-9614-2b26f428f070:1",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:2",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:3",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:4",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:5",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:6",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:7",
+            "da797b60-e0ad-11ea-9614-2b26f428f070:8"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_TEAMWORK": {
+      "question_id": "Q_GPS_TEAMWORK",
+      "display_question_id": "[Q_GPS_TEAMWORK]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fb8676d0-e0b4-11ea-88a1-adbac9f53456",
+          "template_name": "Glint Teamwork - GPS",
+          "action_plan_record_ids": [
+            "fb8676d0-e0b4-11ea-88a1-adbac9f53456:1",
+            "fb8676d0-e0b4-11ea-88a1-adbac9f53456:2",
+            "fb8676d0-e0b4-11ea-88a1-adbac9f53456:3",
+            "fb8676d0-e0b4-11ea-88a1-adbac9f53456:4",
+            "fb8676d0-e0b4-11ea-88a1-adbac9f53456:5"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_TRAINING": {
+      "question_id": "Q_GPS_TRAINING",
+      "display_question_id": "[Q_GPS_TRAINING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5a09a170-e108-11ea-8730-a3d92ee38b4f",
+          "template_name": "Glint Training - GPS",
+          "action_plan_record_ids": [
+            "5a09a170-e108-11ea-8730-a3d92ee38b4f:1",
+            "5a09a170-e108-11ea-8730-a3d92ee38b4f:2",
+            "5a09a170-e108-11ea-8730-a3d92ee38b4f:3",
+            "5a09a170-e108-11ea-8730-a3d92ee38b4f:4"
+          ]
+        }
+      ]
+    },
+    "Q_GPS_VOICE": {
+      "question_id": "Q_GPS_VOICE",
+      "display_question_id": "[Q_GPS_VOICE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "13d665e0-e107-11ea-b82e-9f5d83186a55",
+          "template_name": "Glint Voice - GPS",
+          "action_plan_record_ids": [
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:1",
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:2",
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:3",
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:4",
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:5",
+            "13d665e0-e107-11ea-b82e-9f5d83186a55:6"
+          ]
+        }
+      ]
+    },
+    "Q_GROWTH_ORIENTATION_360": {
+      "question_id": "Q_GROWTH_ORIENTATION_360",
+      "display_question_id": "[Q_GROWTH_ORIENTATION_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "48209ae0-ab93-11ea-a478-e54709e5e474",
+          "template_name": "Glint 360 Growth Orientation",
+          "action_plan_record_ids": [
+            "48209ae0-ab93-11ea-a478-e54709e5e474:1",
+            "48209ae0-ab93-11ea-a478-e54709e5e474:2",
+            "48209ae0-ab93-11ea-a478-e54709e5e474:3"
+          ]
+        }
+      ]
+    },
+    "Q_HIRING": {
+      "question_id": "Q_HIRING",
+      "display_question_id": "[Q_HIRING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_HOLDS_SELF_ACCOUNTABLE_360": {
+      "question_id": "Q_HOLDS_SELF_ACCOUNTABLE_360",
+      "display_question_id": "[Q_HOLDS_SELF_ACCOUNTABLE_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "83d8e260-aaab-11ea-b6f7-b987dbcac951",
+          "template_name": "Glint 360 Holds Self Accountable",
+          "action_plan_record_ids": [
+            "83d8e260-aaab-11ea-b6f7-b987dbcac951:1",
+            "83d8e260-aaab-11ea-b6f7-b987dbcac951:2"
+          ]
+        }
+      ]
+    },
+    "Q_IMMERSION": {
+      "question_id": "Q_IMMERSION",
+      "display_question_id": "[Q_IMMERSION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INCLUSION": {
+      "question_id": "Q_INCLUSION",
+      "display_question_id": "[Q_INCLUSION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "feaca180-7c4a-11e7-be4c-77c5e1facfc9",
+          "template_name": "Glint Inclusion",
+          "action_plan_record_ids": [
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:1",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:2",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:3",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:4",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:5",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:6",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:7",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:8",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:9",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:10"
+          ]
+        }
+      ]
+    },
+    "Q_INFORMATION": {
+      "question_id": "Q_INFORMATION",
+      "display_question_id": "[Q_INFORMATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INFORMED_CROSSTEAM": {
+      "question_id": "Q_INFORMED_CROSSTEAM",
+      "display_question_id": "[Q_INFORMED_CROSSTEAM]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ae3c4e60-7d46-11e7-8517-63521c71a395",
+          "template_name": "Awareness",
+          "action_plan_record_ids": [
+            "ae3c4e60-7d46-11e7-8517-63521c71a395:1",
+            "ae3c4e60-7d46-11e7-8517-63521c71a395:2",
+            "ae3c4e60-7d46-11e7-8517-63521c71a395:3",
+            "ae3c4e60-7d46-11e7-8517-63521c71a395:4"
+          ]
+        }
+      ]
+    },
+    "Q_INITIATIVE": {
+      "question_id": "Q_INITIATIVE",
+      "display_question_id": "[Q_INITIATIVE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a16212a0-df7b-11e7-9f83-23166a88f815",
+          "template_name": "Glint Initiative",
+          "action_plan_record_ids": [
+            "a16212a0-df7b-11e7-9f83-23166a88f815:1",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:2",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:3",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:4",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:5",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:6",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:7",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:8",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:9",
+            "a16212a0-df7b-11e7-9f83-23166a88f815:10"
+          ]
+        }
+      ]
+    },
+    "Q_INNOVATION": {
+      "question_id": "Q_INNOVATION",
+      "display_question_id": "[Q_INNOVATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fded7680-2c2c-11e6-a061-27900ad2fc1c",
+          "template_name": "Glint Innovation",
+          "action_plan_record_ids": [
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:1",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:2",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:3",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:4",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:5",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:6",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:7",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:8",
+            "fded7680-2c2c-11e6-a061-27900ad2fc1c:9"
+          ]
+        }
+      ]
+    },
+    "Q_INTERNAL_COMMS": {
+      "question_id": "Q_INTERNAL_COMMS",
+      "display_question_id": "[Q_INTERNAL_COMMS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INTERNAL_MOBILITY": {
+      "question_id": "Q_INTERNAL_MOBILITY",
+      "display_question_id": "[Q_INTERNAL_MOBILITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INVENTION": {
+      "question_id": "Q_INVENTION",
+      "display_question_id": "[Q_INVENTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INVENTIVE_FOCUS": {
+      "question_id": "Q_INVENTIVE_FOCUS",
+      "display_question_id": "[Q_INVENTIVE_FOCUS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_INVITES_CONTRIBUTION_360": {
+      "question_id": "Q_INVITES_CONTRIBUTION_360",
+      "display_question_id": "[Q_INVITES_CONTRIBUTION_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "273844d0-ab94-11ea-9edd-6b2bbd458f1d",
+          "template_name": "Glint 360 Invites Contribution",
+          "action_plan_record_ids": [
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:1",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:2",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:3",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:4",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:5",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:6",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:7",
+            "273844d0-ab94-11ea-9edd-6b2bbd458f1d:8"
+          ]
+        }
+      ]
+    },
+    "Q_INVOLVEMENT": {
+      "question_id": "Q_INVOLVEMENT",
+      "display_question_id": "[Q_INVOLVEMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_JOB_CREATIVITY": {
+      "question_id": "Q_JOB_CREATIVITY",
+      "display_question_id": "[Q_JOB_CREATIVITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "cdb0f720-2cd2-11e6-b9d8-3df910755a86",
+          "template_name": "Glint Creativity",
+          "action_plan_record_ids": [
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:1",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:2",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:3",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:4",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:5",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:6",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:7",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:8",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:9",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:10",
+            "cdb0f720-2cd2-11e6-b9d8-3df910755a86:11"
+          ]
+        }
+      ]
+    },
+    "Q_JOB_EMPOWERMENT": {
+      "question_id": "Q_JOB_EMPOWERMENT",
+      "display_question_id": "[Q_JOB_EMPOWERMENT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "1955f4c0-05b2-11e6-8759-3b8460ed0dcb",
+          "template_name": "Glint Empowerment",
+          "action_plan_record_ids": [
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:1",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:2",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:3",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:4",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:5",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:6",
+            "1955f4c0-05b2-11e6-8759-3b8460ed0dcb:7"
+          ]
+        }
+      ]
+    },
+    "Q_JOB_GROWTH": {
+      "question_id": "Q_JOB_GROWTH",
+      "display_question_id": "[Q_JOB_GROWTH]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "dc8ed980-0903-11e6-bacf-170ba1b0fcba",
+          "template_name": "Glint Growth",
+          "action_plan_record_ids": [
+            "dc8ed980-0903-11e6-bacf-170ba1b0fcba:1",
+            "dc8ed980-0903-11e6-bacf-170ba1b0fcba:2",
+            "dc8ed980-0903-11e6-bacf-170ba1b0fcba:3",
+            "dc8ed980-0903-11e6-bacf-170ba1b0fcba:4",
+            "dc8ed980-0903-11e6-bacf-170ba1b0fcba:5"
+          ]
+        }
+      ]
+    },
+    "Q_JOB_RESOURCES": {
+      "question_id": "Q_JOB_RESOURCES",
+      "display_question_id": "[Q_JOB_RESOURCES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "926499a0-0b04-11e6-8135-4f9e7469f586",
+          "template_name": "Glint Resources",
+          "action_plan_record_ids": [
+            "926499a0-0b04-11e6-8135-4f9e7469f586:1",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:2",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:3",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:4",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:5",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:6",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:7",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:8",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:9",
+            "926499a0-0b04-11e6-8135-4f9e7469f586:10"
+          ]
+        }
+      ]
+    },
+    "Q_JOB_SECURITY": {
+      "question_id": "Q_JOB_SECURITY",
+      "display_question_id": "[Q_JOB_SECURITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_LARGER_PURPOSE": {
+      "question_id": "Q_LARGER_PURPOSE",
+      "display_question_id": "[Q_LARGER_PURPOSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7",
+          "template_name": "Glint Larger Purpose",
+          "action_plan_record_ids": [
+            "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7:1",
+            "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7:2"
+          ]
+        }
+      ]
+    },
+    "Q_LEADERSHIP_COMMUNICATION": {
+      "question_id": "Q_LEADERSHIP_COMMUNICATION",
+      "display_question_id": "[Q_LEADERSHIP_COMMUNICATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_LEADERSHIP_CONFIDENCE": {
+      "question_id": "Q_LEADERSHIP_CONFIDENCE",
+      "display_question_id": "[Q_LEADERSHIP_CONFIDENCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a98f2fc0-1881-11e6-8135-4f9e7469f586",
+          "template_name": "Glint Leadership",
+          "action_plan_record_ids": [
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:1",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:2",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:3",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:4",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:5",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:6",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:7",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:8",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:9",
+            "a98f2fc0-1881-11e6-8135-4f9e7469f586:10"
+          ]
+        }
+      ]
+    },
+    "Q_LEADERS_CARE": {
+      "question_id": "Q_LEADERS_CARE",
+      "display_question_id": "[Q_LEADERS_CARE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "9c860ed0-6921-11ea-8bc7-5baaa0027ac8",
+          "template_name": "Glint Leaders Care",
+          "action_plan_record_ids": [
+            "9c860ed0-6921-11ea-8bc7-5baaa0027ac8:1"
+          ]
+        }
+      ]
+    },
+    "Q_LEARN_MISTAKES": {
+      "question_id": "Q_LEARN_MISTAKES",
+      "display_question_id": "[Q_LEARN_MISTAKES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_LISTENS_360": {
+      "question_id": "Q_LISTENS_360",
+      "display_question_id": "[Q_LISTENS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "0efbfd40-ab20-11ea-bbfe-3f218b594687",
+          "template_name": "Glint 360 Listens",
+          "action_plan_record_ids": [
+            "0efbfd40-ab20-11ea-bbfe-3f218b594687:1",
+            "0efbfd40-ab20-11ea-bbfe-3f218b594687:2"
+          ]
+        }
+      ]
+    },
+    "Q_MAKES_DECISIONS_360": {
+      "question_id": "Q_MAKES_DECISIONS_360",
+      "display_question_id": "[Q_MAKES_DECISIONS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+          "template_name": "Glint 360 Makes Decisions",
+          "action_plan_record_ids": [
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:1",
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:2",
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:3",
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:4",
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:5",
+            "95b25120-ab31-11ea-8ced-c9ca65ff29de:6"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_AUTONOMY": {
+      "question_id": "Q_MANAGER_AUTONOMY",
+      "display_question_id": "[Q_MANAGER_AUTONOMY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_BEST_INTERESTS": {
+      "question_id": "Q_MANAGER_BEST_INTERESTS",
+      "display_question_id": "[Q_MANAGER_BEST_INTERESTS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "1f54ff10-6922-11ea-ad18-51511e87d04f",
+          "template_name": "Glint Best Interests - Manager",
+          "action_plan_record_ids": [
+            "1f54ff10-6922-11ea-ad18-51511e87d04f:1"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_COLLABORATION": {
+      "question_id": "Q_MANAGER_COLLABORATION",
+      "display_question_id": "[Q_MANAGER_COLLABORATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "045cc4b0-d48b-11e6-acd7-9b7aac93a465",
+          "template_name": "Glint Collaboration",
+          "action_plan_record_ids": [
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:1",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:2",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:3",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:4",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:5",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:6",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:7",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:8",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:9"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_COMMUNICATION": {
+      "question_id": "Q_MANAGER_COMMUNICATION",
+      "display_question_id": "[Q_MANAGER_COMMUNICATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4560a390-d48c-11e6-8896-3f7b594f7cdc",
+          "template_name": "Glint Communication",
+          "action_plan_record_ids": [
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:1",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:2",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:3",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:4",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:5",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:6",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:7",
+            "4560a390-d48c-11e6-8896-3f7b594f7cdc:8"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_CONSIDERATION": {
+      "question_id": "Q_MANAGER_CONSIDERATION",
+      "display_question_id": "[Q_MANAGER_CONSIDERATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5fca44c0-d437-11e6-b133-37f4050e693f",
+          "template_name": "Glint Care",
+          "action_plan_record_ids": [
+            "5fca44c0-d437-11e6-b133-37f4050e693f:1",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:2",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:3",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:4",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:5",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:6",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:7",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:8",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:9",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:10",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:11",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:12",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:13",
+            "5fca44c0-d437-11e6-b133-37f4050e693f:14"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_DECISIONS": {
+      "question_id": "Q_MANAGER_DECISIONS",
+      "display_question_id": "[Q_MANAGER_DECISIONS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "14d7fd10-d48f-11e6-b21c-e7fd2e716528",
+          "template_name": "Glint Decisions",
+          "action_plan_record_ids": [
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:1",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:2",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:3",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:4",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:5",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:6",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:7",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:8",
+            "14d7fd10-d48f-11e6-b21c-e7fd2e716528:9"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_FEEDBACK": {
+      "question_id": "Q_MANAGER_FEEDBACK",
+      "display_question_id": "[Q_MANAGER_FEEDBACK]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "3ddef890-05ae-11e6-8759-3b8460ed0dcb",
+          "template_name": "Glint Feedback",
+          "action_plan_record_ids": [
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:1",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:2",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:3",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:4",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:5",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:6",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:7",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:8"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_GROWTH": {
+      "question_id": "Q_MANAGER_GROWTH",
+      "display_question_id": "[Q_MANAGER_GROWTH]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a601cf80-7bd0-11e7-8517-63521c71a395",
+          "template_name": "Glint Career Path",
+          "action_plan_record_ids": [
+            "a601cf80-7bd0-11e7-8517-63521c71a395:1",
+            "a601cf80-7bd0-11e7-8517-63521c71a395:2",
+            "a601cf80-7bd0-11e7-8517-63521c71a395:3"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_INPUT": {
+      "question_id": "Q_MANAGER_INPUT",
+      "display_question_id": "[Q_MANAGER_INPUT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "6df34f20-d490-11e6-b21c-e7fd2e716528",
+          "template_name": "Glint Input",
+          "action_plan_record_ids": [
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:1",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:2",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:3",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:4",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:5",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:6",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:7",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:8",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:9"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_MOTIVATION": {
+      "question_id": "Q_MANAGER_MOTIVATION",
+      "display_question_id": "[Q_MANAGER_MOTIVATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fca9e2b0-d490-11e6-9f01-bf7ce7531242",
+          "template_name": "Glint Motivation",
+          "action_plan_record_ids": [
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:1",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:2",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:3",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:4",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:5",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:6",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:7",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:8",
+            "fca9e2b0-d490-11e6-9f01-bf7ce7531242:9"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_PRIORITIES": {
+      "question_id": "Q_MANAGER_PRIORITIES",
+      "display_question_id": "[Q_MANAGER_PRIORITIES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "950cf6a0-d491-11e6-a4e5-6156a4f4e371",
+          "template_name": "Glint Priorities",
+          "action_plan_record_ids": [
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:1",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:2",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:3",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:4",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:5",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:6",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:7",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:8"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_QP": {
+      "question_id": "Q_MANAGER_QP",
+      "display_question_id": "[Q_MANAGER_QP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "81030c80-1880-11e6-89d0-cf6ae132b096",
+          "template_name": "Glint Manager",
+          "action_plan_record_ids": [
+            "81030c80-1880-11e6-89d0-cf6ae132b096:1",
+            "81030c80-1880-11e6-89d0-cf6ae132b096:2",
+            "81030c80-1880-11e6-89d0-cf6ae132b096:3",
+            "81030c80-1880-11e6-89d0-cf6ae132b096:4",
+            "81030c80-1880-11e6-89d0-cf6ae132b096:5",
+            "81030c80-1880-11e6-89d0-cf6ae132b096:6"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_RECOGNITION": {
+      "question_id": "Q_MANAGER_RECOGNITION",
+      "display_question_id": "[Q_MANAGER_RECOGNITION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ba63a510-0594-11e6-bacf-170ba1b0fcba",
+          "template_name": "Glint Recognition",
+          "action_plan_record_ids": [
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:1",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:2",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:3",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:4",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:5",
+            "ba63a510-0594-11e6-bacf-170ba1b0fcba:6"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_SUPPORT": {
+      "question_id": "Q_MANAGER_SUPPORT",
+      "display_question_id": "[Q_MANAGER_SUPPORT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_MANAGER_TRUST": {
+      "question_id": "Q_MANAGER_TRUST",
+      "display_question_id": "[Q_MANAGER_TRUST]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0",
+          "template_name": "Glint Trustworthy",
+          "action_plan_record_ids": [
+            "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0:1",
+            "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0:2",
+            "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0:3",
+            "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0:4"
+          ]
+        }
+      ]
+    },
+    "Q_MISSION": {
+      "question_id": "Q_MISSION",
+      "display_question_id": "[Q_MISSION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "23895280-02ad-11e8-86e7-d17fb2020ccf",
+          "template_name": "Glint Mission",
+          "action_plan_record_ids": [
+            "23895280-02ad-11e8-86e7-d17fb2020ccf:1",
+            "23895280-02ad-11e8-86e7-d17fb2020ccf:2",
+            "23895280-02ad-11e8-86e7-d17fb2020ccf:3"
+          ]
+        }
+      ]
+    },
+    "Q_MODELS_VALUES_360": {
+      "question_id": "Q_MODELS_VALUES_360",
+      "display_question_id": "[Q_MODELS_VALUES_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51",
+          "template_name": "Glint 360 Models Values",
+          "action_plan_record_ids": [
+            "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51:1",
+            "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51:2",
+            "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51:3",
+            "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51:4"
+          ]
+        }
+      ]
+    },
+    "Q_MOTIVATES_EXCELLENCE_360": {
+      "question_id": "Q_MOTIVATES_EXCELLENCE_360",
+      "display_question_id": "[Q_MOTIVATES_EXCELLENCE_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8111ea10-aa72-11ea-9371-fb5be38ee807",
+          "template_name": "Glint 360 Motivates Excellence",
+          "action_plan_record_ids": [
+            "8111ea10-aa72-11ea-9371-fb5be38ee807:1",
+            "8111ea10-aa72-11ea-9371-fb5be38ee807:2"
+          ]
+        }
+      ]
+    },
+    "Q_NAVIGATES_THE_ORGANIZATION_360": {
+      "question_id": "Q_NAVIGATES_THE_ORGANIZATION_360",
+      "display_question_id": "[Q_NAVIGATES_THE_ORGANIZATION_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "eb0ea1f0-ab8b-11ea-9371-fb5be38ee807",
+          "template_name": "Glint 360 Navigates the Organization",
+          "action_plan_record_ids": [
+            "eb0ea1f0-ab8b-11ea-9371-fb5be38ee807:1"
+          ]
+        }
+      ]
+    },
+    "Q_NON-DISCRIMINATION": {
+      "question_id": "Q_NON-DISCRIMINATION",
+      "display_question_id": "[Q_NON-DISCRIMINATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ce018780-6923-11ea-b18d-4d088d83dd21",
+          "template_name": "Glint Non-Discrimination",
+          "action_plan_record_ids": [
+            "ce018780-6923-11ea-b18d-4d088d83dd21:1",
+            "ce018780-6923-11ea-b18d-4d088d83dd21:2",
+            "ce018780-6923-11ea-b18d-4d088d83dd21:3",
+            "ce018780-6923-11ea-b18d-4d088d83dd21:4",
+            "ce018780-6923-11ea-b18d-4d088d83dd21:5",
+            "ce018780-6923-11ea-b18d-4d088d83dd21:6"
+          ]
+        }
+      ]
+    },
+    "Q_OPINIONS_COUNT": {
+      "question_id": "Q_OPINIONS_COUNT",
+      "display_question_id": "[Q_OPINIONS_COUNT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "6df34f20-d490-11e6-b21c-e7fd2e716528",
+          "template_name": "Glint Input",
+          "action_plan_record_ids": [
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:1",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:2",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:3",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:4",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:5",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:6",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:7",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:8",
+            "6df34f20-d490-11e6-b21c-e7fd2e716528:9"
+          ]
+        }
+      ]
+    },
+    "Q_PAY_FOR_PERF": {
+      "question_id": "Q_PAY_FOR_PERF",
+      "display_question_id": "[Q_PAY_FOR_PERF]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PERFMGMT_FEEDBACK": {
+      "question_id": "Q_PERFMGMT_FEEDBACK",
+      "display_question_id": "[Q_PERFMGMT_FEEDBACK]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "3ddef890-05ae-11e6-8759-3b8460ed0dcb",
+          "template_name": "Glint Feedback",
+          "action_plan_record_ids": [
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:1",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:2",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:3",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:4",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:5",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:6",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:7",
+            "3ddef890-05ae-11e6-8759-3b8460ed0dcb:8"
+          ]
+        }
+      ]
+    },
+    "Q_PERFORMANCE": {
+      "question_id": "Q_PERFORMANCE",
+      "display_question_id": "[Q_PERFORMANCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PERFORMANCE_EVALUATION": {
+      "question_id": "Q_PERFORMANCE_EVALUATION",
+      "display_question_id": "[Q_PERFORMANCE_EVALUATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PERKS": {
+      "question_id": "Q_PERKS",
+      "display_question_id": "[Q_PERKS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PLANNING": {
+      "question_id": "Q_PLANNING",
+      "display_question_id": "[Q_PLANNING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PRIORITIES": {
+      "question_id": "Q_PRIORITIES",
+      "display_question_id": "[Q_PRIORITIES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "950cf6a0-d491-11e6-a4e5-6156a4f4e371",
+          "template_name": "Glint Priorities",
+          "action_plan_record_ids": [
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:1",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:2",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:3",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:4",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:5",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:6",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:7",
+            "950cf6a0-d491-11e6-a4e5-6156a4f4e371:8"
+          ]
+        }
+      ]
+    },
+    "Q_PROCEDURES": {
+      "question_id": "Q_PROCEDURES",
+      "display_question_id": "[Q_PROCEDURES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PROMO": {
+      "question_id": "Q_PROMO",
+      "display_question_id": "[Q_PROMO]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_PROVIDES_FEEDBACK_360": {
+      "question_id": "Q_PROVIDES_FEEDBACK_360",
+      "display_question_id": "[Q_PROVIDES_FEEDBACK_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283",
+          "template_name": "Glint 360 Provides Feedback",
+          "action_plan_record_ids": [
+            "fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283:1",
+            "fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283:2",
+            "fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283:3"
+          ]
+        }
+      ]
+    },
+    "Q_PSYCHOLOGICAL_SAFETY_360": {
+      "question_id": "Q_PSYCHOLOGICAL_SAFETY_360",
+      "display_question_id": "[Q_PSYCHOLOGICAL_SAFETY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2",
+          "template_name": "Glint 360 Psychological Safety",
+          "action_plan_record_ids": [
+            "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:1",
+            "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:2",
+            "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:3",
+            "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:4",
+            "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:5"
+          ]
+        }
+      ]
+    },
+    "Q_QUALITY_OF_IDEAS": {
+      "question_id": "Q_QUALITY_OF_IDEAS",
+      "display_question_id": "[Q_QUALITY_OF_IDEAS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4e890020-6921-11ea-9f22-15f448a12e51",
+          "template_name": "Glint Quality of Ideas",
+          "action_plan_record_ids": [
+            "4e890020-6921-11ea-9f22-15f448a12e51:1",
+            "4e890020-6921-11ea-9f22-15f448a12e51:2"
+          ]
+        }
+      ]
+    },
+    "Q_QUESTIONS_STATUS_QUO_360": {
+      "question_id": "Q_QUESTIONS_STATUS_QUO_360",
+      "display_question_id": "[Q_QUESTIONS_STATUS_QUO_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "d832f540-ab90-11ea-840d-47c750a2f6e5",
+          "template_name": "Glint 360 Questions Status Quo",
+          "action_plan_record_ids": [
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:1",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:2",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:3",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:4",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:5",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:6",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:7",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:8",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:9",
+            "d832f540-ab90-11ea-840d-47c750a2f6e5:10"
+          ]
+        }
+      ]
+    },
+    "Q_RECOGNIZES_CONTRIBUTIONS_360": {
+      "question_id": "Q_RECOGNIZES_CONTRIBUTIONS_360",
+      "display_question_id": "[Q_RECOGNIZES_CONTRIBUTIONS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "91795b10-aa70-11ea-8344-516b027153ee",
+          "template_name": "Glint 360 Recognizes Contributions",
+          "action_plan_record_ids": [
+            "91795b10-aa70-11ea-8344-516b027153ee:1",
+            "91795b10-aa70-11ea-8344-516b027153ee:2",
+            "91795b10-aa70-11ea-8344-516b027153ee:3"
+          ]
+        }
+      ]
+    },
+    "Q_RELATES_BROADLY_360": {
+      "question_id": "Q_RELATES_BROADLY_360",
+      "display_question_id": "[Q_RELATES_BROADLY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "04195a60-aabe-11ea-abf3-15496f21f1a5",
+          "template_name": "Glint 360 Relates Broadly",
+          "action_plan_record_ids": [
+            "04195a60-aabe-11ea-abf3-15496f21f1a5:1",
+            "04195a60-aabe-11ea-abf3-15496f21f1a5:2",
+            "04195a60-aabe-11ea-abf3-15496f21f1a5:3",
+            "04195a60-aabe-11ea-abf3-15496f21f1a5:4",
+            "04195a60-aabe-11ea-abf3-15496f21f1a5:5"
+          ]
+        }
+      ]
+    },
+    "Q_REMOTE_WORK": {
+      "question_id": "Q_REMOTE_WORK",
+      "display_question_id": "[Q_REMOTE_WORK]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_REMOVES_ROADBLOCKS_360": {
+      "question_id": "Q_REMOVES_ROADBLOCKS_360",
+      "display_question_id": "[Q_REMOVES_ROADBLOCKS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "70f68770-ab8b-11ea-9cdb-d7876c6e36dc",
+          "template_name": "Glint 360 Removes Roadblocks",
+          "action_plan_record_ids": [
+            "70f68770-ab8b-11ea-9cdb-d7876c6e36dc:1",
+            "70f68770-ab8b-11ea-9cdb-d7876c6e36dc:2",
+            "70f68770-ab8b-11ea-9cdb-d7876c6e36dc:3",
+            "70f68770-ab8b-11ea-9cdb-d7876c6e36dc:4",
+            "70f68770-ab8b-11ea-9cdb-d7876c6e36dc:5"
+          ]
+        }
+      ]
+    },
+    "Q_RESILIENCE": {
+      "question_id": "Q_RESILIENCE",
+      "display_question_id": "[Q_RESILIENCE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_RESPONSIBILITY": {
+      "question_id": "Q_RESPONSIBILITY",
+      "display_question_id": "[Q_RESPONSIBILITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_REWARDS_COMP": {
+      "question_id": "Q_REWARDS_COMP",
+      "display_question_id": "[Q_REWARDS_COMP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ef351cf0-2129-11e6-b4ee-8b8a52f84d48",
+          "template_name": "Glint Rewards",
+          "action_plan_record_ids": [
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:1",
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:2",
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:3",
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:4",
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:5",
+            "ef351cf0-2129-11e6-b4ee-8b8a52f84d48:6"
+          ]
+        }
+      ]
+    },
+    "Q_RISK_TAKING": {
+      "question_id": "Q_RISK_TAKING",
+      "display_question_id": "[Q_RISK_TAKING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "79110600-3681-11e8-8a66-51aae45ef563",
+          "template_name": "Glint Risk Taking",
+          "action_plan_record_ids": [
+            "79110600-3681-11e8-8a66-51aae45ef563:1",
+            "79110600-3681-11e8-8a66-51aae45ef563:2",
+            "79110600-3681-11e8-8a66-51aae45ef563:3",
+            "79110600-3681-11e8-8a66-51aae45ef563:4",
+            "79110600-3681-11e8-8a66-51aae45ef563:5"
+          ]
+        }
+      ]
+    },
+    "Q_ROLE_CLARITY": {
+      "question_id": "Q_ROLE_CLARITY",
+      "display_question_id": "[Q_ROLE_CLARITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "db984a50-7bb4-11e7-a59b-294de3121110",
+          "template_name": "Glint Role Clarity",
+          "action_plan_record_ids": [
+            "db984a50-7bb4-11e7-a59b-294de3121110:1",
+            "db984a50-7bb4-11e7-a59b-294de3121110:2",
+            "db984a50-7bb4-11e7-a59b-294de3121110:3",
+            "db984a50-7bb4-11e7-a59b-294de3121110:4",
+            "db984a50-7bb4-11e7-a59b-294de3121110:5"
+          ]
+        }
+      ]
+    },
+    "Q_ROLE_MODELS": {
+      "question_id": "Q_ROLE_MODELS",
+      "display_question_id": "[Q_ROLE_MODELS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_ROLE_PURPOSE": {
+      "question_id": "Q_ROLE_PURPOSE",
+      "display_question_id": "[Q_ROLE_PURPOSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "cfe75ae0-1c86-11e6-8135-4f9e7469f586",
+          "template_name": "Glint Purpose",
+          "action_plan_record_ids": [
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:1",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:2",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:3",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:4",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:5",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:6",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:7",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:8",
+            "cfe75ae0-1c86-11e6-8135-4f9e7469f586:9"
+          ]
+        }
+      ]
+    },
+    "Q_ROLE_SATISFACTION": {
+      "question_id": "Q_ROLE_SATISFACTION",
+      "display_question_id": "[Q_ROLE_SATISFACTION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "e7d05ab0-7c7c-11e7-85cc-c7e4869f4db1",
+          "template_name": "Glint Job",
+          "action_plan_record_ids": [
+            "e7d05ab0-7c7c-11e7-85cc-c7e4869f4db1:1",
+            "e7d05ab0-7c7c-11e7-85cc-c7e4869f4db1:2"
+          ]
+        }
+      ]
+    },
+    "Q_ROLE_STRENGTHS": {
+      "question_id": "Q_ROLE_STRENGTHS",
+      "display_question_id": "[Q_ROLE_STRENGTHS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "a8d6f2e0-0b05-11e6-89d0-cf6ae132b096",
+          "template_name": "Glint Role",
+          "action_plan_record_ids": [
+            "a8d6f2e0-0b05-11e6-89d0-cf6ae132b096:1",
+            "a8d6f2e0-0b05-11e6-89d0-cf6ae132b096:2",
+            "a8d6f2e0-0b05-11e6-89d0-cf6ae132b096:3"
+          ]
+        }
+      ]
+    },
+    "Q_ROOT_CAUSE": {
+      "question_id": "Q_ROOT_CAUSE",
+      "display_question_id": "[Q_ROOT_CAUSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_SAFETY_CLIMATE": {
+      "question_id": "Q_SAFETY_CLIMATE",
+      "display_question_id": "[Q_SAFETY_CLIMATE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_SELF_AWARENESS_360": {
+      "question_id": "Q_SELF_AWARENESS_360",
+      "display_question_id": "[Q_SELF_AWARENESS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "28c944c0-aa86-11ea-afa7-27783cc4e333",
+          "template_name": "Glint 360 Self Awareness",
+          "action_plan_record_ids": [
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:1",
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:2",
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:3",
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:4",
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:5",
+            "28c944c0-aa86-11ea-afa7-27783cc4e333:6"
+          ]
+        }
+      ]
+    },
+    "Q_SHARED_REWARDS": {
+      "question_id": "Q_SHARED_REWARDS",
+      "display_question_id": "[Q_SHARED_REWARDS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_SOLVES_PROBLEMS_360": {
+      "question_id": "Q_SOLVES_PROBLEMS_360",
+      "display_question_id": "[Q_SOLVES_PROBLEMS_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "217021a0-ab33-11ea-834e-4dc1ab30e385",
+          "template_name": "Glint 360 Solves Problems",
+          "action_plan_record_ids": [
+            "217021a0-ab33-11ea-834e-4dc1ab30e385:1",
+            "217021a0-ab33-11ea-834e-4dc1ab30e385:2",
+            "217021a0-ab33-11ea-834e-4dc1ab30e385:3"
+          ]
+        }
+      ]
+    },
+    "Q_SPEAK_UP": {
+      "question_id": "Q_SPEAK_UP",
+      "display_question_id": "[Q_SPEAK_UP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c",
+          "template_name": "Glint Speak My Mind",
+          "action_plan_record_ids": [
+            "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c:1",
+            "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c:2",
+            "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c:3"
+          ]
+        }
+      ]
+    },
+    "Q_STAFF": {
+      "question_id": "Q_STAFF",
+      "display_question_id": "[Q_STAFF]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_STRATEGY": {
+      "question_id": "Q_STRATEGY",
+      "display_question_id": "[Q_STRATEGY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "aa149c90-02af-11e8-a2b6-1ffcd873e43a",
+          "template_name": "Glint Strategy",
+          "action_plan_record_ids": [
+            "aa149c90-02af-11e8-a2b6-1ffcd873e43a:1",
+            "aa149c90-02af-11e8-a2b6-1ffcd873e43a:2",
+            "aa149c90-02af-11e8-a2b6-1ffcd873e43a:3",
+            "aa149c90-02af-11e8-a2b6-1ffcd873e43a:4"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM": {
+      "question_id": "Q_TEAM",
+      "display_question_id": "[Q_TEAM]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8ccdac70-08de-11e6-bacf-170ba1b0fcba",
+          "template_name": "Glint Team",
+          "action_plan_record_ids": [
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:1",
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:2",
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:3",
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:4",
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:5",
+            "8ccdac70-08de-11e6-bacf-170ba1b0fcba:6"
+          ]
+        }
+      ]
+    },
+    "Q_TEAMWORK": {
+      "question_id": "Q_TEAMWORK",
+      "display_question_id": "[Q_TEAMWORK]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_ACCOUNTABILITY": {
+      "question_id": "Q_TEAM_ACCOUNTABILITY",
+      "display_question_id": "[Q_TEAM_ACCOUNTABILITY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "58254c80-6819-11e7-87c8-95da01748934",
+          "template_name": "Glint Accountability Team",
+          "action_plan_record_ids": [
+            "58254c80-6819-11e7-87c8-95da01748934:1",
+            "58254c80-6819-11e7-87c8-95da01748934:2",
+            "58254c80-6819-11e7-87c8-95da01748934:3",
+            "58254c80-6819-11e7-87c8-95da01748934:4",
+            "58254c80-6819-11e7-87c8-95da01748934:5",
+            "58254c80-6819-11e7-87c8-95da01748934:6"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_CAMARADERIE": {
+      "question_id": "Q_TEAM_CAMARADERIE",
+      "display_question_id": "[Q_TEAM_CAMARADERIE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "fd4c9660-7bc8-11e7-b43c-e5402144143d",
+          "template_name": "Glint Camaraderie",
+          "action_plan_record_ids": [
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:1",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:2",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:3",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:4",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:5",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:6",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:7",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:8",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:9",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:10",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:11",
+            "fd4c9660-7bc8-11e7-b43c-e5402144143d:12"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_COLLABORATION": {
+      "question_id": "Q_TEAM_COLLABORATION",
+      "display_question_id": "[Q_TEAM_COLLABORATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "045cc4b0-d48b-11e6-acd7-9b7aac93a465",
+          "template_name": "Glint Collaboration",
+          "action_plan_record_ids": [
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:1",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:2",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:3",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:4",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:5",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:6",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:7",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:8",
+            "045cc4b0-d48b-11e6-acd7-9b7aac93a465:9"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_COMMUNICATION": {
+      "question_id": "Q_TEAM_COMMUNICATION",
+      "display_question_id": "[Q_TEAM_COMMUNICATION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8f73a960-6761-11e7-9adb-eb26b800804d",
+          "template_name": "Glint Communication Team",
+          "action_plan_record_ids": [
+            "8f73a960-6761-11e7-9adb-eb26b800804d:1",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:2",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:3",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:4",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:5",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:6",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:7",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:8",
+            "8f73a960-6761-11e7-9adb-eb26b800804d:9"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_CONFLICT": {
+      "question_id": "Q_TEAM_CONFLICT",
+      "display_question_id": "[Q_TEAM_CONFLICT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "9c4f9f10-6822-11e7-a495-f92fcfa97538",
+          "template_name": "Glint Conflict Resolution Team",
+          "action_plan_record_ids": [
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:1",
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:2",
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:3",
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:4",
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:5",
+            "9c4f9f10-6822-11e7-a495-f92fcfa97538:6"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_DECISIONS": {
+      "question_id": "Q_TEAM_DECISIONS",
+      "display_question_id": "[Q_TEAM_DECISIONS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "2813e6f0-65ad-11e7-aee6-eb6187f657d1",
+          "template_name": "Glint Decisions Team",
+          "action_plan_record_ids": [
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:1",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:2",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:3",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:4",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:5",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:6",
+            "2813e6f0-65ad-11e7-aee6-eb6187f657d1:7"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_FUN": {
+      "question_id": "Q_TEAM_FUN",
+      "display_question_id": "[Q_TEAM_FUN]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "e531a2c0-682a-11e7-b6a8-f9316d28d71d",
+          "template_name": "Glint Fun Team",
+          "action_plan_record_ids": [
+            "e531a2c0-682a-11e7-b6a8-f9316d28d71d:1",
+            "e531a2c0-682a-11e7-b6a8-f9316d28d71d:2",
+            "e531a2c0-682a-11e7-b6a8-f9316d28d71d:3",
+            "e531a2c0-682a-11e7-b6a8-f9316d28d71d:4",
+            "e531a2c0-682a-11e7-b6a8-f9316d28d71d:5"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_GOALS": {
+      "question_id": "Q_TEAM_GOALS",
+      "display_question_id": "[Q_TEAM_GOALS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "efab4a20-6759-11e7-b1b9-4f96c153485f",
+          "template_name": "Glint Goals Team",
+          "action_plan_record_ids": [
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:1",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:2",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:3",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:4",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:5",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:6",
+            "efab4a20-6759-11e7-b1b9-4f96c153485f:7"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_INCLUSION": {
+      "question_id": "Q_TEAM_INCLUSION",
+      "display_question_id": "[Q_TEAM_INCLUSION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "60351000-681d-11e7-8b6b-eddfdf1cfba6",
+          "template_name": "Glint Inclusion Team",
+          "action_plan_record_ids": [
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:1",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:2",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:3",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:4",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:5",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:6",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:7",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:8",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:9",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:10",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:11",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:12",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:13",
+            "60351000-681d-11e7-8b6b-eddfdf1cfba6:14"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_LEARN": {
+      "question_id": "Q_TEAM_LEARN",
+      "display_question_id": "[Q_TEAM_LEARN]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "36c89de0-6827-11e7-b0c4-45b48df307bf",
+          "template_name": "Glint Learn Team",
+          "action_plan_record_ids": [
+            "36c89de0-6827-11e7-b0c4-45b48df307bf:1",
+            "36c89de0-6827-11e7-b0c4-45b48df307bf:2",
+            "36c89de0-6827-11e7-b0c4-45b48df307bf:3",
+            "36c89de0-6827-11e7-b0c4-45b48df307bf:4",
+            "36c89de0-6827-11e7-b0c4-45b48df307bf:5"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_PURPOSE": {
+      "question_id": "Q_TEAM_PURPOSE",
+      "display_question_id": "[Q_TEAM_PURPOSE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "76f5a900-675d-11e7-b6aa-ab62409e7448",
+          "template_name": "Glint Purpose Team",
+          "action_plan_record_ids": [
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:1",
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:2",
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:3",
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:4",
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:5",
+            "76f5a900-675d-11e7-b6aa-ab62409e7448:6"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_TRUST": {
+      "question_id": "Q_TEAM_TRUST",
+      "display_question_id": "[Q_TEAM_TRUST]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "f3aaae10-6824-11e7-95bd-e5a91202bf89",
+          "template_name": "Glint Trust Team",
+          "action_plan_record_ids": [
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:1",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:2",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:3",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:4",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:5",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:6",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:7",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:8",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:9",
+            "f3aaae10-6824-11e7-95bd-e5a91202bf89:10"
+          ]
+        }
+      ]
+    },
+    "Q_TEAM_UNITED": {
+      "question_id": "Q_TEAM_UNITED",
+      "display_question_id": "[Q_TEAM_UNITED]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "ca8919e0-6829-11e7-95bd-e5a91202bf89",
+          "template_name": "Glint United Team",
+          "action_plan_record_ids": [
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:1",
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:2",
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:3",
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:4",
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:5",
+            "ca8919e0-6829-11e7-95bd-e5a91202bf89:6"
+          ]
+        }
+      ]
+    },
+    "Q_TIME": {
+      "question_id": "Q_TIME",
+      "display_question_id": "[Q_TIME]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_TOTAL_COMP": {
+      "question_id": "Q_TOTAL_COMP",
+      "display_question_id": "[Q_TOTAL_COMP]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_TRAINING": {
+      "question_id": "Q_TRAINING",
+      "display_question_id": "[Q_TRAINING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_TRANSLATES_STRATEGY_360": {
+      "question_id": "Q_TRANSLATES_STRATEGY_360",
+      "display_question_id": "[Q_TRANSLATES_STRATEGY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6",
+          "template_name": "Glint 360 Translates Strategy",
+          "action_plan_record_ids": [
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:1",
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:2",
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:3",
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:4",
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:5",
+            "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6:6"
+          ]
+        }
+      ]
+    },
+    "Q_TRANSPARENCY": {
+      "question_id": "Q_TRANSPARENCY",
+      "display_question_id": "[Q_TRANSPARENCY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "65209a00-7bb2-11e7-8b97-296222517dea",
+          "template_name": "Glint Transparency",
+          "action_plan_record_ids": [
+            "65209a00-7bb2-11e7-8b97-296222517dea:1",
+            "65209a00-7bb2-11e7-8b97-296222517dea:2",
+            "65209a00-7bb2-11e7-8b97-296222517dea:3",
+            "65209a00-7bb2-11e7-8b97-296222517dea:4",
+            "65209a00-7bb2-11e7-8b97-296222517dea:5"
+          ]
+        }
+      ]
+    },
+    "Q_TREATMENT_FAIRNESS": {
+      "question_id": "Q_TREATMENT_FAIRNESS",
+      "display_question_id": "[Q_TREATMENT_FAIRNESS]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "36d9c900-7bbc-11e7-a59b-294de3121110",
+          "template_name": "Glint Fairness",
+          "action_plan_record_ids": [
+            "36d9c900-7bbc-11e7-a59b-294de3121110:1",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:2",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:3",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:4",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:5",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:6",
+            "36d9c900-7bbc-11e7-a59b-294de3121110:7"
+          ]
+        }
+      ]
+    },
+    "Q_TREATMENT_INCLUSION": {
+      "question_id": "Q_TREATMENT_INCLUSION",
+      "display_question_id": "[Q_TREATMENT_INCLUSION]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "feaca180-7c4a-11e7-be4c-77c5e1facfc9",
+          "template_name": "Glint Inclusion",
+          "action_plan_record_ids": [
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:1",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:2",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:3",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:4",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:5",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:6",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:7",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:8",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:9",
+            "feaca180-7c4a-11e7-be4c-77c5e1facfc9:10"
+          ]
+        }
+      ]
+    },
+    "Q_TREATMENT_RESPECT": {
+      "question_id": "Q_TREATMENT_RESPECT",
+      "display_question_id": "[Q_TREATMENT_RESPECT]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "55683e80-7d45-11e7-991b-7fda66c32098",
+          "template_name": "Respect",
+          "action_plan_record_ids": [
+            "55683e80-7d45-11e7-991b-7fda66c32098:1",
+            "55683e80-7d45-11e7-991b-7fda66c32098:2",
+            "55683e80-7d45-11e7-991b-7fda66c32098:3",
+            "55683e80-7d45-11e7-991b-7fda66c32098:4",
+            "55683e80-7d45-11e7-991b-7fda66c32098:5",
+            "55683e80-7d45-11e7-991b-7fda66c32098:6",
+            "55683e80-7d45-11e7-991b-7fda66c32098:7",
+            "55683e80-7d45-11e7-991b-7fda66c32098:8"
+          ]
+        }
+      ]
+    },
+    "Q_TREATMENT_SAFETY": {
+      "question_id": "Q_TREATMENT_SAFETY",
+      "display_question_id": "[Q_TREATMENT_SAFETY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4a3b2e20-7c80-11e7-bf75-7709e841c22f",
+          "template_name": "Glint Physical Safety",
+          "action_plan_record_ids": [
+            "4a3b2e20-7c80-11e7-bf75-7709e841c22f:1",
+            "4a3b2e20-7c80-11e7-bf75-7709e841c22f:2"
+          ]
+        }
+      ]
+    },
+    "Q_TREATS_OTHERS_FAIRLY_360": {
+      "question_id": "Q_TREATS_OTHERS_FAIRLY_360",
+      "display_question_id": "[Q_TREATS_OTHERS_FAIRLY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f",
+          "template_name": "Glint 360 Treats Others Fairly",
+          "action_plan_record_ids": [
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:1",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:2",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:3",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:4",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:5",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:6",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:7",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:8",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:9",
+            "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:10"
+          ]
+        }
+      ]
+    },
+    "Q_URGENCY": {
+      "question_id": "Q_URGENCY",
+      "display_question_id": "[Q_URGENCY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_USES_CUSTOMER_FEEDBACK_360": {
+      "question_id": "Q_USES_CUSTOMER_FEEDBACK_360",
+      "display_question_id": "[Q_USES_CUSTOMER_FEEDBACK_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "7855f0b0-ab21-11ea-8622-cf48fbf31532",
+          "template_name": "Glint 360 Uses Customer Feedback",
+          "action_plan_record_ids": [
+            "7855f0b0-ab21-11ea-8622-cf48fbf31532:1"
+          ]
+        }
+      ]
+    },
+    "Q_VALUED_TEAMMATE": {
+      "question_id": "Q_VALUED_TEAMMATE",
+      "display_question_id": "[Q_VALUED_TEAMMATE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "5e84e8a0-6920-11ea-b87f-7567d4c455c2",
+          "template_name": "Glint Valued Teammate",
+          "action_plan_record_ids": [
+            "5e84e8a0-6920-11ea-b87f-7567d4c455c2:1"
+          ]
+        }
+      ]
+    },
+    "Q_VALUES": {
+      "question_id": "Q_VALUES",
+      "display_question_id": "[Q_VALUES]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "4cc8f3c0-efd5-11e7-a087-374542109b2c",
+          "template_name": "Glint Values",
+          "action_plan_record_ids": [
+            "4cc8f3c0-efd5-11e7-a087-374542109b2c:1",
+            "4cc8f3c0-efd5-11e7-a087-374542109b2c:2"
+          ]
+        }
+      ]
+    },
+    "Q_VARIETY": {
+      "question_id": "Q_VARIETY",
+      "display_question_id": "[Q_VARIETY]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_WELL-BEING": {
+      "question_id": "Q_WELL-BEING",
+      "display_question_id": "[Q_WELL-BEING]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_WHITE_SPACE": {
+      "question_id": "Q_WHITE_SPACE",
+      "display_question_id": "[Q_WHITE_SPACE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_WORKLOAD": {
+      "question_id": "Q_WORKLOAD",
+      "display_question_id": "[Q_WORKLOAD]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_WORKSPACE": {
+      "question_id": "Q_WORKSPACE",
+      "display_question_id": "[Q_WORKSPACE]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+          "template_name": "Glint Default Action Template",
+          "action_plan_record_ids": [
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:1",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:2",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:3",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:4",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:5",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:6",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:7",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:8",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:9",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:10",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:11",
+            "c51a8320-1113-11e8-88bd-7f2a388dbffb:12"
+          ]
+        }
+      ]
+    },
+    "Q_WORKS_COLLABORATIVELY_360": {
+      "question_id": "Q_WORKS_COLLABORATIVELY_360",
+      "display_question_id": "[Q_WORKS_COLLABORATIVELY_360]",
+      "candidate_sets": [
+        {
+          "action_plan_template_uuid": "b442f390-ab88-11ea-840d-47c750a2f6e5",
+          "template_name": "Glint 360 Works Collaboratively",
+          "action_plan_record_ids": [
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:1",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:2",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:3",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:4",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:5",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:6",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:7",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:8",
+            "b442f390-ab88-11ea-840d-47c750a2f6e5:9"
+          ]
+        }
+      ]
+    }
+  }
+}

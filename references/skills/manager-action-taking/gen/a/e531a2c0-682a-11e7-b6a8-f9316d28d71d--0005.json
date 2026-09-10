@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "e531a2c0-682a-11e7-b6a8-f9316d28d71d:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_FUN"
+  ],
+  "source_question_id_cell": "[Q_TEAM_FUN]",
+  "action_plan_template_uuid": "e531a2c0-682a-11e7-b6a8-f9316d28d71d",
+  "template_name": "Glint Fun Team",
+  "sequence": 5,
+  "focus_area_title": "Build Stronger Connections Among Your Team",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal here is to develop stronger relationships that are a balance between personal and professional, including with team members that are geographically dispersed.\n\n ### Develop personal connections\n\n Seek opportunities to understand each team member. Get to know their likes, values, and goals. Share your own interests. Have lunch, or an informal virtual chat, with a different person from your team each week.\n\n ### Have fun\n\n In addition to aiming to have some fun while working, also participate in or create opportunities to have fun as a team when work isn't the focus. Team leaders could organize happy hours or other casual events that let the team get to know each other better. If geographically dispersed, then time together in person periodically is important. If expense restrictions don't allow travel, then reserve time for having fun conversations for 20 minutes on a call every month.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-07T09:40:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glennllopis/2013/09/23/6-ways-to-make-your-leadership-and-workplace-fun-again",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3014585/how-to-be-a-success-at-everything/10-ways-to-make-your-office-more-fun",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/659698/ten-ways-inject-fun-workplace",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3028465/work-smart/10-surprising-ways-to-transform-your-creative-thinking",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 532,
+    "source_record_number": "528"
+  }
+}

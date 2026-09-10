@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_RECOGNITION"
+  ],
+  "source_question_id_cell": "[Q_GPS_RECOGNITION]",
+  "action_plan_template_uuid": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327",
+  "template_name": "Glint Recognition - GPS",
+  "sequence": 4,
+  "focus_area_title": "Allow Staff to Nominate Peer for Safety Recognition",
+  "content_type": "mixed",
+  "action_type": "recognition_and_motivation",
+  "selection_signals": [
+    "recognition_and_motivation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why is it Important?\n\nProviding recognition for contributions to safety is a powerful tool that can demonstrate to staff your organization's commitment to ensuring safe care. One way to highlight safety is through the use of peer nominations. Accept nominations for any staff who have demonstrated a commitment to keeping patients safe by:\n\n- Speaking up about potential safety hazards\n\n- Demonstrating a commitment to supporting or leading organizational safety initiatives\n\n- Going above and beyond when it comes to ensuring patient safety\n- Consistently showing a 'patient first' mentality\n\nMake sure that the nomination form is simple, easy to find, and that all staff are aware of the award and know how to access it.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:43:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.safetyandhealthmagazine.com/articles/designing-a-safety-incentive-program-2",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.linkedin.com/learning/emerging-leader-foundations/recognize-and-reward-team-performance?autoplay=true&u=104",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.reliasmedia.com/articles/142186-meaningful-recognition-fights-nurse-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.infectioncontroltoday.com/view/rewarding-employees-good-behavior-can-improve-infection-prevention",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehstoday.com/safety/article/21912352/the-truth-about-safety-incentives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ashp.org/news/2018/01/12/safety-culture-includes-good-catches?loginreturnUrl=SSOCheckOnly",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 719,
+    "source_record_number": "715"
+  }
+}

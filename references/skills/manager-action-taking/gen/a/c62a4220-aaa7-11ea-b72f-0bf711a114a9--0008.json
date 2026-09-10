@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "c62a4220-aaa7-11ea-b72f-0bf711a114a9:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_FOCUSES_UNDER_STRESS_360"
+  ],
+  "source_question_id_cell": "[Q_FOCUSES_UNDER_STRESS_360]",
+  "action_plan_template_uuid": "c62a4220-aaa7-11ea-b72f-0bf711a114a9",
+  "template_name": "Glint 360 Focuses Under Stress",
+  "sequence": 8,
+  "focus_area_title": "Develop a Habit of Recognizing People Who Take Risks",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Initiative Action Item",
+  "content_text_body": "Recognizing and thanking your team members for taking appropriate risks that have the potential to improve the company is one of the simplest and most effective ways to promote effective risk-taking behavior among your team. The goal is to create a regular cadence for doing this. \n\nFor starters, read this brief article on [How to Recognize Game-Changing Ideas](https://www.inc.com/will-yakowicz/heres-why-you-are-really-bad-at-recognizing-great-ideas.html).\n\nTry to come up with innovative ways to recognize and reward innovation. To get some ideas, read this article on [How to Reward Great Ideas](https://www.inc.com/guides/201107/how-to-reward-employees-great-ideas.html).\n\n### For one week, just observe\n\nJot down all of your team's innovative actions or risks that deserve recognition. Review the list at the end of each day.\n\n### Practice every day\n\nConsistently say \"thank you\u00e2\u20ac\u009d for all creative efforts. \n\nLet your team know what they did, why it was important for the team and the business - and whenever possible - what others are saying about it. \n\n### Get your team involved\n\nYour team may interact with each other more than they interact with you. Ask your team to acknowledge each other for taking informed risks. Create a culture where everyone values forward-thinking actions.\n\n### Create a feedback loop\n\nAsk your team to give you feedback at the end of each week on how consistently you're supporting risk-taking behavior.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-08T07:59:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/danschawbel/2015/06/29/why-workplace-flexibility-is-the-linchpin-to-employee-happiness/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/3-small-things-every-person-can-do-to-reduce-stress-in-their-office",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnhall/2014/03/10/11-simple-ways-to-show-your-employees-you-care",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/pressure-doesnt-have-to-turn-into-stress",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lisaquast/2015/11/08/8-signs-that-you-could-be-accidentally-over-working-your-team/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://greatergood.berkeley.edu/article/item/five_science_backed_strategies_to_build_resilience",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "How to Recognize Game-Changing Ideas",
+      "url": "https://www.inc.com/will-yakowicz/heres-why-you-are-really-bad-at-recognizing-great-ideas.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "How to Reward Great Ideas",
+      "url": "https://www.inc.com/guides/201107/how-to-reward-employees-great-ideas.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 119,
+    "source_record_number": "115"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2ef718f0-85d7-11ea-afa7-4d1a01993311:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_MANAGER_SUPPORT"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_MANAGER_SUPPORT]",
+  "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+  "template_name": "Glint Distress - Manager Support",
+  "sequence": 1,
+  "focus_area_title": "Encourage Your Team to Ask for Help",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal is to create an environment at work where people feel that it's okay to ask each other for support. In difficult times, a supportive environment is even more important. Acknowledge the uncertainty and anxiety that arise in difficult circumstances. Establish a culture in which your team members are more likely to support each other by working together to get tasks done. Encourage individuals to ask for help when needed. Ask for help yourself when needed.\n\nEncourage team brainstorming on how to maintain focus on high priority items, and engage in frequent communications to check on progress and changing circumstances.\n\nAs new items are added to your team's plate, communicate to your management and to the team any impact the new item has on the order of priorities. Consider any internal or external dependencies and how they may affect your team's ability to get tasks completed in the timeframe expected. Work with your team to review and update the priority list as needed.\n\n### Balance speed and quality\n\nPart of prioritizing is determining how quickly a task needs to be done, and the level of quality it requires. Quality can suffer when work is rushed, so for each task clearly communicate your expectations. \n\n### Knowledge sharing\n\nShare your expertise and experiences with your team and ask that they share theirs so the team's expertise as a whole is lifted, and everyone knows the experts are in certain areas to help make asking for (and seeking) help easier for everyone.\n\n### Create a priority list\n\nBe clear about the order in which you think things should be done and then discuss and finalize with your team. As new items are added to your team's plate, communicate to your management and to the team any impact the new item has on the order of priorities. Consider any internal or external dependencies and how they may affect your team's ability to get tasks completed in the timeframe expected. Work with your team to review and update the priority list as needed.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/susan-steinbrecher/workplace-meltdown-8-ways-to-help-someone-in-distress.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/help-your-team-manage-stress-anxiety-and-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 449,
+    "source_record_number": "445"
+  }
+}

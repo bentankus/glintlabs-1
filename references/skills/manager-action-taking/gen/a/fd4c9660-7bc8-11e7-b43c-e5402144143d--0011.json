@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fd4c9660-7bc8-11e7-b43c-e5402144143d:11",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_CAMARADERIE"
+  ],
+  "source_question_id_cell": "[Q_TEAM_CAMARADERIE]",
+  "action_plan_template_uuid": "fd4c9660-7bc8-11e7-b43c-e5402144143d",
+  "template_name": "Glint Camaraderie",
+  "sequence": 11,
+  "focus_area_title": "Communicating: When to speak up",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/teamwork-foundations-2020/communicating-when-to-speak-up?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:41:00+00:00",
+  "video_extract": "LiL2_When_to_speak_up",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Communicating: When to speak up",
+      "url": "https://www.linkedin.com/learning/embed/teamwork-foundations-2020/communicating-when-to-speak-up?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/1834912/5-biggest-mistakes-youre-making-work-relationships",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/12/the-intangible-things-employees-want-from-employers",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2009/07/rebuilding-companies-as-communities",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/kevinkruse/2014/09/29/employee-resource-groups-ergs-employee-engagement/#7138e97f1bd7",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/womensmedia/2014/12/01/how-to-improve-your-relationships-at-work/#381e91b847a2",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 287,
+    "source_record_number": "283"
+  }
+}

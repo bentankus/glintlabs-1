@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "55683e80-7d45-11e7-991b-7fda66c32098:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATMENT_RESPECT"
+  ],
+  "source_question_id_cell": "[Q_TREATMENT_RESPECT]",
+  "action_plan_template_uuid": "55683e80-7d45-11e7-991b-7fda66c32098",
+  "template_name": "Respect",
+  "sequence": 5,
+  "focus_area_title": "Establish Expectations of Considerate Behavior on the Team",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Your team members and coworkers deserve to be treated with respect by you, their peers, management, and other people they work with. They have unique rights, opinions, wishes, experience, and competence that are worthy of regard.\n\nFostering a considerate, professional environment means setting clear expectations for how team members should treat each other. Doing so will ensure that each member can perform to his/her best and feel a sense of belonging on the team.\n\n### Set expectations\n\nHow do you want to be treated at work? How do you want your employees to feel on the job?\n\n \n\nCall your team together and share your desire for professional conduct and treatment on the team during all interactions and at all times. Discuss your expectations of positive behaviors like courtesy, politeness, and kindness; and negative behaviors like constant criticism, insulting comments and put-downs, demeaning or patronizing attitudes.\n\n \n\nGive examples that illustrate how some negative behaviors might, to some, seem trivial (\"we're just kidding around\u00e2\u20ac\u009d); but over time, they erode trust and morale, which may result in a hostile work environment. This is not how you want your team to perform.\n\n \n\nPoint out that respect can also be communicated nonverbally through one's body language, tone of voice, demeanor, and expressions. \n\n \n\nCheck to ensure that everyone understands your expectations. Commit that you will \"lead by example\u00e2\u20ac\u009d and will not tolerate disrespectful behavior. Invite everyone on the team call it out when they observe less that professional conduct.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-12-13T08:24:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.glassdoor.com/employers/blog/10-reasons-employees-resign/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/davidsturt/2016/10/25/how-to-build-respect-with-difficult-people/#6af67ef2392b",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.thebalance.com/how-to-demonstrate-respect-in-the-workplace-1919376",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3050242/10-ways-to-become-a-better-listener",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.monster.com/career-advice/article/gain-respect-as-a-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 827,
+    "source_record_number": "823"
+  }
+}

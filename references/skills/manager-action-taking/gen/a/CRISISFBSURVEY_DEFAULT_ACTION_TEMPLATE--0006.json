@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESPONSE]",
+  "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+  "template_name": "CrisisFBSurvey_Default_Action_Template",
+  "sequence": 6,
+  "focus_area_title": "Plan How You're Going to Tackle Your Priorities",
+  "content_type": "guide",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance"
+  ],
+  "content_description": "",
+  "content_text_body": "* Agree what you want to do to make things better. Keep the actions simple and focused, with concrete outcomes; this is not a time to add a long list of new initiatives to everyone's plate.\n\n* Decide when and how you'll check in on progress, to keep you all focused and excited.\n\n* If there is going to be another rapid pulse check soon, build your timelines and actions on that basis and let the team know.\n\n* Consider what resources may be needed - budget, reallocation of resources, outside help.\n\n* Above all, keep it simple. Don't overcommit and underdeliver.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 13,
+    "source_record_number": "9"
+  }
+}

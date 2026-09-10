@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "da797b60-e0ad-11ea-9614-2b26f428f070:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_ROOT_CAUSE"
+  ],
+  "source_question_id_cell": "[Q_GPS_ROOT_CAUSE]",
+  "action_plan_template_uuid": "da797b60-e0ad-11ea-9614-2b26f428f070",
+  "template_name": "Glint Root Cause - GPS",
+  "sequence": 6,
+  "focus_area_title": "Consider the Workplace Environment a Precursor to Safety",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why is it important?  \n \nIndustries that operate around the clock share common challenges to meet workplace staffing demands. Organizational staffing practices are increasingly being scrutinized against measures of performance and employee well-being, enhancing the understanding of this relationship. While health care organizations providing 24-hour care have always faced staffing challenges, several trends since the late 1970s, including nursing shortages, increased patient acuity, and rapid admission-discharge cycles, have influenced management practices. Specifically, shifts for nurses have often increased from the traditional 8-hour rotation to 10-12 hours in length and often do not follow traditional patterns of day, evening, and night shifts.\n \nNoted across diverse safety-sensitive industries, work factors associated with increased risks for poor employee well-being and performance errors include shift work, rotating shifts and night shifts, extended work hours (more than 12 hours in a 24-hour period), overtime, excessive workloads. Research on the effects of shift work, extended work hours, nighttime shifts, insufficient or nonexistent work breaks, inadequate rest between tours of duty, and heavy workloads documents elevated risks. These work factors may be associated with outcomes for employee well-being and performance that include the following:\n \n- Fatigue and exhaustion\n- Sleep deprivation\n- Slowed reaction time\n- Lapses of attention to detail\n- Compromised problem solving\n- Occupational injuries\n- Increased incidence of error\n \nThese types of outcomes contribute to occupational injuries and accidents, as well as safety and performance errors. For example, fatigue is associated with cognitive, psychomotor, and behavioral impairment. Further, heavy workloads and inadequate staffing levels place emotional demands on staff and contribute to the risk of burnout, another significant factor in predicting employee well-being, satisfaction, and turnover, but also in predicting safety incidents.\n \n### Workforce and Working Condition Interventions to Improve Worker Well-being and Patient Safety\n \n#### For Healthcare Organization Management and Administration\n\n- Collect and analyze data to identify patterns on work hours for health care workers, as well as overtime, scheduling patterns, absenteeism, workers compensation claims, turnover, and employee satisfaction; collect and analyze error reports and adverse events for patients\n \n- Ensure compliance with established hours-of-service regulations\n \n- Eliminate mandatory overtime and monitor voluntary overtime practices\n \n- Work with staff nurses to develop flexible staffing strategies\n \n- Assess the organization's hand-off processes and procedures (high safety risk practice) to ensure that they adequately protect patients\n \n- Create and implement a fatigue management plan that includes scientific strategies for fighting fatigue (engaging in conversation with others, doing something that involves physical action, strategic caffeine consumption, taking short naps of less than 45 minutes)\n \n- Educate staff about sleep hygiene and the effects of fatigue on patient safety\n \n- Provide opportunities for staff to express concerns about fatigue. Support staff when appropriate concerns about fatigue are raised and take action to address those concerns\n \n- Educate all staff on the importance of rest and meal breaks\n \n- Encourage teamwork as a strategy to support staff who work extended work shifts or hours and to protect patients from potential harm (such as independent second checks for critical tasks or complex patients)\n \n#### For Healthcare Workers\n\n- Be aware of the work environment and voice safety concerns, including those around staffing and fatigue\n \n- Limit voluntary overtime to recommended hours of service per week\n \n- Evaluate the impact of working multiple jobs on personal health and fatigue\n \n- Recognize obligation to patient safety and personal health by declining assi",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2020-11-30T11:12:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://youtu.be/JL5GTxDzApk",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/how-one-hospital-improved-patient-safety-in-10-minutes-a-day",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/ehrs/taking-a-systems-approach-to-improve-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/assetmanager/humanfactorsthe_sourcepdf.pdf?db=web&hash=085A09275C38FACB50BC3D92CB35450A",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/npsf-8-tips-to-create-a-total-systems-approach-to-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/systems-approach",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/checklists",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 760,
+    "source_record_number": "756"
+  }
+}

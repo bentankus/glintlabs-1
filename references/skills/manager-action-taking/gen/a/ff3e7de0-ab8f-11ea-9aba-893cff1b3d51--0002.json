@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MODELS_VALUES_360"
+  ],
+  "source_question_id_cell": "[Q_MODELS_VALUES_360]",
+  "action_plan_template_uuid": "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51",
+  "template_name": "Glint 360 Models Values",
+  "sequence": 2,
+  "focus_area_title": "Learn What Your Team Members Value",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "When accomplishments are recognized in ways that don't match what people expect, they may not feel adequately acknowledged for their efforts. The goal is to understand how your team would like to be recognized for their work so that they feel appreciated.\n\n### Find out how your team wants to be recognized\n\nAsk team members the following questions to help you determine how each person prefers to be recognized at work:\n\n* Do they want to be recognized publicly or in private? \n\n* Do they prefer official awards or would a simple \"thank you\u00e2\u20ac\u009d do? \n\n* Do they prefer regular small acts of recognition for the efforts they regularly put in or do they prefer less frequent but bigger acts of recognition for completing important projects? \n\nEach person on your team is likely to differ in terms of what they find rewarding. Tailor your recognition to each person to increase their feeling of reward.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:13:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2002/07/make-your-values-mean-something",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/dorieclark/2013/12/12/how-to-align-your-life-with-your-values",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/paulspiegelman/2016/03/22/values-dont-matter-unless-youre-living-them",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3028201/leadership-now/5-reasons-you-need-to-instill-values-in-your-organization",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/cywakeman/2015/05/15/less-talk-more-action-5-new-realities-for-todays-workforce",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/02/how-to-build-a-passionate-company",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 163,
+    "source_record_number": "159"
+  }
+}

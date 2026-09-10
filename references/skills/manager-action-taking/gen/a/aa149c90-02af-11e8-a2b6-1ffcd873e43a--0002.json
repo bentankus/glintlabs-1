@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "aa149c90-02af-11e8-a2b6-1ffcd873e43a:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_STRATEGY"
+  ],
+  "source_question_id_cell": "[Q_STRATEGY]",
+  "action_plan_template_uuid": "aa149c90-02af-11e8-a2b6-1ffcd873e43a",
+  "template_name": "Glint Strategy",
+  "sequence": 2,
+  "focus_area_title": "Be a Link Between Senior Leaders and Your Team",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Employees who have access to key decision makers tend to trust their company more. The goal is to help your team and senior leaders feel connected even though they might not interact frequently.\n\n ### Collect and share stories\n\n Look for examples of leaders' actions that show their personal side and convey the right company values.\n\n Do the same with your team. Capture stories where they've overcome big challenges, worked together to pull off the impossible, and learned or built confidence from failures.\n\n Share positive stories about senior leaders with your team and vice versa. This will help each group understand the other and feel a sense of shared success.\n\n ### Be an Effective Advocate\n\n To be an advocate for your team, you must understand each team member's experiences and needs and seek out the appropriate support for them.\n\n Practice asking your team members how they are doing, if they need any support, and what concerns they have about the business.\n\n Ask them to help you build a case for any resources they may need.\n\n Make a commitment to them to secure necessary resources from senior leaders and to pass along their concerns about the business. Be specific about when and how you will do that. And be clear and concise about when and why you chose not to pursue a particular request.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T14:15:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/08/eight-ways-to-energize-your-te",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/01/being-a-strategic-leader-is-about-asking-the-right-questions",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/make-strategic-thinking-part-of-your-job",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/a-better-way-to-set-strategic-priorities",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/01/the-stretch-goal-paradox",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 767,
+    "source_record_number": "763"
+  }
+}

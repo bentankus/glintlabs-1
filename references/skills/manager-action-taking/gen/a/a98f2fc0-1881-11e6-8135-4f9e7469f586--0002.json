@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "a98f2fc0-1881-11e6-8135-4f9e7469f586:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GLINT_EXEC_LEADERSHIP",
+    "Q_LEADERSHIP_CONFIDENCE"
+  ],
+  "source_question_id_cell": "[Q_GLINT_EXEC_LEADERSHIP, Q_LEADERSHIP_CONFIDENCE]",
+  "action_plan_template_uuid": "a98f2fc0-1881-11e6-8135-4f9e7469f586",
+  "template_name": "Glint Leadership",
+  "sequence": 2,
+  "focus_area_title": "What Does it Mean to Communicate Values",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/communicating-values/what-does-it-mean-to-communicate-values?claim=AQGsX1J2k6Qw2wAAAXBfPySDlwLlN0LqB14KbpQO7I3E_Sf2tD1hULcjAAFNtDuTxh_mX3w2CxP4SwkLH7NyfrTOqKM-cR8aNWKT7jNONXxBaCYJU6glCNfQXF7e-GxROVQcalyuFmMVZcI9Jpr5-xFb7P-czmNBqvK0sF6SXafoCQSK4daxzKGL98U4iLtC-Iq0wkTmG0nIph9YXmDPQ9NB7tPXn9GygOkFVfqwmmVMe-DO5i6tuCTL7iAMjZaL2FJbstoytW_NvrHHOyfmYG0Or8nc3WAuchM_94QzIx0QZ01VXZeEbVi7MZyB6HbwIP3L83WIyxjMTszjrEsGtv01Mp2QU8gBDTK-7tE-q6H7sXWS_hBPCTrzRs93GHn456Q4clrtRqS6fQaClIfsABCLJtX9s4d6us8Q6YsJDkPdXjQ3y5OWjP-72wEArzf2-KzR0fWMnPUwzQpiHIYbvL8vWuugzYRmA0SyzGqnmHMUDezzOSZAHGTyBgfe2tqTnHBx15RIITkF06dutxJGwcvBhXNO4znyLjN3lcwVebC0yKpDz3mGa-2KeTpVX8IdWPcK0ALDyoQdBnaPEenEZqWDVl0m-LDOe93WjTSprWJLsQM56aOA0xey_jw8QFc723H80HCgjbuHrXPqf1u5EznRwNMLg1Rl-FnH6EtPAPr69DI3jSy1m8TKEzDcFHw1e4k43SZzPM6Hdt7mG-ZFZnpqKb1JGftxbhQrE1BMtNVmVTU",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-21T07:57:00+00:00",
+  "video_extract": "LiL3_Communicate_Values",
+  "resources": [
+    {
+      "type": "video",
+      "title": "What Does it Mean to Communicate Values",
+      "url": "https://www.linkedin.com/learning/embed/communicating-values/what-does-it-mean-to-communicate-values?claim=AQGsX1J2k6Qw2wAAAXBfPySDlwLlN0LqB14KbpQO7I3E_Sf2tD1hULcjAAFNtDuTxh_mX3w2CxP4SwkLH7NyfrTOqKM-cR8aNWKT7jNONXxBaCYJU6glCNfQXF7e-GxROVQcalyuFmMVZcI9Jpr5-xFb7P-czmNBqvK0sF6SXafoCQSK4daxzKGL98U4iLtC-Iq0wkTmG0nIph9YXmDPQ9NB7tPXn9GygOkFVfqwmmVMe-DO5i6tuCTL7iAMjZaL2FJbstoytW_NvrHHOyfmYG0Or8nc3WAuchM_94QzIx0QZ01VXZeEbVi7MZyB6HbwIP3L83WIyxjMTszjrEsGtv01Mp2QU8gBDTK-7tE-q6H7sXWS_hBPCTrzRs93GHn456Q4clrtRqS6fQaClIfsABCLJtX9s4d6us8Q6YsJDkPdXjQ3y5OWjP-72wEArzf2-KzR0fWMnPUwzQpiHIYbvL8vWuugzYRmA0SyzGqnmHMUDezzOSZAHGTyBgfe2tqTnHBx15RIITkF06dutxJGwcvBhXNO4znyLjN3lcwVebC0yKpDz3mGa-2KeTpVX8IdWPcK0ALDyoQdBnaPEenEZqWDVl0m-LDOe93WjTSprWJLsQM56aOA0xey_jw8QFc723H80HCgjbuHrXPqf1u5EznRwNMLg1Rl-FnH6EtPAPr69DI3jSy1m8TKEzDcFHw1e4k43SZzPM6Hdt7mG-ZFZnpqKb1JGftxbhQrE1BMtNVmVTU",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/erikaandersen/2012/06/05/courageous-leaders-dont-make-excuses-they-apologize/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ekaterinawalter/2015/12/01/12-leadership-behaviors-that-build-team-trust/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/12/only-8-of-leaders-are-good-at-both-strategy-and-execution",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/02/theres-a-proven-link-between-effective-leadership-and-getting-enough-sleep",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/a-10-year-study-reveals-what-great-executives-know-and-do",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 607,
+    "source_record_number": "603"
+  }
+}

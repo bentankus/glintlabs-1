@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "76f5a900-675d-11e7-b6aa-ab62409e7448:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_PURPOSE"
+  ],
+  "source_question_id_cell": "[Q_TEAM_PURPOSE]",
+  "action_plan_template_uuid": "76f5a900-675d-11e7-b6aa-ab62409e7448",
+  "template_name": "Glint Purpose Team",
+  "sequence": 4,
+  "focus_area_title": "Express Your Gratitude",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "One of the simplest ways to help your team members find meaning in their work is to tell them that their work is meaningful to you. The goal here is to thank team members for their efforts and let them know that their work has made a positive impact on the team's work, the organization's goals, or even on your life.\n\n### Observe others\n\nFor one week, everyone on the team should pay attention to every other team member's efforts and successes. Everyone should attempt to call out or privately praise every other teammate at least once.\n\n### Create a culture that strives to find meaning\n\nTeam members should do their part to create a culture where meaning in the work the team is doing is discussed on a regular basis. If the team is having trouble, ask for advice from the team leader or manager who should be able to help make those connections.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-08T03:34:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/stop-mindlessly-going-through-your-work-day",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://greatergood.berkeley.edu/article/item/five_ways_to_cultivate_gratitude_at_work",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/find-purpose-in-even-your-most-mundane-tasks-at-work",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://greatergood.berkeley.edu/article/item/can_higher_purpose_help_your_team_survive_and_thrive",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/youre-never-done-finding-purpose-at-work",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 699,
+    "source_record_number": "695"
+  }
+}

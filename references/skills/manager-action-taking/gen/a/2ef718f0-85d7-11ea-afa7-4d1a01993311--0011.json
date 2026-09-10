@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2ef718f0-85d7-11ea-afa7-4d1a01993311:11",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_MANAGER_SUPPORT"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_MANAGER_SUPPORT]",
+  "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+  "template_name": "Glint Distress - Manager Support",
+  "sequence": 11,
+  "focus_area_title": "Build psychological safety for your team",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Take this learning path to learn how to cultivate psychological safety on your team",
+  "content_text_body": "This module defines psychological safety, describes why it's important, and provides guidance on how to recognize it on teams.\n\n[Psychological safety for managers](https://learn.microsoft.com/en-us/training/modules/viva-glint-psychological-safety/ \"Psychological safety for managers\")",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/susan-steinbrecher/workplace-meltdown-8-ways-to-help-someone-in-distress.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/help-your-team-manage-stress-anxiety-and-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Psychological safety for managers",
+      "url": "https://learn.microsoft.com/en-us/training/modules/viva-glint-psychological-safety/ \"Psychological safety for managers\"",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 459,
+    "source_record_number": "455"
+  }
+}

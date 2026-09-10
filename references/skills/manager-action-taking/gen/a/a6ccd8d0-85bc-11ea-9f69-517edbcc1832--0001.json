@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_WELL-BEING"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_WELL-BEING]",
+  "action_plan_template_uuid": "a6ccd8d0-85bc-11ea-9f69-517edbcc1832",
+  "template_name": "Glint Distress - Well-being",
+  "sequence": 1,
+  "focus_area_title": "Cultivate a Caring Culture During Times of Stress",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Employees who feel valued and cared for are more likely to be engaged, feel happier in their roles, and go the extra mile for the success of the company. This is especially true during challenging and stressful times. Everyday actions can mark a difference in the lives of your employees, so your goal is to nurture a culture of caring where your team members feel safe, included and appreciated. \n\nFirst, read these articles on [keeping your team focused during uncertain times](https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times) and [ways to build a culture of caring](https://www.inc.com/adam-fridman/5-ways-to-build-a-culture-of-caring.html) to recognize which recommendations you can start implementing with your team.\n\n### Acknowledge uncertain times\nDuring challenging times employees are worried about their country, their family, the future of the company and their job. This is not a time to carry on with business as usual. Instead, directly acknowledge that things are chaotic and unpredictable at the moment.  If you're feeling stressed, admit it, or talk about previous situations in which you've felt anxiety, so they know they're not alone. At the same time, don't get stuck in a negative spiral. Acknowledge how people are feeling, but then move on to talk about how you want to act as a team. \n\n### Remember to encourage your employees to be their best \nTo do this, you need to connect with them. Take time to know them and learn about their concerns, aspirations, and career goals. Empower them by providing them with tools that can help them move forward in their professional pathways. Recommend development opportunities including workshops, mentoring sessions, academic programs, etc. \n\n### Show you care about their personal lives\nFirst, encourage them to have some self-compassion and acknowledge that stress is a normal, physiological response to feeling out of control or threatened. Help them with personal situations to the best of your abilities. For example, be flexible with the work schedule and workplace if this can alleviate a personal situation they are experiencing. Let them know you understand the importance of a healthy work-life balance and make extra time to check in and have meaningful dialogue.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/help-your-team-manage-stress-anxiety-and-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/alankohll/2020/03/22/how-to-help-employees-cope-with-covid-19/#768263b44cbd",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://blogs.ohsu.edu/occupational-health-sciences/2020/03/25/4-key-strategies-to-help-supervisors-support-employee-well-being-during-covid-19/?fbclid=IwAR2UyOAeOpG8dJhH_XdUDAscmoE7MBEfHU4NA3ndhdUrgqM-YNx0SgLyF9Q",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/11/making-work-less-stressful-and-more-engaging-for-your-employees",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "keeping your team focused during uncertain times",
+      "url": "https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "ways to build a culture of caring",
+      "url": "https://www.inc.com/adam-fridman/5-ways-to-build-a-culture-of-caring.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 473,
+    "source_record_number": "469"
+  }
+}

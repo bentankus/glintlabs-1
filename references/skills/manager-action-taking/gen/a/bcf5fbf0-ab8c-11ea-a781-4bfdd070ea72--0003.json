@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DRIVES_ACCOUNTABILITY_360"
+  ],
+  "source_question_id_cell": "[Q_DRIVES_ACCOUNTABILITY_360]",
+  "action_plan_template_uuid": "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72",
+  "template_name": "Glint 360 Drives Accountability",
+  "sequence": 3,
+  "focus_area_title": "Set the Proper Stage for Feedback",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "When employees rate Feedback negatively, it's often a result of spotty weekly meetings and unclear performance objectives.\n\n### Schedule weekly meetings\n\nIf you are not having weekly check-in's with your team to review the past week's activities and plan for next week's, schedule them now. Here's a helpful [Weekly Meeting Agenda](Glint_Feedback_Weekly_Meeting_Agenda).\n\n \n\n### Review performance goals\n\nTake a look at each person's quarterly or longer-term goals and ask yourself:\n\n> Are the goals clear and easy to understand? \n\n> Are there measurable results tied to them? \n\n> Is the priority order clear to your team members? \n\nIf not, make all goals clear and measurable, and discuss them until you and the team understand what they are, what success looks like, and how performance is measured.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/the-right-way-to-hold-people-accountable",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/victorlipman/2016/03/24/the-best-managers-always-hold-people-accountable/#3449795a28c8",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3050453/hit-the-ground-running/how-to-create-an-environment-of-collaboration",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2020/02/does-your-team-have-an-accountability-problem",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/gordon-tredgold/the-1-mistake-managers-when-holding-their-staff-accountable.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/how-spotify-balances-employee-autonomy-and-accountability",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Weekly Meeting Agenda",
+      "url": "",
+      "target": "Glint_Feedback_Weekly_Meeting_Agenda",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 80,
+    "source_record_number": "76"
+  }
+}

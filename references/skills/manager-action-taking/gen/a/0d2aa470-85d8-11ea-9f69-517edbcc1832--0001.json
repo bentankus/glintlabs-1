@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "0d2aa470-85d8-11ea-9f69-517edbcc1832:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_PRECAUTIONS"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_PRECAUTIONS]",
+  "action_plan_template_uuid": "0d2aa470-85d8-11ea-9f69-517edbcc1832",
+  "template_name": "Glint Distress - Team Precautions",
+  "sequence": 1,
+  "focus_area_title": "Help the Team Plan",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "In uncertain times, managers need to directly address issues and concerns with empathy and honesty. Acknowledge the uncertainty and anxiety that arise in difficult circumstances. Encourage team brainstorming on how to maintain focus on high priority items, and engage in frequent communications to check on progress and changing circumstances.\n\nDetermine the most important actions to mitigate negative consequences of difficult circumstances and then prioritize them. Gain full commitment of the team to these priorities.\n\n### Create a priority list\nBe clear about the order in which you think things should be done and then discuss and finalize with your team. As new items are added to your team's plate, communicate to your management and to the team any impact the new item has on the order of priorities. Consider any internal or external dependencies and how they may affect your team's ability to get tasks completed in the timeframe expected. Work with your team to review and update the priority list as needed.\n\n### Balance speed and quality\nPart of prioritizing is determining how quickly a task needs to be done, and the level of quality it requires. Quality can suffer when work is rushed, so for each task clearly communicate your expectations. \n\n### Ask for advice \nWhom do you work with that is very good at prioritization, who almost always meets or beats deadlines? Ask them how they manage. Whom do you know who is skilled at handling difficult situations? What do they suggest?",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://blogs.ohsu.edu/occupational-health-sciences/2020/03/25/4-key-strategies-to-help-supervisors-support-employee-well-being-during-covid-19/?fbclid=IwAR2UyOAeOpG8dJhH_XdUDAscmoE7MBEfHU4NA3ndhdUrgqM-YNx0SgLyF9Q",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 470,
+    "source_record_number": "466"
+  }
+}

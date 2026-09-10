@@ -1,0 +1,144 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "950cf6a0-d491-11e6-a4e5-6156a4f4e371:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_PRIORITIES",
+    "Q_MANAGER_PRIORITIES"
+  ],
+  "source_question_id_cell": "[Q_PRIORITIES, Q_MANAGER_PRIORITIES]",
+  "action_plan_template_uuid": "950cf6a0-d491-11e6-a4e5-6156a4f4e371",
+  "template_name": "Glint Priorities",
+  "sequence": 2,
+  "focus_area_title": "Learn How to Help Teams Work Effectively",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The objective is to help your team collaborate more effectively by discussing issues and working together to make changes.\n\nTry to figure out which factors most affect your team's ability to work together effectively. Consider the following:\n\n* External factors beyond the team's control\n\n* Internal dependencies in order to complete tasks\n\n* Large or imbalanced workloads, work-related stress\n\n* Ineffective processes or tools\n\n* Unclear roles or decision-making ownership\n\n* Unclear priorities or goals\n\n* Personal attitudes, motivation or abilities\n\n* Poor role fit\n\n* Tendency to silo work rather than supporting one another\n\n* Communication problems\n\n* Personal circumstances of team members\n\nAsk your team members, both 1:1 and as a group, to identify obstacles to strong collaboration and what they think could be done to overcome the challenges. Review as a team and pick one solution to implement.  Also, share your own ideas and plans to improve collaboration in the team (e.g., role clarity), ask for their feedback, and discuss next steps.\n\nRemember to check in regularly with the team to discuss the impact of changes, and revisit the list of obstacles and solutions to continue improving collaboration.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:36:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://fortune.com/2013/12/16/how-do-you-keep-your-team-focused/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/01/help-your-overwhelmed-stressed-out-team",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/dailymuse/2013/02/10/why-you-never-finish-your-to-do-lists-at-work-and-how-to-change-that",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glassheel/2013/03/14/6-ways-to-achieve-any-goal",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/francesbooth/2015/01/12/how-to-get-organized",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1837301/5-ways-process-killing-your-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/danschawbel/2015/06/29/why-workplace-flexibility-is-the-linchpin-to-employee-happiness/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacquelynsmith/2012/08/24/14-things-you-should-do-at-the-start-of-every-work-day",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ilyapozin/2013/08/14/9-habits-of-productive-people",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2016/01/21/the-best-managers-always-set-clear-expectations/",
+      "target": "",
+      "sources": [
+        "Ext Link 10"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/siimonreynolds/2013/11/06/4-ways-to-work-much-faster",
+      "target": "",
+      "sources": [
+        "Ext Link 11"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 668,
+    "source_record_number": "664"
+  }
+}

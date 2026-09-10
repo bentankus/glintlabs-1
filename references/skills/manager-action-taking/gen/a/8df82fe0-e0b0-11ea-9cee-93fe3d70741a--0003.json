@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "8df82fe0-e0b0-11ea-9cee-93fe3d70741a:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_OWNERSHIP"
+  ],
+  "source_question_id_cell": "[Q_GPS_OWNERSHIP]",
+  "action_plan_template_uuid": "8df82fe0-e0b0-11ea-9cee-93fe3d70741a",
+  "template_name": "Glint Ownership - GPS",
+  "sequence": 3,
+  "focus_area_title": "Promote Nurse Empowerment",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why is it Important?\n\nNurses are well-placed to drive the safety and quality agenda within healthcare because of their closeness to patients. Further, research shows that their empowerment is related to better outcomes for patients, as well as greater satisfaction and effectiveness at work. **Below are some factors that can influence Nurse Empowerment:**\n\n- **Understand Nurse Empowerment Factors**  \nNurse empowerment can be attributed to a variety of factors, both individual and factors within the work environment. Some of these factors include individual motivation, a supportive environment, being granted increased control over their roles, and having the freedom to make decisions, according to an article published in the International Journal of Productivity and Quality Management.\n\n- **Promote Nurse Empowerment**  \nOne strategy for promoting nurse empowerment is to utilize existing organizational structures which contribute to overall workplace empowerment, such as:\n>- Access to information\n>- Support from colleagues, supervisors, and leaders\n>- Adequate resources to perform responsibilities at a high level\n>- Provision of learning and development opportunities\n\nAccess the following research [article](https://www.nursingcenter.com/wkhlrp/Handlers/articleContent.pdf?key=pdf_00005110-200907001-00003) to learn more about structural empowerment. \n\n>Source: \n\n>Al-Dweik et. al. Work-related empowerment among nurses: literature review.  Int. J. Productivity and Quality Management, Vol. 19, No. 2, 2016",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:22:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.healthcarefinancenews.com/news/empowering-front-line-workers",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fiercehealthcare.com/hospitals/hospital-impact-4-steps-to-empower-nurse-leaders-who-drive-better-outcomes",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://pcna.net/6-empowering-communications-tips-for-nurses/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/empowering-hospital-staff-to-speak-up-about-safety-4-tips.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehs.com/2016/01/empowering-employees-to-have-an-impact-on-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "article",
+      "url": "https://www.nursingcenter.com/wkhlrp/Handlers/articleContent.pdf?key=pdf_00005110-200907001-00003",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 660,
+    "source_record_number": "656"
+  }
+}

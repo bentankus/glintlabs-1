@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "cdb0f720-2cd2-11e6-b9d8-3df910755a86:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_JOB_CREATIVITY"
+  ],
+  "source_question_id_cell": "[Q_JOB_CREATIVITY]",
+  "action_plan_template_uuid": "cdb0f720-2cd2-11e6-b9d8-3df910755a86",
+  "template_name": "Glint Creativity",
+  "sequence": 3,
+  "focus_area_title": "Inspire Your Team to Be More Creative",
+  "content_type": "mixed",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "People typically think that only designers, developers, or those with artistic jobs are creative. But, actually, most jobs are creative in some way. The goal is to help your team discover how their roles are creative, which'll alone help boost their creativity.\n\nFirst read this article on [Ways to be More Creative](http://www.inc.com/christina-desmarais/25-ways-to-be-more-creative.html).\n\nHelp your team members understand the ways they already are creative. Read this article explaining why [Everyone is Creative](http://www.fastcompany.com/3050195/most-creative-people/everyone-is-creative-business-lessons-from-a-ceos-nigerian-childhood).\n\nEncourage your team to keep the creativity flowing. Read [5 Ways to Keep Your Team's Creativity Flowing](http://www.fastcompany.com/3036739/hit-the-ground-running/5-ways-to-keep-your-teams-creativity-flowing).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:36:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3058554/how-to-be-a-success-at-everything/the-secret-to-creativity-become-an-intellectual-middleman",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/stevedenning/2012/04/27/a-glimpse-at-a-workplace-of-the-future-valve/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3054548/how-to-be-a-success-at-everything/6-creativity-habits-for-people-who-think-theyre-not-creati",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3056177/lessons-learned/5-priceless-lessons-in-collaboration-risk-taking-and-motivation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3049282/lessons-learned/inside-the-creative-office-culture-at-facebook-ideo-and-virgin-airlines",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Ways to be More Creative",
+      "url": "http://www.inc.com/christina-desmarais/25-ways-to-be-more-creative.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Everyone is Creative",
+      "url": "http://www.fastcompany.com/3050195/most-creative-people/everyone-is-creative-business-lessons-from-a-ceos-nigerian-childhood",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "5 Ways to Keep Your Team's Creativity Flowing",
+      "url": "http://www.fastcompany.com/3036739/hit-the-ground-running/5-ways-to-keep-your-teams-creativity-flowing",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 382,
+    "source_record_number": "378"
+  }
+}

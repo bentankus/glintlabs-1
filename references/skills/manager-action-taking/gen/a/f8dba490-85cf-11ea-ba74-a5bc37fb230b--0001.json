@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "f8dba490-85cf-11ea-ba74-a5bc37fb230b:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_TECHNOLOGY"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_TECHNOLOGY]",
+  "action_plan_template_uuid": "f8dba490-85cf-11ea-ba74-a5bc37fb230b",
+  "template_name": "Glint Distress - Technology",
+  "sequence": 1,
+  "focus_area_title": "Provide the Right Technology to Help Your Team Execute",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal is to supply your team with the resources, including technology, they need to succeed.\n\n### Why is it important?\nTrying to get things done without the proper resources can be frustrating for your team. Whether it's lack of staff, funding, or supplies, or inadequate access to tools, systems and information; your team members are not executing to full potential, which may be costing you in productivity and output. Over time, under-resourcing will also bring down morale and motivation, further impacting execution.\n\n### Take stock in current resources\nTake a look at the current resources your team has access to ask yourself some hard questions.  Starting with the team itself, look at workloads and staffing. Do you have the \"right players on the bus\u00e2\u20ac\u009d to get the work done?  \n\nNext look at your physical resources - which ones come up short most frequently?  What tools and systems are outdated, not reliable? Which tools are effective for remote work, which are not? In the immediate future, what technology issues are absolutely critical to resolve?\n\nWhat work is done manually that could be made more efficient with a new tool?  How might you reallocate the available funds to better serve the goals of your team?  Could you spend a little something now or plan for a future investment that will better equip the team to execute?  \n\nFirst solve any immediate concerns, next make a list of all the projects your team is working on and involve your team in a resource audit to answer the questions above. Challenge yourselves to be creative in your suggestions for improving your resources.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/elizabeth-gore/5-ways-to-make-your-teams-remote-work-productive.html?cid=search",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.siop.org/Portals/84/docs/White%20Papers/Visibility/VirtualTeams.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.pwc.com/us/en/services/consulting/library/images/PwC_CIS-Tech-at-Work.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 472,
+    "source_record_number": "468"
+  }
+}

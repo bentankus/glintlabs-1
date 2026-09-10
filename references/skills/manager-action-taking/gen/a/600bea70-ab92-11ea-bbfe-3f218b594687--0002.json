@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "600bea70-ab92-11ea-bbfe-3f218b594687:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ACCEPTS_FEEDBACK_360"
+  ],
+  "source_question_id_cell": "[Q_ACCEPTS_FEEDBACK_360]",
+  "action_plan_template_uuid": "600bea70-ab92-11ea-bbfe-3f218b594687",
+  "template_name": "Glint 360 Accepts Feedback",
+  "sequence": 2,
+  "focus_area_title": "Connect through feedback",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/eq-and-positive-conflict-management?autoplay=false&claim=AQEZ1hUvkFOqnQAAAZHWwqm6YStZlwVW_69m7aGl8lS82PoX_UQf70D6F1V7hL3Vyon_Iyz5PJanqBm00DvlIqENIo41BstI-9u4WXcaJj3bbO-siTXC2dR4bjyMMsMovZWt3OPrMlCmCtMC_1f2tyPrmyyXHGeetTlXo9UObPMplchl8ZpZ1mXnZxgfsZm5vTIZo0nVFnByIj3HhtoRsQkD8q8uqAEAiNM2rgh1ge1RNzD8xhEaPjDjoXgG6sV2ELr8XtHAyqFdqC33Jf-Akae7D-Wczn9t4mBOpNViFS9b6LY1FDfAg2YKOWsdSxVrXhVbE9VZ0ckMjrtn3PEvyYpisCgK10E2DO14oQjkxz1v-NVIpgr48ikWmdZKRsnq0ernUyF6S3-dsudsfXw7bliih3KkGtLqWWflGw0PxPe9aIFYD_IyCoNc_9TN3vluzlSNF2JsI2kfY8gpxqBjJr4Jhnny_XNVzPMeLOViS6WwF4cHxg72eFmv5Njx1XwEhWZ7MrLoXPZNoxT5o0PAJX5ATfOdJjvjvG07nqtoR7GdWxb32y2fuGq54E1Lh2OOD4olNYzyw7YeydlVXppQZN-WHy730xtp6PA9OsEBbiABnoMXRur85EvJn7t9FMJgOS4wmuUJhWcwolV7FumudM-z9UloHUT9k4Y1ammx6sRtKgZxEYtIDi2NJoT5xoB3QYFdKx8UQtZc2CdfQTfru3znA0E9fzuD_sMw9S7PeTsx4PCNiFlSGTyPCZUEV0pzHr3tBkH-w5qnk3nSJGUqgdeJQbPqoDhDAypUNAxwHrcg2F3ob_lbb88ksrZltWr0-ckIVw-QsFRMpvv9q-BW87rqg8N9yHNxvGuDljhqSGFIgHVTqs6yIuG0OMYfHsZmREklccVNmK3l94FBkXkXjCQrZkQQspDyiFTOW5FsQzwCAQN0QUVvZUMfEl7u4OXfQ7Ihm-XFMKa-CDYPk94LXq57ddQ0DfpPJI61O4vNh6Z_qGeRYkDlCg8_V-ciPYUK_vWOA_pb63FmxFYRziNDLJE_2-TP56IrvFCdrxFrA_tiVT8LMoWVnvRf2jVO8S9kp6m8Xf0OLyUcCvv575Zu3RghXV8RPfekARLKPTa55-zchtwNJwfIQQP0JJn1NOj-yHMl-1E1ARDYgc3AeJk7wt2Yv2QLzMeEmslzdUoZBC_5bcSjeKEVO_9Ycal8orfuTFqPrP_WqelkZdw_1Kmv",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:22:00+00:00",
+  "video_extract": "LiL2_Collect_feedback_to_build_connection",
+  "resources": [
+    {
+      "type": "video",
+      "title": "EQ and positive conflict management",
+      "url": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/eq-and-positive-conflict-management?autoplay=false&claim=AQEZ1hUvkFOqnQAAAZHWwqm6YStZlwVW_69m7aGl8lS82PoX_UQf70D6F1V7hL3Vyon_Iyz5PJanqBm00DvlIqENIo41BstI-9u4WXcaJj3bbO-siTXC2dR4bjyMMsMovZWt3OPrMlCmCtMC_1f2tyPrmyyXHGeetTlXo9UObPMplchl8ZpZ1mXnZxgfsZm5vTIZo0nVFnByIj3HhtoRsQkD8q8uqAEAiNM2rgh1ge1RNzD8xhEaPjDjoXgG6sV2ELr8XtHAyqFdqC33Jf-Akae7D-Wczn9t4mBOpNViFS9b6LY1FDfAg2YKOWsdSxVrXhVbE9VZ0ckMjrtn3PEvyYpisCgK10E2DO14oQjkxz1v-NVIpgr48ikWmdZKRsnq0ernUyF6S3-dsudsfXw7bliih3KkGtLqWWflGw0PxPe9aIFYD_IyCoNc_9TN3vluzlSNF2JsI2kfY8gpxqBjJr4Jhnny_XNVzPMeLOViS6WwF4cHxg72eFmv5Njx1XwEhWZ7MrLoXPZNoxT5o0PAJX5ATfOdJjvjvG07nqtoR7GdWxb32y2fuGq54E1Lh2OOD4olNYzyw7YeydlVXppQZN-WHy730xtp6PA9OsEBbiABnoMXRur85EvJn7t9FMJgOS4wmuUJhWcwolV7FumudM-z9UloHUT9k4Y1ammx6sRtKgZxEYtIDi2NJoT5xoB3QYFdKx8UQtZc2CdfQTfru3znA0E9fzuD_sMw9S7PeTsx4PCNiFlSGTyPCZUEV0pzHr3tBkH-w5qnk3nSJGUqgdeJQbPqoDhDAypUNAxwHrcg2F3ob_lbb88ksrZltWr0-ckIVw-QsFRMpvv9q-BW87rqg8N9yHNxvGuDljhqSGFIgHVTqs6yIuG0OMYfHsZmREklccVNmK3l94FBkXkXjCQrZkQQspDyiFTOW5FsQzwCAQN0QUVvZUMfEl7u4OXfQ7Ihm-XFMKa-CDYPk94LXq57ddQ0DfpPJI61O4vNh6Z_qGeRYkDlCg8_V-ciPYUK_vWOA_pb63FmxFYRziNDLJE_2-TP56IrvFCdrxFrA_tiVT8LMoWVnvRf2jVO8S9kp6m8Xf0OLyUcCvv575Zu3RghXV8RPfekARLKPTa55-zchtwNJwfIQQP0JJn1NOj-yHMl-1E1ARDYgc3AeJk7wt2Yv2QLzMeEmslzdUoZBC_5bcSjeKEVO_9Ycal8orfuTFqPrP_WqelkZdw_1Kmv",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/09/6-steps-leaders-can-take-to-get-the-most-out-of-feedback",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/joefolkman/2017/12/05/you-can-take-it-how-to-accept-negative-feedback-with-ease/#52e1e4b923a7",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ellevate/2020/02/05/how-to-receive-feedback-aim-for-success/#3fd63c881a7a",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/05/the-right-way-to-respond-to-negative-feedback",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 17,
+    "source_record_number": "13"
+  }
+}

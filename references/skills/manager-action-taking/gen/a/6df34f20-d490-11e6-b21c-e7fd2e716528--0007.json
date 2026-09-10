@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "6df34f20-d490-11e6-b21c-e7fd2e716528:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_INPUT",
+    "Q_OPINIONS_COUNT"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_INPUT, Q_OPINIONS_COUNT]",
+  "action_plan_template_uuid": "6df34f20-d490-11e6-b21c-e7fd2e716528",
+  "template_name": "Glint Input",
+  "sequence": 7,
+  "focus_area_title": "Create a culture of inclusion",
+  "content_type": "discussion_prompt",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "As a team, share examples of when you felt like you belonged and/or where you saw a missed opportunity to help others feel a sense of belonging.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:08:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/08/how-to-stop-micromanaging-your-team",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/aaron-skonnard/creating-a-culture-that-women-want-to-join.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/joshbersin/2015/12/06/why-diversity-and-inclusion-will-be-a-top-priority-for-2016",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/williamarruda/2016/11/22/the-difference-between-diversity-and-inclusion-and-why-it-is-important-to-your-success",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 596,
+    "source_record_number": "592"
+  }
+}

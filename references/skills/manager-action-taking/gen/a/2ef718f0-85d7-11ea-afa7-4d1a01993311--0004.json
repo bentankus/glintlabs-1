@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2ef718f0-85d7-11ea-afa7-4d1a01993311:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_MANAGER_SUPPORT"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_MANAGER_SUPPORT]",
+  "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+  "template_name": "Glint Distress - Manager Support",
+  "sequence": 4,
+  "focus_area_title": "Looking past empathy: Connecting with perspective",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/looking-past-empathy-connecting-with-perspective?autoplay=false&claim=AQGFRKuCNLyVFAAAAZHW6rH2nRe2KEEBsPcQql6ST0WhLex87REJym1aQaQzim-Sext0l0NXyPlsXKGUJR7YeonxlueMDBlyLx6BubI1K1I4gmaVeN1aZ6as2GgBEPA6CMjIy7Tm4DaOuicszVgGW_pEkRqvPB6Qa4tcWX2K3I8lP4IkvHyp0CFcfZeISejmU_HVUFtaf4qv5_rllbKZBfQn_fXv2_y1CAh8aFlig9_UJBpwgKJYfunzCvrYuAxmQg7NPEfAIvA1y3U7OU6ixaWV8ZMuBYAsoiKMA8mww2_wpAdvnLcqBrwh86UC3ftzb2XpNGOlfWMUuYAIMPmrXgY8FiQVzr8li8JQsmhAupQWscSXWBGd-VUbizaPTev7bi5W-XV0O9jDoDMIOJUalNjTn8DhgIhtg9wllZl5HFBRp9WXcudtMn4pEelC04mCCvEr0NkjA9gGMUo3_jsUpnIFZoRc5mr5g9fIPYi2XZ-Lamacga6B9WAnfOB1q7BB0Jtpg2QFzz5F82PU8i5Jzue8stnfnxQyJXP62Vi_NJh1KaaE1uKCE3pFitmchSJwh5Lu_t14aGuG1EyYX1j0OPpvSNsb195r-Hq83V1TpUU4EVYdhxo7y426t9wtUvJ9i-rALszOihFWFDThsf1XweowfkoLi1d25s-8IW_dr7q7qcQ-dnEXxQF4LtI-nbfpmD6K1QLHfyDr9s6rxgOwrugLVTgBoM4RO9vsbgI96gZdx3Eg11ZPU0dHMHKInVwR67CnrVeUj7s-Gio4jG1qOlenm5dho21T88YROa1pQ9B8kizAu7-fNLP3NyK4t-zz_wMyX-mywh0YzcsS5y4E9vSUWl0YLDVazsOYjBXyY-SlSkF_d2QH-IkD1MlF73hoLByddwWanmkxI-jaN7OspOTgaNbH-4sOe4P5Q9eCbHl7_PVZ7VvvasI1wayyPybMQThLRrN9Md5oumJV8YUlvcEwbnshejWdTvUe1Lc2ZSjzGyTqV_CnVMOSLGPAnsZxCoAaKPCApm1RtBFKHKMv6aL4vh9d-jWPdh9ntvXsKteHD3tjA3fU75myVT8ut72f6GN4afZu_DPq2p4Od08TFa9qZhEb-Lb1i8WQnw30UHCTqGljDLwfOqI5QoWKLxlTJBPt6SUpKdnsQ7noOBUho0XRikGMSR06tLJrE87dB2sic9VKdkZ9fVjT0OG8loAKREvTKkBloKpk9omnI2QZ",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:21:00+00:00",
+  "video_extract": "LiL2_Connecting_with_empathy",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Looking past empathy: Connecting with perspective",
+      "url": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/looking-past-empathy-connecting-with-perspective?autoplay=false&claim=AQGFRKuCNLyVFAAAAZHW6rH2nRe2KEEBsPcQql6ST0WhLex87REJym1aQaQzim-Sext0l0NXyPlsXKGUJR7YeonxlueMDBlyLx6BubI1K1I4gmaVeN1aZ6as2GgBEPA6CMjIy7Tm4DaOuicszVgGW_pEkRqvPB6Qa4tcWX2K3I8lP4IkvHyp0CFcfZeISejmU_HVUFtaf4qv5_rllbKZBfQn_fXv2_y1CAh8aFlig9_UJBpwgKJYfunzCvrYuAxmQg7NPEfAIvA1y3U7OU6ixaWV8ZMuBYAsoiKMA8mww2_wpAdvnLcqBrwh86UC3ftzb2XpNGOlfWMUuYAIMPmrXgY8FiQVzr8li8JQsmhAupQWscSXWBGd-VUbizaPTev7bi5W-XV0O9jDoDMIOJUalNjTn8DhgIhtg9wllZl5HFBRp9WXcudtMn4pEelC04mCCvEr0NkjA9gGMUo3_jsUpnIFZoRc5mr5g9fIPYi2XZ-Lamacga6B9WAnfOB1q7BB0Jtpg2QFzz5F82PU8i5Jzue8stnfnxQyJXP62Vi_NJh1KaaE1uKCE3pFitmchSJwh5Lu_t14aGuG1EyYX1j0OPpvSNsb195r-Hq83V1TpUU4EVYdhxo7y426t9wtUvJ9i-rALszOihFWFDThsf1XweowfkoLi1d25s-8IW_dr7q7qcQ-dnEXxQF4LtI-nbfpmD6K1QLHfyDr9s6rxgOwrugLVTgBoM4RO9vsbgI96gZdx3Eg11ZPU0dHMHKInVwR67CnrVeUj7s-Gio4jG1qOlenm5dho21T88YROa1pQ9B8kizAu7-fNLP3NyK4t-zz_wMyX-mywh0YzcsS5y4E9vSUWl0YLDVazsOYjBXyY-SlSkF_d2QH-IkD1MlF73hoLByddwWanmkxI-jaN7OspOTgaNbH-4sOe4P5Q9eCbHl7_PVZ7VvvasI1wayyPybMQThLRrN9Md5oumJV8YUlvcEwbnshejWdTvUe1Lc2ZSjzGyTqV_CnVMOSLGPAnsZxCoAaKPCApm1RtBFKHKMv6aL4vh9d-jWPdh9ntvXsKteHD3tjA3fU75myVT8ut72f6GN4afZu_DPq2p4Od08TFa9qZhEb-Lb1i8WQnw30UHCTqGljDLwfOqI5QoWKLxlTJBPt6SUpKdnsQ7noOBUho0XRikGMSR06tLJrE87dB2sic9VKdkZ9fVjT0OG8loAKREvTKkBloKpk9omnI2QZ",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/susan-steinbrecher/workplace-meltdown-8-ways-to-help-someone-in-distress.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/help-your-team-manage-stress-anxiety-and-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 452,
+    "source_record_number": "448"
+  }
+}

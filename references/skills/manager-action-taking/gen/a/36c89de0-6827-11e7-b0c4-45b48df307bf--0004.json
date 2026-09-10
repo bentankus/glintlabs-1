@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "36c89de0-6827-11e7-b0c4-45b48df307bf:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_LEARN"
+  ],
+  "source_question_id_cell": "[Q_TEAM_LEARN]",
+  "action_plan_template_uuid": "36c89de0-6827-11e7-b0c4-45b48df307bf",
+  "template_name": "Glint Learn Team",
+  "sequence": 4,
+  "focus_area_title": "Teach Each Other",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "When team members make time to teach each other, they are sharing knowledge and experience, information and feedback that will positively influence the future success for the team. \n\n### Build teaching habits\n\nLearning from peers on the team is a powerful way to improve the team skills as well as recognize the unique contributions that each person makes based on his or her diverse experience. Invite each person to think about the expertise and skills they can share with the rest of the team, and in a way that can help others improve their performance and help the team excel. \n\n### Create teaching opportunities\n\nFinding the right \"teachable moment\u00e2\u20ac\u009d means finding those times when the information to be shared will have the best chance of being fully heard and understood. Think about when it is most appropriate to share something with the team.  Is it during a staff meeting, or a special session devoted to learning? How much dialogue will the team need to fully understand the message? What's the best medium to do so? \n\nAlso think about the learners. Not all team members need to hear from all teachers. Who can be paired with whom to honor their unique learning needs, strengths and personalities? And not all information should be shared at once. Allow the team to learn new things when they have the best opportunity to put it to use.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:19:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/help-scout/how-teaching-benefits-you-your-team-and-your-company.html",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3035664/how-a-culture-of-learning-makes-teams-more-productive",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/your-company-is-full-of-good-experiments-you-just-have-to-recognize-them",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 619,
+    "source_record_number": "615"
+  }
+}

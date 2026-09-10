@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fb8676d0-e0b4-11ea-88a1-adbac9f53456:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_TEAMWORK"
+  ],
+  "source_question_id_cell": "[Q_GPS_TEAMWORK]",
+  "action_plan_template_uuid": "fb8676d0-e0b4-11ea-88a1-adbac9f53456",
+  "template_name": "Glint Teamwork - GPS",
+  "sequence": 2,
+  "focus_area_title": "Techniques to Improve Teamwork & Support",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Achieving individual goals is a great way for team members to help reach company goals. The objective is to help your team understand that what they are working on as an individual will make a positive difference for the team, organization, and company. \n\n \n\n \n\n \n\n ### Align work to high-level goals\n\n \n\n List upcoming tasks that you'll need to delegate to your team. Think of the bigger picture goals or outcomes that each task will achieve. Write out a statement that explains how the task will contribute to the company's future goals. Use words like: change, impact, affect, and goal. \n\n \n\n \n\n \n\n ### Reinforce business impacts\n\n \n\n When your team members agree to take on important tasks, frame your appreciation in terms of the impact they have: \"Thank you for committing to doing X, it will help us achieve Y and that's really important for the business because of Z.\u00e2\u20ac\u009d",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://safestart.com/news/4-ways-help-workers-look-out-each-others-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=ncExr5OGQYE",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.nursingtimes.net/clinical-archive/patient-safety/tools-and-techniques-to-improve-teamwork-and-avoid-patient-harm-12-12-2016/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.freshrn.com/season-4-episode-5-what-nursing-teamwork-practically-looks-like-at-the-bedside/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6875884/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehstoday.com/safety-leadership/article/21917903/supporting-a-culture-of-caring-can-reduce-injuries-and-costs-improve-performance",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=E-dCBl3gRYs",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 777,
+    "source_record_number": "773"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "7f7cbb50-212b-11e6-a177-7f43a1a92440:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CULTURE"
+  ],
+  "source_question_id_cell": "[Q_CULTURE]",
+  "action_plan_template_uuid": "7f7cbb50-212b-11e6-a177-7f43a1a92440",
+  "template_name": "Glint Culture",
+  "sequence": 7,
+  "focus_area_title": "Building Trust for Collaboration",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/collaborative-leadership/building-trust-for-collaboration?claim=AQFzTJwrX6oSeQAAAXBgYWrrEtQ271ljcMUm0flAdMh63ubScL3FpTXhdLTI61dqKa7WC4O_l9k6CXjIK7tP5BuDgAowugxrv1wUxmEuk8fI0eMFoQ5KpQICnaB3H5ZqjgCJNfUGDd5P08ittQUaXWthzkmxpW2u-QJuCtkjOrq4d301Rl8nFyxCZ_o66r-KQlc1DZe9ckFVBwHr5tBJWzBMrdk7U8BQuFnj6E9XTadTXz14Iob2yBH2aOHD_5j7cJoNYiSQjyFRfeP87SDumi3uoGCrSKz19f8BJVvHAv6MIPmI7GqwDDqs_PBpeslTk5Ux9q_lDPH70G5iJstxgeVp1e8CI42Eh_9yYhXJ0eqrL9-N0cESumA_tMrxNr2C7eM-WADIk_6EL0t9Shw_Gv_zSLdeOgdzGyR5YNn5CKtR2lHy_aVOzBVp4A3_m-OvbPOmT_ys2I5h9EAxo1dnR9RErOlZKiVZgnKxXjqHRhVtNQzwqWRhq-FmArsnxodT7anhJuJLUjyalq5lWsbef_w5OklMlgNRSGgs6CPIN4HDkhPZo5twCS2ls78E312lfOGdCgnleoJU6QDh44jTUTBHTQ8zGLu5cQricC8cMV5SDV65C-bBOi_6F83oPedDIlsKukyFMgBpjqu4THIdGoYTsXcxaHzhxvTt2gXmmO31IuriiIm50Sg8zgSCZjjrrq14jpn-phIey6revH0PFOEVzXvnlxNC4NjXwY8qalPS6JE",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:45:00+00:00",
+  "video_extract": "LiL3_Trust_for_Collaboration",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Building Trust for Collaboration",
+      "url": "https://www.linkedin.com/learning/embed/collaborative-leadership/building-trust-for-collaboration?claim=AQFzTJwrX6oSeQAAAXBgYWrrEtQ271ljcMUm0flAdMh63ubScL3FpTXhdLTI61dqKa7WC4O_l9k6CXjIK7tP5BuDgAowugxrv1wUxmEuk8fI0eMFoQ5KpQICnaB3H5ZqjgCJNfUGDd5P08ittQUaXWthzkmxpW2u-QJuCtkjOrq4d301Rl8nFyxCZ_o66r-KQlc1DZe9ckFVBwHr5tBJWzBMrdk7U8BQuFnj6E9XTadTXz14Iob2yBH2aOHD_5j7cJoNYiSQjyFRfeP87SDumi3uoGCrSKz19f8BJVvHAv6MIPmI7GqwDDqs_PBpeslTk5Ux9q_lDPH70G5iJstxgeVp1e8CI42Eh_9yYhXJ0eqrL9-N0cESumA_tMrxNr2C7eM-WADIk_6EL0t9Shw_Gv_zSLdeOgdzGyR5YNn5CKtR2lHy_aVOzBVp4A3_m-OvbPOmT_ys2I5h9EAxo1dnR9RErOlZKiVZgnKxXjqHRhVtNQzwqWRhq-FmArsnxodT7anhJuJLUjyalq5lWsbef_w5OklMlgNRSGgs6CPIN4HDkhPZo5twCS2ls78E312lfOGdCgnleoJU6QDh44jTUTBHTQ8zGLu5cQricC8cMV5SDV65C-bBOi_6F83oPedDIlsKukyFMgBpjqu4THIdGoYTsXcxaHzhxvTt2gXmmO31IuriiIm50Sg8zgSCZjjrrq14jpn-phIey6revH0PFOEVzXvnlxNC4NjXwY8qalPS6JE",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/cywakeman/2015/05/15/less-talk-more-action-5-new-realities-for-todays-workforce",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/danschawbel/2012/05/13/how-companies-can-benefit-from-inclusion/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lizryan/2015/08/03/six-signs-your-companys-culture-is-toxic",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lizryan/2016/03/11/five-signs-your-company-is-clueless-about-talent",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/jacobmorgan/2015/12/10/how-corporate-culture-impacts-the-employee-experience/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/02/how-to-build-a-passionate-company",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 397,
+    "source_record_number": "393"
+  }
+}

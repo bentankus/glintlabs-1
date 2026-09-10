@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_PRIORITIZATION"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_PRIORITIZATION]",
+  "action_plan_template_uuid": "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0",
+  "template_name": "Glint Distress - Prioritization",
+  "sequence": 1,
+  "focus_area_title": "Help Team Members Understand Their Roles",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Job clarity improves job performance and satisfaction. The goal here is to help each member of your team understand their role more clearly.\n\nSchedule 1:1 meetings where you discuss how each person perceives their position at the company. Spend time talking about the scope, duties, relationships, and skills you expect in their role until you have a shared understanding.  \n\n### Prior to the discussion\n\nAsk each team member to write down the duties and responsibilities they believe are part of their job. You do the same. Refer to the job description for the role, if available. \n\n### During your 1:1 meetings\n\nCompare notes and work together to develop a clear definition of your team member's role, and write it down. \n\nAfter meeting with everyone on your team, reflect on how it went by asking yourself:\n\n> How clearly do you think your team members understand their role?\n\n> What aspects of their roles still need clarification?\n\n> Are any team members working far beyond their defined roles?\n\n> Do team members understand the relationship between their role and yours, and how their position aligns with the goals of the company?",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-08-28T13:02:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/partners-in-leadership/helping-teams-focus-when-theyre-suddenly-working-remotely.html?cid=search",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/jeff-haden/tired-of-same-old-how-to-be-effective-working-from-home-tips-heres-1-strategy-you-need-to-stay-efficient-effective-motivated.html?cid=search",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 463,
+    "source_record_number": "459"
+  }
+}

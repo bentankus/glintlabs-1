@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fca9e2b0-d490-11e6-9f01-bf7ce7531242:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_MOTIVATION"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_MOTIVATION]",
+  "action_plan_template_uuid": "fca9e2b0-d490-11e6-9f01-bf7ce7531242",
+  "template_name": "Glint Motivation",
+  "sequence": 6,
+  "focus_area_title": "Designing Stretch Opportunities",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/coaching-and-developing-employees-22657884/designing-stretch-opportunities?autoplay=true&claim=AQGgpSsv7TeczQAAAYxvfRYA6B30GjFPubzyr7HPt-d9TgI-h9WbtFd7UHqWONkZSTlhCm_M920FkqRLAs_M66CE2cUXVQW49tM4uQzByP5ZDyvTNeRw9jBo0IaiVYQ6tJrW5iJ61MyJ58iUhJFuZB7pY-0uE6kdO3U0hedvKrlfmpYqmxC8Ozf_yo4n6gDKV_AZx9pecmzyLoVKbXs0VFsN6HKoYVCcW4QKoC98KFsaRrxz611yaqsTxTXZPqXKg81YGZBMdDfIelRqiysFptuU3xispY3EgWJwS1guxgloQ__jskZ5sCHXMiTKXRawAH-6UqVJAMeiCpsF_VhdfFeKqwfK3jDipydmeK9CGcy6oBuS7eC3UHKOgfbZMxldIhuNKlkOZcjBXl9qxPjaeMlMV_o5uEQIa45NXcuVTtoASgHKa2YWhUM89vv0lqK9sRbokq-9Q53XfuE6AjqnOkm47Yjt0Zi_abbkaTMVI2g0_VrnHfTyx8vz7XWG4EXiaMcasosdeICoiPQwptaIY4aokos4RLuUWPGMc3JyxtquGbMO9wppNKNFIRuHBgryUuj7XME5ltJS9ZVkh41PrjcnsiMLpD7aauiIT2fyj19J-xHkgbBpFu3MLOX0LO2T-4cv-lE4YdTjXExqQcAU8Gml_nTjzffWiNVet2mcJhmN5lMD1EXCOIsolYVI1C9uAKm-9kPkeZo2jFUdsnO-k2cGkKsVZLLvO19QydqOm7CyBjWCcaupVbKptCg0whZMVq1BPJkFip3jia-oBTiGShbihsl7dXnf3kh9w6GUJ8mYUP-T20G2E1Q2ltcwS9WKEjeooaN7NcaD42qxIH8baCVMwdMIt_aqlmWmmFa74IdsHNZLV-yEi8KzlqlbAfL_o4HYbqt6gXkhg1hFi95lKFSgVjC9Hw0SJLl87as46_OrF4AQsAH240HbjydmFQLmw4AIgRgmsFHiM0DJ8ln3H_Ra7vrH9kmFyM_QKsxB2elJ1EiNFyEOaHo7F5mTxq5OqaD95jb-lFW38OQzQTGGqA74WCq6X8u6WNBNGVLkfkGuxW_uVZm7HWeBDSFM1T-a1dTAjuzKIPrB1986CLEoZ768kdlv7WRyauF3xYF5TYDkJnWXQrCXqRgWpdtzVfFkPmQktnSCFekxbgI6uR9NzAPuM6AbfmTVa2Jv9l_6MmPMgKb-Ault9GYcDJvr_q-aL6EKhAIvVPj7L5Bf",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-29T12:03:00+00:00",
+  "video_extract": "LiL3_Stretch_Opportunities",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Designing Stretch Opportunities",
+      "url": "https://www.linkedin.com/learning/embed/coaching-and-developing-employees-22657884/designing-stretch-opportunities?autoplay=true&claim=AQGgpSsv7TeczQAAAYxvfRYA6B30GjFPubzyr7HPt-d9TgI-h9WbtFd7UHqWONkZSTlhCm_M920FkqRLAs_M66CE2cUXVQW49tM4uQzByP5ZDyvTNeRw9jBo0IaiVYQ6tJrW5iJ61MyJ58iUhJFuZB7pY-0uE6kdO3U0hedvKrlfmpYqmxC8Ozf_yo4n6gDKV_AZx9pecmzyLoVKbXs0VFsN6HKoYVCcW4QKoC98KFsaRrxz611yaqsTxTXZPqXKg81YGZBMdDfIelRqiysFptuU3xispY3EgWJwS1guxgloQ__jskZ5sCHXMiTKXRawAH-6UqVJAMeiCpsF_VhdfFeKqwfK3jDipydmeK9CGcy6oBuS7eC3UHKOgfbZMxldIhuNKlkOZcjBXl9qxPjaeMlMV_o5uEQIa45NXcuVTtoASgHKa2YWhUM89vv0lqK9sRbokq-9Q53XfuE6AjqnOkm47Yjt0Zi_abbkaTMVI2g0_VrnHfTyx8vz7XWG4EXiaMcasosdeICoiPQwptaIY4aokos4RLuUWPGMc3JyxtquGbMO9wppNKNFIRuHBgryUuj7XME5ltJS9ZVkh41PrjcnsiMLpD7aauiIT2fyj19J-xHkgbBpFu3MLOX0LO2T-4cv-lE4YdTjXExqQcAU8Gml_nTjzffWiNVet2mcJhmN5lMD1EXCOIsolYVI1C9uAKm-9kPkeZo2jFUdsnO-k2cGkKsVZLLvO19QydqOm7CyBjWCcaupVbKptCg0whZMVq1BPJkFip3jia-oBTiGShbihsl7dXnf3kh9w6GUJ8mYUP-T20G2E1Q2ltcwS9WKEjeooaN7NcaD42qxIH8baCVMwdMIt_aqlmWmmFa74IdsHNZLV-yEi8KzlqlbAfL_o4HYbqt6gXkhg1hFi95lKFSgVjC9Hw0SJLl87as46_OrF4AQsAH240HbjydmFQLmw4AIgRgmsFHiM0DJ8ln3H_Ra7vrH9kmFyM_QKsxB2elJ1EiNFyEOaHo7F5mTxq5OqaD95jb-lFW38OQzQTGGqA74WCq6X8u6WNBNGVLkfkGuxW_uVZm7HWeBDSFM1T-a1dTAjuzKIPrB1986CLEoZ768kdlv7WRyauF3xYF5TYDkJnWXQrCXqRgWpdtzVfFkPmQktnSCFekxbgI6uR9NzAPuM6AbfmTVa2Jv9l_6MmPMgKb-Ault9GYcDJvr_q-aL6EKhAIvVPj7L5Bf",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/joefolkman/2014/04/22/8-ways-to-ensure-your-vision-is-valued/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3002877/employee-motivation-checklist",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/05/from-purpose-to-impact",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/karlmoore/2014/12/11/change-is-pain-why-your-employees-resist-it-and-what-to-do-about-it/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/ilya-pozin/14-highly-effective-ways-to-motivate-employees.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3000998/5-rules-making-your-vision-stick",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 648,
+    "source_record_number": "644"
+  }
+}

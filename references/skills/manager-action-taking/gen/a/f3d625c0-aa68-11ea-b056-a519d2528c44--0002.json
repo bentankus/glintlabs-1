@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "f3d625c0-aa68-11ea-b056-a519d2528c44:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_COLLABORATIVE_PROBLEM_SOLVING_360"
+  ],
+  "source_question_id_cell": "[Q_COLLABORATIVE_PROBLEM_SOLVING_360]",
+  "action_plan_template_uuid": "f3d625c0-aa68-11ea-b056-a519d2528c44",
+  "template_name": "Glint 360 Collaborative Problem Solving",
+  "sequence": 2,
+  "focus_area_title": "Help Your Team Develop Grit",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "When people develop grit - a combination of persistence and passion - they can achieve their goals and overcome difficult challenges. The objective here is to build grit on your team to reach new heights.\n\n### Fuel passion on your team\nFirst, help team members explore and discover what they enjoy and are good at. Give them a variety of different tasks so they can learn about themselves, their abilities, and their passions. Pay attention to how they pursue, achieve, and talk about the different parts of their job to better understand their passions.\n\n### Gently push people outside their comfort zone\nWhen you notice a team member excelling or enjoying a particular task, gently push them to the next level. For example, if a team member is enjoying training new team members in company processes, you might ask them to create and lead a refresher training for the whole team.\n\n### Share your passion and persistence stories\nIt's hard to imagine continued persistence at anything when we are not at least somewhat passionate about it. So if your team is struggling with persistence, share what you are passionate about and why it drives you.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:30:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.thebalancecareers.com/how-to-strengthen-team-problem-solving-skills-4123663",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://medium.com/management-matters/how-to-run-an-effective-and-engaging-problem-solving-session-a24f96fe73bc",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/markmurphy/2015/05/29/try-coaching-instead-of-managing-when-employees-bring-you-problems/#57a8c4432921",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/11/why-groups-struggle-to-solve-problems-together",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 59,
+    "source_record_number": "55"
+  }
+}

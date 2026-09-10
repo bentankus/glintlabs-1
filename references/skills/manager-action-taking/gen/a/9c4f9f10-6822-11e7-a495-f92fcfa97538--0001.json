@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "9c4f9f10-6822-11e7-a495-f92fcfa97538:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_CONFLICT"
+  ],
+  "source_question_id_cell": "[Q_TEAM_CONFLICT]",
+  "action_plan_template_uuid": "9c4f9f10-6822-11e7-a495-f92fcfa97538",
+  "template_name": "Glint Conflict Resolution Team",
+  "sequence": 1,
+  "focus_area_title": "Develop Conflict Resolution Skills",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "The goal here is to develop conflict resolution skills so that team members can effectively address any conflicts that arise.\n\n### Start with addressing the issue\n\nWhen a conflict arises, team members should address the conflict as soon as possible. Each person should aim to calmly share their point of view and make their case, and listen to the other person's point of view.\n\n### Be empathetic\n\nPractice taking each other's points of view. Try to really feel and understand where each person is coming from. Use this [Empathy Practice](Team_Empathy_Practice) to build this skill.\n\n### Resolve the conflict\n\nDiscuss possible solutions. Come up with as many as possible. Look for win-win solutions or compromises. Bring in an impartial mediator, like your team leader or another team member if you are having a hard time deciding on a solution that will work for all parties.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/04/how-self-managed-teams-can-resolve-conflict",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/06/how-to-preempt-team-conflict",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/jeffboss/2017/05/12/3-practical-team-strategies-for-managing-the-fear-of-conflict",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/the-new-science-of-team-chemistry#pioneers-drivers-integrators-and-guardians",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2010/04/are-bullies-in-your-workplace",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/06/six-common-misperceptions-abou/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/1824515/team-conflict-why-its-good-thing",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Empathy Practice",
+      "url": "",
+      "target": "Team_Empathy_Practice",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 370,
+    "source_record_number": "366"
+  }
+}

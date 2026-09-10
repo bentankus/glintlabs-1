@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "540f9810-85be-11ea-a001-6f8f3b362169:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESOURCES"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESOURCES]",
+  "action_plan_template_uuid": "540f9810-85be-11ea-a001-6f8f3b362169",
+  "template_name": "Glint Distress - Resources",
+  "sequence": 1,
+  "focus_area_title": "Develop a Support Network for Your Team",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal of a support network is to provide contacts that your team members can call on to get help and resources. Knowing who to call for support and how to best approach those individuals or departments will enable your team members to avoid delays and get more done on their jobs. Expanding your employees' support network will also help them make important connections and open up potential career opportunities, a key to retention.\n\nProvide your staff with a list of all the people and departments who can provide resources or some type of support. Include relevant contact information, links, etc. In some cases you may have to establish an account ahead of the need so that things go smoothly when your team members call.\n\n[Internal Networking in Business](video \"LiL3_Internal_Networking\")\n\n**Watch**: *Internal Networking in Business*\n\n---",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-08T05:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/1692383/there-way-improve-project-planning?cid=search",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://tenstep.com/use-these-three-steps-to-create-a-resource-plan/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.projectengineer.net/the-4-steps-of-resource-planning/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.theprojectgroup.com/blog/en/resource-planning-in-project-management/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Internal Networking in Business",
+      "url": "",
+      "target": "video \"LiL3_Internal_Networking\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 466,
+    "source_record_number": "462"
+  }
+}

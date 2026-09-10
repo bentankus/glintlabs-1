@@ -1,0 +1,134 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "275b09c0-aabd-11ea-b056-a519d2528c44:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_BUILDS_RAPPORT_360"
+  ],
+  "source_question_id_cell": "[Q_BUILDS_RAPPORT_360]",
+  "action_plan_template_uuid": "275b09c0-aabd-11ea-b056-a519d2528c44",
+  "template_name": "Glint 360 Builds Rapport",
+  "sequence": 5,
+  "focus_area_title": "Encourage Your Team to Ask for Help",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal is to create an environment at work where people feel that it's okay to ask each other for support.\n\n[How to Get Better at Asking for Help](video \"LiL3_How_to_Ask_for_Help\")\n\n**Watch**: *How to Get Better at Asking for Help*\n\n---\n\n### Why is it important?\n\nAs a manager, if you model asking for and offering help, your team members are more likely to support each other, work together and have positive relationships. And by discussing why supporting one another is important, you will create a greater sense of 'we are all in it together' on the team.\n\n### Knowledge sharing\n\nSchedule a team meeting focused on knowledge sharing and creating opportunities for support. Ask each team member to share their areas of expertise and experience, as well as development areas where they would like to learn more or improve. Identify opportunities for pairing team members, group lunch and learns, and other ways to bring team members together to support one another in their learning and performance.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-31T08:05:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnhall/2014/03/10/11-simple-ways-to-show-your-employees-you-care",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/christinecomaford/2014/03/12/bust-workplace-bullies-and-clear-conflict-in-3-essential-steps",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/01/the-neuroscience-of-trust",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/ilan-mochari/bridging-social-distance-remote-teams.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/can-your-employees-really-speak-freely",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3039912/why-successful-ceos-must-think-like-the-janitor",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glennllopis/2013/05/20/6-effective-ways-listening-can-make-you-a-better-leader/",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/the-problem-with-saying-my-door-is-always-open",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Get Better at Asking for Help",
+      "url": "",
+      "target": "video \"LiL3_How_to_Ask_for_Help\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 44,
+    "source_record_number": "40"
+  }
+}

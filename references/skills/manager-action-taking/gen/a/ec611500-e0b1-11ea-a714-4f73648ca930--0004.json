@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ec611500-e0b1-11ea-a714-4f73648ca930:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_RESOURCES"
+  ],
+  "source_question_id_cell": "[Q_GPS_RESOURCES]",
+  "action_plan_template_uuid": "ec611500-e0b1-11ea-a714-4f73648ca930",
+  "template_name": "Glint Resources - GPS",
+  "sequence": 4,
+  "focus_area_title": "Use an Acuity-Adjusted Staffing Model",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Managing staffing and scheduling in a healthcare environment is challenging. Ensuring that the right staff and the right numbers of staff are in place to ensure safe patient care while also balancing the workload of healthcare professionals is an ongoing and complex problem. An acuity-adjusted staffing model may offer some solutions to these problems.\n\n### Why is it important?\n\nIn her article, \"Acuity-adjusted staffing: A proven strategy to optimize patient care,\" Meaghan O'Keefe states that multiple experts believe patient acuity is an important component of nurse staffing because acuity-informed staffing approaches have been shown to improve patient outcomes and enhance nurse satisfaction. Acuity-based staffing is also associated with decreased adverse events, including falls, infections, and pressure ulcers. A study in one transplant unit has identified four patient risk factors that indicate a higher acuity level.\n\nWhile acuity-based staffing models have been around for many years, earlier models required a great deal of extra work for nursing managers and were not forward-looking like those of today.  **In the article, \"Acuity-adjusted staffing: A proven strategy to optimize patient care,\" Meaghan O'Keefe and other contributors discuss recommendations for implementing these models:**\n \n- **Adopt or create a definition of acuity**  \nIt is difficult to define acuity across healthcare facilities of different functions, sizes, and geographic regions. For your organization, create a definition so everyone is on the same page regarding terminology. One expert defined this as the individual patient's need for care.  \n\n- **Utilize EHR**  \nElectronic Health Records or EHR gives nurses and nursing leaders access to rich clinical information which can inform their decision making around staffing.  \n\n- **Utilize Shared Governance**  \nExperts on acuity-adjust staffing agreed that a Shared Governance model where front-line employee staff was involved in the definition of acuity levels (e.g., a group including staff RNs helped determine indicators that determined high acuity) and the implementation of the new staffing model was a key to success. \"Shared governance gives nurses power in their practice,\" \"It gives them a voice, which promotes innovation and allows them control over their practice,\" saud Andrea Erickson, an RN who oversaw the implementation of this staffing model at her facility. The shared governance model at her facility kept the patient and family as their central focus, with unit-based councils and evidence-based practices on the second tier, followed by other councils and committees that funnel up through the coordinating councils. \"At the end of the day,\" remarked Erickson, we want an acuity tool system that fulfills requirements of the law, but we don't want to lose nursing judgement along the way.\"\n\n- **Consider the Context**  \nEileen Lake, a chair in Nursing and Health policy at University of Pennsylvania School of Nursing, pointed out the importance of considering the context and setting of a particular unit when implementing an acuity-adjusted model, in addition to using a system which is evidence-based.  For example, for a nurse working with multiple low-acuity infants, if you add events and parent needs together, they may have a much higher workload than a nurse working with 1-2 high acuity infants.\n\n- **Acuity Calculations driven by Nursing Documentation**  \nAn EHR should be integrated with nursing documentation - this helps ensure that the acuity level calculation doesn't come at the direct cost of nursing time. Trinity Health decided to give all of their nurses access to the acuity solution to allow for greater transparency and empowerment of nurses.  \n\n- **Ensure Ownership and Engagement of Nurses**\nTrinity Health successfully launched an acuity solution at one of their hospitals in the fall of 2015. Along with employing a shared governance model, they kept their nurses engaged by:\n>- Using scheduling and",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:44:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.psqh.com/analysis/weighing-the-pros-and-cons-of-patient-safety-technology/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.myamericannurse.com/acuity-adjusted-staffing-proven-strategy-optimize-patient-care/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/workforce/5-of-the-biggest-issues-nurses-face-todayjune15.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://patientengagementhit.com/news/how-nurse-staffing-ratios-impact-patient-safety-access-to-care",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/hr/solving-staffing-conundrums-a-system-wide-domino-effect.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/20-patient-safety-tools.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 734,
+    "source_record_number": "730"
+  }
+}

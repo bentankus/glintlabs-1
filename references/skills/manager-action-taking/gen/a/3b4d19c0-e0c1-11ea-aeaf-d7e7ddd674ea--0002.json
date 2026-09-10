@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_PSYCHOLOGICAL_SAFETY"
+  ],
+  "source_question_id_cell": "[Q_GPS_PSYCHOLOGICAL_SAFETY]",
+  "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+  "template_name": "Glint Psychological Safety - GPS",
+  "sequence": 2,
+  "focus_area_title": "Ensuring Psychological Safety",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Why is psychological safety in health care so important? In a short video, Amy Edmondson, Novartis Professor of Leadership and Management at Harvard Business School, describes four specific outcomes associated with a psychologically safe work environment.\n\n### Why is it important?\n\nSpeaking up is vital to patient safety, but healthcare professionals need a climate of psychological safety to be able to do so, said Amy C. Edmondson, Novartis Professor of Leadership and Management, Harvard Business School. Psychological safety is a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes. Nobody wakes up in the morning because they want to look ignorant, incompetent, intrusive and negative, noted Edmondson. Leaders need to make sure that others are not afraid to speak up. Psychological safety is not about being nice. It is fostered by explicit recognition of the complex, interdependent nature of the work.\n\nA climate of psychological safety does not mean high standards cannot be maintained. Psychological safety enables learning behavior in organizations, for error reporting, quality improvement, innovation and more. Leaders need to create both psychological safety for voice and convey high standards for work.\n\n#### Video:  Why is Psychological Safety So Important in Health Care?\n\n**Description**: Why is psychological safety in health care so important? In a short video, Amy Edmondson, Novartis Professor of Leadership and Management at Harvard Business School, describes four specific outcomes associated with a psychologically safe work environment.\n\n[http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Why-Is-Psychological-Safety-So-Important-in-Health-Care.aspx](http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Why-Is-Psychological-Safety-So-Important-in-Health-Care.aspx)\n\n**Learning Objectives**: At the end of this activity, you will be able to:\n- List four outcomes associated with a psychologically safe work environment.\u00e2\u20ac\u2039\n- Describe organizational and individual benefits associated with learning, risk management, innovation, and job satisfaction in health care.\n\n**Discussion Questions**:\n\n- Do you agree with each of Amy Edmondson's observations about the benefits of a psychologically safe work environment? Why or why not?\n- In your experience, how have environments in which you've worked contributed to or detracted from the four outcomes Amy Edmondson mentioned? What other factors besides psychological safety influenced these outcomes?\n- Amy Edmondson talks about the importance of individual and organizational learning. In your experience, what is the relationship between these two types of learning? How does individual learning become organizational learning, and vice versa?\n- Amy Edmondson describes \"the very real risks that are always present in the health care setting.\" What are these risks?\n- Amy Edmondson talks about employee retention as being valuable to patients, organizations, and colleagues. What do you see as the benefits for each group?\n\n>Sources: \n\n>Institute for Healthcare Innovation:  Why Is Psychological Safety So Important in Health Care?\nAmy Edmondson, Novartis Professor of Leadership and Management, Harvard Business School\n\n>Edmondson AC (1996) Learning from mistakes is easier said than done: group and organizational influences on the detection and correction of human error. Journal of Applied Behavioral Science, 21(1), 5-28.\n\n>Edmondson AC, Lei Z (2014) Psychological safety: the history, renaissance, and future of an interpersonal construct. Annual Review of Organizational Psychology and Organizational Behavior, 1: 23-43.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:23:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.hopkinsmedicine.org/news/newsroom/news-releases/study-at-johns-hopkins-hospital-leads-to-changes-in-reporting-patient-safety-concerns",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/WIHI-Speak-Up-For-Safety.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Why-Is-Psychological-Safety-So-Important-in-Health-Care.aspx",
+      "url": "http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Why-Is-Psychological-Safety-So-Important-in-Health-Care.aspx",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 681,
+    "source_record_number": "677"
+  }
+}

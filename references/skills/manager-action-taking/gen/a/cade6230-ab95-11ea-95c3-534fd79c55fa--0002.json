@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "cade6230-ab95-11ea-95c3-534fd79c55fa:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DEMONSTRATES_CAPABILITY_360"
+  ],
+  "source_question_id_cell": "[Q_DEMONSTRATES_CAPABILITY_360]",
+  "action_plan_template_uuid": "cade6230-ab95-11ea-95c3-534fd79c55fa",
+  "template_name": "Glint 360 Demonstrates Capability",
+  "sequence": 2,
+  "focus_area_title": "Set Attainable but Challenging Goals",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Setting goals requires finding a balance between too hard and too easy so that team members feel both motivated and inspired. The objective is to help your team develop attainable but challenging goals.\n\nFirst, read this article on [Setting Attainable Goals](http://www.inc.com/rebecca-borison/why-its-better-to-be-vague-with-team-goals.html).\n\n### Determine what is attainable\n\nAsk each team member to list all of the tasks they are responsible for and how likely they are to hit deadlines for each task. If a task is at risk for not being completed on time, figure out why and adjust the goal as needed.\n\n### Create challenging goals\n\nNow that you know about how long each task takes to complete, set a range of goals from \"expected to achieve\u00e2\u20ac\u009d to \"would be nice to achieve.\u00e2\u20ac\u009d For example, the goal could be to reduce errors by 10-15% instead of setting the goal at 15%. Regularly evaluate if you team is meeting their goals and adjust to make them more or less challenging.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/11/can-you-be-a-great-leader-without-technical-expertise?autocomplete=true",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/11/your-strategy-wont-work-if-you-dont-identify-the-new-capabilities-you-need",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.leadershipnow.com/CoveyOnTrust.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/forbestechcouncil/2018/10/01/bridging-the-gap-between-executive-leadership-and-technical-execution/#7cdfc05f7c5e",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.linkedin.com/pulse/25-ways-demonstrate-technical-leadership-lee-mallabone/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Setting Attainable Goals",
+      "url": "http://www.inc.com/rebecca-borison/why-its-better-to-be-vague-with-team-goals.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 73,
+    "source_record_number": "69"
+  }
+}

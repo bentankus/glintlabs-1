@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "36d9c900-7bbc-11e7-a59b-294de3121110:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATMENT_FAIRNESS"
+  ],
+  "source_question_id_cell": "[Q_TREATMENT_FAIRNESS]",
+  "action_plan_template_uuid": "36d9c900-7bbc-11e7-a59b-294de3121110",
+  "template_name": "Glint Fairness",
+  "sequence": 3,
+  "focus_area_title": "Resolve Internal Pay Equity Issues",
+  "content_type": "mixed",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "[Strategic Compensation](video \"LiL3_Strategic_Compensation\")\n\n**Watch**: *Strategic Compensation*\n\n---\n\nPerformance at work can suffer if there's an issue on your team with paying people unfairly. The goal is to ensure that you are paying team members equitably for similar jobs, levels, skills and experience.\n\n### Clarify how the team is paid\n\nTalk with your team about company pay practices, specifically the guidelines concerning rewards, and how compensation is distributed. Ask for questions and clarify any misunderstandings.\n\nIf a team member raises a legitimate concern (e.g., a pay issue that appears to be out of alignment with company guidelines), commit to following up. Encourage team members to approach you with any individual issue they might not feel open to sharing in the group.\n\n### Rectify inequitable pay\n\nLook for any cases where pay for a team member is not equitable, and correct it by making adjustments at the earliest opportunity.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T08:49:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-managers-can-avoid-playing-favorites",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/dont-let-power-corrupt-you",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/pay-fairness-isnt-just-about-teaching-employees-to-negotiate",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.bizjournals.com/bizjournals/how-to/growth-strategies/2014/02/treating-employees-fairly-not-the-same.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/making-employment-a-fair-deal-in-the-age-of-contracting-subcontracting-and-temp-work",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Strategic Compensation",
+      "url": "",
+      "target": "video \"LiL3_Strategic_Compensation\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 515,
+    "source_record_number": "511"
+  }
+}

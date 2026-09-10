@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "f3aaae10-6824-11e7-95bd-e5a91202bf89:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_TRUST"
+  ],
+  "source_question_id_cell": "[Q_TEAM_TRUST]",
+  "action_plan_template_uuid": "f3aaae10-6824-11e7-95bd-e5a91202bf89",
+  "template_name": "Glint Trust Team",
+  "sequence": 3,
+  "focus_area_title": "Learn what it means to really trust",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/why-trust-matters-with-rachel-botsman/the-real-meaning-of-trust-17502769?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "LiL2_The_real_meaning_of_trust",
+  "resources": [
+    {
+      "type": "video",
+      "title": "The real meaning of trust",
+      "url": "https://www.linkedin.com/learning/embed/why-trust-matters-with-rachel-botsman/the-real-meaning-of-trust-17502769?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/video/2363593491001/how-to-build-trust-on-your-virtual-team",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/michelle-reina/want-to-make-google-envious-of-your-team-do-these-10-things-first.html",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3059665/how-to-build-employee-trust-in-an-age-of-short-job-tenures",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/06/how-to-build-trust-on-your-cross-cultural-team",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/09/what-to-do-when-you-dont-trust-your-team",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/michelle-reina/5-counterintuitive-signs-your-team-is-more-trustworthy-than-average.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 792,
+    "source_record_number": "788"
+  }
+}

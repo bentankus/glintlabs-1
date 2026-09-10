@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ba63a510-0594-11e6-bacf-170ba1b0fcba:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_RECOGNITION",
+    "Q_CULTURE_RECOGNITION"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_RECOGNITION, Q_CULTURE_RECOGNITION]",
+  "action_plan_template_uuid": "ba63a510-0594-11e6-bacf-170ba1b0fcba",
+  "template_name": "Glint Recognition",
+  "sequence": 6,
+  "focus_area_title": "Reinforce team strengths through recognition",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/a-strengths-based-approach-to-managing-your-team/reinforce-team-strengths-through-recognition?autoplay=false&claim=AQGIPgpdFRcwAAAAAX9BVWgi8h_1ww5Wgc2Lbz1i_eHEvAqmZUbKRvqnqBrFkDvspCS0zgtv3pIwRxRIMZN4vlpReUwDsV_RgaH_XhcBnG3Q3QRh1x1PSUB2mi54o5onJu0R1ZSKFR5o9nwiHhz0x_2-ptm_blojhxhnEFIPSM9XYWuJ-6Kyp8LQAXUZnY3TUKTk9iU5aC6njS8YDucYOinSWNgdAnQP3zsCFuhv4xsKH4D4lIbN-3OTENv3UHoZbotke_YjUK_InvPB2W94jZH6FOU1Ru8oO24MVtc4tSGRFSv-2UjLtdzD8gvFn7rrw2Df6C9I3M8DdQx9J_x6Y_ahg3NYudvs9a6OblEZdp2fedEROXWwxcaZyYqc-gNyy1Si2YiaD1ozSL0dUkH7ZJ23mo68k3Iz2KrJL1jX13u1841LmpsGD6pMEFnbwQ6Z6Y0QGXKcjGG7wAOpn_KyTJ9ADNXqrXHxaDjMb4Z-7D0nBWdtqmBdil8rlyUJP6QGyjacy68YTwBL3k0du96ImYaf5H-ENcAdwI6rvNwWgHUgBzKm7dPSLmBDGF3BfogAcH3cYVSQdHYkZhC3yWiLzRO6PO5ObLZDptyKz5Xls8SjMdcDAqpyg_t44qVytx5Idatv34sz23IuJlRifAds1V0d7rYPpt2zLUqIQIIa9wPKZ6paMROalwTv2vDv2AveRrcBnjOY0bi_cs7V8a1NULd1ai8NkYlpYqKB4Vuy-rPBvuY&lipi=urn%3Ali%3Apage%3Ad_learning_content%3B%2FHrwjxBJTdyJFpsilw2BSQ%3D%3D&licu",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-12-13T08:22:00+00:00",
+  "video_extract": "LiL3_Reinforce_Team_Strengths_Through_Recognition",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Reinforce team strengths through recognition",
+      "url": "https://www.linkedin.com/learning/embed/a-strengths-based-approach-to-managing-your-team/reinforce-team-strengths-through-recognition?autoplay=false&claim=AQGIPgpdFRcwAAAAAX9BVWgi8h_1ww5Wgc2Lbz1i_eHEvAqmZUbKRvqnqBrFkDvspCS0zgtv3pIwRxRIMZN4vlpReUwDsV_RgaH_XhcBnG3Q3QRh1x1PSUB2mi54o5onJu0R1ZSKFR5o9nwiHhz0x_2-ptm_blojhxhnEFIPSM9XYWuJ-6Kyp8LQAXUZnY3TUKTk9iU5aC6njS8YDucYOinSWNgdAnQP3zsCFuhv4xsKH4D4lIbN-3OTENv3UHoZbotke_YjUK_InvPB2W94jZH6FOU1Ru8oO24MVtc4tSGRFSv-2UjLtdzD8gvFn7rrw2Df6C9I3M8DdQx9J_x6Y_ahg3NYudvs9a6OblEZdp2fedEROXWwxcaZyYqc-gNyy1Si2YiaD1ozSL0dUkH7ZJ23mo68k3Iz2KrJL1jX13u1841LmpsGD6pMEFnbwQ6Z6Y0QGXKcjGG7wAOpn_KyTJ9ADNXqrXHxaDjMb4Z-7D0nBWdtqmBdil8rlyUJP6QGyjacy68YTwBL3k0du96ImYaf5H-ENcAdwI6rvNwWgHUgBzKm7dPSLmBDGF3BfogAcH3cYVSQdHYkZhC3yWiLzRO6PO5ObLZDptyKz5Xls8SjMdcDAqpyg_t44qVytx5Idatv34sz23IuJlRifAds1V0d7rYPpt2zLUqIQIIa9wPKZ6paMROalwTv2vDv2AveRrcBnjOY0bi_cs7V8a1NULd1ai8NkYlpYqKB4Vuy-rPBvuY&lipi=urn%3Ali%3Apage%3Ad_learning_content%3B%2FHrwjxBJTdyJFpsilw2BSQ%3D%3D&licu",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/tip/2015/09/recognize-your-employees-achievements",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/meghanbiro/2013/01/13/5-ways-leaders-rock-employee-recognition",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2008/02/employee-recognition-and-rewar-1.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/joshbersin/2012/06/13/new-research-unlocks-the-secret-of-employee-recognition",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 715,
+    "source_record_number": "711"
+  }
+}

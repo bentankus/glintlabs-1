@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "813516e0-ab8d-11ea-b61d-47fc60103d85:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GAINS_SUPPORT_360"
+  ],
+  "source_question_id_cell": "[Q_GAINS_SUPPORT_360]",
+  "action_plan_template_uuid": "813516e0-ab8d-11ea-b61d-47fc60103d85",
+  "template_name": "Glint 360 Gains Support",
+  "sequence": 2,
+  "focus_area_title": "Build rapport with new people",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/persuading-others/get-new-people-to-like-you?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:22:00+00:00",
+  "video_extract": "LiL2_Get_new_people_to_like_you",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Get new people to like you",
+      "url": "https://www.linkedin.com/learning/embed/persuading-others/get-new-people-to-like-you?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/drew-hendricks/8-simple-ways-to-make-your-employees-trust-you-more.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/glennllopis/2012/09/10/5-powerful-things-happen-when-a-leader-is-transparent/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.shrm.org/hr-today/news/hr-magazine/0618/pages/why-trust-matters-at-work.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnhall/2014/03/10/11-simple-ways-to-show-your-employees-you-care",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/01/the-neuroscience-of-trust",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 123,
+    "source_record_number": "119"
+  }
+}

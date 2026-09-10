@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESPONSE]",
+  "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+  "template_name": "CrisisFBSurvey_Default_Action_Template",
+  "sequence": 7,
+  "focus_area_title": "Take Action and Communicate Progress",
+  "content_type": "guide",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance"
+  ],
+  "content_description": "",
+  "content_text_body": "* Work towards your commitments, check in on progress frequently, be agile and celebrate success.\n\n* Keep having conversations and communicating progress with the team.\n\n* If something didn't work, course-correct quickly and identify 'lessons learned'.\n\n* Make sure your manager/leader is fully apprised of the discussions and actions - enlisting their support as required.\n\n* Stay tuned for the next Glint survey to see how things are improving and evolving.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 14,
+    "source_record_number": "10"
+  }
+}

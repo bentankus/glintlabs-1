@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "14d7fd10-d48f-11e6-b21c-e7fd2e716528:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_DECISIONS",
+    "Q_DECISION_MAKING"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_DECISIONS, Q_DECISION_MAKING]",
+  "action_plan_template_uuid": "14d7fd10-d48f-11e6-b21c-e7fd2e716528",
+  "template_name": "Glint Decisions",
+  "sequence": 6,
+  "focus_area_title": "Get Better at Planning",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Meeting your targets is part of demonstrating excellence, and how you plan for those targets will play a big role in hitting them. The goal is to learn how to plan out projects so that you know what steps are required to successfully complete them.\n\n### Prior to your next project\n\nEstimate the time, materials, tasks, people and technical resources it will take to complete it. Add some extra time for issues that may arise.\n\n### Create your plan\n\nSet your goals, the strategy you will use to achieve your goals, the objectives or steps you will take to execute your strategy, and any tools you will need to execute your objectives.\n\n### Modify your plans as needed\n\nGet regular updates from your team to better understand how long each task takes, and if there are any additional tools, supplies or information they need.\n\nPlan to accomplish whatever is feasible with the number of people you have at the time (e.g., reduce the scope but keep the deadline). Or, extend the deadline to fit the capacity of available people hours.\n\n[How to Get Better at Asking for Help](video \"LiL3_How_to_Ask_for_Help\")\n\n**Watch**: *How to Get Better at Asking for Help*\n\n---",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-08-19T08:31:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/travisbradberry/2015/10/07/10-tricks-successful-people-use-to-make-smart-decisions/#6346c6c81418",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jeffboss/2015/03/20/how-to-overcome-the-analysis-paralysis-of-decision-making/#cb9e63e7cc40",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/04/how-you-make-decisions-is-as-important-as-what-you-decide",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/03/a-checklist-for-making-faster-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://fortune.com/2015/12/09/successful-leaders-tough-decisions/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/12/only-8-of-leaders-are-good-at-both-strategy-and-execution",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://gbr.pepperdine.edu/2010/10/great-leaders-are-great-decision-makers/",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Get Better at Asking for Help",
+      "url": "",
+      "target": "video \"LiL3_How_to_Ask_for_Help\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 411,
+    "source_record_number": "407"
+  }
+}

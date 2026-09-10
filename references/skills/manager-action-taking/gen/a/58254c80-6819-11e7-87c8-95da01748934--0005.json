@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "58254c80-6819-11e7-87c8-95da01748934:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_ACCOUNTABILITY"
+  ],
+  "source_question_id_cell": "[Q_TEAM_ACCOUNTABILITY]",
+  "action_plan_template_uuid": "58254c80-6819-11e7-87c8-95da01748934",
+  "template_name": "Glint Accountability Team",
+  "sequence": 5,
+  "focus_area_title": "Agree on a Goal Tracking Process",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "[How to Create Measurable Goals](video \"LiL3_Measurable_Goals\")\n\n**Watch**: *How to Create Measurable Goals*\n\n---\n\nThe objective is to create a goal tracking process so that everyone on the team knows whether they are completing their goals.\n\n### The assignment\n\nEach quarter, or more frequently if necessary, get together as a group and create a list of all the goals that the team faces. Break these bigger goals down into smaller, measurable actions. For each, note down the person who is responsible for completing each goal. Throughout the quarter, each team member should track all of their goals. Apply a color system to identify which goals are on track for being completed on time.\n\n* Green = completed\n\n* Yellow = on track\n\n* Red = in danger of not getting completed on time\n\nAt the end of each quarter, note any goals that didn't get completed to identify unrealistic goals, bottlenecks, and obstacles.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T07:53:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/joefolkman/2014/11/14/how-do-you-score-the-8-great-accountability-skills-for-business-success/#6c6986673c11",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/the-right-way-to-hold-people-accountable",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/shawn-murphy/7-invaluable-leadership-tips-that-boost-accountability-in-the-workplace.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/how-spotify-balances-employee-autonomy-and-accountability",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3025193/what-you-need-to-know-to-create-an-accountability-group-that-works",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/3-ways-to-make-time-for-the-little-tasks-you-never-make-time-for",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ccl/2012/02/28/7-ways-to-build-accountable-organizations/#654d80393cd3",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Create Measurable Goals",
+      "url": "",
+      "target": "video \"LiL3_Measurable_Goals\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 246,
+    "source_record_number": "242"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ca8919e0-6829-11e7-95bd-e5a91202bf89:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_UNITED"
+  ],
+  "source_question_id_cell": "[Q_TEAM_UNITED]",
+  "action_plan_template_uuid": "ca8919e0-6829-11e7-95bd-e5a91202bf89",
+  "template_name": "Glint United Team",
+  "sequence": 4,
+  "focus_area_title": "Create a Tracking Tool for Team Goals",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "The objective is to create a goal tracking tool so that everyone on the team knows and agrees on which goals each person is responsible for.\n\n### The assignment\n\nAs a group, create a list of all the goals that the team faces on a regular basis. Note down the point person who is responsible for each goal. Then apply the \"Stop Light\u00e2\u20ac\u009d system to each decision:\n\n* Green light = needs no approval\n\n* Yellow light = needs a quick answer from (note team members' names)\n\n* Red light = needs significant review by (note team members' names)\n\nNote any team members who have more than their fair share of responsibility. Take this opportunity to change processes or practices that might impede reaching team goals. The team leader should monitor these goals over time to make sure everyone remains on the same page.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-08T03:58:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/06/six-common-misperceptions-abou/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 807,
+    "source_record_number": "803"
+  }
+}

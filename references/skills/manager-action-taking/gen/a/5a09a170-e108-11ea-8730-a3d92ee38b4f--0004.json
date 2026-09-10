@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5a09a170-e108-11ea-8730-a3d92ee38b4f:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_TRAINING"
+  ],
+  "source_question_id_cell": "[Q_GPS_TRAINING]",
+  "action_plan_template_uuid": "5a09a170-e108-11ea-8730-a3d92ee38b4f",
+  "template_name": "Glint Training - GPS",
+  "sequence": 4,
+  "focus_area_title": "Leading by Example",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why is it important?\n\nOrganizations with learning cultures tend to be safer for patients and employees. A learning culture is a collection of organizational conventions, values, practices and processes. These conventions encourage employees and organizations to develop knowledge and competence. An organization with a learning culture encourages continuous learning and believes that systems influence each other.\n\n#### Set the example and foster a learning culture\n\nA manager's role in training and development is essential because they spend so much time with employees. Managers can use simple daily interactions to show employees that training is a priority. This constant interaction between manager and employee can be leveraged to improve training by consciously fostering a learning culture within the organization. An effective learning culture starts from the top, and is cascaded throughout all levels - no exceptions!\n\nA successful learning culture promises:\n\n- Increased productivity (and increased profit!)\n\n- Improved employee satisfaction levels\n\n- Decreased employee turnover\n\n- A culture of knowledge sharing (rather than knowledge-hoarding)\n\n- Improved learning agility\n\nTraining programs can also take advantage of managers' daily interaction with employees by incorporating managers into structured post-training activities. These can range from on-the-job assessments to encouragement when employees find changes challenging to implement and maintain.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:48:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/professionals/systems/hospital/fallpxtraining/index.html?utm_source=ahrq&utm_medium=dpils&utm_term=&utm_content=1&utm_campaign=ahrq_fallprevent_2017",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://qualitysafety.bmj.com/content/22/5/394.abstract",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/wihi-how-to-make-patient-safety-easy-to-explain-and-champion.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/teamstepps/index.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.aha.org/system/files/2019-01/TeamTraining_AboutTeamSTEPPS.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 784,
+    "source_record_number": "780"
+  }
+}

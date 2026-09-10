@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "b940c380-ab89-11ea-b68e-1fd653b3f79b:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EMPOWERS_OTHERS_360"
+  ],
+  "source_question_id_cell": "[Q_EMPOWERS_OTHERS_360]",
+  "action_plan_template_uuid": "b940c380-ab89-11ea-b68e-1fd653b3f79b",
+  "template_name": "Glint 360 Empowers Others",
+  "sequence": 4,
+  "focus_area_title": "Ask Your Team to Help Solve Key Business Problems",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Ask your team to help identify major barriers that impact the team, function, or company - and help you come up with solutions that address them. \n\nFirst, spend a few minutes brainstorming around these two areas:\n\n**Business Growth:** What new products or services would help us generate revenue and grow the business? \n\n**Team Efficiency:** What could we do on the team, in the function, or at the company to operate more efficiently?\n\nChoose *either* a growth or an efficiency opportunity. The more achievable and more impactful the better. Ask yourself: How will we make it happen? What are our next steps? Can we do this as a team or do we need to propose others to do it?\n\nAsk each team member to spend three minutes writing down as many ideas as they can on post-it's, one idea per post-it. Then, on a whiteboard, draw a 2x2 chart so that \"Very achievable and very impactful\u00e2\u20ac\u009d is in the top right quadrant, and \"Nearly impossible and barely impactful\u00e2\u20ac\u009d is in the bottom left quadrant.  \n\nOne by one, share your ideas with the group, propose where you think each item belongs on the chart, discuss, and make a final placement.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:12:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-tell-your-boss-to-stop-doing-your-job",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/08/how-to-stop-micromanaging-your-team",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1837301/5-ways-process-killing-your-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://greatergood.berkeley.edu/article/item/how_to_find_your_power_avoid_abusing_it",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/05/6-myths-about-empowering-employees",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 95,
+    "source_record_number": "91"
+  }
+}

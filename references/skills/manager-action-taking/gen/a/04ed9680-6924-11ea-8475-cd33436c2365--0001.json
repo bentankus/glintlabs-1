@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "04ed9680-6924-11ea-8475-cd33436c2365:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EQUAL_OPPORTUNITY"
+  ],
+  "source_question_id_cell": "[Q_EQUAL_OPPORTUNITY]",
+  "action_plan_template_uuid": "04ed9680-6924-11ea-8475-cd33436c2365",
+  "template_name": "Glint Equal Opportunity",
+  "sequence": 1,
+  "focus_area_title": "Ensure Equal Development for Your Employees",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Supporting the professional development of your employees is an essential step to ensuring equal access to opportunities among your team. \n\n### Open space for one-on-one meetings \nSchedule time to get to know your employees. Find out about their career goals, their plans, their frustrations, and aspirations. This will help you to make connections on how to help them in their career plans, and possibly recognize how they can continue their career pathway with the company. Help them answer questions such as: What's next for me? How can I move forward toward my next career goal? Consistent communication on their career advancement will help you enhance their level of engagement and reveal you have their best interest in mind. \n\n### Promote development opportunities at all levels \nExplore ways to nurture the individual needs and specific skills of your employees. Ensure they are aware of professional development opportunities that match their experience, interests and motivate them to move forward in their career advancement.  \n\n### Support mentoring \nEncourage your employees to participate in mentoring sessions if these are available at your organization. If not, serve as a mentor for your employee or create mentoring group sessions to build on a culture of support. Mentoring is an excellent channel to build strong internal networks, increase teamwork, improve staff retention, and develop leadership skills among other things. \n\nRead more [recommendations on how to develop and retain top talent](https://hbr.org/2020/01/a-better-way-to-develop-and-retain-top-talent).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "inline_external",
+      "title": "recommendations on how to develop and retain top talent",
+      "url": "https://hbr.org/2020/01/a-better-way-to-develop-and-retain-top-talent",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 492,
+    "source_record_number": "488"
+  }
+}

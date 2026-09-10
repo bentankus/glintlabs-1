@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "feaca180-7c4a-11e7-be4c-77c5e1facfc9:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INCLUSION",
+    "Q_TREATMENT_INCLUSION"
+  ],
+  "source_question_id_cell": "[Q_INCLUSION, Q_TREATMENT_INCLUSION]",
+  "action_plan_template_uuid": "feaca180-7c4a-11e7-be4c-77c5e1facfc9",
+  "template_name": "Glint Inclusion",
+  "sequence": 8,
+  "focus_area_title": "Be honest and open",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/teamwork-foundations-2020/be-honest-and-open?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:13:00+00:00",
+  "video_extract": "LiL2_Be_honest_and_open",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Be honest and open",
+      "url": "https://www.linkedin.com/learning/embed/teamwork-foundations-2020/be-honest-and-open?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/listening-is-an-overlooked-leadership-tool",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/07/how-to-make-diversity-and-incl",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 552,
+    "source_record_number": "548"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "cdb0f720-2cd2-11e6-b9d8-3df910755a86:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_JOB_CREATIVITY"
+  ],
+  "source_question_id_cell": "[Q_JOB_CREATIVITY]",
+  "action_plan_template_uuid": "cdb0f720-2cd2-11e6-b9d8-3df910755a86",
+  "template_name": "Glint Creativity",
+  "sequence": 7,
+  "focus_area_title": "Develop a Habit of Recognizing Creativity",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Recognizing and thanking team members for their creative thinking is one of the simplest and most effective ways to promote creativity on your team. \n\nFor starters, read this brief article on [How to Recognize Creative Ideas](http://www.inc.com/will-yakowicz/heres-why-you-are-really-bad-at-recognizing-great-ideas.html).\n\nTry to come up with new ways to recognize and reward your team's creativity. To get some ideas, read this article on [How to Reward Creative ideas](http://www.inc.com/guides/201107/how-to-reward-employees-great-ideas.html).\n\n### For one week, just observe\n\nJot down all of your team's outside-the-box ideas or actions that deserve recognition. Review the list at the end of each day.\n\n### Practice every day\n\nConsistently say \"thank you\u00e2\u20ac\u009d for all creative efforts. \n\nLet your team know what they did, why it was important for the team and the business - and whenever possible - what others are saying about it. \n\n### Get your team involved\n\nDoes your team interact with each other more than they interact with you? Then ask your team to recognize each other's creative efforts. Create a culture where everyone values creative thought, ideas, and actions.\n\n### Create a feedback loop\n\nAsk your team to give you feedback at the end of each week on how consistently you're supporting creativity.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:36:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3058554/how-to-be-a-success-at-everything/the-secret-to-creativity-become-an-intellectual-middleman",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/stevedenning/2012/04/27/a-glimpse-at-a-workplace-of-the-future-valve/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3054548/how-to-be-a-success-at-everything/6-creativity-habits-for-people-who-think-theyre-not-creati",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3056177/lessons-learned/5-priceless-lessons-in-collaboration-risk-taking-and-motivation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3049282/lessons-learned/inside-the-creative-office-culture-at-facebook-ideo-and-virgin-airlines",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "How to Recognize Creative Ideas",
+      "url": "http://www.inc.com/will-yakowicz/heres-why-you-are-really-bad-at-recognizing-great-ideas.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "How to Reward Creative ideas",
+      "url": "http://www.inc.com/guides/201107/how-to-reward-employees-great-ideas.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 386,
+    "source_record_number": "382"
+  }
+}

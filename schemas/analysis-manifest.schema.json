@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/eve-people-science/analysis-manifest.schema.json",
+  "title": "EVE People Science Analysis Manifest",
+  "type": "object",
+  "required": ["schema_version", "created_at", "engine", "input_profile", "analyses", "artifacts", "warnings"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "created_at": { "type": "string" },
+    "engine": {
+      "type": "object",
+      "required": ["package", "version", "recommended_install"],
+      "properties": {
+        "package": { "const": "vivaglint" },
+        "version": { "type": "string" },
+        "recommended_install": { "type": "string" },
+        "source_repo": { "type": "string" },
+        "source_commit": { "type": "string" }
+      }
+    },
+    "input_profile": {
+      "type": "object",
+      "required": ["n_rows", "n_questions", "emp_id_col", "scale_points"],
+      "properties": {
+        "n_rows": { "type": "integer" },
+        "n_questions": { "type": "integer" },
+        "emp_id_col": { "type": "string" },
+        "scale_points": { "type": "integer" },
+        "input_format": { "type": "string" },
+        "attribute_cols": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "analyses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status"],
+        "properties": {
+          "name": { "type": "string" },
+          "status": { "enum": ["completed", "skipped", "failed"] },
+          "artifact": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "interpretation_readiness": {
+      "type": "object",
+      "properties": {
+        "ready": { "type": "boolean" },
+        "reasons": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_summaries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["rows", "columns"],
+        "properties": {
+          "rows": { "type": "integer" },
+          "columns": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "repeatability_check": {
+      "type": "object",
+      "required": ["enabled", "runs", "status", "compared_artifacts", "mismatches"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "runs": { "type": "integer" },
+        "status": { "enum": ["passed", "failed", "skipped"] },
+        "verification_dir": { "type": "string" },
+        "compared_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["artifact", "primary_sha256", "verification_sha256"],
+            "properties": {
+              "artifact": { "type": "string" },
+              "primary_sha256": { "type": "string" },
+              "verification_sha256": { "type": "string" }
+            }
+          }
+        },
+        "mismatches": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

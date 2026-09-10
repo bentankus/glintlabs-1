@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "926499a0-0b04-11e6-8135-4f9e7469f586:9",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_JOB_RESOURCES"
+  ],
+  "source_question_id_cell": "[Q_JOB_RESOURCES]",
+  "action_plan_template_uuid": "926499a0-0b04-11e6-8135-4f9e7469f586",
+  "template_name": "Glint Resources",
+  "sequence": 9,
+  "focus_area_title": "Training Employees",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/management-foundations-advanced-applications/training-employees?claim=AQERNGlf_tWo1AAAAXBgZSCNDAJlvBVRiXVH5XUrVh-hlBZJvAhL6yxC4vUvMJMEP0-77aoO-tI0INE7m1Iw5t4Tt8mMREEh8WrwTupO97zABJIAUSqSKf1gamnLzYcMZpWnhsTPQxvgfQt3UJkP6ZhTRaGurjJiFaWQJTbK6hVYQGa4NuqKA-bCN8ApFi5q0myswmeIRFsbV927IQZo7XOCZezzL-H11QyR7dOI9mqXpXFoq5SH-c8LIy-v2eNZK1jrVXMo99-o5tUZ--GejIL7w5p0SMWif7cFm3rTupWYClZw3bQHjOVRenWt95-UOVTyLEF0QwuCXTBqq21PgVR6tHkLhg5siKAHXrLR9FJaGFUdAzL4BwPoBG7ICkxPRJmqYDUJ3unjpVTT-2d7iyPD0fMjam47x11EyXZd4WeXbxFQ-AYHWbw_3NRXOqjhZ33OVK0dlg1yvTrviRtuf9-Hl4JtKIJMgzb1QLdcw9TTgIPrZUBg9HSgqe6oMVBzm7cba5TukC-OjAnBYPoX78tw_gZkNPfnf-YyX3zUToupl0OGpYc3e6dt9eYIJjfhMDNOvJL6j9i1EZSzfklUZlxslysrVH2dwNltPde5I-QcsUcrSwoWiJ0FlT-CHTYQJy-5aCQNvUhP5Q046bWRjsA8SS96Fczp8BKdp8lvjHDg5-Vkw56fIkGcobEtYObfVqnCUkegtp_H9BbuLdU1nfEtF3KJIXeTLfE6f24H1g",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:27:00+00:00",
+  "video_extract": "LiL3_Training_Employees",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Training Employees",
+      "url": "https://www.linkedin.com/learning/embed/management-foundations-advanced-applications/training-employees?claim=AQERNGlf_tWo1AAAAXBgZSCNDAJlvBVRiXVH5XUrVh-hlBZJvAhL6yxC4vUvMJMEP0-77aoO-tI0INE7m1Iw5t4Tt8mMREEh8WrwTupO97zABJIAUSqSKf1gamnLzYcMZpWnhsTPQxvgfQt3UJkP6ZhTRaGurjJiFaWQJTbK6hVYQGa4NuqKA-bCN8ApFi5q0myswmeIRFsbV927IQZo7XOCZezzL-H11QyR7dOI9mqXpXFoq5SH-c8LIy-v2eNZK1jrVXMo99-o5tUZ--GejIL7w5p0SMWif7cFm3rTupWYClZw3bQHjOVRenWt95-UOVTyLEF0QwuCXTBqq21PgVR6tHkLhg5siKAHXrLR9FJaGFUdAzL4BwPoBG7ICkxPRJmqYDUJ3unjpVTT-2d7iyPD0fMjam47x11EyXZd4WeXbxFQ-AYHWbw_3NRXOqjhZ33OVK0dlg1yvTrviRtuf9-Hl4JtKIJMgzb1QLdcw9TTgIPrZUBg9HSgqe6oMVBzm7cba5TukC-OjAnBYPoX78tw_gZkNPfnf-YyX3zUToupl0OGpYc3e6dt9eYIJjfhMDNOvJL6j9i1EZSzfklUZlxslysrVH2dwNltPde5I-QcsUcrSwoWiJ0FlT-CHTYQJy-5aCQNvUhP5Q046bWRjsA8SS96Fczp8BKdp8lvjHDg5-Vkw56fIkGcobEtYObfVqnCUkegtp_H9BbuLdU1nfEtF3KJIXeTLfE6f24H1g",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/02/use-your-staff-meeting-for-peer-to-peer-coaching",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/dailymuse/2013/02/10/why-you-never-finish-your-to-do-lists-at-work-and-how-to-change-that",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/01/why-good-jobs-are-good-for-retailers",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ilyapozin/2013/08/14/9-habits-of-productive-people",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3047784/how-to-be-a-success-at-everything/how-leaders-can-ask-for-help-and-keep-their-teams-confiden",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacquelynsmith/2012/08/24/14-things-you-should-do-at-the-start-of-every-work-day",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2010/02/cultivate-your-coaching-networ-2/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 729,
+    "source_record_number": "725"
+  }
+}

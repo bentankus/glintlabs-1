@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "36d9c900-7bbc-11e7-a59b-294de3121110",
+  "template_name": "Glint Fairness",
+  "action_plan_record_ids": [
+    "36d9c900-7bbc-11e7-a59b-294de3121110:1",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:2",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:3",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:4",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:5",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:6",
+    "36d9c900-7bbc-11e7-a59b-294de3121110:7"
+  ]
+}

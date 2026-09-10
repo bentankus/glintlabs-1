@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "4e890020-6921-11ea-9f22-15f448a12e51:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_QUALITY_OF_IDEAS"
+  ],
+  "source_question_id_cell": "[Q_QUALITY_OF_IDEAS]",
+  "action_plan_template_uuid": "4e890020-6921-11ea-9f22-15f448a12e51",
+  "template_name": "Glint Quality of Ideas",
+  "sequence": 1,
+  "focus_area_title": "Encourage Innovation From All Employees",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "One of the greatest benefits of diversity and inclusion practices is the enhancement of innovation and creativity levels among your team. The goal is to create a culture of innovation where employees across all levels feel motivated to engage in creative thinking and share their ideas without a fear of rejection or exclusion. \n\nTo start, you can evaluate the current environment for idea sharing. Assessing some of the potential barriers listed below can help you to get started on understanding what is limiting your employees' contributions. \n\n* Lack of space and time to voice ideas\n* Fear of rejection \n* Lack of collaboration \n* Unclear company mission \n* No sense of shared purpose \n* Lack of encouragement for innovation\n* Lack of incentives for innovation\n\nNow, move forward to consider how feelings of belongingness can be impacting idea sharing among your team. \n\n### Value uniqueness \nEmployees with a low sense of belongingness probably feel a high level of hesitation to share new ideas. They might feel afraid to further outcast themselves by sharing new ideas that do not conform to previously proposed ideas. Authentic and innovative ideas will follow strong feelings of acceptance and belonging. Watch this video to further explore how belongingness and authenticity merge in group dynamics.   \n\nAdditionally, evaluate resources and share them with your team. Motivate your employees to share their thoughts by helping them recognize there are resources available to support their idea. Employees need to understand there is a system in place to support new ideas with no discrimination. \n\nRead this [article](https://www.forbes.com/sites/forbescommunicationscouncil/2018/05/21/15-ways-to-encourage-creative-idea-sharing-from-all-team-members/#49132ecdce0a) to learn more on how to encourage idea sharing from all team members \n\nLastly, learn how [Elop](https://hbr.org/2018/06/how-to-make-sure-good-ideas-dont-get-lost-in-the-shuffle), an electro-optic company, developed a holistic process to encourage employees to share, develop, and implement ideas.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "inline_external",
+      "title": "article",
+      "url": "https://www.forbes.com/sites/forbescommunicationscouncil/2018/05/21/15-ways-to-encourage-creative-idea-sharing-from-all-team-members/#49132ecdce0a",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Elop",
+      "url": "https://hbr.org/2018/06/how-to-make-sure-good-ideas-dont-get-lost-in-the-shuffle",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 702,
+    "source_record_number": "698"
+  }
+}

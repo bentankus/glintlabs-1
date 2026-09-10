@@ -1,0 +1,957 @@
+{
+  "schema_version": "2.0.0",
+  "source": {
+    "workbook": "plugins/eve-people-science/references/skills/manager-action-taking/Action Planning Taxonomy.xlsx",
+    "source_url": "https://microsoft.sharepoint-df.com/:x:/r/teams/EVE/_layouts/15/Doc.aspx?sourcedoc=%7B0F15DEAC-2FD9-4324-9CDC-DADF01AED66C%7D&file=Action%20Planning%20Taxonomy.xlsx&action=default&mobileredirect=true&share=cQqs3hUP2S8kQ5zc2t8BrtZsEgUC16tQCPV2ZNTnlKYSFg7kWQ&CID=D800A8D6-41EE-4F68-AB87-33B90E17CF69",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408"
+  },
+  "summary": {
+    "source_rows": 827,
+    "question_ids": 224,
+    "candidate_sets": 150,
+    "action_plan_records": 827,
+    "expanded_question_record_relationships": 1681
+  },
+  "action_type_counts": {
+    "communication": 84,
+    "general_action": 7,
+    "growth_and_development": 99,
+    "process_and_accountability": 55,
+    "recognition_and_motivation": 10,
+    "reflection_and_self_assessment": 4,
+    "resource_learning": 231,
+    "resources_and_support": 115,
+    "team_conversation": 121,
+    "trust_and_inclusion": 54,
+    "workload_and_prioritization": 47
+  },
+  "content_type_counts": {
+    "discussion_prompt": 89,
+    "guide": 8,
+    "mixed": 519,
+    "resource_only": 26,
+    "video": 185
+  },
+  "selection_signal_counts": {
+    "communication": 84,
+    "general_action": 7,
+    "growth_and_development": 99,
+    "has_detailed_guidance": 527,
+    "has_external_resources": 811,
+    "has_unresolved_internal_references": 195,
+    "has_video": 185,
+    "process_and_accountability": 55,
+    "quick_start": 89,
+    "recognition_and_motivation": 10,
+    "reflection_and_self_assessment": 4,
+    "resource_learning": 231,
+    "resources_and_support": 115,
+    "team_conversation": 121,
+    "trust_and_inclusion": 54,
+    "workload_and_prioritization": 47
+  },
+  "action_plan_record_id_strategy": "action_plan_template_uuid:sequence",
+  "candidate_sets": [
+    {
+      "action_plan_template_uuid": "ae3c4e60-7d46-11e7-8517-63521c71a395",
+      "template_name": "Awareness",
+      "action_plan_record_count": 4,
+      "file": "c/ae3c4e60-7d46-11e7-8517-63521c71a395.json"
+    },
+    {
+      "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+      "template_name": "CrisisFBSurvey_Default_Action_Template",
+      "action_plan_record_count": 8,
+      "file": "c/CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE.json"
+    },
+    {
+      "action_plan_template_uuid": "600bea70-ab92-11ea-bbfe-3f218b594687",
+      "template_name": "Glint 360 Accepts Feedback",
+      "action_plan_record_count": 4,
+      "file": "c/600bea70-ab92-11ea-bbfe-3f218b594687.json"
+    },
+    {
+      "action_plan_template_uuid": "6d3563f0-ab8f-11ea-9fe9-25ab166456c3",
+      "template_name": "Glint 360 Acts Ethically",
+      "action_plan_record_count": 3,
+      "file": "c/6d3563f0-ab8f-11ea-9fe9-25ab166456c3.json"
+    },
+    {
+      "action_plan_template_uuid": "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2",
+      "template_name": "Glint 360 Adapts Approach",
+      "action_plan_record_count": 4,
+      "file": "c/8f2321f0-aa63-11ea-8778-4f1ac0d91fb2.json"
+    },
+    {
+      "action_plan_template_uuid": "e9266e80-ab1e-11ea-96a6-339e433451e0",
+      "template_name": "Glint 360 Adjusts Rapidly",
+      "action_plan_record_count": 9,
+      "file": "c/e9266e80-ab1e-11ea-96a6-339e433451e0.json"
+    },
+    {
+      "action_plan_template_uuid": "fce9f280-aabe-11ea-9df2-8b8249621425",
+      "template_name": "Glint 360 Builds Diverse Teams",
+      "action_plan_record_count": 4,
+      "file": "c/fce9f280-aabe-11ea-9df2-8b8249621425.json"
+    },
+    {
+      "action_plan_template_uuid": "275b09c0-aabd-11ea-b056-a519d2528c44",
+      "template_name": "Glint 360 Builds Rapport",
+      "action_plan_record_count": 7,
+      "file": "c/275b09c0-aabd-11ea-b056-a519d2528c44.json"
+    },
+    {
+      "action_plan_template_uuid": "e336cb70-ab94-11ea-afdb-c9ac8d0924cc",
+      "template_name": "Glint 360 Calms Others",
+      "action_plan_record_count": 5,
+      "file": "c/e336cb70-ab94-11ea-afdb-c9ac8d0924cc.json"
+    },
+    {
+      "action_plan_template_uuid": "afa84ae0-ab8a-11ea-b2f1-6d6534e57fd2",
+      "template_name": "Glint 360 Career Development",
+      "action_plan_record_count": 1,
+      "file": "c/afa84ae0-ab8a-11ea-b2f1-6d6534e57fd2.json"
+    },
+    {
+      "action_plan_template_uuid": "2c545330-aa79-11ea-bdd0-7328cdcaa7d6",
+      "template_name": "Glint 360 Clarifies Roles",
+      "action_plan_record_count": 5,
+      "file": "c/2c545330-aa79-11ea-bdd0-7328cdcaa7d6.json"
+    },
+    {
+      "action_plan_template_uuid": "f3d625c0-aa68-11ea-b056-a519d2528c44",
+      "template_name": "Glint 360 Collaborative Problem Solving",
+      "action_plan_record_count": 5,
+      "file": "c/f3d625c0-aa68-11ea-b056-a519d2528c44.json"
+    },
+    {
+      "action_plan_template_uuid": "b817d590-aa65-11ea-96a6-339e433451e0",
+      "template_name": "Glint 360 Communicates Clearly",
+      "action_plan_record_count": 9,
+      "file": "c/b817d590-aa65-11ea-96a6-339e433451e0.json"
+    },
+    {
+      "action_plan_template_uuid": "cade6230-ab95-11ea-95c3-534fd79c55fa",
+      "template_name": "Glint 360 Demonstrates Capability",
+      "action_plan_record_count": 6,
+      "file": "c/cade6230-ab95-11ea-95c3-534fd79c55fa.json"
+    },
+    {
+      "action_plan_template_uuid": "bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72",
+      "template_name": "Glint 360 Drives Accountability",
+      "action_plan_record_count": 5,
+      "file": "c/bcf5fbf0-ab8c-11ea-a781-4bfdd070ea72.json"
+    },
+    {
+      "action_plan_template_uuid": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2",
+      "template_name": "Glint 360 Empathizes",
+      "action_plan_record_count": 9,
+      "file": "c/b2719fe0-ab91-11ea-b2f1-6d6534e57fd2.json"
+    },
+    {
+      "action_plan_template_uuid": "b940c380-ab89-11ea-b68e-1fd653b3f79b",
+      "template_name": "Glint 360 Empowers Others",
+      "action_plan_record_count": 5,
+      "file": "c/b940c380-ab89-11ea-b68e-1fd653b3f79b.json"
+    },
+    {
+      "action_plan_template_uuid": "48c81010-aa83-11ea-ac0e-23649c6ec811",
+      "template_name": "Glint 360 Encourages Initiative",
+      "action_plan_record_count": 6,
+      "file": "c/48c81010-aa83-11ea-ac0e-23649c6ec811.json"
+    },
+    {
+      "action_plan_template_uuid": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b",
+      "template_name": "Glint 360 Encourages Teamwork",
+      "action_plan_record_count": 9,
+      "file": "c/eeaeee80-aaac-11ea-b68e-1fd653b3f79b.json"
+    },
+    {
+      "action_plan_template_uuid": "c62a4220-aaa7-11ea-b72f-0bf711a114a9",
+      "template_name": "Glint 360 Focuses Under Stress",
+      "action_plan_record_count": 10,
+      "file": "c/c62a4220-aaa7-11ea-b72f-0bf711a114a9.json"
+    },
+    {
+      "action_plan_template_uuid": "813516e0-ab8d-11ea-b61d-47fc60103d85",
+      "template_name": "Glint 360 Gains Support",
+      "action_plan_record_count": 8,
+      "file": "c/813516e0-ab8d-11ea-b61d-47fc60103d85.json"
+    },
+    {
+      "action_plan_template_uuid": "78f15bb0-aa84-11ea-8ced-c9ca65ff29de",
+      "template_name": "Glint 360 Gains Trust",
+      "action_plan_record_count": 11,
+      "file": "c/78f15bb0-aa84-11ea-8ced-c9ca65ff29de.json"
+    },
+    {
+      "action_plan_template_uuid": "48209ae0-ab93-11ea-a478-e54709e5e474",
+      "template_name": "Glint 360 Growth Orientation",
+      "action_plan_record_count": 3,
+      "file": "c/48209ae0-ab93-11ea-a478-e54709e5e474.json"
+    },
+    {
+      "action_plan_template_uuid": "83d8e260-aaab-11ea-b6f7-b987dbcac951",
+      "template_name": "Glint 360 Holds Self Accountable",
+      "action_plan_record_count": 2,
+      "file": "c/83d8e260-aaab-11ea-b6f7-b987dbcac951.json"
+    },
+    {
+      "action_plan_template_uuid": "273844d0-ab94-11ea-9edd-6b2bbd458f1d",
+      "template_name": "Glint 360 Invites Contribution",
+      "action_plan_record_count": 8,
+      "file": "c/273844d0-ab94-11ea-9edd-6b2bbd458f1d.json"
+    },
+    {
+      "action_plan_template_uuid": "0efbfd40-ab20-11ea-bbfe-3f218b594687",
+      "template_name": "Glint 360 Listens",
+      "action_plan_record_count": 2,
+      "file": "c/0efbfd40-ab20-11ea-bbfe-3f218b594687.json"
+    },
+    {
+      "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+      "template_name": "Glint 360 Makes Decisions",
+      "action_plan_record_count": 6,
+      "file": "c/95b25120-ab31-11ea-8ced-c9ca65ff29de.json"
+    },
+    {
+      "action_plan_template_uuid": "ff3e7de0-ab8f-11ea-9aba-893cff1b3d51",
+      "template_name": "Glint 360 Models Values",
+      "action_plan_record_count": 4,
+      "file": "c/ff3e7de0-ab8f-11ea-9aba-893cff1b3d51.json"
+    },
+    {
+      "action_plan_template_uuid": "8111ea10-aa72-11ea-9371-fb5be38ee807",
+      "template_name": "Glint 360 Motivates Excellence",
+      "action_plan_record_count": 2,
+      "file": "c/8111ea10-aa72-11ea-9371-fb5be38ee807.json"
+    },
+    {
+      "action_plan_template_uuid": "eb0ea1f0-ab8b-11ea-9371-fb5be38ee807",
+      "template_name": "Glint 360 Navigates the Organization",
+      "action_plan_record_count": 1,
+      "file": "c/eb0ea1f0-ab8b-11ea-9371-fb5be38ee807.json"
+    },
+    {
+      "action_plan_template_uuid": "fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283",
+      "template_name": "Glint 360 Provides Feedback",
+      "action_plan_record_count": 3,
+      "file": "c/fa27d3a0-aa6e-11ea-82c8-b3cdfbb6d283.json"
+    },
+    {
+      "action_plan_template_uuid": "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2",
+      "template_name": "Glint 360 Psychological Safety",
+      "action_plan_record_count": 5,
+      "file": "c/1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2.json"
+    },
+    {
+      "action_plan_template_uuid": "d832f540-ab90-11ea-840d-47c750a2f6e5",
+      "template_name": "Glint 360 Questions Status Quo",
+      "action_plan_record_count": 10,
+      "file": "c/d832f540-ab90-11ea-840d-47c750a2f6e5.json"
+    },
+    {
+      "action_plan_template_uuid": "91795b10-aa70-11ea-8344-516b027153ee",
+      "template_name": "Glint 360 Recognizes Contributions",
+      "action_plan_record_count": 3,
+      "file": "c/91795b10-aa70-11ea-8344-516b027153ee.json"
+    },
+    {
+      "action_plan_template_uuid": "04195a60-aabe-11ea-abf3-15496f21f1a5",
+      "template_name": "Glint 360 Relates Broadly",
+      "action_plan_record_count": 5,
+      "file": "c/04195a60-aabe-11ea-abf3-15496f21f1a5.json"
+    },
+    {
+      "action_plan_template_uuid": "70f68770-ab8b-11ea-9cdb-d7876c6e36dc",
+      "template_name": "Glint 360 Removes Roadblocks",
+      "action_plan_record_count": 5,
+      "file": "c/70f68770-ab8b-11ea-9cdb-d7876c6e36dc.json"
+    },
+    {
+      "action_plan_template_uuid": "28c944c0-aa86-11ea-afa7-27783cc4e333",
+      "template_name": "Glint 360 Self Awareness",
+      "action_plan_record_count": 6,
+      "file": "c/28c944c0-aa86-11ea-afa7-27783cc4e333.json"
+    },
+    {
+      "action_plan_template_uuid": "217021a0-ab33-11ea-834e-4dc1ab30e385",
+      "template_name": "Glint 360 Solves Problems",
+      "action_plan_record_count": 3,
+      "file": "c/217021a0-ab33-11ea-834e-4dc1ab30e385.json"
+    },
+    {
+      "action_plan_template_uuid": "8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6",
+      "template_name": "Glint 360 Translates Strategy",
+      "action_plan_record_count": 6,
+      "file": "c/8ffc7380-aa7a-11ea-aba6-71eb42c8c7f6.json"
+    },
+    {
+      "action_plan_template_uuid": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f",
+      "template_name": "Glint 360 Treats Others Fairly",
+      "action_plan_record_count": 10,
+      "file": "c/71b0cf60-ab8e-11ea-9605-a7b032b0c88f.json"
+    },
+    {
+      "action_plan_template_uuid": "7855f0b0-ab21-11ea-8622-cf48fbf31532",
+      "template_name": "Glint 360 Uses Customer Feedback",
+      "action_plan_record_count": 1,
+      "file": "c/7855f0b0-ab21-11ea-8622-cf48fbf31532.json"
+    },
+    {
+      "action_plan_template_uuid": "b442f390-ab88-11ea-840d-47c750a2f6e5",
+      "template_name": "Glint 360 Works Collaboratively",
+      "action_plan_record_count": 9,
+      "file": "c/b442f390-ab88-11ea-840d-47c750a2f6e5.json"
+    },
+    {
+      "action_plan_template_uuid": "da6152f0-6921-11ea-b3eb-e56c269e1f76",
+      "template_name": "Glint Acceptance",
+      "action_plan_record_count": 1,
+      "file": "c/da6152f0-6921-11ea-b3eb-e56c269e1f76.json"
+    },
+    {
+      "action_plan_template_uuid": "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9",
+      "template_name": "Glint Accountability",
+      "action_plan_record_count": 6,
+      "file": "c/22b2bc20-7bb7-11e7-be4c-77c5e1facfc9.json"
+    },
+    {
+      "action_plan_template_uuid": "58254c80-6819-11e7-87c8-95da01748934",
+      "template_name": "Glint Accountability Team",
+      "action_plan_record_count": 6,
+      "file": "c/58254c80-6819-11e7-87c8-95da01748934.json"
+    },
+    {
+      "action_plan_template_uuid": "eb219260-7d49-11e7-bfa2-4b9d4b3d74fb",
+      "template_name": "Glint Action Taking",
+      "action_plan_record_count": 4,
+      "file": "c/eb219260-7d49-11e7-bfa2-4b9d4b3d74fb.json"
+    },
+    {
+      "action_plan_template_uuid": "80138970-6922-11ea-9955-87e9dfbb508d",
+      "template_name": "Glint Appreciate Differences",
+      "action_plan_record_count": 2,
+      "file": "c/80138970-6922-11ea-9955-87e9dfbb508d.json"
+    },
+    {
+      "action_plan_template_uuid": "f22136d0-7bcb-11e7-991b-7fda66c32098",
+      "template_name": "Glint Authenticity",
+      "action_plan_record_count": 5,
+      "file": "c/f22136d0-7bcb-11e7-991b-7fda66c32098.json"
+    },
+    {
+      "action_plan_template_uuid": "9e9efef0-08e2-11e6-bacf-170ba1b0fcba",
+      "template_name": "Glint Balance",
+      "action_plan_record_count": 6,
+      "file": "c/9e9efef0-08e2-11e6-bacf-170ba1b0fcba.json"
+    },
+    {
+      "action_plan_template_uuid": "fdc14e80-3683-11e8-ba3e-771905cfa54f",
+      "template_name": "Glint Barriers to Execution",
+      "action_plan_record_count": 4,
+      "file": "c/fdc14e80-3683-11e8-ba3e-771905cfa54f.json"
+    },
+    {
+      "action_plan_template_uuid": "1f508ad0-3c93-11e6-a006-97265ceaa2da",
+      "template_name": "Glint Belonging",
+      "action_plan_record_count": 7,
+      "file": "c/1f508ad0-3c93-11e6-a006-97265ceaa2da.json"
+    },
+    {
+      "action_plan_template_uuid": "1f54ff10-6922-11ea-ad18-51511e87d04f",
+      "template_name": "Glint Best Interests - Manager",
+      "action_plan_record_count": 1,
+      "file": "c/1f54ff10-6922-11ea-ad18-51511e87d04f.json"
+    },
+    {
+      "action_plan_template_uuid": "fd4c9660-7bc8-11e7-b43c-e5402144143d",
+      "template_name": "Glint Camaraderie",
+      "action_plan_record_count": 12,
+      "file": "c/fd4c9660-7bc8-11e7-b43c-e5402144143d.json"
+    },
+    {
+      "action_plan_template_uuid": "5fca44c0-d437-11e6-b133-37f4050e693f",
+      "template_name": "Glint Care",
+      "action_plan_record_count": 14,
+      "file": "c/5fca44c0-d437-11e6-b133-37f4050e693f.json"
+    },
+    {
+      "action_plan_template_uuid": "f58bdca0-0901-11e6-8759-3b8460ed0dcb",
+      "template_name": "Glint Career",
+      "action_plan_record_count": 4,
+      "file": "c/f58bdca0-0901-11e6-8759-3b8460ed0dcb.json"
+    },
+    {
+      "action_plan_template_uuid": "a601cf80-7bd0-11e7-8517-63521c71a395",
+      "template_name": "Glint Career Path",
+      "action_plan_record_count": 3,
+      "file": "c/a601cf80-7bd0-11e7-8517-63521c71a395.json"
+    },
+    {
+      "action_plan_template_uuid": "98a54040-6923-11ea-afdc-b98820df85fe",
+      "template_name": "Glint Change Adaptation",
+      "action_plan_record_count": 2,
+      "file": "c/98a54040-6923-11ea-afdc-b98820df85fe.json"
+    },
+    {
+      "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+      "template_name": "Glint Change Communication",
+      "action_plan_record_count": 10,
+      "file": "c/495b0f70-efd0-11e7-a4fd-099d0b0cd2de.json"
+    },
+    {
+      "action_plan_template_uuid": "b566b580-e0ae-11ea-8681-a907b687abac",
+      "template_name": "Glint Change Willingness - GPS",
+      "action_plan_record_count": 6,
+      "file": "c/b566b580-e0ae-11ea-8681-a907b687abac.json"
+    },
+    {
+      "action_plan_template_uuid": "34f77c40-23b4-11e8-9037-5f50e2ce5aa6",
+      "template_name": "Glint Coaching",
+      "action_plan_record_count": 1,
+      "file": "c/34f77c40-23b4-11e8-9037-5f50e2ce5aa6.json"
+    },
+    {
+      "action_plan_template_uuid": "045cc4b0-d48b-11e6-acd7-9b7aac93a465",
+      "template_name": "Glint Collaboration",
+      "action_plan_record_count": 9,
+      "file": "c/045cc4b0-d48b-11e6-acd7-9b7aac93a465.json"
+    },
+    {
+      "action_plan_template_uuid": "4560a390-d48c-11e6-8896-3f7b594f7cdc",
+      "template_name": "Glint Communication",
+      "action_plan_record_count": 8,
+      "file": "c/4560a390-d48c-11e6-8896-3f7b594f7cdc.json"
+    },
+    {
+      "action_plan_template_uuid": "484c23b0-e0c5-11ea-a4b1-79e76de49060",
+      "template_name": "Glint Communication - GPS",
+      "action_plan_record_count": 6,
+      "file": "c/484c23b0-e0c5-11ea-a4b1-79e76de49060.json"
+    },
+    {
+      "action_plan_template_uuid": "b5fe2350-f950-11e6-bd5a-b364c473df9c",
+      "template_name": "Glint Communication Flow",
+      "action_plan_record_count": 9,
+      "file": "c/b5fe2350-f950-11e6-bd5a-b364c473df9c.json"
+    },
+    {
+      "action_plan_template_uuid": "8f73a960-6761-11e7-9adb-eb26b800804d",
+      "template_name": "Glint Communication Team",
+      "action_plan_record_count": 9,
+      "file": "c/8f73a960-6761-11e7-9adb-eb26b800804d.json"
+    },
+    {
+      "action_plan_template_uuid": "9c4f9f10-6822-11e7-a495-f92fcfa97538",
+      "template_name": "Glint Conflict Resolution Team",
+      "action_plan_record_count": 6,
+      "file": "c/9c4f9f10-6822-11e7-a495-f92fcfa97538.json"
+    },
+    {
+      "action_plan_template_uuid": "0448baf0-efd4-11e7-b712-cb98ceb7b694",
+      "template_name": "Glint Contribution",
+      "action_plan_record_count": 4,
+      "file": "c/0448baf0-efd4-11e7-b712-cb98ceb7b694.json"
+    },
+    {
+      "action_plan_template_uuid": "cdb0f720-2cd2-11e6-b9d8-3df910755a86",
+      "template_name": "Glint Creativity",
+      "action_plan_record_count": 11,
+      "file": "c/cdb0f720-2cd2-11e6-b9d8-3df910755a86.json"
+    },
+    {
+      "action_plan_template_uuid": "7f7cbb50-212b-11e6-a177-7f43a1a92440",
+      "template_name": "Glint Culture",
+      "action_plan_record_count": 9,
+      "file": "c/7f7cbb50-212b-11e6-a177-7f43a1a92440.json"
+    },
+    {
+      "action_plan_template_uuid": "bfab9760-df79-11e7-9579-af1d9262a2c0",
+      "template_name": "Glint Customer Focus",
+      "action_plan_record_count": 6,
+      "file": "c/bfab9760-df79-11e7-9579-af1d9262a2c0.json"
+    },
+    {
+      "action_plan_template_uuid": "14d7fd10-d48f-11e6-b21c-e7fd2e716528",
+      "template_name": "Glint Decisions",
+      "action_plan_record_count": 9,
+      "file": "c/14d7fd10-d48f-11e6-b21c-e7fd2e716528.json"
+    },
+    {
+      "action_plan_template_uuid": "2813e6f0-65ad-11e7-aee6-eb6187f657d1",
+      "template_name": "Glint Decisions Team",
+      "action_plan_record_count": 7,
+      "file": "c/2813e6f0-65ad-11e7-aee6-eb6187f657d1.json"
+    },
+    {
+      "action_plan_template_uuid": "c51a8320-1113-11e8-88bd-7f2a388dbffb",
+      "template_name": "Glint Default Action Template",
+      "action_plan_record_count": 12,
+      "file": "c/c51a8320-1113-11e8-88bd-7f2a388dbffb.json"
+    },
+    {
+      "action_plan_template_uuid": "59021f90-85ce-11ea-a8d2-9b8c31bca5f4",
+      "template_name": "Glint Distress - Communications",
+      "action_plan_record_count": 4,
+      "file": "c/59021f90-85ce-11ea-a8d2-9b8c31bca5f4.json"
+    },
+    {
+      "action_plan_template_uuid": "6c05bf40-85cc-11ea-a8d2-9b8c31bca5f4",
+      "template_name": "Glint Distress - Contribution",
+      "action_plan_record_count": 1,
+      "file": "c/6c05bf40-85cc-11ea-a8d2-9b8c31bca5f4.json"
+    },
+    {
+      "action_plan_template_uuid": "93f90fd0-85cb-11ea-8b87-95289f1d2f38",
+      "template_name": "Glint Distress - Customer",
+      "action_plan_record_count": 1,
+      "file": "c/93f90fd0-85cb-11ea-8b87-95289f1d2f38.json"
+    },
+    {
+      "action_plan_template_uuid": "d3bbfc80-85c7-11ea-b26f-65755f450b88",
+      "template_name": "Glint Distress - Employee Connection",
+      "action_plan_record_count": 9,
+      "file": "c/d3bbfc80-85c7-11ea-b26f-65755f450b88.json"
+    },
+    {
+      "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+      "template_name": "Glint Distress - Manager Support",
+      "action_plan_record_count": 11,
+      "file": "c/2ef718f0-85d7-11ea-afa7-4d1a01993311.json"
+    },
+    {
+      "action_plan_template_uuid": "d3d7b220-85d8-11ea-bb67-457d9eb9179a",
+      "template_name": "Glint Distress - Plan",
+      "action_plan_record_count": 3,
+      "file": "c/d3d7b220-85d8-11ea-bb67-457d9eb9179a.json"
+    },
+    {
+      "action_plan_template_uuid": "2b2a50f0-85c0-11ea-ab47-0d78cbf30db0",
+      "template_name": "Glint Distress - Prioritization",
+      "action_plan_record_count": 2,
+      "file": "c/2b2a50f0-85c0-11ea-ab47-0d78cbf30db0.json"
+    },
+    {
+      "action_plan_template_uuid": "fa2f8e10-85ca-11ea-901c-7fbffdda303a",
+      "template_name": "Glint Distress - Remote work",
+      "action_plan_record_count": 1,
+      "file": "c/fa2f8e10-85ca-11ea-901c-7fbffdda303a.json"
+    },
+    {
+      "action_plan_template_uuid": "540f9810-85be-11ea-a001-6f8f3b362169",
+      "template_name": "Glint Distress - Resources",
+      "action_plan_record_count": 4,
+      "file": "c/540f9810-85be-11ea-a001-6f8f3b362169.json"
+    },
+    {
+      "action_plan_template_uuid": "0d2aa470-85d8-11ea-9f69-517edbcc1832",
+      "template_name": "Glint Distress - Team Precautions",
+      "action_plan_record_count": 1,
+      "file": "c/0d2aa470-85d8-11ea-9f69-517edbcc1832.json"
+    },
+    {
+      "action_plan_template_uuid": "4f74ca80-85cf-11ea-b656-755d0b0a2fda",
+      "template_name": "Glint Distress - Team Priorities",
+      "action_plan_record_count": 1,
+      "file": "c/4f74ca80-85cf-11ea-b656-755d0b0a2fda.json"
+    },
+    {
+      "action_plan_template_uuid": "f8dba490-85cf-11ea-ba74-a5bc37fb230b",
+      "template_name": "Glint Distress - Technology",
+      "action_plan_record_count": 1,
+      "file": "c/f8dba490-85cf-11ea-ba74-a5bc37fb230b.json"
+    },
+    {
+      "action_plan_template_uuid": "a6ccd8d0-85bc-11ea-9f69-517edbcc1832",
+      "template_name": "Glint Distress - Well-being",
+      "action_plan_record_count": 5,
+      "file": "c/a6ccd8d0-85bc-11ea-9f69-517edbcc1832.json"
+    },
+    {
+      "action_plan_template_uuid": "b4f692b0-7c47-11e7-bd3a-8d86aee10cb3",
+      "template_name": "Glint Diversity",
+      "action_plan_record_count": 6,
+      "file": "c/b4f692b0-7c47-11e7-bd3a-8d86aee10cb3.json"
+    },
+    {
+      "action_plan_template_uuid": "c0a784f0-6922-11ea-b20b-c743470f944a",
+      "template_name": "Glint Diversity Commitment",
+      "action_plan_record_count": 1,
+      "file": "c/c0a784f0-6922-11ea-b20b-c743470f944a.json"
+    },
+    {
+      "action_plan_template_uuid": "1955f4c0-05b2-11e6-8759-3b8460ed0dcb",
+      "template_name": "Glint Empowerment",
+      "action_plan_record_count": 7,
+      "file": "c/1955f4c0-05b2-11e6-8759-3b8460ed0dcb.json"
+    },
+    {
+      "action_plan_template_uuid": "04ed9680-6924-11ea-8475-cd33436c2365",
+      "template_name": "Glint Equal Opportunity",
+      "action_plan_record_count": 1,
+      "file": "c/04ed9680-6924-11ea-8475-cd33436c2365.json"
+    },
+    {
+      "action_plan_template_uuid": "6e5e0360-3687-11e8-a72e-f7e9fe66949f",
+      "template_name": "Glint Ethics",
+      "action_plan_record_count": 2,
+      "file": "c/6e5e0360-3687-11e8-a72e-f7e9fe66949f.json"
+    },
+    {
+      "action_plan_template_uuid": "4302eb70-3c94-11e6-a006-97265ceaa2da",
+      "template_name": "Glint Excellence",
+      "action_plan_record_count": 4,
+      "file": "c/4302eb70-3c94-11e6-a006-97265ceaa2da.json"
+    },
+    {
+      "action_plan_template_uuid": "271c6dc0-e0ad-11ea-87c3-8d13e17facb4",
+      "template_name": "Glint Exchange - GPS",
+      "action_plan_record_count": 5,
+      "file": "c/271c6dc0-e0ad-11ea-87c3-8d13e17facb4.json"
+    },
+    {
+      "action_plan_template_uuid": "61957d40-2cd2-11e6-bdd7-1bc20811d880",
+      "template_name": "Glint Execution",
+      "action_plan_record_count": 7,
+      "file": "c/61957d40-2cd2-11e6-bdd7-1bc20811d880.json"
+    },
+    {
+      "action_plan_template_uuid": "205b2f00-6923-11ea-8666-33f1ce05bf6b",
+      "template_name": "Glint Expressing Opinions",
+      "action_plan_record_count": 2,
+      "file": "c/205b2f00-6923-11ea-8666-33f1ce05bf6b.json"
+    },
+    {
+      "action_plan_template_uuid": "36d9c900-7bbc-11e7-a59b-294de3121110",
+      "template_name": "Glint Fairness",
+      "action_plan_record_count": 7,
+      "file": "c/36d9c900-7bbc-11e7-a59b-294de3121110.json"
+    },
+    {
+      "action_plan_template_uuid": "3ddef890-05ae-11e6-8759-3b8460ed0dcb",
+      "template_name": "Glint Feedback",
+      "action_plan_record_count": 8,
+      "file": "c/3ddef890-05ae-11e6-8759-3b8460ed0dcb.json"
+    },
+    {
+      "action_plan_template_uuid": "e531a2c0-682a-11e7-b6a8-f9316d28d71d",
+      "template_name": "Glint Fun Team",
+      "action_plan_record_count": 5,
+      "file": "c/e531a2c0-682a-11e7-b6a8-f9316d28d71d.json"
+    },
+    {
+      "action_plan_template_uuid": "efab4a20-6759-11e7-b1b9-4f96c153485f",
+      "template_name": "Glint Goals Team",
+      "action_plan_record_count": 7,
+      "file": "c/efab4a20-6759-11e7-b1b9-4f96c153485f.json"
+    },
+    {
+      "action_plan_template_uuid": "dc8ed980-0903-11e6-bacf-170ba1b0fcba",
+      "template_name": "Glint Growth",
+      "action_plan_record_count": 5,
+      "file": "c/dc8ed980-0903-11e6-bacf-170ba1b0fcba.json"
+    },
+    {
+      "action_plan_template_uuid": "feaca180-7c4a-11e7-be4c-77c5e1facfc9",
+      "template_name": "Glint Inclusion",
+      "action_plan_record_count": 10,
+      "file": "c/feaca180-7c4a-11e7-be4c-77c5e1facfc9.json"
+    },
+    {
+      "action_plan_template_uuid": "60351000-681d-11e7-8b6b-eddfdf1cfba6",
+      "template_name": "Glint Inclusion Team",
+      "action_plan_record_count": 14,
+      "file": "c/60351000-681d-11e7-8b6b-eddfdf1cfba6.json"
+    },
+    {
+      "action_plan_template_uuid": "7e9c5a20-691f-11ea-94e8-ff0d75349a17",
+      "template_name": "Glint Influence",
+      "action_plan_record_count": 2,
+      "file": "c/7e9c5a20-691f-11ea-94e8-ff0d75349a17.json"
+    },
+    {
+      "action_plan_template_uuid": "a16212a0-df7b-11e7-9f83-23166a88f815",
+      "template_name": "Glint Initiative",
+      "action_plan_record_count": 10,
+      "file": "c/a16212a0-df7b-11e7-9f83-23166a88f815.json"
+    },
+    {
+      "action_plan_template_uuid": "fded7680-2c2c-11e6-a061-27900ad2fc1c",
+      "template_name": "Glint Innovation",
+      "action_plan_record_count": 9,
+      "file": "c/fded7680-2c2c-11e6-a061-27900ad2fc1c.json"
+    },
+    {
+      "action_plan_template_uuid": "6df34f20-d490-11e6-b21c-e7fd2e716528",
+      "template_name": "Glint Input",
+      "action_plan_record_count": 9,
+      "file": "c/6df34f20-d490-11e6-b21c-e7fd2e716528.json"
+    },
+    {
+      "action_plan_template_uuid": "e7d05ab0-7c7c-11e7-85cc-c7e4869f4db1",
+      "template_name": "Glint Job",
+      "action_plan_record_count": 2,
+      "file": "c/e7d05ab0-7c7c-11e7-85cc-c7e4869f4db1.json"
+    },
+    {
+      "action_plan_template_uuid": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4",
+      "template_name": "Glint Just Response - GPS",
+      "action_plan_record_count": 2,
+      "file": "c/5aea00e0-e0bc-11ea-87c3-8d13e17facb4.json"
+    },
+    {
+      "action_plan_template_uuid": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7",
+      "template_name": "Glint Larger Purpose",
+      "action_plan_record_count": 2,
+      "file": "c/5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7.json"
+    },
+    {
+      "action_plan_template_uuid": "9c860ed0-6921-11ea-8bc7-5baaa0027ac8",
+      "template_name": "Glint Leaders Care",
+      "action_plan_record_count": 1,
+      "file": "c/9c860ed0-6921-11ea-8bc7-5baaa0027ac8.json"
+    },
+    {
+      "action_plan_template_uuid": "a98f2fc0-1881-11e6-8135-4f9e7469f586",
+      "template_name": "Glint Leadership",
+      "action_plan_record_count": 10,
+      "file": "c/a98f2fc0-1881-11e6-8135-4f9e7469f586.json"
+    },
+    {
+      "action_plan_template_uuid": "36c89de0-6827-11e7-b0c4-45b48df307bf",
+      "template_name": "Glint Learn Team",
+      "action_plan_record_count": 5,
+      "file": "c/36c89de0-6827-11e7-b0c4-45b48df307bf.json"
+    },
+    {
+      "action_plan_template_uuid": "4ace8ad0-e0af-11ea-a4b1-79e76de49060",
+      "template_name": "Glint Learning From Mistakes - GPS",
+      "action_plan_record_count": 6,
+      "file": "c/4ace8ad0-e0af-11ea-a4b1-79e76de49060.json"
+    },
+    {
+      "action_plan_template_uuid": "81030c80-1880-11e6-89d0-cf6ae132b096",
+      "template_name": "Glint Manager",
+      "action_plan_record_count": 6,
+      "file": "c/81030c80-1880-11e6-89d0-cf6ae132b096.json"
+    },
+    {
+      "action_plan_template_uuid": "23895280-02ad-11e8-86e7-d17fb2020ccf",
+      "template_name": "Glint Mission",
+      "action_plan_record_count": 3,
+      "file": "c/23895280-02ad-11e8-86e7-d17fb2020ccf.json"
+    },
+    {
+      "action_plan_template_uuid": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e",
+      "template_name": "Glint Modeling - GPS",
+      "action_plan_record_count": 7,
+      "file": "c/67a6e8d0-e0ac-11ea-a4e0-7187c267177e.json"
+    },
+    {
+      "action_plan_template_uuid": "fca9e2b0-d490-11e6-9f01-bf7ce7531242",
+      "template_name": "Glint Motivation",
+      "action_plan_record_count": 9,
+      "file": "c/fca9e2b0-d490-11e6-9f01-bf7ce7531242.json"
+    },
+    {
+      "action_plan_template_uuid": "ce018780-6923-11ea-b18d-4d088d83dd21",
+      "template_name": "Glint Non-Discrimination",
+      "action_plan_record_count": 6,
+      "file": "c/ce018780-6923-11ea-b18d-4d088d83dd21.json"
+    },
+    {
+      "action_plan_template_uuid": "8df82fe0-e0b0-11ea-9cee-93fe3d70741a",
+      "template_name": "Glint Ownership - GPS",
+      "action_plan_record_count": 7,
+      "file": "c/8df82fe0-e0b0-11ea-9cee-93fe3d70741a.json"
+    },
+    {
+      "action_plan_template_uuid": "4a3b2e20-7c80-11e7-bf75-7709e841c22f",
+      "template_name": "Glint Physical Safety",
+      "action_plan_record_count": 2,
+      "file": "c/4a3b2e20-7c80-11e7-bf75-7709e841c22f.json"
+    },
+    {
+      "action_plan_template_uuid": "950cf6a0-d491-11e6-a4e5-6156a4f4e371",
+      "template_name": "Glint Priorities",
+      "action_plan_record_count": 8,
+      "file": "c/950cf6a0-d491-11e6-a4e5-6156a4f4e371.json"
+    },
+    {
+      "action_plan_template_uuid": "84e07300-0904-11e6-8759-3b8460ed0dcb",
+      "template_name": "Glint Prospects",
+      "action_plan_record_count": 5,
+      "file": "c/84e07300-0904-11e6-8759-3b8460ed0dcb.json"
+    },
+    {
+      "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+      "template_name": "Glint Psychological Safety - GPS",
+      "action_plan_record_count": 7,
+      "file": "c/3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea.json"
+    },
+    {
+      "action_plan_template_uuid": "cfe75ae0-1c86-11e6-8135-4f9e7469f586",
+      "template_name": "Glint Purpose",
+      "action_plan_record_count": 9,
+      "file": "c/cfe75ae0-1c86-11e6-8135-4f9e7469f586.json"
+    },
+    {
+      "action_plan_template_uuid": "76f5a900-675d-11e7-b6aa-ab62409e7448",
+      "template_name": "Glint Purpose Team",
+      "action_plan_record_count": 6,
+      "file": "c/76f5a900-675d-11e7-b6aa-ab62409e7448.json"
+    },
+    {
+      "action_plan_template_uuid": "4e890020-6921-11ea-9f22-15f448a12e51",
+      "template_name": "Glint Quality of Ideas",
+      "action_plan_record_count": 2,
+      "file": "c/4e890020-6921-11ea-9f22-15f448a12e51.json"
+    },
+    {
+      "action_plan_template_uuid": "1e625650-7bce-11e7-873a-7573321a5a60",
+      "template_name": "Glint Questioning",
+      "action_plan_record_count": 6,
+      "file": "c/1e625650-7bce-11e7-873a-7573321a5a60.json"
+    },
+    {
+      "action_plan_template_uuid": "ba63a510-0594-11e6-bacf-170ba1b0fcba",
+      "template_name": "Glint Recognition",
+      "action_plan_record_count": 6,
+      "file": "c/ba63a510-0594-11e6-bacf-170ba1b0fcba.json"
+    },
+    {
+      "action_plan_template_uuid": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327",
+      "template_name": "Glint Recognition - GPS",
+      "action_plan_record_count": 5,
+      "file": "c/13a4c4a0-e0b1-11ea-95a7-bda546f6b327.json"
+    },
+    {
+      "action_plan_template_uuid": "926499a0-0b04-11e6-8135-4f9e7469f586",
+      "template_name": "Glint Resources",
+      "action_plan_record_count": 10,
+      "file": "c/926499a0-0b04-11e6-8135-4f9e7469f586.json"
+    },
+    {
+      "action_plan_template_uuid": "ec611500-e0b1-11ea-a714-4f73648ca930",
+      "template_name": "Glint Resources - GPS",
+      "action_plan_record_count": 5,
+      "file": "c/ec611500-e0b1-11ea-a714-4f73648ca930.json"
+    },
+    {
+      "action_plan_template_uuid": "ef351cf0-2129-11e6-b4ee-8b8a52f84d48",
+      "template_name": "Glint Rewards",
+      "action_plan_record_count": 6,
+      "file": "c/ef351cf0-2129-11e6-b4ee-8b8a52f84d48.json"
+    },
+    {
+      "action_plan_template_uuid": "79110600-3681-11e8-8a66-51aae45ef563",
+      "template_name": "Glint Risk Taking",
+      "action_plan_record_count": 5,
+      "file": "c/79110600-3681-11e8-8a66-51aae45ef563.json"
+    },
+    {
+      "action_plan_template_uuid": "a8d6f2e0-0b05-11e6-89d0-cf6ae132b096",
+      "template_name": "Glint Role",
+      "action_plan_record_count": 3,
+      "file": "c/a8d6f2e0-0b05-11e6-89d0-cf6ae132b096.json"
+    },
+    {
+      "action_plan_template_uuid": "db984a50-7bb4-11e7-a59b-294de3121110",
+      "template_name": "Glint Role Clarity",
+      "action_plan_record_count": 5,
+      "file": "c/db984a50-7bb4-11e7-a59b-294de3121110.json"
+    },
+    {
+      "action_plan_template_uuid": "da797b60-e0ad-11ea-9614-2b26f428f070",
+      "template_name": "Glint Root Cause - GPS",
+      "action_plan_record_count": 8,
+      "file": "c/da797b60-e0ad-11ea-9614-2b26f428f070.json"
+    },
+    {
+      "action_plan_template_uuid": "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c",
+      "template_name": "Glint Speak My Mind",
+      "action_plan_record_count": 3,
+      "file": "c/bbf24c30-6920-11ea-ad33-5f0e67bbaa7c.json"
+    },
+    {
+      "action_plan_template_uuid": "aa149c90-02af-11e8-a2b6-1ffcd873e43a",
+      "template_name": "Glint Strategy",
+      "action_plan_record_count": 4,
+      "file": "c/aa149c90-02af-11e8-a2b6-1ffcd873e43a.json"
+    },
+    {
+      "action_plan_template_uuid": "8ccdac70-08de-11e6-bacf-170ba1b0fcba",
+      "template_name": "Glint Team",
+      "action_plan_record_count": 6,
+      "file": "c/8ccdac70-08de-11e6-bacf-170ba1b0fcba.json"
+    },
+    {
+      "action_plan_template_uuid": "fb8676d0-e0b4-11ea-88a1-adbac9f53456",
+      "template_name": "Glint Teamwork - GPS",
+      "action_plan_record_count": 5,
+      "file": "c/fb8676d0-e0b4-11ea-88a1-adbac9f53456.json"
+    },
+    {
+      "action_plan_template_uuid": "5a09a170-e108-11ea-8730-a3d92ee38b4f",
+      "template_name": "Glint Training - GPS",
+      "action_plan_record_count": 4,
+      "file": "c/5a09a170-e108-11ea-8730-a3d92ee38b4f.json"
+    },
+    {
+      "action_plan_template_uuid": "65209a00-7bb2-11e7-8b97-296222517dea",
+      "template_name": "Glint Transparency",
+      "action_plan_record_count": 5,
+      "file": "c/65209a00-7bb2-11e7-8b97-296222517dea.json"
+    },
+    {
+      "action_plan_template_uuid": "f3aaae10-6824-11e7-95bd-e5a91202bf89",
+      "template_name": "Glint Trust Team",
+      "action_plan_record_count": 10,
+      "file": "c/f3aaae10-6824-11e7-95bd-e5a91202bf89.json"
+    },
+    {
+      "action_plan_template_uuid": "e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0",
+      "template_name": "Glint Trustworthy",
+      "action_plan_record_count": 4,
+      "file": "c/e3ac4b30-7bc6-11e7-b106-5b3846dc4bb0.json"
+    },
+    {
+      "action_plan_template_uuid": "ca8919e0-6829-11e7-95bd-e5a91202bf89",
+      "template_name": "Glint United Team",
+      "action_plan_record_count": 6,
+      "file": "c/ca8919e0-6829-11e7-95bd-e5a91202bf89.json"
+    },
+    {
+      "action_plan_template_uuid": "5e84e8a0-6920-11ea-b87f-7567d4c455c2",
+      "template_name": "Glint Valued Teammate",
+      "action_plan_record_count": 1,
+      "file": "c/5e84e8a0-6920-11ea-b87f-7567d4c455c2.json"
+    },
+    {
+      "action_plan_template_uuid": "4cc8f3c0-efd5-11e7-a087-374542109b2c",
+      "template_name": "Glint Values",
+      "action_plan_record_count": 2,
+      "file": "c/4cc8f3c0-efd5-11e7-a087-374542109b2c.json"
+    },
+    {
+      "action_plan_template_uuid": "c79351d0-81f9-11e7-987b-0755ac383f0c",
+      "template_name": "Glint Vision",
+      "action_plan_record_count": 4,
+      "file": "c/c79351d0-81f9-11e7-987b-0755ac383f0c.json"
+    },
+    {
+      "action_plan_template_uuid": "13d665e0-e107-11ea-b82e-9f5d83186a55",
+      "template_name": "Glint Voice - GPS",
+      "action_plan_record_count": 6,
+      "file": "c/13d665e0-e107-11ea-b82e-9f5d83186a55.json"
+    },
+    {
+      "action_plan_template_uuid": "55683e80-7d45-11e7-991b-7fda66c32098",
+      "template_name": "Respect",
+      "action_plan_record_count": 8,
+      "file": "c/55683e80-7d45-11e7-991b-7fda66c32098.json"
+    }
+  ]
+}

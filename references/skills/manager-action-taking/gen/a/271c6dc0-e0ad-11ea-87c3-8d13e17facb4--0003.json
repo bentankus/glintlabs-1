@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "271c6dc0-e0ad-11ea-87c3-8d13e17facb4:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_EXCHANGE"
+  ],
+  "source_question_id_cell": "[Q_GPS_EXCHANGE]",
+  "action_plan_template_uuid": "271c6dc0-e0ad-11ea-87c3-8d13e17facb4",
+  "template_name": "Glint Exchange - GPS",
+  "sequence": 3,
+  "focus_area_title": "Techniques to Improve Safety Communication",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Several communication techniques for safety have been utilized across other high-risk industries, such as space shuttle mission control, nuclear power, and railroad. These techniques provide a solid foundation that can be modified for use in a healthcare setting.\n\n### Why is it important?\n\nAccording to their 2012 monograph, \"Improving Patient and Worker Safety,\" the Joint Commission points out that communication is a key factor in ensuring patient safety. Poor communication is often a contributing factor in adverse events and was one of the top causes cited in sentinel events reported to the Joint Commission from 2004 to 2011. In contrast, open communication that leads to the discovery of safety risks by not hiding potential and actual system failures is a hallmark of high reliability organizations.  \n\n**The following communication techniques released by the Joint Commission can improve overall safety communication and communication between healthcare professionals:**\n\n- **Daily Organization-Wide Safety Huddles**  \nMeetings to review safety concerns, near-misses, or any other safety-related issues across the entire organization over from the past 24 hours. Led by senior leadership and attended by all staff to review safety events that have identified organization-wide.  \n\n- **Unit Huddles**  \nBriefings to discuss safety events and concerns identified at a unit-level. These concerns may be elevated to leadership or shared at the organization-wide huddle as appropriate. Frontline staff and managers should participate.\n\n##### **Case Study**: \"House-wide\" and unit huddles were used by St. Vincent's Medical Center in Bridgeport CT to improve communication and improve multiple patient safety metrics from 2008 to 2010.\n\n- **Use the Acronym CUS to Signal Concern and Demand Attention**  \nCUS can be used to empower staff to speak up when they are concerned about safety. CUS is shorthand for a three-step process that assists people in stopping the activity when they sense or discover a safety breach. To be most effective, all members of the team should be familiar with this technique and understand the implications when a fellow team member says:  \n>I am Concerned.  \n>I am Uncomfortable.  \n>This is a Safety issue.  \n\n- **Teach back or Repeat back**  \nTeach back is usually used in health care worker-patient communication but can be used between healthcare professionals as well. The patient is asked to repeat back or \"teach back\" the information provided to ensure understanding of the communication. Health care workers are encouraged to practice \"teach back\" with their colleagues as well as their patients. \n\n- **Utilize SHARE**  \nThe Joint Commission Center for Transforming Healthcare released this tool for improving communication during patient handoffs. Its components are described below:\n>**S**tandardize critical content - this includes providing details of the patient's history to your colleague, emphasizing key information about the patient when speaking with your colleague, and synthesizing patient information from separate sources before passing it on to your colleague.  \n>**H**ardwire within your system - includes developing standardized forms, tools, and methods, such as checklists, identifying new and existing technologies to assist in making the hand-off successful, and stating expectations about how to conduct a successful hand-off.  \n>**A**llow opportunity to ask questions - includes using critical thinking skills when discussing a patient's case as well as sharing and receiving information as an interdisciplinary team (for example, a pit crew). Receivers should expect to receive all key information about the patient from the sender, receivers should scrutinize and question the data, and the receivers and senders should exchange contact information in the event there are any additional questions.   \n>**R**einforce quality and measurement - includes demonstrating leadership commitment to successful hand-offs such as holding sta",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:36:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.sage.com/en-us/blog/collaboration-cross-departments/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.physicianleaders.org/news/nine-paths-for-improving-teamwork-in-a-hospital-setting",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/handoffs-and-signouts",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=qeD-s0tzGgQ",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.nursingtimes.net/clinical-archive/patient-safety/tools-and-techniques-to-improve-teamwork-and-avoid-patient-harm-12-12-2016/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 501,
+    "source_record_number": "497"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "273844d0-ab94-11ea-9edd-6b2bbd458f1d:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INVITES_CONTRIBUTION_360"
+  ],
+  "source_question_id_cell": "[Q_INVITES_CONTRIBUTION_360]",
+  "action_plan_template_uuid": "273844d0-ab94-11ea-9edd-6b2bbd458f1d",
+  "template_name": "Glint 360 Invites Contribution",
+  "sequence": 6,
+  "focus_area_title": "Shift perspective to shape behavior",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/shift-perspective-to-shape-behavior?autoplay=false&claim=AQHEXk5DdSxbcQAAAZHWxV21H99iCUl_UJv60Yr76t5rfKiMRpij6kz__Bs7__ZR59zUOssl4BQdbtRaja2fUwpiA1oIe5eTniTWg5hmz8gIsFZnMi_FEylA6Bf4_N2V5r6jWJksRO1Qy6ZKEYRv6s_O7AoLOv_2kZrnbEHdhKnuIQ5cgGXxY1XM4rz4DtIkj0Qb1NF4lNTt7PKGL1U8tIP5zWrsKlnnzTNES3HOs-xABQ9VhLaG8Ify2nIAgB6ZlSLnpXLACJmPdiIrwitflK8BSMluusjcB8_xXtVukBHPemtStspMvMgsOqUwH7cVD1KDO6gg2mKN8i2sQvlI-ZXQM96z2k_XRWUSIQ4LlicvYFlFw21TwHn1jQqAFuFvW7XKxp-Tq7zkLiHb9Yq7Wo6YeGsDlpbPE3gnALWxSOACxTJkKUWBWg6KybO-jirrnspaaStLiVHQy1c8ITO7_e-Lq4iznobvWCIe1r0NCp7wyJACvae63JSPfxGeQIr4wgdXbtuH4ft_G1Oj7QS-LX_zDNbt35ISVPwThUmNjeBhxzUmkJnCMi9CLVIyZkhDVaPfHlytfcp6Z5F6Z46NMQk6MgXLo_EL5mNnwXpdn2sUpdq5Zl5LfQ2ESaF9_CXUJIYM2SAKXq87rays7qM05DDVcm3qRwDJ9OY61wFiPMxxWwlv5DemOn-pWhI_4l_BFKKcMASn6L3Yl9Q7K5-ZfSgUub4xV8MCW746DrhzPhNKnJ0CDqSuo3k7nWFtUf2MDJj5k9vfPqZtvB1rlbY0PxsEOVf1bfPsm0wYCD888z1t95FoEpb3pUgVbKqcqk0APQHiUxLT0d76pu6sXBrPlLoMhgBK8wIQ0MiiZbogGmaDR_C8D6lEieHxP1RuHMG-mYM32dmZy7YDa5ZnTve2vhsGEi1gABL43X9PIZ1b6nxLoqgbqBYUmcc6L3Yl9Q7K5-ZfSgUub4xV8MCW746DrhzPhNKnJ0CDqSuo3k7nWFtUf2MDJj5k9vfPqZtvB1rlbY0PxsEOVf1bfPsm0wYCD888z1t95FoEpb3pUgVbKqcqk0APQHiUxLT0d76pu6sXBrPlLoMhgBK8wIQ0MiiZbogGmaDR_C8D6lEieHxP1RuHMG-mYM32dmZy7YDa5ZnTve2vhsGEi1gABL43X9PIZ1b6nxLoqgbqBYUmcc6YtwSzqeLBOIxn5PS9Yh1bamTVR-w4qWQiSWUot3TVLvDTgPAOEeBKtdQ3pjfzMyWgik5ZtcRGOsk1v21gRq2p8VADloudHZaE2VpAnVmlNmvuYKGMJvVvDhLkbbPP6gWc3uVspwS9gNb_639Dz5LeOScfgnZkGwjxn_L1JrstBBlbaWe0g4PrxGjN4tISRYaB_PzSIpgz4OT8-z7lR-4LoaMGDYmt7Xn1KVN1ZhOfWHf6xjMM77Pdgzjh3niZTabuLqVWnqdh9wwgSG2id-l2zRZ3A4l",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T09:55:00+00:00",
+  "video_extract": "LiL2_Shift_perspective_to_shape_behavior",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Shift perspective to shape behavior",
+      "url": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/shift-perspective-to-shape-behavior?autoplay=false&claim=AQHEXk5DdSxbcQAAAZHWxV21H99iCUl_UJv60Yr76t5rfKiMRpij6kz__Bs7__ZR59zUOssl4BQdbtRaja2fUwpiA1oIe5eTniTWg5hmz8gIsFZnMi_FEylA6Bf4_N2V5r6jWJksRO1Qy6ZKEYRv6s_O7AoLOv_2kZrnbEHdhKnuIQ5cgGXxY1XM4rz4DtIkj0Qb1NF4lNTt7PKGL1U8tIP5zWrsKlnnzTNES3HOs-xABQ9VhLaG8Ify2nIAgB6ZlSLnpXLACJmPdiIrwitflK8BSMluusjcB8_xXtVukBHPemtStspMvMgsOqUwH7cVD1KDO6gg2mKN8i2sQvlI-ZXQM96z2k_XRWUSIQ4LlicvYFlFw21TwHn1jQqAFuFvW7XKxp-Tq7zkLiHb9Yq7Wo6YeGsDlpbPE3gnALWxSOACxTJkKUWBWg6KybO-jirrnspaaStLiVHQy1c8ITO7_e-Lq4iznobvWCIe1r0NCp7wyJACvae63JSPfxGeQIr4wgdXbtuH4ft_G1Oj7QS-LX_zDNbt35ISVPwThUmNjeBhxzUmkJnCMi9CLVIyZkhDVaPfHlytfcp6Z5F6Z46NMQk6MgXLo_EL5mNnwXpdn2sUpdq5Zl5LfQ2ESaF9_CXUJIYM2SAKXq87rays7qM05DDVcm3qRwDJ9OY61wFiPMxxWwlv5DemOn-pWhI_4l_BFKKcMASn6L3Yl9Q7K5-ZfSgUub4xV8MCW746DrhzPhNKnJ0CDqSuo3k7nWFtUf2MDJj5k9vfPqZtvB1rlbY0PxsEOVf1bfPsm0wYCD888z1t95FoEpb3pUgVbKqcqk0APQHiUxLT0d76pu6sXBrPlLoMhgBK8wIQ0MiiZbogGmaDR_C8D6lEieHxP1RuHMG-mYM32dmZy7YDa5ZnTve2vhsGEi1gABL43X9PIZ1b6nxLoqgbqBYUmcc6L3Yl9Q7K5-ZfSgUub4xV8MCW746DrhzPhNKnJ0CDqSuo3k7nWFtUf2MDJj5k9vfPqZtvB1rlbY0PxsEOVf1bfPsm0wYCD888z1t95FoEpb3pUgVbKqcqk0APQHiUxLT0d76pu6sXBrPlLoMhgBK8wIQ0MiiZbogGmaDR_C8D6lEieHxP1RuHMG-mYM32dmZy7YDa5ZnTve2vhsGEi1gABL43X9PIZ1b6nxLoqgbqBYUmcc6YtwSzqeLBOIxn5PS9Yh1bamTVR-w4qWQiSWUot3TVLvDTgPAOEeBKtdQ3pjfzMyWgik5ZtcRGOsk1v21gRq2p8VADloudHZaE2VpAnVmlNmvuYKGMJvVvDhLkbbPP6gWc3uVspwS9gNb_639Dz5LeOScfgnZkGwjxn_L1JrstBBlbaWe0g4PrxGjN4tISRYaB_PzSIpgz4OT8-z7lR-4LoaMGDYmt7Xn1KVN1ZhOfWHf6xjMM77Pdgzjh3niZTabuLqVWnqdh9wwgSG2id-l2zRZ3A4l",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/03/why-inclusive-leaders-are-good-for-organizations-and-how-to-become-one",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/07/how-to-make-diversity-and-incl",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/listening-is-an-overlooked-leadership-tool",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 151,
+    "source_record_number": "147"
+  }
+}

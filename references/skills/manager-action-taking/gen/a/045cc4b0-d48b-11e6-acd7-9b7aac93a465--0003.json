@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "045cc4b0-d48b-11e6-acd7-9b7aac93a465:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_COLLABORATION",
+    "Q_TEAM_COLLABORATION"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_COLLABORATION, Q_TEAM_COLLABORATION]",
+  "action_plan_template_uuid": "045cc4b0-d48b-11e6-acd7-9b7aac93a465",
+  "template_name": "Glint Collaboration",
+  "sequence": 3,
+  "focus_area_title": "Empowering People",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/building-high-performance-teams/empowering-people-3?claim=AQGWlVu1TB2MZgAAAXBe_YuWUVPu7QPMd5s8SlpWPB89hv1xS0N7nP9C7uIxbg8v2OhF48Y9viVlGnNAjyeFGqOUdWA4w8954b2aFQD82PSSOkq-HcAU1pVT2tT9O0TnBvFtE1EVgWcuJXfwi9XqJuNW3NfpobckrdSXlWDaJ7HArIkGRnpmcpD2gn-tN1GHTL4UNq1HEDfqCqnKFCaycF2lEesRFe_WN_gpL5JQ5fhVKD7jhTxwTHWjbLvWuWj1OhB4aTFNLOsTs5Fk2eKuUeFDX3LwJ-_ZaXqmHwRTA9qbP69cqx44z93Q6GX5ukLq7426GSUke_zqI6c46Y58s6al9bNZGoehool_MX9-SSGsQ_fHE1xSo8JMZuubr5l1S0ACmyYf7O4nOEzE2A-wIFHiJpFbC-RRMOR-hPfwZZw6OCdVKzTnMeu57nLpi16zFPMY_bvc5ZvY9jzuU6fdCDDt0FIX4H02qJWI1DeSnxCwEL0Cabb7nCltPAi3nB2N9jaPmfiBeJv3fHES_DkeoEjnbggWaD4KgeyQMFZjguYaiVP8AFBMqnv7Wy3btNCBPr_dKWzmpvnmlPBfUXOBogUGePfP2wH1o8dVdFzAihzOdSnflA62wXABfIMT6mPlKS--WJFjVeJt2atnxhK26bK78XXe7KD47r7AQXwnbCkyLYQAOsAJkHQpSqr_GfBhT0ppS6K894pe1lbsWzV7iXNVO49Zx0Qt5gbzguZ13R7K",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-12-13T08:20:00+00:00",
+  "video_extract": "LiL3_Empowering_People",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Empowering People",
+      "url": "https://www.linkedin.com/learning/embed/building-high-performance-teams/empowering-people-3?claim=AQGWlVu1TB2MZgAAAXBe_YuWUVPu7QPMd5s8SlpWPB89hv1xS0N7nP9C7uIxbg8v2OhF48Y9viVlGnNAjyeFGqOUdWA4w8954b2aFQD82PSSOkq-HcAU1pVT2tT9O0TnBvFtE1EVgWcuJXfwi9XqJuNW3NfpobckrdSXlWDaJ7HArIkGRnpmcpD2gn-tN1GHTL4UNq1HEDfqCqnKFCaycF2lEesRFe_WN_gpL5JQ5fhVKD7jhTxwTHWjbLvWuWj1OhB4aTFNLOsTs5Fk2eKuUeFDX3LwJ-_ZaXqmHwRTA9qbP69cqx44z93Q6GX5ukLq7426GSUke_zqI6c46Y58s6al9bNZGoehool_MX9-SSGsQ_fHE1xSo8JMZuubr5l1S0ACmyYf7O4nOEzE2A-wIFHiJpFbC-RRMOR-hPfwZZw6OCdVKzTnMeu57nLpi16zFPMY_bvc5ZvY9jzuU6fdCDDt0FIX4H02qJWI1DeSnxCwEL0Cabb7nCltPAi3nB2N9jaPmfiBeJv3fHES_DkeoEjnbggWaD4KgeyQMFZjguYaiVP8AFBMqnv7Wy3btNCBPr_dKWzmpvnmlPBfUXOBogUGePfP2wH1o8dVdFzAihzOdSnflA62wXABfIMT6mPlKS--WJFjVeJt2atnxhK26bK78XXe7KD47r7AQXwnbCkyLYQAOsAJkHQpSqr_GfBhT0ppS6K894pe1lbsWzV7iXNVO49Zx0Qt5gbzguZ13R7K",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/09/3-ways-to-encourage-smarter-teamwork",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1818737/collaboration-takes-work-and-starts-top",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/06/six-common-misperceptions-abou/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3047784/how-to-be-a-success-at-everything/how-leaders-can-ask-for-help-and-keep-their-teams-confiden",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3033275/3-types-of-dysfunctional-teams-and-how-to-fix-them",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 331,
+    "source_record_number": "327"
+  }
+}

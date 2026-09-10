@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "36d9c900-7bbc-11e7-a59b-294de3121110:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATMENT_FAIRNESS"
+  ],
+  "source_question_id_cell": "[Q_TREATMENT_FAIRNESS]",
+  "action_plan_template_uuid": "36d9c900-7bbc-11e7-a59b-294de3121110",
+  "template_name": "Glint Fairness",
+  "sequence": 1,
+  "focus_area_title": "Fairness is Essential",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/practicing-fairness-as-a-manager/fairness-is-essential?claim=AQHsowfVAhKTTQAAAXBgYFLELY3_fKCmoIpnZhpGylBB-2PnKMKxV4UOdhuRMI28J2SZmmpngaQ8sLgLGPdhBwcD8My12CdhuXyaQiaIKjknPlVuhu19N4NSS_RTF4zTdGmSs-rJYkMd8rXysnIBJgoFGUhP5lD9DTWpFPgg0OuQ9JbPG2jfmSIUq0HVrs5WeYr15SX_qEuaPeDQRRJbIv5IcvDRZ8KaeKHWclIGaFx9n8uesCWeksoEsYyrirv9nnAjpcT4zPi-ldc_O9mz9sdvTAuVtKAp0uQ-OUZOZihIWa0pSxemDyEZPKgsUpBMWdqRAyOqoWBuLvr0PkuFzCcVdj0UTo9zSjFGLyqCfLrKfKSpN8UmBbGzqRjPUrQwhKxlcYypohglH3kP3uyCXJGAx5apZMcNOlHrgFK9geFL5tHX9oEbplQLx-cpZ6mz_NlmctzhB9WktWtjrg47UQ8baFEPzJpxLjp-JEqrByH9XmdQjV22traaKi2n6wKMB-BCzzTqDtgu6g6Pe4I9eeszSo_6Afph-y64jP8eGfppJzPxiqwwAoTPRkA65TJFg94BHcltdQcX69tT4dk9bdLRcxEcgyaQLyXvHM_z8Qm84JJ_Ivz2m8vVo6MaNDViKQBuIgU9tZ6q9KbShCnZDN4KREiInSWhMRxhKjnFLp1nI57TFAuyQRZ6QQvPsMke2VoOXg6uvvJhI9fqfaAKz-jjQZVHOXytWu1wdwXyXg",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T08:49:00+00:00",
+  "video_extract": "LiL3_Fairness",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Fairness is Essential",
+      "url": "https://www.linkedin.com/learning/embed/practicing-fairness-as-a-manager/fairness-is-essential?claim=AQHsowfVAhKTTQAAAXBgYFLELY3_fKCmoIpnZhpGylBB-2PnKMKxV4UOdhuRMI28J2SZmmpngaQ8sLgLGPdhBwcD8My12CdhuXyaQiaIKjknPlVuhu19N4NSS_RTF4zTdGmSs-rJYkMd8rXysnIBJgoFGUhP5lD9DTWpFPgg0OuQ9JbPG2jfmSIUq0HVrs5WeYr15SX_qEuaPeDQRRJbIv5IcvDRZ8KaeKHWclIGaFx9n8uesCWeksoEsYyrirv9nnAjpcT4zPi-ldc_O9mz9sdvTAuVtKAp0uQ-OUZOZihIWa0pSxemDyEZPKgsUpBMWdqRAyOqoWBuLvr0PkuFzCcVdj0UTo9zSjFGLyqCfLrKfKSpN8UmBbGzqRjPUrQwhKxlcYypohglH3kP3uyCXJGAx5apZMcNOlHrgFK9geFL5tHX9oEbplQLx-cpZ6mz_NlmctzhB9WktWtjrg47UQ8baFEPzJpxLjp-JEqrByH9XmdQjV22traaKi2n6wKMB-BCzzTqDtgu6g6Pe4I9eeszSo_6Afph-y64jP8eGfppJzPxiqwwAoTPRkA65TJFg94BHcltdQcX69tT4dk9bdLRcxEcgyaQLyXvHM_z8Qm84JJ_Ivz2m8vVo6MaNDViKQBuIgU9tZ6q9KbShCnZDN4KREiInSWhMRxhKjnFLp1nI57TFAuyQRZ6QQvPsMke2VoOXg6uvvJhI9fqfaAKz-jjQZVHOXytWu1wdwXyXg",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-managers-can-avoid-playing-favorites",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/dont-let-power-corrupt-you",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/pay-fairness-isnt-just-about-teaching-employees-to-negotiate",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.bizjournals.com/bizjournals/how-to/growth-strategies/2014/02/treating-employees-fairly-not-the-same.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/making-employment-a-fair-deal-in-the-age-of-contracting-subcontracting-and-temp-work",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 513,
+    "source_record_number": "509"
+  }
+}

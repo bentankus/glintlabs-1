@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_LARGER_PURPOSE"
+  ],
+  "source_question_id_cell": "[Q_LARGER_PURPOSE]",
+  "action_plan_template_uuid": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7",
+  "template_name": "Glint Larger Purpose",
+  "sequence": 1,
+  "focus_area_title": "Finding Success Starts with Finding Your Purpose",
+  "content_type": "mixed",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_detailed_guidance",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Success without significance - purpose, service, and meaningful relationships - is not really success at all. It's important to properly reflect on how we can live a meaningful life not just with the superficial trappings of \"success\" but with deep purpose and joy in all we do. \n\nAsk yourself:  What is the core purpose of my work and the ways in which it makes the world better? Who are the key relationships in my life, and how can I deepen them? What more can I do at work, at home, and in my community to serve others? How am I becoming better each day? Read [this article](<HBR_Finding_Success_Starts_with_Finding_Your_Purpose>) to learn more.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:09:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "internal_reference",
+      "title": "this article",
+      "url": "",
+      "target": "<HBR_Finding_Success_Starts_with_Finding_Your_Purpose>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 603,
+    "source_record_number": "599"
+  }
+}

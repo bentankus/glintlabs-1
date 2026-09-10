@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "dc8ed980-0903-11e6-bacf-170ba1b0fcba:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_JOB_GROWTH"
+  ],
+  "source_question_id_cell": "[Q_JOB_GROWTH]",
+  "action_plan_template_uuid": "dc8ed980-0903-11e6-bacf-170ba1b0fcba",
+  "template_name": "Glint Growth",
+  "sequence": 5,
+  "focus_area_title": "How to Build a Successful Upskilling Program",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "A key component of career growth is upskilling, a longer-term investment in augmenting the knowledge, skills, and competencies that help employees advance their careers. When employees are offered and encouraged to take advantage of upskilling opportunities for their personal or professional growth, people metrics, such as employee engagement and retention, also go up. \n\nThe problem is that too often, even the employees who say they want more training and development struggle to identify what they're looking for. [This article](<HBR_How_to_Build_a_Successful_Upskilling_Program>) covers three strategies to help organizational leaders identify the skills and competencies that employees will find valuable.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T11:57:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3037059/how-to-get-employees-jazzed-about-their-professional-development",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://prezi.com/8uejole0mrjh/mindful-engagement",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lisaquast/2015/09/14/how-to-overcome-micromanager-tendencies-part-2",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/northwesternmutual/2016/03/02/be-a-great-leader-get-out-of-your-teams-way/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/kathycaprino/2014/01/06/successful-people-the-8-self-limiting-behaviors-they-avoid/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glennllopis/2012/10/22/five-most-effective-ways-to-invest-in-your-career/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3007369/heres-google-perk-any-company-can-imitate-employee-employee-learning",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "This article",
+      "url": "",
+      "target": "<HBR_How_to_Build_a_Successful_Upskilling_Program>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 544,
+    "source_record_number": "540"
+  }
+}

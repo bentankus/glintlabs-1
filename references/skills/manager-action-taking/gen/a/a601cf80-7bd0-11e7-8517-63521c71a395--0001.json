@@ -1,0 +1,85 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "a601cf80-7bd0-11e7-8517-63521c71a395:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_GROWTH",
+    "Q_CAREER_PATH"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_GROWTH, Q_CAREER_PATH]",
+  "action_plan_template_uuid": "a601cf80-7bd0-11e7-8517-63521c71a395",
+  "template_name": "Glint Career Path",
+  "sequence": 1,
+  "focus_area_title": "How to Help an Employee Figure Out Their Career Goals",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Having a sense of purpose and a feeling of momentum in achieving our career goals is powerful - so when we can assist employees in getting there, it's a meaningful way to make a difference in their lives and their professional success. [This article](<HBR_How_to_Help_an_Employee_Figure_Out_Their_Career_Goals>) offers three strategies managers can use to help those who are unsure of their career path: 1) help them analyze patterns, 2) expand their worldview, and 3) don't steer too hard.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:06:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2014/01/24/want-motivated-employees-offer-ample-opportunities-for-growth/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/sylviavorhausersmith/2012/11/12/no-career-path-no-retention/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/29/why-development-planning-is-important-neglected-and-can-cost-you-young-talent/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3037059/hit-the-ground-running/how-to-get-employees-jazzed-about-their-professional-development",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "This article",
+      "url": "",
+      "target": "<HBR_How_to_Help_an_Employee_Figure_Out_Their_Career_Goals>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 307,
+    "source_record_number": "303"
+  }
+}

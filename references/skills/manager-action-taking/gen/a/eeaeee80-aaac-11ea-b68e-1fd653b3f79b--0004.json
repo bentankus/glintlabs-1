@@ -1,0 +1,134 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ENCOURAGES_TEAMWORK_360"
+  ],
+  "source_question_id_cell": "[Q_ENCOURAGES_TEAMWORK_360]",
+  "action_plan_template_uuid": "eeaeee80-aaac-11ea-b68e-1fd653b3f79b",
+  "template_name": "Glint 360 Encourages Teamwork",
+  "sequence": 4,
+  "focus_area_title": "Develop a Support Network for Your Team",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal of a support network is to provide contacts that your team members can call on to get help and resources. Knowing who to call for support and how to best approach those individuals or departments will enable your team members to avoid delays and get more done on their jobs. Expanding your employees' support network will also help them make important connections and open up potential career opportunities, a key to retention.\n\nProvide your staff with a list of all the people and departments who can provide resources or some type of support. Include relevant contact information, links, etc. In some cases you may have to establish an account ahead of the need so that things go smoothly when your team members call.\n\n[Internal Networking in Business](video \"LiL3_Internal_Networking\")\n\n**Watch**: *Internal Networking in Business*\n\n---",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T09:54:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/christinecomaford/2014/03/12/bust-workplace-bullies-and-clear-conflict-in-3-essential-steps",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3033275/3-types-of-dysfunctional-teams-and-how-to-fix-them",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/09/3-ways-to-encourage-smarter-teamwork",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/06/six-common-misperceptions-abou/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3047784/how-to-be-a-success-at-everything/how-leaders-can-ask-for-help-and-keep-their-teams-confiden",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1818737/collaboration-takes-work-and-starts-top",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Internal Networking in Business",
+      "url": "",
+      "target": "video \"LiL3_Internal_Networking\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 106,
+    "source_record_number": "102"
+  }
+}

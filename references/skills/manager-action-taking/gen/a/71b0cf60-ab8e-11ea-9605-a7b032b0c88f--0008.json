@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATS_OTHERS_FAIRLY_360"
+  ],
+  "source_question_id_cell": "[Q_TREATS_OTHERS_FAIRLY_360]",
+  "action_plan_template_uuid": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f",
+  "template_name": "Glint 360 Treats Others Fairly",
+  "sequence": 8,
+  "focus_area_title": "How to Earn a Reputation as a Fair Manager",
+  "content_type": "mixed",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "As a manager, you're probably dedicating significant amounts of time and energy to making unbiased decisions, but no doubt finding that the right balance is elusive. Sadly, there is no objective measure of fairness. Even once you invest considerable effort in deciding fairly, there's no guarantee that it will be perceived that way by your team. \n\nDon't make the mistake of assuming your decisions will speak for themselves. As the manager, you have the discretion to make tough decisions, but regardless of how you choose to make the difficult calls, it's critical that you communicate what you're thinking. Transparency increases trust in the process and has value for your employees beyond the specifics of the decision-making process. Read [this article](<HBR_How_to_Earn_a_Reputation_as_a_Fair_Manager>) to learn how to earn a reputation as a fair manager.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.bizjournals.com/bizjournals/how-to/growth-strategies/2014/02/treating-employees-fairly-not-the-same.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/pay-fairness-isnt-just-about-teaching-employees-to-negotiate",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/dont-let-power-corrupt-you",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/should-you-give-your-star-employees-star-treatment",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-managers-can-avoid-playing-favorites",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "this article",
+      "url": "",
+      "target": "<HBR_How_to_Earn_a_Reputation_as_a_Fair_Manager>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 222,
+    "source_record_number": "218"
+  }
+}

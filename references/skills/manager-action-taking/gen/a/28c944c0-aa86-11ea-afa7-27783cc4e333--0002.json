@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "28c944c0-aa86-11ea-afa7-27783cc4e333:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_SELF_AWARENESS_360"
+  ],
+  "source_question_id_cell": "[Q_SELF_AWARENESS_360]",
+  "action_plan_template_uuid": "28c944c0-aa86-11ea-afa7-27783cc4e333",
+  "template_name": "Glint 360 Self Awareness",
+  "sequence": 2,
+  "focus_area_title": "Learn about emotional intelligence (EQ)",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/what-is-emotional-intelligence-eq?autoplay=false&claim=AQGVeSLG4OFRuQAAAZHWxYd9NQghaPwZrKN7UjgIu5UNnvR27BU_ufrVjJcKjDNYx1jhiZLXNuIt4FalQxv7pEvTWbXa3NKqtmkIflUYBqI-klxAcVjTItUbud_kLy4qc4_H_A9GR8jQyzrdzabWf1CFUo5BCsBb9KmnIVXdKmLyToUrhnqk-iHkUg52XFFmYlY3MXVgkfJT3oney7LgnvsMN_MC94g9tvx36wIW_T82MK04ZDSeCy_Aq5AUB-VaWnKzZKOvVl2BNC2Hvmuyu3N_Lm3N14tFITcskaXNDmGfuSRj_C2wL7OFz1LkoB3Raoa5qAuDG8qZfm_5tLt11bAm-WxS19ipRs3TPxr8eOQhu8q982Bbe4RC1ygv2XqytkbmKVevolEhHaDWbrmI_kRbFAr-3Pw_bXlk-iEiJ0vuL2hIOIrgcThd_p-WU7W1NFDfkM4X5P93b6QpsJ_A7MdF_Bo2PMyAJN7w0v43KXfpVLussn98eS-VtfgiGEKG26N500sPApxnKqhPePIX8dkDvJ-mXxS_GOK5V51eKLESGMZut4Qi_KMAqFefM-H9ZFBOar_TSpGOAlD0pXUMNce7fA_A0kT0kIL5obUmzvYKdOcUcobCBgGrArlGDUQtoikhAeHwTLraQ_J5fn8FKS1Ln4LjZEN507RdgV0w4c-yY8NEJAXLSTldHGZwWebI-OUhR02fcPxhirmoT02NA0s9TesbDq3cSZiUHRfo0kI5Qdzmp0ZhhjcLn8xVqUEwf4cUsWW9CDxfrvPi1EsNaL5jqJRRzLCl2QJnnVxEReA6AYSNwyXHuYoujyP7E28ZOmO2Aj6Ssul80yOOEJMWlmrJ_F_jmCigXsEaArDrZ8Wih7lGP4T3FZgxB3Z2PIlR-IzvqVJi8PDvO30NWwqAgM9wH5X1tAernQkcb6jABFCwvOm2J7W4I9b9ZIRnJwkhwWTBrxMCY0vNf7vp4c7qqITVds7BQs5k1WBHD6o_U6pa6xSqRrsn6KBkLwVMwwsbZzAWpwH6VG74D8CvjFOk5225Cyle17oldpySvn2_uUAvPrMqxMV0fSlXZsJWilA32RF-sMbyT4hiJN7TZvOuzRXK43EUZtKFnLJMRukzme4t60X9k11ig6BjLrZsD4A6EhK2ofcyf6aaLwSXFKyQQe_fCIfYYKPIZm0XMnBsVN1ViYdgh5pYFtMtXI3iHbp4-l7XFnve1ve6xrObSPy-",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "LiL2_The_emotions_in_EQ",
+  "resources": [
+    {
+      "type": "video",
+      "title": "What is emotional intelligence (EQ)?",
+      "url": "https://www.linkedin.com/learning/embed/developing-your-emotional-intelligence-22196221/what-is-emotional-intelligence-eq?autoplay=false&claim=AQGVeSLG4OFRuQAAAZHWxYd9NQghaPwZrKN7UjgIu5UNnvR27BU_ufrVjJcKjDNYx1jhiZLXNuIt4FalQxv7pEvTWbXa3NKqtmkIflUYBqI-klxAcVjTItUbud_kLy4qc4_H_A9GR8jQyzrdzabWf1CFUo5BCsBb9KmnIVXdKmLyToUrhnqk-iHkUg52XFFmYlY3MXVgkfJT3oney7LgnvsMN_MC94g9tvx36wIW_T82MK04ZDSeCy_Aq5AUB-VaWnKzZKOvVl2BNC2Hvmuyu3N_Lm3N14tFITcskaXNDmGfuSRj_C2wL7OFz1LkoB3Raoa5qAuDG8qZfm_5tLt11bAm-WxS19ipRs3TPxr8eOQhu8q982Bbe4RC1ygv2XqytkbmKVevolEhHaDWbrmI_kRbFAr-3Pw_bXlk-iEiJ0vuL2hIOIrgcThd_p-WU7W1NFDfkM4X5P93b6QpsJ_A7MdF_Bo2PMyAJN7w0v43KXfpVLussn98eS-VtfgiGEKG26N500sPApxnKqhPePIX8dkDvJ-mXxS_GOK5V51eKLESGMZut4Qi_KMAqFefM-H9ZFBOar_TSpGOAlD0pXUMNce7fA_A0kT0kIL5obUmzvYKdOcUcobCBgGrArlGDUQtoikhAeHwTLraQ_J5fn8FKS1Ln4LjZEN507RdgV0w4c-yY8NEJAXLSTldHGZwWebI-OUhR02fcPxhirmoT02NA0s9TesbDq3cSZiUHRfo0kI5Qdzmp0ZhhjcLn8xVqUEwf4cUsWW9CDxfrvPi1EsNaL5jqJRRzLCl2QJnnVxEReA6AYSNwyXHuYoujyP7E28ZOmO2Aj6Ssul80yOOEJMWlmrJ_F_jmCigXsEaArDrZ8Wih7lGP4T3FZgxB3Z2PIlR-IzvqVJi8PDvO30NWwqAgM9wH5X1tAernQkcb6jABFCwvOm2J7W4I9b9ZIRnJwkhwWTBrxMCY0vNf7vp4c7qqITVds7BQs5k1WBHD6o_U6pa6xSqRrsn6KBkLwVMwwsbZzAWpwH6VG74D8CvjFOk5225Cyle17oldpySvn2_uUAvPrMqxMV0fSlXZsJWilA32RF-sMbyT4hiJN7TZvOuzRXK43EUZtKFnLJMRukzme4t60X9k11ig6BjLrZsD4A6EhK2ofcyf6aaLwSXFKyQQe_fCIfYYKPIZm0XMnBsVN1ViYdgh5pYFtMtXI3iHbp4-l7XFnve1ve6xrObSPy-",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/lisaquast/2013/04/15/how-to-conduct-a-personal-s-w-o-t-analysis/#44a7f15c28d8",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/01/what-self-awareness-really-is-and-how-to-cultivate-it",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://blog.iqmatrix.com/strengths",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ellevate/2014/03/24/know-your-strengths-to-be-a-more-effective-and-successful-leader/#bc34f364b480",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/02/most-leaders-know-their-strengths-but-are-oblivious-to-their-weaknesses",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 201,
+    "source_record_number": "197"
+  }
+}

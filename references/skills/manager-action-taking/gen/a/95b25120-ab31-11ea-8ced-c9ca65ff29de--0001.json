@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "95b25120-ab31-11ea-8ced-c9ca65ff29de:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MAKES_DECISIONS_360"
+  ],
+  "source_question_id_cell": "[Q_MAKES_DECISIONS_360]",
+  "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+  "template_name": "Glint 360 Makes Decisions",
+  "sequence": 1,
+  "focus_area_title": "Map How Decisions Are Made on Your Team",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "When team members have opportunities to be involved in decision making, they are more likely to feel a sense of inclusion, empowerment, and belonging. The objective here is to assess decision making on your team to ensure inclusivity on the team.\n\n### Map team decisions\nSend out an email to your team asking them to respond to this question:\n> Which team members do you go to most frequently to get help making important decisions?\n\n### Map of your team's decision making process\nWith all of your team members' responses, draw a map. Use a circle to represent each team member. Draw an arrow linking each support seeker to each support provider. \n\n### Use your team map to create a more inclusive decision making process\nReview your completed map. Are there any people on your team that are rarely (or never) consulted when it comes to decision making? If so, reflect on how to get them more involved in team decision making. Ask them to be involved in new projects, invite them into collaborations, and give them more leadership responsibilities.\n\nSee this article: [Map How Your Employees Interact](https://hbr.org/2017/07/to-understand-whether-your-company-is-inclusive-map-how-your-employees-interact) for sample decision-making maps.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/09/managers-shouldnt-fear-algorithm-based-decision-making",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/root-out-bias-from-your-decision-making-process",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/noise",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Map How Your Employees Interact",
+      "url": "https://hbr.org/2017/07/to-understand-whether-your-company-is-inclusive-map-how-your-employees-interact",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 156,
+    "source_record_number": "152"
+  }
+}

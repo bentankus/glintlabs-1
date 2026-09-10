@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "b566b580-e0ae-11ea-8681-a907b687abac",
+  "template_name": "Glint Change Willingness - GPS",
+  "action_plan_record_ids": [
+    "b566b580-e0ae-11ea-8681-a907b687abac:1",
+    "b566b580-e0ae-11ea-8681-a907b687abac:2",
+    "b566b580-e0ae-11ea-8681-a907b687abac:3",
+    "b566b580-e0ae-11ea-8681-a907b687abac:4",
+    "b566b580-e0ae-11ea-8681-a907b687abac:5",
+    "b566b580-e0ae-11ea-8681-a907b687abac:6"
+  ]
+}

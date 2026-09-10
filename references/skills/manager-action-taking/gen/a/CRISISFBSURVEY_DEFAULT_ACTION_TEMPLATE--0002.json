@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESPONSE]",
+  "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+  "template_name": "CrisisFBSurvey_Default_Action_Template",
+  "sequence": 2,
+  "focus_area_title": "Make Sure You Are Informed About What the Wider Organization Is Doing to Respond",
+  "content_type": "guide",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance"
+  ],
+  "content_description": "",
+  "content_text_body": "Before discussing survey results with your team, and moving towards action, make sure that you know what the organization is doing to support everyone. This will allow you to ensure that everyone is fully informed; it will also assist you in taking action with your team that supports these wider initiatives. Make sure you find out about things such as:\n* All assistance to enable people to work remotely\n* Special provisions to enable people to work flexibly\n* Communications about the organization's future\n* Employee Assistance Programs\n* Updates relating to how the company is performing\n* The crucial role of your team/people in the company's success at this unusual time.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 9,
+    "source_record_number": "5"
+  }
+}

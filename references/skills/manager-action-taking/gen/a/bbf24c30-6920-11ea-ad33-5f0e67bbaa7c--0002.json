@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_SPEAK_UP"
+  ],
+  "source_question_id_cell": "[Q_SPEAK_UP]",
+  "action_plan_template_uuid": "bbf24c30-6920-11ea-ad33-5f0e67bbaa7c",
+  "template_name": "Glint Speak My Mind",
+  "sequence": 2,
+  "focus_area_title": "Encourage Your Employees to Speak Up With No Fear",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Managers who intentionally monitor the level of engagement of their employees benefit from having greater knowledge into their group dynamics and can address a lack of participation at an early stage. \n\nThe goal is to assess if your employees feel free to speak up and determine if there is an appropriate environment for safe communication. \n\nTo start, read this [article](https://www.inc.com/jay-steinfeld/5-reasons-why-employees-dont-speak-up-and-6-ways-t.html) describing reasons why employees don't speak up and determine the probability that any of these reasons might be present in your team. \n\n### Monitor the work environment \nIf employees don't sense a safe and inclusive environment, they will probably disengage and avoid interactions. Keep your eyes and ears open to witness the level of ease and openness by which your employees interact. Are they eager to get involved and express themselves\u00e2\u20ac\u00a6or are they reserved and reclusive?\n\n### Offer options  \nYou can increase chances of participation by offering different ways for employees to contribute. Some people might feel uncomfortable sharing through the current medium you are offering. For example, try a casual conversation during a lunch break. Be open to receive ideas through potential new channels from your own team.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "inline_external",
+      "title": "article",
+      "url": "https://www.inc.com/jay-steinfeld/5-reasons-why-employees-dont-speak-up-and-6-ways-t.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 764,
+    "source_record_number": "760"
+  }
+}

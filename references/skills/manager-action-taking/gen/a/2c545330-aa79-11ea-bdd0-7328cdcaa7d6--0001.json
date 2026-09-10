@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2c545330-aa79-11ea-bdd0-7328cdcaa7d6:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CLARIFIES_ROLES_360"
+  ],
+  "source_question_id_cell": "[Q_CLARIFIES_ROLES_360]",
+  "action_plan_template_uuid": "2c545330-aa79-11ea-bdd0-7328cdcaa7d6",
+  "template_name": "Glint 360 Clarifies Roles",
+  "sequence": 1,
+  "focus_area_title": "Hold Your Team Accountable with Compassion, Not Fear",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "It can be a challenge to promote accountability for business outcomes while demonstrating kindness to individuals on the team. How do you find the sweet spot between being compassionate and holding people responsible? The secret is to over-index on clear expectations and then provide frequent, low-impact coaching and feedback to give team members assistance without ever transferring ownership of responsibility. Read [this article](<HBR_Hold_Your_Team_Accountable_with_Compassion_Not_Fear>) to learn more.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-29T12:05:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/guides/2010/08/how-to-communicate-employee-expectations-effectively.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/2009/12/07/job-description-review-leadership-managing-employee.html",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2016/01/21/the-best-managers-always-set-clear-expectations/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glennllopis/2015/09/15/job-titles-disrupt-productivity-and-innovation",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "this article",
+      "url": "",
+      "target": "<HBR_Hold_Your_Team_Accountable_with_Compassion_Not_Fear>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 53,
+    "source_record_number": "49"
+  }
+}

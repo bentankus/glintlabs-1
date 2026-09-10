@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "60351000-681d-11e7-8b6b-eddfdf1cfba6:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_INCLUSION"
+  ],
+  "source_question_id_cell": "[Q_TEAM_INCLUSION]",
+  "action_plan_template_uuid": "60351000-681d-11e7-8b6b-eddfdf1cfba6",
+  "template_name": "Glint Inclusion Team",
+  "sequence": 2,
+  "focus_area_title": "How to let them know you've heard them",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/improving-your-listening-skills/how-to-let-them-know-you-ve-heard-them?claim=AQHIVPdun8HywQAAAXBfEKWKPI44vUtpX2yFiokTbV8klpMVgRWJrSKckU1aubzrsQxTXIKyD9SIr3dy_kGfPda_2_D-BlcoOzLd4KkXKgxy_4ONQT_Dv_gem_65WOInp72Wr7ZcqyU5tEf-6VljLKO6oG2d1cyqYrxuC_ikrouKfGKcrtC029NM4OPFjfSpJXErzvzscuZ5HDpEUKTrLRfaafgp5YgUDQmkYzoZKGlYQan3kCFACJWKi7kVYLqk9N7tdmf_GfuFgyEs9ugqoIIjQ_HdekNoGbmCk8LV0q20UdT44x2WWVRhJDBfcyhAgVc5qB9j60yaBD9_ShL12ZKnIy8dXZWZ-Dx8FpcNjWqdMUGx3ufhSZx6nkrWaiQnDuXVixgyjzf6vMjEqrYc-UQnMekwow98bq2f6AU6JmhwmY7e_5oZxwQ9FIbnL-JnkeGHSsQwxGIlZ2hAJ2gUh79vMtTsGP5eX16QSgL4pvi9Z8wDdT-RITU5x8Ltrxg9I7XkBydWY8Y54Uk2ID8TArRmAkKOEDwrGWbHeTZC4Mm6ZZOFooXNhK3DCTADslncw0_ErURdGNsPOLCvUylN-u8RMglGhcfiV-mVYr4HGLSdmzJbiZg4Ye_Rznk0F2yE9jnxtbdroUB_tHirSLNYlH2N1vtp_GGmdbW0XfhiYWwuhw0nbXM13vgEaA5TgCtywEQ6HKND0IQtXaxI04eT-ByWcjdYUYzKaiyxiR8s-Q",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:10:00+00:00",
+  "video_extract": "LiL3_Let_Others",
+  "resources": [
+    {
+      "type": "video",
+      "title": "How to let them know you've heard them",
+      "url": "https://www.linkedin.com/learning/embed/improving-your-listening-skills/how-to-let-them-know-you-ve-heard-them?claim=AQHIVPdun8HywQAAAXBfEKWKPI44vUtpX2yFiokTbV8klpMVgRWJrSKckU1aubzrsQxTXIKyD9SIr3dy_kGfPda_2_D-BlcoOzLd4KkXKgxy_4ONQT_Dv_gem_65WOInp72Wr7ZcqyU5tEf-6VljLKO6oG2d1cyqYrxuC_ikrouKfGKcrtC029NM4OPFjfSpJXErzvzscuZ5HDpEUKTrLRfaafgp5YgUDQmkYzoZKGlYQan3kCFACJWKi7kVYLqk9N7tdmf_GfuFgyEs9ugqoIIjQ_HdekNoGbmCk8LV0q20UdT44x2WWVRhJDBfcyhAgVc5qB9j60yaBD9_ShL12ZKnIy8dXZWZ-Dx8FpcNjWqdMUGx3ufhSZx6nkrWaiQnDuXVixgyjzf6vMjEqrYc-UQnMekwow98bq2f6AU6JmhwmY7e_5oZxwQ9FIbnL-JnkeGHSsQwxGIlZ2hAJ2gUh79vMtTsGP5eX16QSgL4pvi9Z8wDdT-RITU5x8Ltrxg9I7XkBydWY8Y54Uk2ID8TArRmAkKOEDwrGWbHeTZC4Mm6ZZOFooXNhK3DCTADslncw0_ErURdGNsPOLCvUylN-u8RMglGhcfiV-mVYr4HGLSdmzJbiZg4Ye_Rznk0F2yE9jnxtbdroUB_tHirSLNYlH2N1vtp_GGmdbW0XfhiYWwuhw0nbXM13vgEaA5TgCtywEQ6HKND0IQtXaxI04eT-ByWcjdYUYzKaiyxiR8s-Q",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/how-to-be-good-at-managing-both-introverts-and-extroverts",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/the-new-science-of-team-chemistry#pioneers-drivers-integrators-and-guardians",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3067346/how-these-top-companies-are-getting-inclusion-right",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 556,
+    "source_record_number": "552"
+  }
+}

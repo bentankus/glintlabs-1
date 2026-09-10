@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fd4c9660-7bc8-11e7-b43c-e5402144143d:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_CAMARADERIE"
+  ],
+  "source_question_id_cell": "[Q_TEAM_CAMARADERIE]",
+  "action_plan_template_uuid": "fd4c9660-7bc8-11e7-b43c-e5402144143d",
+  "template_name": "Glint Camaraderie",
+  "sequence": 6,
+  "focus_area_title": "Learn How to Help Teams Work Effectively",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The objective is to help your team collaborate more effectively by discussing issues and working together to make changes.\n\nTry to figure out which factors most affect your team's ability to work together effectively. Consider the following:\n\n* External factors beyond the team's control\n\n* Internal dependencies in order to complete tasks\n\n* Large or imbalanced workloads, work-related stress\n\n* Ineffective processes or tools\n\n* Unclear roles or decision-making ownership\n\n* Unclear priorities or goals\n\n* Personal attitudes, motivation or abilities\n\n* Poor role fit\n\n* Tendency to silo work rather than supporting one another\n\n* Communication problems\n\n* Personal circumstances of team members\n\nAsk your team members, both 1:1 and as a group, to identify obstacles to strong collaboration and what they think could be done to overcome the challenges. Review as a team and pick one solution to implement.  Also, share your own ideas and plans to improve collaboration in the team (e.g., role clarity), ask for their feedback, and discuss next steps.\n\nRemember to check in regularly with the team to discuss the impact of changes, and revisit the list of obstacles and solutions to continue improving collaboration.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:41:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/1834912/5-biggest-mistakes-youre-making-work-relationships",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/12/the-intangible-things-employees-want-from-employers",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2009/07/rebuilding-companies-as-communities",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/kevinkruse/2014/09/29/employee-resource-groups-ergs-employee-engagement/#7138e97f1bd7",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/womensmedia/2014/12/01/how-to-improve-your-relationships-at-work/#381e91b847a2",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/iese/2015/06/02/ten-teamwork-killers-and-how-to-avoid-them",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 282,
+    "source_record_number": "278"
+  }
+}

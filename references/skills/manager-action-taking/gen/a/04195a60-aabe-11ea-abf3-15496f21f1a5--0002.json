@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "04195a60-aabe-11ea-abf3-15496f21f1a5:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_RELATES_BROADLY_360"
+  ],
+  "source_question_id_cell": "[Q_RELATES_BROADLY_360]",
+  "action_plan_template_uuid": "04195a60-aabe-11ea-abf3-15496f21f1a5",
+  "template_name": "Glint 360 Relates Broadly",
+  "sequence": 2,
+  "focus_area_title": "Create a Climate Where Team Members Can Be Themselves",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Most people say they want to work for companies that let them be themselves. The goal here is to clarify what this means to your team so you can make effective changes that support authenticity at work. \n\n### Get to know your team\nBeing yourself at work can help boost inclusion and increase well-being. But it can also be scary for some people who would rather not reveal less desirable parts of themselves. \n\nTo help your team better get to know themselves, have them take this [self-assessment](https://hbr.org/web/assessment/2014/06/is-this-the-development-path-for-you) that tells them if they would thrive in an organization that prioritizes personal development and authenticity.\n\n### Build communication skills\nBeing ourselves at work has pros and cons. Learn and practice skillful deployment of authenticity to get positive results.\n\nRead [Be Yourself, but Carefully](https://hbr.org/2013/10/be-yourself-but-carefully) for more tips.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T10:07:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/07/how-to-make-diversity-and-incl",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/listening-is-an-overlooked-leadership-tool",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "self-assessment",
+      "url": "https://hbr.org/web/assessment/2014/06/is-this-the-development-path-for-you",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Be Yourself, but Carefully",
+      "url": "https://hbr.org/2013/10/be-yourself-but-carefully",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 191,
+    "source_record_number": "187"
+  }
+}

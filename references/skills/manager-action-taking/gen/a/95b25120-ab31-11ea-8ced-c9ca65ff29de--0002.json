@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "95b25120-ab31-11ea-8ced-c9ca65ff29de:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MAKES_DECISIONS_360"
+  ],
+  "source_question_id_cell": "[Q_MAKES_DECISIONS_360]",
+  "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+  "template_name": "Glint 360 Makes Decisions",
+  "sequence": 2,
+  "focus_area_title": "Clarify Roles to Make Group Decisions",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "It can be challenging to make decisions when multiple people are involved. The objective here is to clarify who is involved in a decision and what role each person will play.\n\n### Define roles\nFor each decision, define roles:\nWho is the driver? (i.e., the person coordinating the stakeholders)\nWho is the approver? (i.e., the person who makes the decision)\nWho are the contributors? (i.e., the people who will be consulted for thier knowledge or expertise, but will not make the decision)\nWho should be informed? (i.e., the people who will be informed after the decision is made)\n\nOnce you are clear on roles, create a plan of action to make the group decision. \nRead this [Group Decision Guide](https://www.atlassian.com/team-playbook/plays/daci) for more information.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/09/managers-shouldnt-fear-algorithm-based-decision-making",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/root-out-bias-from-your-decision-making-process",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/noise",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Group Decision Guide",
+      "url": "https://www.atlassian.com/team-playbook/plays/daci",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 157,
+    "source_record_number": "153"
+  }
+}

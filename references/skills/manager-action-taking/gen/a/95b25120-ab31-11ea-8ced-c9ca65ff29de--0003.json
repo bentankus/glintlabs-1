@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "95b25120-ab31-11ea-8ced-c9ca65ff29de:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MAKES_DECISIONS_360"
+  ],
+  "source_question_id_cell": "[Q_MAKES_DECISIONS_360]",
+  "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+  "template_name": "Glint 360 Makes Decisions",
+  "sequence": 3,
+  "focus_area_title": "Support Effective Brainstorming",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal here is to provide the right structure for brainstorming in your team. Better brainstorming can lead to better idea generation and prioritization, innovation, and progress.\n### Let team members work alone first\nWhen your team all brainstorms together, their ideas tend to converge. You may miss out on other good ideas that were never mentioned. So before talking as a group, have everyone write down all their ideas. Once everyone has had a chance to brainstorm on their own, then collect and discuss the ideas as a group.\n\n### Manage personalities\nSome people on your team will dislike uncertainty and try to hone the ideas more quickly. Other people on your team will be more extroverted and will push for move involvement in the brainstorm. So pay attention to the personalities in the room and ensure that everyone's ideas are shared to create as many options as possible.\n\n### Provide plenty of paper for drawing\nSome solutions are better discovered through drawings than words. If team members are having a hard time articulating an idea, encourage them to try drawing it.\n\nFor more insights, read [Your Team Is Brainstorming All Wrong](https://hbr.org/2017/05/your-team-is-brainstorming-all-wrong).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/09/managers-shouldnt-fear-algorithm-based-decision-making",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/root-out-bias-from-your-decision-making-process",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/noise",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Your Team Is Brainstorming All Wrong",
+      "url": "https://hbr.org/2017/05/your-team-is-brainstorming-all-wrong",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 158,
+    "source_record_number": "154"
+  }
+}

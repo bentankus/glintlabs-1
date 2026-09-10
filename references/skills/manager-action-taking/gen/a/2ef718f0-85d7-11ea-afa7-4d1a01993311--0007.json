@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2ef718f0-85d7-11ea-afa7-4d1a01993311:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_MANAGER_SUPPORT"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_MANAGER_SUPPORT]",
+  "action_plan_template_uuid": "2ef718f0-85d7-11ea-afa7-4d1a01993311",
+  "template_name": "Glint Distress - Manager Support",
+  "sequence": 7,
+  "focus_area_title": "Create an Open-Door Policy",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Team members feel a greater sense of belonging when their managers are readily available to chat. This is essential during times of stress and uncertainty.\n\n### Be available to talk about issues\nWhether team members are struggling with other employees, work processes, or customers, or a situation at home, be available for them to talk to someone about it. Don't make them wait for the next 1:1 meeting.\n\n### Provide a place to chat or vent\nHelp team members vent and express themselves by creating a specific place for it. For example, you could create a slack channel for employees to talk about whatever they want. Professionalism is still important, but encourage them to post pictures and share their stories.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/susan-steinbrecher/workplace-meltdown-8-ways-to-help-someone-in-distress.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/help-your-team-manage-stress-anxiety-and-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 455,
+    "source_record_number": "451"
+  }
+}

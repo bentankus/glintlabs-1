@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "9e9efef0-08e2-11e6-bacf-170ba1b0fcba:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CULTURE_WORKLIFE"
+  ],
+  "source_question_id_cell": "[Q_CULTURE_WORKLIFE]",
+  "action_plan_template_uuid": "9e9efef0-08e2-11e6-bacf-170ba1b0fcba",
+  "template_name": "Glint Balance",
+  "sequence": 4,
+  "focus_area_title": "Practice prioritization",
+  "content_type": "discussion_prompt",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "Discuss priority on tasks. As new items are added to your team's plate, discuss any impact the new item has on the priority list.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:10:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://jb-schnittstelle.de/wp-content/uploads/2014/08/Burned-Out.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/danschawbel/2015/06/29/why-workplace-flexibility-is-the-linchpin-to-employee-happiness/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3044095/5-things-high-profile-dads-can-do-for-work-life-balance-before-they-leave-their",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/15/cross-training-your-best-defense-against-indispensable-employees/#461c013f6303",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lisaquast/2015/11/08/8-signs-that-you-could-be-accidentally-over-working-your-team/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/dailymuse/2013/06/04/how-to-tell-if-your-team-is-burnt-out-and-what-to-do-about-it",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.huffingtonpost.com/entry/huffpost-email-deletion-tool-vacation_55ba97a8e4b0b23e3ce21f5f",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3047825/7-habits-of-people-who-have-achieved-work-life-balance",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 262,
+    "source_record_number": "258"
+  }
+}

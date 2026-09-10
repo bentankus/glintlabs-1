@@ -1,0 +1,74 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_JUST_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_GPS_JUST_RESPONSE]",
+  "action_plan_template_uuid": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4",
+  "template_name": "Glint Just Response - GPS",
+  "sequence": 2,
+  "focus_area_title": "Learn from Team Mistakes",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why it is Important\n\nLearning from our mistakes in terms of how we respond to errors, near misses, or key safety events is important in developing a just culture. The objective is to practice using team mistakes as opportunities to learn. **Below are a few suggestions you can use to learn from mistakes:**\n\n[Learning from failure in teams](video \"LiL3_Learning_from_Failure\")\n\n**Watch**: *Learning from failure in teams*\n\n---\n\n- **Identifying team mistakes**\n\nAll teams make mistakes. When teams start identifying their mistakes, mistakes become valuable opportunities to learn. Build a culture of learning from mistakes so people will know honest mistakes will be handled fairly, and not punitively.\n\n- **Make the most from failure**\n\n>- As a group, get together and make a list of key mistakes the team made over the past month.\n\n>- Consider: Has anyone missed a deadline or come up short on an assignment? Was the wrong approach taken when pursuing a goal? Could other processes have been used that would have made work more efficient, enjoyable, or engaging?\n\n>- For each mistake, clarify exactly what went wrong and why. As a group discuss what the team learned and what will be done differently next time.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:45:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://incident-prevention.com/ip-articles/near-miss-and-good-catch-reporting-1#:~:text=The%20intent%20of%20a%20near,from%20happening%20in%20the%20future.",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jcrinc.com/-/media/deprecated-unorganized/imported-assets/jcr/default-folders/items/ebrca15samplepdf.pdf?db=web&hash=D9A527F917C81876009A950394FE8D69",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=zeldVu-3DpM",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Learning from failure in teams",
+      "url": "",
+      "target": "video \"LiL3_Learning_from_Failure\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 602,
+    "source_record_number": "598"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "55683e80-7d45-11e7-991b-7fda66c32098:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATMENT_RESPECT"
+  ],
+  "source_question_id_cell": "[Q_TREATMENT_RESPECT]",
+  "action_plan_template_uuid": "55683e80-7d45-11e7-991b-7fda66c32098",
+  "template_name": "Respect",
+  "sequence": 8,
+  "focus_area_title": "Cross Training Your Team",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/leading-through-relationships/cross-training-your-team?claim=AQHbvfIGjSA5zAAAAXBgZU8nrqtALPcYX1GlmxaX3qXkc6q8LbrMGYn_2vmEuZbmSIFchuKviQ_Ub8wrK1Q0K0zKxFBmT2xAsip95vhas4aatwuQZfhnyRbs0VzAaszzcFSKsfoGxzlmvsA0owV23DnfJe-G-PXm05Xa9UAb-UUkd_dZ3Fkzu-tChCJphPU_D8Xt8P1UFkMhOmipEO3uRNz-0golVDB8MMmeCSfiFfI837_to0CSVhgmvpWu_-PEWiN3uEPnxka4gBdT87YjEqpY6bOiavdU0dIvRr4K2sC_h0YrPzM00HwVvhrfvHz3xB0BjXdooNgQkAm6U1OX4ji5DAFVbT4pe7jDR9BwM65Vq_o51Gsa04Txj7asI9BmIQAq8tTHr1oJ8crevxd6ezt6tUtahtmrYYG-X3Y4OmEedJGJ3sir0a7VCPhsL9V6QU5wsAFDWupNYxsR9y2RdsfTsTRk4ccwPaksNfLlglUW-ARm6y1c_LqxzbdV6itdYKZCRgOYq-QWcahkaYIXwtcm9u8e0B6J4hWxfnV8FO2X2274PSevQXUVxOKZLBhPBmIig50HKL9QzrLRJloDnyGwc-aehdVeZWQgeyK6OMwntszaeCynH39IV4M6uYXeczhGhBnWhp0AUfJgosUelhQrHjaGnx_0AVHB12usOwEL-ZzHSaBPnBaoE9E4Y96rzsdjCeG7zX843WGCKYGPWdQK9SyvJxmb3BDst-w9qZqn",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-12-13T08:24:00+00:00",
+  "video_extract": "LiL3_Cross_Training_Your_Team",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Cross Training Your Team",
+      "url": "https://www.linkedin.com/learning/embed/leading-through-relationships/cross-training-your-team?claim=AQHbvfIGjSA5zAAAAXBgZU8nrqtALPcYX1GlmxaX3qXkc6q8LbrMGYn_2vmEuZbmSIFchuKviQ_Ub8wrK1Q0K0zKxFBmT2xAsip95vhas4aatwuQZfhnyRbs0VzAaszzcFSKsfoGxzlmvsA0owV23DnfJe-G-PXm05Xa9UAb-UUkd_dZ3Fkzu-tChCJphPU_D8Xt8P1UFkMhOmipEO3uRNz-0golVDB8MMmeCSfiFfI837_to0CSVhgmvpWu_-PEWiN3uEPnxka4gBdT87YjEqpY6bOiavdU0dIvRr4K2sC_h0YrPzM00HwVvhrfvHz3xB0BjXdooNgQkAm6U1OX4ji5DAFVbT4pe7jDR9BwM65Vq_o51Gsa04Txj7asI9BmIQAq8tTHr1oJ8crevxd6ezt6tUtahtmrYYG-X3Y4OmEedJGJ3sir0a7VCPhsL9V6QU5wsAFDWupNYxsR9y2RdsfTsTRk4ccwPaksNfLlglUW-ARm6y1c_LqxzbdV6itdYKZCRgOYq-QWcahkaYIXwtcm9u8e0B6J4hWxfnV8FO2X2274PSevQXUVxOKZLBhPBmIig50HKL9QzrLRJloDnyGwc-aehdVeZWQgeyK6OMwntszaeCynH39IV4M6uYXeczhGhBnWhp0AUfJgosUelhQrHjaGnx_0AVHB12usOwEL-ZzHSaBPnBaoE9E4Y96rzsdjCeG7zX843WGCKYGPWdQK9SyvJxmb3BDst-w9qZqn",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.glassdoor.com/employers/blog/10-reasons-employees-resign/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/davidsturt/2016/10/25/how-to-build-respect-with-difficult-people/#6af67ef2392b",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.thebalance.com/how-to-demonstrate-respect-in-the-workplace-1919376",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3050242/10-ways-to-become-a-better-listener",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.monster.com/career-advice/article/gain-respect-as-a-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 830,
+    "source_record_number": "826"
+  }
+}

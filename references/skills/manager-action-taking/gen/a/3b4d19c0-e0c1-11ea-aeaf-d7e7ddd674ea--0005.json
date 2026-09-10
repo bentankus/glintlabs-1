@@ -1,0 +1,54 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_PSYCHOLOGICAL_SAFETY"
+  ],
+  "source_question_id_cell": "[Q_GPS_PSYCHOLOGICAL_SAFETY]",
+  "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+  "template_name": "Glint Psychological Safety - GPS",
+  "sequence": 5,
+  "focus_area_title": "Listen to webcast - note key themes and takeaways",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Many staff members think that robust safety cultures are so common in healthcare\norganizations today, everyone is comfortable pointing out missteps and discrepancies to their\ncolleagues and even getting better at bringing them to the attention of their supervisors. But\nthat is not always the case. This webcast provides information on why this practice is not more\ncommon and how to speak up for safety.\n\n### Why is it important?\n\nWe'd like to think that robust safety cultures are so common in health care organizations today, everyone is comfortable pointing out missteps and discrepancies to their colleagues and even getting better at bringing them to the attention of their supervisors. Not so fast.\n \nConsider this scenario: A patient is being discharged from the hospital and you, a staff person, notice that the discharge nurse has been called away from the bedside and left the patient's chart on a table where anyone can view it. Here's another one: You observe a doctor not washing her hands before entering a patient's room. And, there's this: You spot the same equipment, a monitor, in a hospital hallway for several weeks in a row. There's no note on it, and you and your colleagues, who also notice the machine, never inquire if there's something wrong with it or why it's been sitting there for so long.\n \nSo, what do these situations have in common? Well, in each there's an opportunity to speak up, or speak to someone about behavior or a situation that's problematic, especially where patient safety is concerned, and you don't. How come? That's what these panelists looked into on this IHI Webcast: How to Speak Up for Safety.\n\n**Listen to webcast and note key themes and takeaways**  \nIHI Webast: [How to Speak Up for Safety](http://www.ihi.org/resources/Pages/AudioandVideo/WIHI-Speak-Up-For-Safety.aspx)\n\n>Sources: \n\n>Institute for Healthcare Improvement\n\n>Joanne Zee, BScPT,  MSc, MCPA, Senior Clinical Director, Brain and Spinal Cord Rehab Program, Toronto Rehab, University Health Network (Toronto, Canada)\n\n>Brenda Kenefick, Director, Lean Process Improvement, University Health Network\n\n>Gregg Meyer, MD, MSc, Chief Clinical Officer, Partners Healthcare System (Boston, MA)",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:23:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.hopkinsmedicine.org/news/newsroom/news-releases/study-at-johns-hopkins-hospital-leads-to-changes-in-reporting-patient-safety-concerns",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "How to Speak Up for Safety",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/WIHI-Speak-Up-For-Safety.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 2",
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 684,
+    "source_record_number": "680"
+  }
+}

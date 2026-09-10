@@ -1,0 +1,29 @@
+{
+  "name": "eve-people-science",
+  "description": "People Science analytics plugin suite for Viva Glint survey data: run pinned vivaglint analyses, validate output quality, interpret findings, and support manager action taking.",
+  "version": "1.8.0",
+  "author": {
+    "name": "Ben Tankus",
+    "email": "bentankus@microsoft.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "people-science",
+    "viva-glint",
+    "survey",
+    "analytics",
+    "manager-action-taking",
+    "vivaglint"
+  ],
+  "mcpServers": {
+    "hits": {
+      "command": "agency",
+      "args": [
+        "mcp",
+        "remote",
+        "--url",
+        "https://mcp.hits.microsoft.com"
+      ]
+    }
+  }
+}

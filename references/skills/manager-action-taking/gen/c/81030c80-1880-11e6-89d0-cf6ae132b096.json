@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "81030c80-1880-11e6-89d0-cf6ae132b096",
+  "template_name": "Glint Manager",
+  "action_plan_record_ids": [
+    "81030c80-1880-11e6-89d0-cf6ae132b096:1",
+    "81030c80-1880-11e6-89d0-cf6ae132b096:2",
+    "81030c80-1880-11e6-89d0-cf6ae132b096:3",
+    "81030c80-1880-11e6-89d0-cf6ae132b096:4",
+    "81030c80-1880-11e6-89d0-cf6ae132b096:5",
+    "81030c80-1880-11e6-89d0-cf6ae132b096:6"
+  ]
+}

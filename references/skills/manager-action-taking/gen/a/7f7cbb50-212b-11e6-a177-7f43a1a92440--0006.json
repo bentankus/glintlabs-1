@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "7f7cbb50-212b-11e6-a177-7f43a1a92440:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CULTURE"
+  ],
+  "source_question_id_cell": "[Q_CULTURE]",
+  "action_plan_template_uuid": "7f7cbb50-212b-11e6-a177-7f43a1a92440",
+  "template_name": "Glint Culture",
+  "sequence": 6,
+  "focus_area_title": "Listen to and Act on Ideas",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "People feel appreciated and included when their leaders listen to and act on their ideas. The goal is to be fully present when listening so that you can evaluate and implement your team's good ideas.\n\n[Appreciate input and suggestions from all](video \"LiL3_Input_from_All\")\n\n**Watch**: *Appreciate input and suggestions from all*\n\n---\n\n### Listening tips for leaders\n\nShow your team members respect by acknowledging their unique experiences and honoring their individual points of view. Doing this with sincerity demonstrates that you genuinely care about them as people.\n\nPractice these [Listening Tips](Glint_Leadership_Tips_for_Being_a_Better_Listener) to become a better listener and leader.\n\n### Act on good ideas\n\nWhen team members come to you with good ideas, encourage them to think critically about those ideas to evaluate their potential. Help them brainstorm ways to implement these ideas at your company, encouraging them to take the lead.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:45:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/cywakeman/2015/05/15/less-talk-more-action-5-new-realities-for-todays-workforce",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/danschawbel/2012/05/13/how-companies-can-benefit-from-inclusion/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lizryan/2015/08/03/six-signs-your-companys-culture-is-toxic",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lizryan/2016/03/11/five-signs-your-company-is-clueless-about-talent",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/jacobmorgan/2015/12/10/how-corporate-culture-impacts-the-employee-experience/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/02/how-to-build-a-passionate-company",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Appreciate input and suggestions from all",
+      "url": "",
+      "target": "video \"LiL3_Input_from_All\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Listening Tips",
+      "url": "",
+      "target": "Glint_Leadership_Tips_for_Being_a_Better_Listener",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 396,
+    "source_record_number": "392"
+  }
+}

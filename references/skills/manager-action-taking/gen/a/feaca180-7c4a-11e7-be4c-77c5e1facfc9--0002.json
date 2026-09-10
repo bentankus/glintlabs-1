@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "feaca180-7c4a-11e7-be4c-77c5e1facfc9:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INCLUSION",
+    "Q_TREATMENT_INCLUSION"
+  ],
+  "source_question_id_cell": "[Q_INCLUSION, Q_TREATMENT_INCLUSION]",
+  "action_plan_template_uuid": "feaca180-7c4a-11e7-be4c-77c5e1facfc9",
+  "template_name": "Glint Inclusion",
+  "sequence": 2,
+  "focus_area_title": "Cultivate Inclusive Leadership",
+  "content_type": "mixed",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Creating opportunities for your team members to feel included and valued has a direct impact on the health of the team. Examine your current inclusive capabilities and embrace opportunities to increase effective inclusion practices in the daily management of your team.\n\n### Reflect on your behaviors \nIs there a consistency in your behaviors? Pursuing and demonstrating consistency in your behaviors projects a message of fair and equal treatment. Ask yourself questions such as: Are my actions aligned with my diversity, inclusion, and belonginess values and goals? Am I tracking trainings and assignments to make sure everyone has an equal chance to participate? Are there any excluding behaviors that are increasing divisions in my team? \n\n### Give everyone a voice \nInsist on participation. Talented team members might feel hesitant to participate in meetings or projects due to a variety of reasons (e.g. cultural beliefs, age, gender); nonetheless, extend invitations to participate acknowledging their expertise and inviting their contributions. \n\n### Review individual performance fairly\nEstablish clear expectations for each team member and define benchmarks for performance. This can help avoid favoritism and increase transparency. Give members an opportunity to discuss their own performance and present a method to support their claims.  \n\nRead on how to [improve them in your day-to-day activities](https://hbr.org/2019/11/how-the-best-bosses-interrupt-bias-on-their-teams).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:13:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/listening-is-an-overlooked-leadership-tool",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/07/how-to-make-diversity-and-incl",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "improve them in your day-to-day activities",
+      "url": "https://hbr.org/2019/11/how-the-best-bosses-interrupt-bias-on-their-teams",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 546,
+    "source_record_number": "542"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "1f508ad0-3c93-11e6-a006-97265ceaa2da:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_BELONGING"
+  ],
+  "source_question_id_cell": "[Q_BELONGING]",
+  "action_plan_template_uuid": "1f508ad0-3c93-11e6-a006-97265ceaa2da",
+  "template_name": "Glint Belonging",
+  "sequence": 2,
+  "focus_area_title": "Create a culture of inclusion",
+  "content_type": "discussion_prompt",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "As a team, share examples of when you felt like you belonged and/or where you saw a missed opportunity to help others feel a sense of belonging.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:31:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1818737/collaboration-takes-work-and-starts-top",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/ilan-mochari/bridging-social-distance-remote-teams.html",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/jeff-haden/why-you-dont-want-to-be-a-woman-in-tech.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnhall/2014/03/10/11-simple-ways-to-show-your-employees-you-care",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/christinecomaford/2014/03/12/bust-workplace-bullies-and-clear-conflict-in-3-essential-steps",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036509/the-future-of-work/why-you-need-to-stop-blaming-your-coworkers-for-your-lack-of-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 270,
+    "source_record_number": "266"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/eve-people-science/analysis-config.schema.json",
+  "title": "EVE People Science Analysis Config",
+  "type": "object",
+  "required": ["survey_csv", "scale_points", "emp_id_col"],
+  "properties": {
+    "survey_csv": {
+      "type": "string",
+      "description": "Path to the primary Viva Glint survey export CSV."
+    },
+    "cycle_csvs": {
+      "type": "array",
+      "description": "Optional ordered cycle CSVs for cycle comparison.",
+      "items": {
+        "type": "object",
+        "required": ["name", "path"],
+        "properties": {
+          "name": { "type": "string" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "scale_points": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 11
+    },
+    "emp_id_col": { "type": "string" },
+    "input_format": {
+      "enum": ["glint_export", "wide_items"],
+      "default": "glint_export",
+      "description": "glint_export expects a raw Viva Glint export. wide_items supports demo-style files with one numeric survey item per column."
+    },
+    "question_cols": {
+      "type": "array",
+      "description": "Optional explicit survey item columns for wide_items input.",
+      "items": { "type": "string" }
+    },
+    "attribute_file": { "type": "string" },
+    "attribute_cols": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "attrition_file": { "type": "string" },
+    "term_date_col": { "type": "string" },
+    "min_group_size": {
+      "type": "integer",
+      "minimum": 5,
+      "default": 5
+    },
+    "analyses": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "descriptives",
+          "response_distribution",
+          "correlations",
+          "factor_analysis",
+          "cycle_comparisons",
+          "by_attribute",
+          "attrition"
+        ]
+      },
+      "default": [
+        "descriptives",
+        "response_distribution",
+        "correlations",
+        "factor_analysis",
+        "by_attribute",
+        "attrition"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

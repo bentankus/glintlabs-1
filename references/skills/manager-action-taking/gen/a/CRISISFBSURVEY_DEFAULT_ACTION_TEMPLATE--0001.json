@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESPONSE]",
+  "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+  "template_name": "CrisisFBSurvey_Default_Action_Template",
+  "sequence": 1,
+  "focus_area_title": "Thank Your Team for Participating",
+  "content_type": "guide",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance"
+  ],
+  "content_description": "",
+  "content_text_body": "As soon as you can, thank people for taking the time to provide input. Emphasize that it is a chance for them to share what they feel, what they need and to enable the organization to help them. Communicate your commitment to doing all you can to support them based on their feedback.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 8,
+    "source_record_number": "4"
+  }
+}

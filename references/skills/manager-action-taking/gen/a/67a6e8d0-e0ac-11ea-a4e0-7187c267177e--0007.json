@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_MODELING"
+  ],
+  "source_question_id_cell": "[Q_GPS_MODELING]",
+  "action_plan_template_uuid": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e",
+  "template_name": "Glint Modeling - GPS",
+  "sequence": 7,
+  "focus_area_title": "Ensuring a Just Response and Appropriate Accountability",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "An organization whose leaders respond in a just and fair manner to safety errors ensure appropriate accountability and do not weaken the trust and transparency that's been built. According to James Reason - one of the top researchers in the field of patient safety - a just culture encourages and even rewards employees for providing critical patient safety information, but clear lines are drawn between system and normal human errors and at-risk or reckless behaviors.   \n\n### Why is it important?\n\nLeadership building a just culture and responding appropriately \"when things go wrong\" has been widely cited as a core tenet of high reliability organizations. Ensuring appropriate accountability will demonstrate to your workforce that they will not be blamed or held responsible for system issues or inevitable human error. This will serve to reinforce trust in leadership and encourage reporting behaviors. On the other hand, good leaders will hold employees appropriately accountable when they \"cut corners\" or act recklessly. This will reinforce your commitment to patient safety and the high standards that support it.     \n\nIn their white paper, \"A Framework for Safe, Reliable, and Effective Care,\" the Institute for Healthcare Improvement (IHI) shared a simple algorithm for leaders to use to ensure appropriate accountability and a just response when mistakes occur. This algorithm is a \"hybrid\" that takes into account properties of two well known algorithms: the Just Culture algorithm by David Marx and the Incident Decision Tree by James Reason. **A few sample components of these algorithms are below:**\n\n- **When something goes wrong and a patient is harmed, evaluate the involved staff member's actions using the following algorithm:**  \n>- **Were their actions malicious? Did they intend to cause harm?**  \nYes - This points to potential criminal activity, and the organization's response should proceed accordingly.  \nNo - The evaluation should move to the next question.\n\n>- **Was their sensorium intact? Were they thinking clearly?**  \nClear thinking is commonly adversely affected by health issues, severe social stressors such as divorce or a sick child, drugs (legal or illegal), or alcohol abuse.  \n>>No - The organization should engage the employee assistance program or pursue discipline as needed.  \nYes - The evaluation should move to the next question\n\n>- **Were their actions reasonable and appropriate?**  \nAt this point, organizations should use Reason's Substitution Test to guide the answer, asking if it is likely that three other people in a similar situation with similar skills would do the same thing. If the answer is yes, chances are it's a system problem. Note, however, that this isn't always the case; there are times when entire groups deviate from safe and reasonable behavior. As one example, an analysis of a post-delivery opioid overdose in a new mother found that a hospital maternity service of 30 obstetricians and 300 RNs came to agree that a reasonable standing order for post-C-section pain was 2 mg morphine, repeated as needed up to 30 mg morphine - an extremely high dose to administer. Using this standing order, patients received an average dose of 17 mg morphine. (One modification to the standing order - that the RNs discuss pain medication with the attending doctors once 10 mg morphine had been administered - decreased the average morphine dose to 11 mg.) When groups collectively deviate, the organization must ask the entire group to reflect on their behaviors and then recalibrate. If someone was hurt as a result of the group's behavior, the individuals involved are still accountable for their decisions and the organization must deftly manage the balance between accountability and psychological safety. Regrettably, outside influences, such as malpractice law, sway the response toward accountability. Organizational leaders need to continually reflect on their values as they navigate these complex events.\n\n>- **Were their a",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:22:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/Publications/Leading-a-Culture-of-Safety-A-Blueprint-for-Success.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=snaLG-zx5fk",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/storytelling-a-leadership-competency-for-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.myamericannurse.com/inspire-transformational-leadership/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/topics-library/sea_57_safety_culture_leadership_0317pdf.pdf?db=web&hash=10CEAE0FD05B6C3A4A1F040F7B69EBE9",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://ojin.nursingworld.org/MainMenuCategories/ANAMarketplace/ANAPeriodicals/OJIN/TableofContents/Vol-16-2011/No3-Sept-2011/Patient-Safety-Culture-and-Nursing-Unit-Leader.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/the-safety-journey-leaders-building-and-sustaining-momentum/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/leadership-role-improving-safety",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 642,
+    "source_record_number": "638"
+  }
+}

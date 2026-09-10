@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9:6",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ACCOUNTABILITY"
+  ],
+  "source_question_id_cell": "[Q_ACCOUNTABILITY]",
+  "action_plan_template_uuid": "22b2bc20-7bb7-11e7-be4c-77c5e1facfc9",
+  "template_name": "Glint Accountability",
+  "sequence": 6,
+  "focus_area_title": "Hold your team accountable",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Meeting your targets is part of demonstrating excellence, and how you plan for those targets will play a big role in hitting them. The goal is to learn how to plan out projects so that you know what steps are required to successfully complete them.\n\n### Prior to your next project\n\nEstimate the time, materials, tasks, people and technical resources it will take to complete it. Add some extra time for issues that may arise.\n\n### Create your plan\n\nSet your goals, the strategy you will use to achieve your goals, the objectives or steps you will take to execute your strategy, and any tools you will need to execute your objectives.\n\n \n\n### Modify your plans as needed\n\nGet regular updates from your team to better understand how long each task takes, and if there are any additional tools, supplies or information they need.\n\n \n\nPlan to accomplish whatever is feasible with the number of people you have at the time (e.g., reduce the scope but keep the deadline). Or, extend the deadline to fit the capacity of available people hours.\n\nEnsure project team members understand their level of authority and responsibilities.\n\n[Giving Authority and Responsibility](video \"LiL3_Authority_and_Responsibility\")\n\n**Watch**: *Giving Authority and Responsibility*",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/how-spotify-balances-employee-autonomy-and-accountability",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/victorlipman/2016/03/24/the-best-managers-always-hold-people-accountable/#3449795a28c8",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/the-right-way-to-hold-people-accountable",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3050453/hit-the-ground-running/how-to-create-an-environment-of-collaboration",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/gordon-tredgold/the-1-mistake-managers-when-holding-their-staff-accountable.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Giving Authority and Responsibility",
+      "url": "",
+      "target": "video \"LiL3_Authority_and_Responsibility\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 241,
+    "source_record_number": "237"
+  }
+}

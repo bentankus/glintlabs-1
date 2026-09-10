@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "98a54040-6923-11ea-afdc-b98820df85fe:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_ADAPTATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_ADAPTATION]",
+  "action_plan_template_uuid": "98a54040-6923-11ea-afdc-b98820df85fe",
+  "template_name": "Glint Change Adaptation",
+  "sequence": 2,
+  "focus_area_title": "Connecting one-on-one with employees to support them during times of change",
+  "content_type": "resource_only",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support"
+  ],
+  "content_description": "",
+  "content_text_body": "https://techcommunity.microsoft.com/blog/viva_insights_blog/the-new-manager-11-nurturing-employee-resiliency-during-disruption-and-change/3862522",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 311,
+    "source_record_number": "307"
+  }
+}

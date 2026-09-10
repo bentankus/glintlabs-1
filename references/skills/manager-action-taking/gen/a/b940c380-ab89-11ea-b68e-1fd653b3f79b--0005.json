@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "b940c380-ab89-11ea-b68e-1fd653b3f79b:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EMPOWERS_OTHERS_360"
+  ],
+  "source_question_id_cell": "[Q_EMPOWERS_OTHERS_360]",
+  "action_plan_template_uuid": "b940c380-ab89-11ea-b68e-1fd653b3f79b",
+  "template_name": "Glint 360 Empowers Others",
+  "sequence": 5,
+  "focus_area_title": "Change the Way Work Gets Done",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The objective is to review and improve team processes and procedures in order to empower your team more.\n\n### Determine the leads\n\nAsk your team to help nominate a pair of team members who will decide which processes can be updated to improve team empowerment. \n\n### The assignment\n\nTell the pair what you'd like to accomplish, but let them determine how to get there. Provide any previously collected information that may assist the two while they look for opportunities, which may include old processes that once served a function, but now limit employee choice. \n\nMeet with the pair as needed to clarify scope, provide coaching, and support. And flag areas that may need cross-functional support to help remove bottlenecks. \n\nSet a timeline and review the pair's findings, and implement them with the team.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:12:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-tell-your-boss-to-stop-doing-your-job",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/08/how-to-stop-micromanaging-your-team",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/1837301/5-ways-process-killing-your-productivity",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://greatergood.berkeley.edu/article/item/how_to_find_your_power_avoid_abusing_it",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/05/6-myths-about-empowering-employees",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 96,
+    "source_record_number": "92"
+  }
+}

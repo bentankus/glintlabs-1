@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "79110600-3681-11e8-8a66-51aae45ef563:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_RISK_TAKING"
+  ],
+  "source_question_id_cell": "[Q_RISK_TAKING]",
+  "action_plan_template_uuid": "79110600-3681-11e8-8a66-51aae45ef563",
+  "template_name": "Glint Risk Taking",
+  "sequence": 4,
+  "focus_area_title": "Giving Authority and Responsibility",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/building-high-performance-teams/giving-authority-and-responsibility?claim=AQG36SjspPMKOQAAAXBe_N1g_dVD-l23FCX-S3Ex-0RLyk6JChZ8Jg0duiepyo4YWrEJETe_QLqtusTB01hHyR2PhAq_lcdede5dMnUOg9wuxqWkICeAFK4e1ZPb_sfVbnm9GtnbGLU_HvxzBViX1bKvKKnIBehoA_gMOg52dT8joek8vYErzGkZtiGT2GcTGbJXV2JWVC3acE7WrpL3TGF8JkDvfb1idPhJtzJj-HlACcmCF_Jy7HTGFXi7MJgVjV1Z78a4YN2lkYpbICQ6jlFQPngiALE5Bow5e3tjiYa-u5EV6G1PojC6NnCTvdZM00ohaDwonT1BVVgYvECiCc_PSfgNVZW6JKsJpR77CBJNCL97bQgxCEZC5yiaREjyE050sO86TqxOU7GVqX7d4uG_mQKCAplKybgfC3vy6ar3qkD-2iv6xSXOrlhW0ZfDsgqiVAWSaJhfknr2tyvk0Iu0YMBSizFwxPQATqDT5ByoRVBU-8Q_xvpVaADML_2DRpnhItmVDmcW7Opph-yl3OmX-zdgJAfbdFYJ3hb8erf7aWwTVWLwMAsw5u17dqGmfYbraELU9FbSWOpSM5CEb9ot5h5jgXriTMLUU1sx0WE9LiKbCvoRWXTSdx7nyINLlCXMJbAiD9G2xiG78VhOkP-MhednVt3ehZrfeP-rInkPqEtBRxZ5vrAX-Fa60M4ZCEpm4NQe9EQcg4w8UBqe8S1zJBg11scvQU48-RHXK3Ue",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:16:00+00:00",
+  "video_extract": "LiL3_Authority_and_Responsibility",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Giving Authority and Responsibility",
+      "url": "https://www.linkedin.com/learning/embed/building-high-performance-teams/giving-authority-and-responsibility?claim=AQG36SjspPMKOQAAAXBe_N1g_dVD-l23FCX-S3Ex-0RLyk6JChZ8Jg0duiepyo4YWrEJETe_QLqtusTB01hHyR2PhAq_lcdede5dMnUOg9wuxqWkICeAFK4e1ZPb_sfVbnm9GtnbGLU_HvxzBViX1bKvKKnIBehoA_gMOg52dT8joek8vYErzGkZtiGT2GcTGbJXV2JWVC3acE7WrpL3TGF8JkDvfb1idPhJtzJj-HlACcmCF_Jy7HTGFXi7MJgVjV1Z78a4YN2lkYpbICQ6jlFQPngiALE5Bow5e3tjiYa-u5EV6G1PojC6NnCTvdZM00ohaDwonT1BVVgYvECiCc_PSfgNVZW6JKsJpR77CBJNCL97bQgxCEZC5yiaREjyE050sO86TqxOU7GVqX7d4uG_mQKCAplKybgfC3vy6ar3qkD-2iv6xSXOrlhW0ZfDsgqiVAWSaJhfknr2tyvk0Iu0YMBSizFwxPQATqDT5ByoRVBU-8Q_xvpVaADML_2DRpnhItmVDmcW7Opph-yl3OmX-zdgJAfbdFYJ3hb8erf7aWwTVWLwMAsw5u17dqGmfYbraELU9FbSWOpSM5CEb9ot5h5jgXriTMLUU1sx0WE9LiKbCvoRWXTSdx7nyINLlCXMJbAiD9G2xiG78VhOkP-MhednVt3ehZrfeP-rInkPqEtBRxZ5vrAX-Fa60M4ZCEpm4NQe9EQcg4w8UBqe8S1zJBg11scvQU48-RHXK3Ue",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/karlmoore/2014/12/11/change-is-pain-why-your-employees-resist-it-and-what-to-do-about-it/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2013/06/18/take-a-risk-the-odds-are-better-than-you-think",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2015/02/25/the-innovation-game/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/why-organizations-dont-learn",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/05/make-it-ok-for-employees-to-challenge-your-ideas",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 745,
+    "source_record_number": "741"
+  }
+}

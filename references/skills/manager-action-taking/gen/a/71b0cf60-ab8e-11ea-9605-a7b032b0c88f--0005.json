@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATS_OTHERS_FAIRLY_360"
+  ],
+  "source_question_id_cell": "[Q_TREATS_OTHERS_FAIRLY_360]",
+  "action_plan_template_uuid": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f",
+  "template_name": "Glint 360 Treats Others Fairly",
+  "sequence": 5,
+  "focus_area_title": "Perception bias",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/unconscious-bias-14822310/perception-bias?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:18:00+00:00",
+  "video_extract": "LiL2_Perception_bias",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Perception bias",
+      "url": "https://www.linkedin.com/learning/embed/unconscious-bias-14822310/perception-bias?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.bizjournals.com/bizjournals/how-to/growth-strategies/2014/02/treating-employees-fairly-not-the-same.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/pay-fairness-isnt-just-about-teaching-employees-to-negotiate",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/dont-let-power-corrupt-you",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/should-you-give-your-star-employees-star-treatment",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-managers-can-avoid-playing-favorites",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 219,
+    "source_record_number": "215"
+  }
+}

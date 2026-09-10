@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "95b25120-ab31-11ea-8ced-c9ca65ff29de:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MAKES_DECISIONS_360"
+  ],
+  "source_question_id_cell": "[Q_MAKES_DECISIONS_360]",
+  "action_plan_template_uuid": "95b25120-ab31-11ea-8ced-c9ca65ff29de",
+  "template_name": "Glint 360 Makes Decisions",
+  "sequence": 5,
+  "focus_area_title": "Make Sure Decisions Are Made at the Right Level",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Create a list of all the key objectives and important decision points for all projects on your team in the coming year so that you can assign these decisions to the employees who have the most information about them.\n\nExamples could include the direction of a product, development of new services or offerings, or leading a project. \n\nDiscuss the list with your team and ask them who should own each item. Owning the decision may not necessarily mean they make the decision themselves, but that they will ensure the decision gets made involving the right stakeholders. Remind your team members that you are always available for feedback, coaching and support. \n\nCheck in periodically with your team during 1:1 meetings and other methods that work best for your team.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/09/managers-shouldnt-fear-algorithm-based-decision-making",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/root-out-bias-from-your-decision-making-process",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/noise",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 160,
+    "source_record_number": "156"
+  }
+}

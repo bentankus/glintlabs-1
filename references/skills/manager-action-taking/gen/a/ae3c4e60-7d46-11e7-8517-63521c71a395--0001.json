@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ae3c4e60-7d46-11e7-8517-63521c71a395:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INFORMED_CROSSTEAM"
+  ],
+  "source_question_id_cell": "[Q_INFORMED_CROSSTEAM]",
+  "action_plan_template_uuid": "ae3c4e60-7d46-11e7-8517-63521c71a395",
+  "template_name": "Awareness",
+  "sequence": 1,
+  "focus_area_title": "Align with Other Leaders",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Communication Flow Action Item",
+  "content_text_body": "Sometimes leaders do not keep their peers sufficiently updated on the status of work, or may communicate information that is disconnected from the actual work happening by lower-level teams. This disconnect creates obstacles for cross-team collaboration.\n\n### Communicate with leaders in other departments\n\nStay aligned with leaders in other departments on things like deadlines, priorities, resources, and decisions, particularly with teams where there are dependencies. And check in regularly to ensure that your team has the information needed to do their jobs well.\n\n### Communicate with senior leaders\n\nBe sure to communicate with senior leaders changes in direction, obstacles, or decisions that affect how, when, or what work will get done. By ensuring that your leaders know what's going on with your team, they can better support the work.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-07T00:02:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/theyec/2014/10/03/4-steps-for-building-a-culture-of-open-communication",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/johnkotter/2011/05/03/breaking-down-silos/#7f25e99f63b6",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/12/a-simpler-way-to-get-employees-to-share.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/07/collaborate-across-teams-silos-and-even-companies",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/brentgleeson/2013/10/02/the-silo-mentality-how-to-break-down-the-barriers",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/chuckcohn/2014/10/24/strategies-to-strengthen-communication-within-your-company/2/#7b029d175214",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 4,
+    "source_record_number": "0"
+  }
+}

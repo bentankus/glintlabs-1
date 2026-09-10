@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "83d8e260-aaab-11ea-b6f7-b987dbcac951:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_HOLDS_SELF_ACCOUNTABLE_360"
+  ],
+  "source_question_id_cell": "[Q_HOLDS_SELF_ACCOUNTABLE_360]",
+  "action_plan_template_uuid": "83d8e260-aaab-11ea-b6f7-b987dbcac951",
+  "template_name": "Glint 360 Holds Self Accountable",
+  "sequence": 1,
+  "focus_area_title": "Learn to Break down Your Objectives",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Goals are more likely to be achieved when they are clear, measurable and bite-sized. The objective is to form a habit of helping team members specify objectives as a series of subtasks.\n\nThe best way to help your team break down objectives is to do it yourself. Split goals into smaller, actionable tasks that can be measured to evaluate progress.\n\nFirst, read this article on [Setting Effective Goals](http://www.inc.com/disneyinstitute/effective-team-goals.html).\n\n### Break goals into clear tasks\n\nWhen you begin to work towards a goal, start by specifying the ultimate objective (e.g., increase revenue 10%). Then list 3-5 measurable results that need to be met to achieve it. \n\nFor each measurable result that you personally own, outline the main tasks that you will need to accomplish and the process you plan to take. For each of these tasks, ask yourself the following questions:\n\n* How will I measure success?\n\n* How long will it take?\n\n* Who should own it?\n\n* What process will be used? (if you are the owner)\n\nShare your objectives, measurable results, and subtasks with your team members and discuss them regularly. Seek their input and feedback on the feasibility of the goals and effectiveness of the plans. Let them know when and how you will be measuring progress. Encourage your team to tell you about unforeseen tasks or challenges that will affect progress and revise your objectives as needed.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:34:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/06/be-a-leader-who-can-admit-mistakes",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/06/how-to-move-from-self-awareness-to-self-improvement",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://sloanreview.mit.edu/article/learning-for-a-living/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/40543815/how-to-turn-your-biggest-goals-into-monthly-weekly-and-daily-to-dos",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/kevinkruse/2020/01/13/improve-personal-accountability-12-things-to-do-in-12-weeks/#50ba76c46e63",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/lolly-daskal/4-impressive-ways-great-leaders-handle-their-mistakes.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Setting Effective Goals",
+      "url": "http://www.inc.com/disneyinstitute/effective-team-goals.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 144,
+    "source_record_number": "140"
+  }
+}

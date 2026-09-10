@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "a16212a0-df7b-11e7-9f83-23166a88f815:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INITIATIVE"
+  ],
+  "source_question_id_cell": "[Q_INITIATIVE]",
+  "action_plan_template_uuid": "a16212a0-df7b-11e7-9f83-23166a88f815",
+  "template_name": "Glint Initiative",
+  "sequence": 8,
+  "focus_area_title": "Stop killing your ideas",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/banish-your-inner-critic-to-unleash-creativity-revision-2/stop-killing-your-ideas?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:14:00+00:00",
+  "video_extract": "LiL2_Stop_killing_your_ideas",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Stop killing your ideas",
+      "url": "https://www.linkedin.com/learning/embed/banish-your-inner-critic-to-unleash-creativity-revision-2/stop-killing-your-ideas?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/why-organizations-dont-learn",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/if-you-want-to-motivate-employees-stop-trusting-your-instincts",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2015/07/27/the-5-types-of-innovation-for-the-future-of-work-pt-1-employee-innovation/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2013/06/18/take-a-risk-the-odds-are-better-than-you-think",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/12/4-ways-to-become-a-better-learner",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2010/09/the-surest-way-to-destroy-an-i",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/karlmoore/2014/12/11/change-is-pain-why-your-employees-resist-it-and-what-to-do-about-it/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 578,
+    "source_record_number": "574"
+  }
+}

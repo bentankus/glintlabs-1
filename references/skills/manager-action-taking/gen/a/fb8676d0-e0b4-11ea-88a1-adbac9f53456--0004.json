@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fb8676d0-e0b4-11ea-88a1-adbac9f53456:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_TEAMWORK"
+  ],
+  "source_question_id_cell": "[Q_GPS_TEAMWORK]",
+  "action_plan_template_uuid": "fb8676d0-e0b4-11ea-88a1-adbac9f53456",
+  "template_name": "Glint Teamwork - GPS",
+  "sequence": 4,
+  "focus_area_title": "Tips for Supporting One Another to Ensure Patient Safety",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "In order to ensure patient safety, healthcare professionals need to trust one another, work together as a team, communicate, and support one another. Support for one another can mean several things like speaking up when you need assistance or closely monitoring your teammates to ensure they're not getting overwhelmed.  \n\n### Why is it important?\n\nPoor communication and teamwork are some of the leading causes of medical errors and patient safety events. According to Aiken and others, feeling supported within a nursing unit is a key factor in nursing satisfaction, intention to remain in the job, and the ability to provide safe patient care. Furthermore, Bridges and other researchers at the University of North Carolina found that team training and education on mutual support - a learning module of the TeamSTEPPS\u00c2\u00ae training developed by the Department of Defense and Agency for Healthcare Research and Quality - helped improve nursing ratings of teamwork significantly.    \n\nOn the Agency for Healthcare Research and Quality's (AHRQ's) website there is robust information regarding TeamSTEPPS\u00c2\u00ae. Below is a description of and information on Mutual Support, one of the key components of the TeamSTEPPS\u00c2\u00ae curriculum. **Below are several tips on how to be more supportive of one another in a care setting.**\n \n#### Start with the Fundamentals\n\nIt's important to note that you can only support your teammates through consistent situation monitoring, or understanding what is going on around you and to your teammates. Furthermore, support happens information is communicated to one another (e.g., asking for help or offering support) and it's enhanced by leaders who encourage and role model support behaviors.  \n\n#### Task Assistance\n\nMutual support occurs when teammates assist each other, provide and receive feedback, and demonstrate assertive and advocacy behaviors when patient safety is threatened. In regards to task assistance, teammates foster a climate in which it is expected that assistance will be actively sought and offered as a method for reducing the occurrence of error.\n\n#### Providing Effective Informal Feedback\n\nIncreasing daily and informal feedback will help team members learn and improve. Effective informal feedback is timely, respectful, and specific. Furthermore, it's directed at improvement (i.e., helps prevent the same problems from happening again) and is considerate.                                                                                                                                                                                                                                                                                     \n\n#### Advocacy and Assertion\n\nIn a mutually supportive environment, teammates must advocate for the patient when their viewpoint doesn't coincide with that of a decision-maker. They then must assert a corrective action in a firm and respectful manner. It is recommended that the advocate challenge the decision-maker twice if the initial assertion is ignored. The member being challenged must acknowledge the advocate. If the situation is still unresolved, any team member can \"stop the line\" calling for a stop to all procedures until the potential safety breach is worked through and resolved. \n\n>Sources:\n\n>TeamSTEPPS 2.0 Fundamentals Module 6. The Agency for Healthcare Research and Quality. Retrieved from [https://www.ahrq.gov/teamstepps/instructor/fundamentals/module6/slmutualsupp.html#sl5](https://www.ahrq.gov/teamstepps/instructor/fundamentals/module6/slmutualsupp.html#sl5)\n\n>Aiken LH, Clarke SP, Sloane DM. Hospital staf\u00ef\u00ac\u0081ng, organization, and quality of care; cross-national \u00ef\u00ac\u0081ndings. Int J Qual Health Care 2012;14(1):5e13.\n\n>Bridges, Renee & Sherwood, Gwen & Durham, Carol. (2014). Measuring the influence of a mutual support educational intervention within a nursing team. International Journal of Nursing Sciences. 10.1016/j.ijnss.2014.02.013.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://safestart.com/news/4-ways-help-workers-look-out-each-others-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=ncExr5OGQYE",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.nursingtimes.net/clinical-archive/patient-safety/tools-and-techniques-to-improve-teamwork-and-avoid-patient-harm-12-12-2016/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.freshrn.com/season-4-episode-5-what-nursing-teamwork-practically-looks-like-at-the-bedside/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6875884/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehstoday.com/safety-leadership/article/21917903/supporting-a-culture-of-caring-can-reduce-injuries-and-costs-improve-performance",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=E-dCBl3gRYs",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "https://www.ahrq.gov/teamstepps/instructor/fundamentals/module6/slmutualsupp.html#sl5",
+      "url": "https://www.ahrq.gov/teamstepps/instructor/fundamentals/module6/slmutualsupp.html#sl5",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 779,
+    "source_record_number": "775"
+  }
+}

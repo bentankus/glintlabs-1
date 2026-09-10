@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_MODELING"
+  ],
+  "source_question_id_cell": "[Q_GPS_MODELING]",
+  "action_plan_template_uuid": "67a6e8d0-e0ac-11ea-a4e0-7187c267177e",
+  "template_name": "Glint Modeling - GPS",
+  "sequence": 5,
+  "focus_area_title": "Prioritize Safety when Selecting & Developing Leaders",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "The CEO and board are responsible for the design and direction of the organization's  leadership development strategy.  Prioritizing safety in the selection and development of leaders throughout the entire organization demonstrates leaderships' commitment to patient safety.  \n\n### Why is it important?\n\nIn their guidebook, \"Leading a Culture of Safety: A Blueprint for Success,\" the expert authors list this as one of their essential steps in creating a culture of safety. They assert that a focus on safety education can also help close the gap between administrative and clinical leadership, providing all leaders with the common goal of driving toward a culture of safety for the betterment of the organization and the patients they serve. They go on to state that identifying and developing physician, nursing, and other clinical leaders as champions for safety is a key responsibility of the CEO. Numerous studies indicate the positive impact clinical leaders can have on culture and safety, particularly in an era when healthcare leaders are often in a position to make decisions that affect care at the frontlines. Clinical leaders have extensive understanding of healthcare's \"core business\" of patient care, and are therefore in a unique position to connect administration with the clinical workforce, and to garner support for safety and culture initiatives. **Several of their recommendations for prioritizing safety when selecting and developing leaders are summarized below:**\n\n- **Evaluate your current leadership selection processes**  \nThe selection process for both current and emerging leaders should be predicated on their understanding of, dedication to, and alignment with the organization's vision for patient and workforce safety, communication skills, and modeling of expected safety behaviors.\n\n- **Provide leaders with regular and helpful feedback**  \nWhether this is a 360-degree review model or another structured review. Feedback should clearly define, communicate, and embody required leadership competencies in safety culture, and safety development plans should be reviewed at regularly scheduled check-ins. \n\n- **Development of Leadership Safety Competencies**  \nDefine these leadership safety culture competencies and skills for your organization and ensure current and prospective leaders receive education in these. \n\n- **Consider safety expertise and credentialing when considering future leaders**\n\n- **Discuss whether the leadership team reflects the community it serves and create a plan to address any gaps**\n\n- **Create sustainable learning opportunities for leaders**  \nRoutinely create development opportunities in the area of safety culture and quality with an emphasis on experiential learning. Opportunities to learn outside of the organization with healthcare and non-healthcare organizations should also be created. \n\n- **Ensure leaders are equipped to provide regular feedback and coach their employees**\n\n- **Find champions of safety culture**  \nBuild a guiding coalition of champions, including clinicians and frontline workforce members, that provides candid and honest feedback to the CEO.\n\n- **Integrate safety culture goals with leadership development**  \nTie measures and performance on safety and culture to leadership development goals, performance reviews, and succession planning.\n\n- **Connect executives to patients and families**  \nRecommend that each senior executive participate in communication and apology to patients and families who have experienced harm.\n\n>*Sources:* \n\n>Leading a Culture of Safety: A Blueprint for Success\n\n>American College of Healthcare Executives\n\n>The National Patient Safety Foundation's Lucian Leape Institute\n\n>The National Patient Safety Foundation at the Institute for Healthcare Improvement\n\n>Lipton M. 1996. \"Demystifying the development of an organizational vision.\" *Sloan Management Review*",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:22:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/Publications/Leading-a-Culture-of-Safety-A-Blueprint-for-Success.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=snaLG-zx5fk",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/storytelling-a-leadership-competency-for-safety/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.myamericannurse.com/inspire-transformational-leadership/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/topics-library/sea_57_safety_culture_leadership_0317pdf.pdf?db=web&hash=10CEAE0FD05B6C3A4A1F040F7B69EBE9",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://ojin.nursingworld.org/MainMenuCategories/ANAMarketplace/ANAPeriodicals/OJIN/TableofContents/Vol-16-2011/No3-Sept-2011/Patient-Safety-Culture-and-Nursing-Unit-Leader.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://solutionsforpatientsafety.podbean.com/e/the-safety-journey-leaders-building-and-sustaining-momentum/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/leadership-role-improving-safety",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 640,
+    "source_record_number": "636"
+  }
+}

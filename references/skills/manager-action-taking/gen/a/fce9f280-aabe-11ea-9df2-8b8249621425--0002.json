@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fce9f280-aabe-11ea-9df2-8b8249621425:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_BUILDS_DIVERSE_TEAMS_360"
+  ],
+  "source_question_id_cell": "[Q_BUILDS_DIVERSE_TEAMS_360]",
+  "action_plan_template_uuid": "fce9f280-aabe-11ea-9df2-8b8249621425",
+  "template_name": "Glint 360 Builds Diverse Teams",
+  "sequence": 2,
+  "focus_area_title": "Keep an Eye out for Biases in Hiring",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Biases can unconsciously affect hiring decisions and lead to missed talent opportunities at best, and unfair practices and outcomes at worst. The goal here is to become more aware of unconscious biases and make sure they are not influencing who you hire and promote. \n\n### Review your approach\n\n* Before you start reviewing resumes or applications, define clear criteria for evaluating and selecting candidates.\n\n* Consider doing blind resume/application reviews where names and demographic information have already been stripped out. \n\n* When narrowing down candidates, reflect on why you are drawn to certain candidates. Is it because they meet the evaluation criteria for the role, or is it because they share similarities to you that could be biasing you toward them, over their qualifications?\n\n### Talk with your team about ways to reduce bias\n\n* Explore unconscious bias training for your entire team. Help people feel comfortable openly talking about biases they have, perceive, or experience.\n\n* Review candidate evaluation criteria and the tips above with any team members involved in the hiring process. Ensure candidate discussions are based on the criteria.\n\n* Empower team members to identify unconscious biases they may perceive in others during candidate reviews. \n\n* When a hiring decision is made, share the evaluation criteria and why the candidate was the best hire to reinforce the importance of fair and consistent practices.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-31T08:00:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3036627/strong-female-lead/youre-more-biased-than-you-think",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3043074/how-to-thwart-your-unconscious-biases-when-hiring-a-diverse-team",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://guides.wsj.com/management/building-a-workplace-culture/how-to-increase-workplace-diversity/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/06/7-practical-ways-to-reduce-bias-in-your-hiring-process",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/08/diversity-efforts-fall-short-unless-employees-feel-that-they-belong",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3044094/strong-female-lead/how-changing-one-word-in-job-descriptions-can-lead-to-more-diverse-candid",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 37,
+    "source_record_number": "33"
+  }
+}

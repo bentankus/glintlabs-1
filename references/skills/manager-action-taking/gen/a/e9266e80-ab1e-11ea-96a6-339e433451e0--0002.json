@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "e9266e80-ab1e-11ea-96a6-339e433451e0:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ADJUSTS_RAPIDLY_360"
+  ],
+  "source_question_id_cell": "[Q_ADJUSTS_RAPIDLY_360]",
+  "action_plan_template_uuid": "e9266e80-ab1e-11ea-96a6-339e433451e0",
+  "template_name": "Glint 360 Adjusts Rapidly",
+  "sequence": 2,
+  "focus_area_title": "Putting change in context",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/embracing-unexpected-change/change-in-context?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "LiL2_Change_in_context_audio",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Change in context",
+      "url": "https://www.linkedin.com/learning/embed/embracing-unexpected-change/change-in-context?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://leadchangegroup.com/why-you-want-to-lead-a-team-with-transferable-skills-and-how-to-build-one/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2020/01/to-be-a-great-leader-you-need-the-right-mindset",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://medium.com/@savitha84/8-ways-to-capture-tacit-knowledge-536ef990b82d",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.careeraddict.com/demonstrate-adaptability-on-the-job",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.quantumworkplace.com/future-of-work/how-your-managers-can-help-build-employee-trust-in-senior-leaders",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2020/03/the-best-leaders-are-versatile-ones",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 28,
+    "source_record_number": "24"
+  }
+}

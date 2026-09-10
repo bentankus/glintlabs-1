@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fdc14e80-3683-11e8-ba3e-771905cfa54f:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_BARRIERS_TO_EXECUTE"
+  ],
+  "source_question_id_cell": "[Q_BARRIERS_TO_EXECUTE]",
+  "action_plan_template_uuid": "fdc14e80-3683-11e8-ba3e-771905cfa54f",
+  "template_name": "Glint Barriers to Execution",
+  "sequence": 4,
+  "focus_area_title": "Help Your Team Resolve Conflicts",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Barriers to Execution",
+  "content_text_body": "The goal here is to help your team develop conflict resolution skills so that team members can effectively address any conflicts that arise.\n\n### Start with addressing the issue\n\nWhen a conflict arises, team members should address the conflict as soon as possible. Each person should aim to calmly share their point of view and make their case, and listen to the other person's point of view.\n\n### Be empathetic\n\nTeam members should practice taking each other's points of view. Encourage them to really feel and understand where the other person is coming from, for example by imagining how they would feel in the other person's shoes.\n\n### Resolve the conflict\n\nEncourage team members to discuss possible solutions. Have them come up with as many as possible. Help them look for win-win solutions or compromises. \n\n### Be an impartial mediator\n\nOnly if they have failed to resolve the conflict on their own, play the role of impartial mediator. In this role, your goal is to help your team members decide on a solution that will work for all parties.\n\n### Help your team understand each other's workstyle\n\nSometimes, conflict can arise when team members aren't accommodating of different working styles. Conducting a session to uncover these preferences can be a very effective way of helping teams adapt to different ways of working, and help reduce conflicts once these differences are out in the open.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/geoffrey-james/science-says-collaboration-is-vastly-overrated.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ronashkenas/2012/07/09/seven-mistakes-leaders-make-in-setting-goals",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/articles/2001/10/23559.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/tykiisel/2013/03/27/deadlines-objectives-and-action-oh-my",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 268,
+    "source_record_number": "264"
+  }
+}

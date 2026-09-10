@@ -1,0 +1,143 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fded7680-2c2c-11e6-a061-27900ad2fc1c:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INNOVATION"
+  ],
+  "source_question_id_cell": "[Q_INNOVATION]",
+  "action_plan_template_uuid": "fded7680-2c2c-11e6-a061-27900ad2fc1c",
+  "template_name": "Glint Innovation",
+  "sequence": 1,
+  "focus_area_title": "Tell stories about innovation and risk-taking",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Stories are a memorable way to communicate that your organization values and celebrates innovation and risk-taking. The goal is to create a habit of telling innovation and risk-taking stories that encourage your team to find new and better ways of doing things.\n\n \n\n \n\n \n\n Write out a list of the 5-10 most innovative efforts or beneficial risks that your team or other teams have taken over the past year. Pick the three that best reinforce the importance of innovation and calculated risk-taking to your collective success. Think about how you would tell them as a story:\n\n \n\n \n\n \n\n * Who was involved?\n\n \n\n * What was happening at the time?\n\n \n\n * What was the opportunity or problem to be solved?\n\n \n\n * What was the innovation or risk? \n\n \n\n * What was the potential consequence of failure? \n\n \n\n * What factors were considered and addressed to maximize success?\n\n \n\n * What impact did it have? \n\n \n\n \n\n \n\n Take a few minutes in meetings and impromptu gatherings to share these stories. See if you can do it once per week for an entire month.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T12:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.brainpickings.org/2014/01/29/carol-dweck-mindset/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=_X0mgOOSpLU",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=XD6N8bsjOEE",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/why-organizations-dont-learn",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2015/02/25/the-innovation-game/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2013/06/18/take-a-risk-the-odds-are-better-than-you-think",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3007369/heres-google-perk-any-company-can-imitate-employee-employee-learning",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2015/07/27/the-5-types-of-innovation-for-the-future-of-work-pt-1-employee-innovation/",
+      "target": "",
+      "sources": [
+        "Ext Link 10"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/karlmoore/2014/12/11/change-is-pain-why-your-employees-resist-it-and-what-to-do-about-it/",
+      "target": "",
+      "sources": [
+        "Ext Link 11"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 581,
+    "source_record_number": "577"
+  }
+}

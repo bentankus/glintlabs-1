@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "bfab9760-df79-11e7-9579-af1d9262a2c0:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CUSTOMER_FOCUS"
+  ],
+  "source_question_id_cell": "[Q_CUSTOMER_FOCUS]",
+  "action_plan_template_uuid": "bfab9760-df79-11e7-9579-af1d9262a2c0",
+  "template_name": "Glint Customer Focus",
+  "sequence": 3,
+  "focus_area_title": "Learn from customer feedback",
+  "content_type": "discussion_prompt",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "List three ways your customers are satisfied and three areas for improvement. Share and discuss strategies to improve quality with your team.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T07:56:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/02/how-to-build-a-passionate-company",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/geoffrey-james/be-customer-focused-4-basic-tactics.html",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/yec/2014/12/23/how-to-build-a-customer-focused-culture-on-day-one",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/to-motivate-employees-show-them-how-theyre-helping-customers",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/04/focus-on-keeping-up-with-your-customers-not-your-competitors",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 402,
+    "source_record_number": "398"
+  }
+}

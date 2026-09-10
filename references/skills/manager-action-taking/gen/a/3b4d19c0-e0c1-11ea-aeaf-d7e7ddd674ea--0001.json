@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_PSYCHOLOGICAL_SAFETY"
+  ],
+  "source_question_id_cell": "[Q_GPS_PSYCHOLOGICAL_SAFETY]",
+  "action_plan_template_uuid": "3b4d19c0-e0c1-11ea-aeaf-d7e7ddd674ea",
+  "template_name": "Glint Psychological Safety - GPS",
+  "sequence": 1,
+  "focus_area_title": "Creating a Psychologically Safe Environment",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "How can leaders \u00e2\u20ac\u2022 with or without formal authority \u00e2\u20ac\u2022 create psychological safety in health care? In a short video, Amy Edmondson, Novartis Professor of Leadership and Management at Harvard Business School, describes three key actions to foster a psychologically safe work environment.\n\n### Why is it important?\n\nSpeaking up is vital to patient safety, but healthcare professionals need a climate of psychological safety to be able to do so, said Amy C. Edmondson, Novartis Professor of Leadership and Management, Harvard Business School. Psychological safety is a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes. Nobody wakes up in the morning because they want to look ignorant, incompetent, intrusive and negative, noted Edmondson. Leaders need to make sure that others are not afraid to speak up. Psychological safety is not about being nice. It is fostered by explicit recognition of the complex, interdependent nature of the work.\n\nA climate of psychological safety does not mean high standards cannot be maintained. Psychological safety enables learning behavior in organizations, for error reporting, quality improvement, innovation and more. Leaders need to create both psychological safety for voice and convey high standards for work.\n\n#### Create a Psychologically Safe Environment\n\n**Description**: How can leaders \u00e2\u20ac\u2022 with or without formal authority \u00e2\u20ac\u2022 create psychological safety in health care? In a short video, Amy Edmondson, Novartis Professor of Leadership and Management at Harvard Business School, describes three key actions to foster a psychologically safe work environment.\n\n[http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Three-Ways-to-Create-Psychological-Safety-in-Health-Care.aspx#:~:text=List%20three%20actions%20to%20create,inviting%20input%2C%20and%20embracing%20messengers](http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Three-Ways-to-Create-Psychological-Safety-in-Health-Care.aspx#:~:text=List%20three%20actions%20to%20create,inviting%20input%2C%20and%20embracing%20messengers)\n\n**Learning Objectives**: At the end of this activity, you will be able to:\n- List three actions to create psychological safety in health care.\n- Explain how the following three actions promote psychological safety: framing the work, modeling fallibility and inviting input, and embracing messengers.\n\n**Discussion Questions**:\n\n- Why is it difficult to speak up in a hierarchical environment?\n- Have you ever challenged someone who had more authority in a situation than you? How did it go?\n- How can people who aren't in formal positions of authority apply Amy Edmondson's leadership principles to their work? Give some examples.\n- Amy Edmondson talks about the distinction between \"managing others' impressions of us\" and \"the actual work that we do.\" Have you noticed this distinction in your work?\n- Why is working in health care risky, and why is it important? Do you think it's easy or difficult to keep these risks and rewards in mind as you go about the daily work of health care?\n- Think of leaders with whom you've worked. Which ones made you feel safest, and why\n\n>Sources: \n\n>American College of Healthcare Executives\n\n>The National Patient Safety Foundation's Lucian Leape Institute\n\n>The National Patient Safety Foundation at the Institute for Healthcare Improvement\n\n>Lipton M. 1996. \"Demystifying the development of an organizational vision.\" Sloan Management Review",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:23:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.hopkinsmedicine.org/news/newsroom/news-releases/study-at-johns-hopkins-hospital-leads-to-changes-in-reporting-patient-safety-concerns",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/WIHI-Speak-Up-For-Safety.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Three-Ways-to-Create-Psychological-Safety-in-Health-Care.aspx#:~:text=List%20three%20actions%20to%20create,inviting%20input%2C%20and%20embracing%20messengers",
+      "url": "http://www.ihi.org/education/IHIOpenSchool/resources/Pages/AudioandVideo/Amy-Edmondson-Three-Ways-to-Create-Psychological-Safety-in-Health-Care.aspx#:~:text=List%20three%20actions%20to%20create,inviting%20input%2C%20and%20embracing%20messengers",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 680,
+    "source_record_number": "676"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EMPATHIZES_360"
+  ],
+  "source_question_id_cell": "[Q_EMPATHIZES_360]",
+  "action_plan_template_uuid": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2",
+  "template_name": "Glint 360 Empathizes",
+  "sequence": 8,
+  "focus_area_title": "Make Time for Creativity",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Creativity flourishes when people have the time to ponder, explore and question ideas. The goal is to ensure your team members have enough time to think creatively.  \n\n### Set aside time to be creative\n\nWhen employees minds are too frequently occupied with completing tasks, they have little time left for being creative. When planning the quarter, schedule time for each team member to explore new ideas and engage in creative thinking. \n\nRead this article to learn more about how you can [Create Time for Creativity](http://www.fastcompany.com/3047506/why-you-should-let-employees-work-on-passion-projects-on-the-clock).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T09:51:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/04/how-to-develop-empathy-for-someone-who-annoys-you",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/melodywilding/2019/08/05/8-habits-of-highly-empathetic-leaders/#658249576de7",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ellevate/2019/08/19/theres-power-in-being-an-empathetic-leader/#11e346e26e73",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/john-eades/3-science-backed-reasons-empathy-makes-you-a-better-leader.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/justin-bariso/there-are-actually-3-types-of-empathy-heres-how-they-differ-and-how-you-can-develop-them-all.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/11/if-you-cant-empathize-with-your-employees-youd-better-learn-to",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "Create Time for Creativity",
+      "url": "http://www.fastcompany.com/3047506/why-you-should-let-employees-work-on-passion-projects-on-the-clock",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 90,
+    "source_record_number": "86"
+  }
+}

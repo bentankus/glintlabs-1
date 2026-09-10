@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_RECOGNITION"
+  ],
+  "source_question_id_cell": "[Q_GPS_RECOGNITION]",
+  "action_plan_template_uuid": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327",
+  "template_name": "Glint Recognition - GPS",
+  "sequence": 3,
+  "focus_area_title": "Develop Specific Recognition Programs for Safety",
+  "content_type": "mixed",
+  "action_type": "recognition_and_motivation",
+  "selection_signals": [
+    "recognition_and_motivation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why is it Important?\n\nProviding recognition for contributions to safety is a powerful tool that can demonstrate to staff your organization's commitment to ensuring safe care. If you do not have mechanisms in place to show appreciation for employees who demonstrate a priority to patient safety, work to develop specific programs to recognize employees for their safety-related accomplishments within your organization. **Consider some of the following ideas for safety recognition programs.**\n\n#### Good Catch Award \nThe Good Catch Award creates positive incentives for providers and staff to report patient safety events. At the institutional level, the Good Catch Award encourages individuals to identify and report adverse events, near-misses, or other medical errors. \n\n#### Individual Safety Focus \nCreate awards that recognize individual employees who have consistently done an outstanding job of promoting a safe work environment over a period of time (e.g., recognizing weekly/monthly/quarterly \"Safety Heroes\")\n\n### Team Safety Focus  \nConsider awards that recognize the safety contributions and achievements of teams and units at your organization. Encourage units to set a specific safety goal. \n\n### Speak Up Award  \nYou can also acknowledge and reward individuals who have demonstrated a willingness to speak up on an annual basis, like this hospital did. \n\nMake sure you have a strategy to inform and remind all employees of your safety recognition programs. \n\n### Form a Safety Recognition Team  \nOne way to get staff more involved in safety efforts is to solicit their assistance directly. Consider forming a safety recognition team to spearhead efforts to highlight and appreciate the organizational safety initiatives taking place at your institution, as well as the individual contributions of specific staff members. If you have an existing committee in charge of recognition efforts, ask the committee to devote some of their time toward developing ways of acknowledging the patient safety-related accomplishments of your organization and front-line staff.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:43:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.safetyandhealthmagazine.com/articles/designing-a-safety-incentive-program-2",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.linkedin.com/learning/emerging-leader-foundations/recognize-and-reward-team-performance?autoplay=true&u=104",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.reliasmedia.com/articles/142186-meaningful-recognition-fights-nurse-burnout",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.infectioncontroltoday.com/view/rewarding-employees-good-behavior-can-improve-infection-prevention",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehstoday.com/safety/article/21912352/the-truth-about-safety-incentives",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ashp.org/news/2018/01/12/safety-culture-includes-good-catches?loginreturnUrl=SSOCheckOnly",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 718,
+    "source_record_number": "714"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "f58bdca0-0901-11e6-8759-3b8460ed0dcb:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CAREER"
+  ],
+  "source_question_id_cell": "[Q_CAREER]",
+  "action_plan_template_uuid": "f58bdca0-0901-11e6-8759-3b8460ed0dcb",
+  "template_name": "Glint Career",
+  "sequence": 1,
+  "focus_area_title": "Cultivate a growth mindset",
+  "content_type": "discussion_prompt",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "Discuss with the team how new experiences and failures can lead to growth and development. Have teammates share examples.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T14:28:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.brainpickings.org/2014/01/29/carol-dweck-mindset/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://prezi.com/8uejole0mrjh/mindful-engagement",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3007369/heres-google-perk-any-company-can-imitate-employee-employee-learning",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3037059/hit-the-ground-running/how-to-get-employees-jazzed-about-their-professional-development",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2014/01/24/want-motivated-employees-offer-ample-opportunities-for-growth/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=_X0mgOOSpLU",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=XD6N8bsjOEE",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/29/why-development-planning-is-important-neglected-and-can-cost-you-young-talent/",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/sylviavorhausersmith/2012/11/12/no-career-path-no-retention/",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
+      "target": "",
+      "sources": [
+        "Ext Link 10"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 303,
+    "source_record_number": "299"
+  }
+}

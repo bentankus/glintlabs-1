@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "a6ccd8d0-85bc-11ea-9f69-517edbcc1832",
+  "template_name": "Glint Distress - Well-being",
+  "action_plan_record_ids": [
+    "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:1",
+    "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:2",
+    "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:3",
+    "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:4",
+    "a6ccd8d0-85bc-11ea-9f69-517edbcc1832:5"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "48209ae0-ab93-11ea-a478-e54709e5e474:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GROWTH_ORIENTATION_360"
+  ],
+  "source_question_id_cell": "[Q_GROWTH_ORIENTATION_360]",
+  "action_plan_template_uuid": "48209ae0-ab93-11ea-a478-e54709e5e474",
+  "template_name": "Glint 360 Growth Orientation",
+  "sequence": 2,
+  "focus_area_title": "Try New Things and Experiment",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "When employees are encouraged to experiment and try new things, they learn how to be flexible, creative, and innovative. Experimental teams feel inspired and often discover better ways of operating. \n\n### Practice experimenting \n\nExperimenting can involve very small changes in standard processes. To get a sense for what it feels like to experiment, think about how you typically run meetings and answer these [Experimentation Questions](Glint_Creativity_Experimentation_Questions). Pick one or two things to experiment with that you think will improve your regular meetings.\n\nIdentify other processes that could benefit from an experiment \n\nWrite out a list of processes or regular tasks that could be improved.\n\nOnce you know the tasks that could be improved and the ways that want to improve them, try out an experiment. See if you can run ten small experiments in the next quarter.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/why-organizations-dont-learn",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/04/strategies-for-learning-from-failure",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/your-company-is-full-of-good-experiments-you-just-have-to-recognize-them",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/12/the-discipline-of-business-experimentation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2013/07/the-culture-to-cultivate",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2015/03/06/every-organization-experiment-more",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Experimentation Questions",
+      "url": "",
+      "target": "Glint_Creativity_Experimentation_Questions",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 142,
+    "source_record_number": "138"
+  }
+}

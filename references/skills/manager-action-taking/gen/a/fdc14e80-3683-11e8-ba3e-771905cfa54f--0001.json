@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "fdc14e80-3683-11e8-ba3e-771905cfa54f:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_BARRIERS_TO_EXECUTE"
+  ],
+  "source_question_id_cell": "[Q_BARRIERS_TO_EXECUTE]",
+  "action_plan_template_uuid": "fdc14e80-3683-11e8-ba3e-771905cfa54f",
+  "template_name": "Glint Barriers to Execution",
+  "sequence": 1,
+  "focus_area_title": "Help Team Members Solve Their Own Problems",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Barriers to Execution",
+  "content_text_body": "Team members will often turn to you to solve their problems. The objective here is to empower  them how to solve these problems on their own so that they can become more autonomous at work. This will also have a positive effect on their perceptions of trust.\n\n### Ask yourself whether or not you should solve this problem\n\nWhen a team member comes to you with a problem, ask yourself these questions:\n\nWho should own this problem? (Hint: If you want team members to solve similar problems in the future, then don't solve it for them this time. Show them how to solve it on their own.)\n\nHow urgent is the problem? (Hint: The less urgent the problem, the more time you have to coach team members in solving the problem for themselves.) \n\nWhat is the least you can do? (Hint: Do as little as you can to solve the problem and as much as you can to coach team members.)\n\n### Require that both parties in a peer dispute request your help\n\nYour team is best served by handling their own peer disputes. However, if they are at an impasse and need a mediator, require that both parties come to you together to request conflict mediation. This approach encourages team members to handle situations maturely and effectively.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/geoffrey-james/science-says-collaboration-is-vastly-overrated.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ronashkenas/2012/07/09/seven-mistakes-leaders-make-in-setting-goals",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/articles/2001/10/23559.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/tykiisel/2013/03/27/deadlines-objectives-and-action-oh-my",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 265,
+    "source_record_number": "261"
+  }
+}

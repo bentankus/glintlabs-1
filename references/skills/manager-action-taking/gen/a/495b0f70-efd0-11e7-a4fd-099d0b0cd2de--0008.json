@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_COMMUNICATION]",
+  "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+  "template_name": "Glint Change Communication",
+  "sequence": 8,
+  "focus_area_title": "Use two-way communication by listening",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-listening?autoplay=false&claim=AQFkk_G1QhGipgAAAZPUYSgq2FduOIKd0KUcrduxqhaAXkRvlZwRlByAOIFDTe9Ir_jusWHematmCVYgrOMzgr0tryMc7GV_zIru3Lh8E5xNM2dbaKrKjXlTdmSce8HmAhD6loL3_fOqtXOXHSNspPtC9SgInXeRolFQWCsh68TIoAQiIspdPNOHaIq4-WlpQdnC9R26ghv6gvIDMDIRK17qtUWu-8uYtHhbZnHdM3_CQdnV69jy2fuhUQQIN-6jntLswvUZ4YpNaxRZ0X7UNrBiLd4YspDYstqvlnTGv7l4cOjIdYrge0wm5WuO5_opxWjK4xUdhgpqX8-C0qBr5u-42PiYjJZ5LuRVbSqh6SJR4BI2Ljo8hpIUWAzyh6N9IiCdOhC7BLUSfZqQdDTdfcGFsjqJCSUxs-b16S7Wd2-rbTBZfSgjbVEjotjG8gqaE9RTabQEFnlkqZ2d1M37_xsHGi-EM3gE_j5NLAa2ANkexKT7PZYC5xF6HgB4uV-BhaNSjhklPbZfrJjLzORzz4YuUVaXRQM1h4D-AmT0IiPt6G16BtxdkMdBrmtziuwC97SgfH_chUWSQgbBZWqhtnX3ugUbJTiyE3g7MUJ4s_qAtkMVDrH9vBoBFB_FmKJZXPLKv5f3U92xJcGG62X77zwtiQpGZPSdtrpcH0BMhwL_nyoj76yFrUuSzUaREN92qsRTbmRGLI-ocU92V23vIP_0sqbAGCbSw1Uo0Hl6b_EQdB4adsA7EZOCTYAOD7G8QsTWWSR_JKo_FSG0SiIqH491Yl3XV6-aLdoJKAukvxtdyN2CZFm_aNiHk6_1zAoQBbdhDHCBav5TSNsqKavssosXrRowWBHiiHa8eOlpm2YcX6_diltNsS6NixQQhP2d_EVVqJRzZPRYYKL3vKdOj1jHiGYSIJ2rWBWx9NXrIgDjkaQkssny4K67v6s8C1ggMNOeHLCl9ZDWCN18hsC4kOozkISyFXpON1PuaiBsi4XiQOgqURJWO7AVHox8F7FNxicBdk58z4o_ltWUlBc48pe1zSMMaZ6yc022mI959RBjdYHmhPIZgpLj6yYSvOGvQ4dgaBki9TpL5ZOOUNz9wgHMhhvb7-xnSPZqJfB1D8o9B8w-fPhIacUr7PfK3i6uhklR9zgKIW-bDiLfBFzh-aRq-kwDEhLW5wqomQaTx1I5mG0oO3pAAvNoJcitMno_5E3VkpF28rbDpFMMBRrS",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "LiL2_The_four_building_blocks_Listening",
+  "resources": [
+    {
+      "type": "video",
+      "title": "The four building blocks: Listening",
+      "url": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-listening?autoplay=false&claim=AQFkk_G1QhGipgAAAZPUYSgq2FduOIKd0KUcrduxqhaAXkRvlZwRlByAOIFDTe9Ir_jusWHematmCVYgrOMzgr0tryMc7GV_zIru3Lh8E5xNM2dbaKrKjXlTdmSce8HmAhD6loL3_fOqtXOXHSNspPtC9SgInXeRolFQWCsh68TIoAQiIspdPNOHaIq4-WlpQdnC9R26ghv6gvIDMDIRK17qtUWu-8uYtHhbZnHdM3_CQdnV69jy2fuhUQQIN-6jntLswvUZ4YpNaxRZ0X7UNrBiLd4YspDYstqvlnTGv7l4cOjIdYrge0wm5WuO5_opxWjK4xUdhgpqX8-C0qBr5u-42PiYjJZ5LuRVbSqh6SJR4BI2Ljo8hpIUWAzyh6N9IiCdOhC7BLUSfZqQdDTdfcGFsjqJCSUxs-b16S7Wd2-rbTBZfSgjbVEjotjG8gqaE9RTabQEFnlkqZ2d1M37_xsHGi-EM3gE_j5NLAa2ANkexKT7PZYC5xF6HgB4uV-BhaNSjhklPbZfrJjLzORzz4YuUVaXRQM1h4D-AmT0IiPt6G16BtxdkMdBrmtziuwC97SgfH_chUWSQgbBZWqhtnX3ugUbJTiyE3g7MUJ4s_qAtkMVDrH9vBoBFB_FmKJZXPLKv5f3U92xJcGG62X77zwtiQpGZPSdtrpcH0BMhwL_nyoj76yFrUuSzUaREN92qsRTbmRGLI-ocU92V23vIP_0sqbAGCbSw1Uo0Hl6b_EQdB4adsA7EZOCTYAOD7G8QsTWWSR_JKo_FSG0SiIqH491Yl3XV6-aLdoJKAukvxtdyN2CZFm_aNiHk6_1zAoQBbdhDHCBav5TSNsqKavssosXrRowWBHiiHa8eOlpm2YcX6_diltNsS6NixQQhP2d_EVVqJRzZPRYYKL3vKdOj1jHiGYSIJ2rWBWx9NXrIgDjkaQkssny4K67v6s8C1ggMNOeHLCl9ZDWCN18hsC4kOozkISyFXpON1PuaiBsi4XiQOgqURJWO7AVHox8F7FNxicBdk58z4o_ltWUlBc48pe1zSMMaZ6yc022mI959RBjdYHmhPIZgpLj6yYSvOGvQ4dgaBki9TpL5ZOOUNz9wgHMhhvb7-xnSPZqJfB1D8o9B8w-fPhIacUr7PfK3i6uhklR9zgKIW-bDiLfBFzh-aRq-kwDEhLW5wqomQaTx1I5mG0oO3pAAvNoJcitMno_5E3VkpF28rbDpFMMBRrS",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/01/how-to-communicate-change-3-lessons-from-microsofts-recent-layoff",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/forbesagencycouncil/2016/05/03/communicating-effectively-in-times-of-change",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/carolkinseygoman/2013/07/18/communicating-change-what-people-want-to-hear-and-what-they-need-to-see",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 319,
+    "source_record_number": "315"
+  }
+}

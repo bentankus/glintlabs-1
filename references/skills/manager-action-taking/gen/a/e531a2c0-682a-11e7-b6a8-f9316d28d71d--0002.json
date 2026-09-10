@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "e531a2c0-682a-11e7-b6a8-f9316d28d71d:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_FUN"
+  ],
+  "source_question_id_cell": "[Q_TEAM_FUN]",
+  "action_plan_template_uuid": "e531a2c0-682a-11e7-b6a8-f9316d28d71d",
+  "template_name": "Glint Fun Team",
+  "sequence": 2,
+  "focus_area_title": "Boost Creativity as a Team",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Action Item - Teams",
+  "content_text_body": "Enthusiasm grows when teams are able to explore creative ideas. The goal is to find ways to balance execution and creativity so that your team can be creative at work.\n\n### Build creativity habits\n\nBuild a creativity-boosting habit by alternating challenging tasks with straightforward tasks. Intense tasks limit people's mental resources to be creative, so by mixing in easier tasks, the team's minds can rest and wander and allow creative thoughts to come out. As a team, give this a try over the next two weeks.\n\n### Make time for mental breaks\n\nAs a team, decide on times to take breaks throughout the day to help keep your team's minds open and flexible. A short walk, snack break, or group activity (or a touch base call if geographically dispersed) can help team members relax, have fun, and recharge their creativity. Take a team break a couple of times over the next two weeks.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-07T09:40:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glennllopis/2013/09/23/6-ways-to-make-your-leadership-and-workplace-fun-again",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3014585/how-to-be-a-success-at-everything/10-ways-to-make-your-office-more-fun",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/659698/ten-ways-inject-fun-workplace",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3028465/work-smart/10-surprising-ways-to-transform-your-creative-thinking",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 529,
+    "source_record_number": "525"
+  }
+}

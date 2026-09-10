@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_LARGER_PURPOSE"
+  ],
+  "source_question_id_cell": "[Q_LARGER_PURPOSE]",
+  "action_plan_template_uuid": "5c28a1c0-6923-11ea-ad0c-3949dbbe0cf7",
+  "template_name": "Glint Larger Purpose",
+  "sequence": 2,
+  "focus_area_title": "Grow a Sense of Purpose Among Your Team",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Employees who understand and believe in the purpose of their organizations tend to perform far better than those who don't. A sense of purpose energizes people, reinforces productive employee engagement, and heightens a sense of belongingness. Your goal is to help your employees to recognize how their daily functions contribute to the company purpose.\n\nTo start, read this [article](https://www.inc.com/brian-scudamore/4-ways-to-create-a-purpose-driven-culture-your-employees-love.html) on ways to create a purpose-driven culture for your employees.\n\nCreating a wide awareness of your company culture can help your employees to understand and believe in the company purpose. \n\n### Link the impact of their work to their values \nExplore what's important to your employees. What moves them? What are their passions? Discover how their values are aligned with the company purpose and help them to see those connections. \n \n### Inspire and motivate\nHelp your employees find meaning in their work. Share positive stories to highlight the impact of their work, talk about how their efforts make a difference in other people, a group, or a whole society. Storytelling can help to strengthen connections, emphasize the company vision, and remind employees how they make a difference.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:09:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "inline_external",
+      "title": "article",
+      "url": "https://www.inc.com/brian-scudamore/4-ways-to-create-a-purpose-driven-culture-your-employees-love.html",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 604,
+    "source_record_number": "600"
+  }
+}

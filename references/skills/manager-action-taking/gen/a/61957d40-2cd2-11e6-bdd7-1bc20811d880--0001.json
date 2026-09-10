@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "61957d40-2cd2-11e6-bdd7-1bc20811d880:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EXECUTION"
+  ],
+  "source_question_id_cell": "[Q_EXECUTION]",
+  "action_plan_template_uuid": "61957d40-2cd2-11e6-bdd7-1bc20811d880",
+  "template_name": "Glint Execution",
+  "sequence": 1,
+  "focus_area_title": "Good Strategy Execution Requires Balancing 4 Tensions",
+  "content_type": "mixed",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "The primary obstacle to strategy execution is a failure to balance four core tensions: First, setting an inspiring end state while also including specific and challenging mid-state targets; second, top-down control versus empowering the team for change; third, developing new capabilities while also pressuring workers to deliver results; and fourth, striking the balance between creativity and discipline. \n\nGetting strategy done well often calls for trade-offs. Companies that can achieve a balance between opposing forces are far more likely to realize successful strategies that endure. Read [this article](<HBR_Good_Strategy_Execution_Requires_Balancing_Tensions>) to learn more about balancing four core tensions.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T08:04:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/geoffrey-james/science-says-collaboration-is-vastly-overrated.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/glassheel/2013/03/14/6-ways-to-achieve-any-goal",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2013/01/04/the-best-way-for-a-manager-to-start-the-year-set-clear-meaningful-employee-objectives",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/795028/why-are-goals-and-objectives-important",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ronashkenas/2012/07/09/seven-mistakes-leaders-make-in-setting-goals",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/tykiisel/2013/03/27/deadlines-objectives-and-action-oh-my",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/guides/2010/12/how-to-set-goals-for-new-employees.html",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "this article",
+      "url": "",
+      "target": "<HBR_Good_Strategy_Execution_Requires_Balancing_Tensions>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 504,
+    "source_record_number": "500"
+  }
+}

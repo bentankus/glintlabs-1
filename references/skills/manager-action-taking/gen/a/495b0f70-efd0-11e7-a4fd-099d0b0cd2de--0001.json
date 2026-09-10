@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_COMMUNICATION]",
+  "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+  "template_name": "Glint Change Communication",
+  "sequence": 1,
+  "focus_area_title": "Share Senior Leadership's Decisions with Your Team",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "Decisions Action Item",
+  "content_text_body": "[How to Improve Communication Immediately](video \"LiL3_Improve_Communication\")\n\n**Watch**: *How to Improve Communication Immediately*\n\n---\n\nIt can be frustrating for employees if they see change resulting from decisions without understanding why the decision was made. The goal is to effectively communicate senior leadership's decisions to your team to create a culture of decision transparency and employee inclusion.\n\n### Communicate decisions\n\nIdentify the decisions that are communicated to you but don't necessarily reach your staff directly. Decide how to communicate the decisions so that the reasons behind them are clear.  Determine which medium is the best for communicating a particular decision. One-on-one? In a group? Through e-mail? Over the phone? Through another technology? \n\nRead this article about [When Not to Communicate Using Email](http://www.forbes.com/sites/lizryan/2016/06/12/ten-things-never-to-say-in-an-email-message).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/01/how-to-communicate-change-3-lessons-from-microsofts-recent-layoff",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/forbesagencycouncil/2016/05/03/communicating-effectively-in-times-of-change",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/carolkinseygoman/2013/07/18/communicating-change-what-people-want-to-hear-and-what-they-need-to-see",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Improve Communication Immediately",
+      "url": "",
+      "target": "video \"LiL3_Improve_Communication\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "type": "inline_external",
+      "title": "When Not to Communicate Using Email",
+      "url": "http://www.forbes.com/sites/lizryan/2016/06/12/ten-things-never-to-say-in-an-email-message",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 312,
+    "source_record_number": "308"
+  }
+}

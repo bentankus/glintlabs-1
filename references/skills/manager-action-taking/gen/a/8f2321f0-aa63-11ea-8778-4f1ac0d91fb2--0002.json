@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_ADAPTS_APPROACH_360"
+  ],
+  "source_question_id_cell": "[Q_ADAPTS_APPROACH_360]",
+  "action_plan_template_uuid": "8f2321f0-aa63-11ea-8778-4f1ac0d91fb2",
+  "template_name": "Glint 360 Adapts Approach",
+  "sequence": 2,
+  "focus_area_title": "Help Team Members Build Tacit Knowledge",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Tacit knowledge - knowledge that is difficult to teach to another person through speaking or writing it down - is key to maintaining company agility in a rapidly changing world. The goal here is create systems that help team members develop tacit knowledge.\n\n### Get comfortable trying new things\n\nCreate a climate in your team where people are encouraged to try new things, experiment, and go outside their comfort zone. By doing something differently, or doing the same thing a different way, team members will better understand how to pivot, iterate, and create new products and services.\n\n### Learn through experience\n\nFocus on learning by doing. Instead of hosting a training lecture, find ways to teach skills through active participation. For example, hosting an internal hackathon or problem solving challenge to learn capabilities that can not be easily learned in traditional trainings.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:20:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://medium.com/@savitha84/8-ways-to-capture-tacit-knowledge-536ef990b82d",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.quantumworkplace.com/future-of-work/how-your-managers-can-help-build-employee-trust-in-senior-leaders",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://leadchangegroup.com/why-you-want-to-lead-a-team-with-transferable-skills-and-how-to-build-one/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2020/01/to-be-a-great-leader-you-need-the-right-mindset",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.careeraddict.com/demonstrate-adaptability-on-the-job",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2020/03/the-best-leaders-are-versatile-ones",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 24,
+    "source_record_number": "20"
+  }
+}

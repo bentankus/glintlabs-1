@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "3ddef890-05ae-11e6-8759-3b8460ed0dcb:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_MANAGER_FEEDBACK",
+    "Q_PERFMGMT_FEEDBACK"
+  ],
+  "source_question_id_cell": "[Q_MANAGER_FEEDBACK, Q_PERFMGMT_FEEDBACK]",
+  "action_plan_template_uuid": "3ddef890-05ae-11e6-8759-3b8460ed0dcb",
+  "template_name": "Glint Feedback",
+  "sequence": 8,
+  "focus_area_title": "Good Feedback Is a Two-Way Conversation",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Improve the team's performance feedback processes by adopting a humbler approach to managing people that focuses on asking questions, not giving orders. [This article](<HBR_Good_Feedback_Is_a_Two-Way_Conversation>) describes a partnership model that distributes power and increases two-way conversation with employees. Learn about \"mirror holding,\" a dramatic shift in the tone and trajectory of feedback conversations. \n\nInstead of telling employees what to see, managers guide them where to look. The goal is to engage employees in thoughtful conversation about their current strengths, future goals, and how to bring those elements closer in line.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T11:50:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/travisbradberry/2015/07/14/10-communication-secrets-of-exceptional-leaders/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/victorlipman/2015/09/02/management-feedback-is-vital-why-is-it-so-often-given-badly/",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/03/two-thirds-of-managers-are-uncomfortable-communicating-with-employees",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jeffboss/2015/06/04/6-ways-you-dont-want-to-give-employee-feedback/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/margiewarrell/2015/08/31/how-to-build-high-trust-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/08/make-getting-feedback-less-stressful/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/work-in-progress/2015/10/07/how-to-give-concise-positive-feedback/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "This article",
+      "url": "",
+      "target": "<HBR_Good_Feedback_Is_a_Two-Way_Conversation>",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 527,
+    "source_record_number": "523"
+  }
+}

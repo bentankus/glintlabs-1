@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "2813e6f0-65ad-11e7-aee6-eb6187f657d1:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_DECISIONS"
+  ],
+  "source_question_id_cell": "[Q_TEAM_DECISIONS]",
+  "action_plan_template_uuid": "2813e6f0-65ad-11e7-aee6-eb6187f657d1",
+  "template_name": "Glint Decisions Team",
+  "sequence": 7,
+  "focus_area_title": "Most common logical fallacies at work",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/uncover-critical-insights-with-critical-thinking/most-common-logical-fallacies-at-work-2?claim=glint",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-08-19T08:35:00+00:00",
+  "video_extract": "LiL2_Most_common_logical_fallacies_at_work",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Most common logical fallacies at work",
+      "url": "https://www.linkedin.com/learning/embed/uncover-critical-insights-with-critical-thinking/most-common-logical-fallacies-at-work-2?claim=glint",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-deal-with-a-chronically-indecisive-boss",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/mikemyatt/2012/03/28/6-tips-for-making-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/04/how-you-make-decisions-is-as-important-as-what-you-decide",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/sean-kim/how-warren-buffett-and-jeff-bezos-make-smarter-decisions.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/root-out-bias-from-your-decision-making-process",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/03/a-checklist-for-making-faster-better-decisions",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3028086/how-to-map-out-your-decision-making",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 421,
+    "source_record_number": "417"
+  }
+}

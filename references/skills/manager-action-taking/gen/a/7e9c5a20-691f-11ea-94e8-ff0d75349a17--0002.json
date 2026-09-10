@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "7e9c5a20-691f-11ea-94e8-ff0d75349a17:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DECISION_INFLUENCE"
+  ],
+  "source_question_id_cell": "[Q_DECISION_INFLUENCE]",
+  "action_plan_template_uuid": "7e9c5a20-691f-11ea-94e8-ff0d75349a17",
+  "template_name": "Glint Influence",
+  "sequence": 2,
+  "focus_area_title": "Build psychological safety for your team",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Take this learning path to learn how to cultivate psychological safety on your team",
+  "content_text_body": "This module defines psychological safety, describes why it's important, and provides guidance on how to recognize it on teams.\n\n[Psychological safety for managers](https://learn.microsoft.com/en-us/training/modules/viva-glint-psychological-safety/ \"Psychological safety for managers\")",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:17:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "inline_external",
+      "title": "Psychological safety for managers",
+      "url": "https://learn.microsoft.com/en-us/training/modules/viva-glint-psychological-safety/ \"Psychological safety for managers\"",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 570,
+    "source_record_number": "566"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "58254c80-6819-11e7-87c8-95da01748934:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_ACCOUNTABILITY"
+  ],
+  "source_question_id_cell": "[Q_TEAM_ACCOUNTABILITY]",
+  "action_plan_template_uuid": "58254c80-6819-11e7-87c8-95da01748934",
+  "template_name": "Glint Accountability Team",
+  "sequence": 3,
+  "focus_area_title": "Hold Team Members Accountable",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Action Items - Teams",
+  "content_text_body": "The goal here is to hold team members accountable for doing what they have agreed to. \n\n### Track progress on goals\n\nWhen your team has clear goals that have been broken down into clear tasks, timelines, and owners, it is easier to detect when a team member is struggling. Use these metrics to identify issues so they can be addressed and resolved.\n\n### Have a conversation\n\nIf a team member is consistently not meeting goals, team leaders need to have a candid conversation with them. Aim to identify if there are any barriers that can be removed. Discuss whether the goals that were set were reasonable. Then create a contingency plan to help the team member get back on track and track their progress.\n\n### Check in often\n\nTeam leaders should check in and follow up often with these team members to better understand why they are struggling  and support them in ways that will lead to success.\n\n### Recognize meeting commitments\n\nConversely, when team members consistently meet their goals and obligations to the team, recognize this individually and in team meetings. Also, be sure to recognize improvements made after feedback has been given.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-08-03T07:53:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/joefolkman/2014/11/14/how-do-you-score-the-8-great-accountability-skills-for-business-success/#6c6986673c11",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/01/the-right-way-to-hold-people-accountable",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/shawn-murphy/7-invaluable-leadership-tips-that-boost-accountability-in-the-workplace.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/how-spotify-balances-employee-autonomy-and-accountability",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3025193/what-you-need-to-know-to-create-an-accountability-group-that-works",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/3-ways-to-make-time-for-the-little-tasks-you-never-make-time-for",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ccl/2012/02/28/7-ways-to-build-accountable-organizations/#654d80393cd3",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 244,
+    "source_record_number": "240"
+  }
+}

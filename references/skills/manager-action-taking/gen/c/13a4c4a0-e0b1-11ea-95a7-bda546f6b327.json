@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "13a4c4a0-e0b1-11ea-95a7-bda546f6b327",
+  "template_name": "Glint Recognition - GPS",
+  "action_plan_record_ids": [
+    "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:1",
+    "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:2",
+    "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:3",
+    "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:4",
+    "13a4c4a0-e0b1-11ea-95a7-bda546f6b327:5"
+  ]
+}

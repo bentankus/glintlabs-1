@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE:8",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_RESPONSE]",
+  "action_plan_template_uuid": "CRISISFBSURVEY_DEFAULT_ACTION_TEMPLATE",
+  "template_name": "CrisisFBSurvey_Default_Action_Template",
+  "sequence": 8,
+  "focus_area_title": "Make Time for Ongoing, 1:1 Discussions",
+  "content_type": "guide",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance"
+  ],
+  "content_description": "",
+  "content_text_body": "* It is likely that, aside from the team perspectives discussed above, each individual will be experiencing unique personal challenges and will have specific needs\n\n* Having 1:1 discussions, in which each person feels heard, cared about, supported and guided is even more important now than usually\n\n* People may be willing to say things in a private setting that they would not with the whole team\n\n* Consider asking these questions in your 1:1s:\n\n> * How are you doing? How are your family members and loved ones?\n> * How have you been adjusting to the changes in how we work due to Covid-19? What are your biggest challenges/concerns? What's working?\n> * What are the most impactful things for you to spend your time on right now? Are any of those priorities at risk? What can be pushed back, transferred to another teammate, or removed?\n> * What support or resources do you need to help you be successful during this time? How else can I support you?\n\n**And finally remember** - you don't have to have all the answers.  Nobody expects you to do a perfect job or to know everything in these challenging times.  In the end, if you make people feel cared about and heard, take action, keep dialogue and support going, then your people, the organization and your customers will all benefit.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 15,
+    "source_record_number": "11"
+  }
+}

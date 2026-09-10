@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "da797b60-e0ad-11ea-9614-2b26f428f070:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_ROOT_CAUSE"
+  ],
+  "source_question_id_cell": "[Q_GPS_ROOT_CAUSE]",
+  "action_plan_template_uuid": "da797b60-e0ad-11ea-9614-2b26f428f070",
+  "template_name": "Glint Root Cause - GPS",
+  "sequence": 2,
+  "focus_area_title": "Engage Both Patients and Families in Safety",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "A recent article published in the Joint Commission highlighted the utility of considering both the patient and their families, within the framework of a systems approach, to address patient safety. According to the article, dedication to engaging both patients and their family members within the existing healthcare system can improve the quality, safety, and experience of care by building true partnerships. This is one strategy to identify more lasting and useful solutions, rather than temporary fixes, for safety problems.\n \n### Best practices for success\n\nFinding ways to increase the engagement of both patients and their families in their care can be very helpful in preventing safety from falling through the cracks, as well as cementing it as a priority. Some best practices for increasing such engagement include:\n \n- Ensure sufficient institutional support for the initiative\n\n- Solicit patient and family feedback regarding the clarity of brochures and other informational and instructional materials for patients\n\n- Provide patients and family members with a card 'a Be Prepared card' where they can write down the things in advance that they want to discuss during their office visit, including questions, concerns, and health goals\n\n- Conduct patient handoffs in person and in front of the patient, rather than using electronic health records or a paper note, to improve communication\n\n- Ask patients and family members to explain in their own words what they need to know or do next\n\n>Sources:\n\n>Hatlie, Nahum, Leonard, Jones, Nahum, Krevat, Mayer, & Smith, 2020\n\n>Nilsen et al. 2006\n\n>AHRQ, 2018, Guide to Improving Patient Safety in Primary Care Settings by Engaging Patients and Families",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2020-11-30T11:12:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://youtu.be/JL5GTxDzApk",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/how-one-hospital-improved-patient-safety-in-10-minutes-a-day",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/ehrs/taking-a-systems-approach-to-improve-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/assetmanager/humanfactorsthe_sourcepdf.pdf?db=web&hash=085A09275C38FACB50BC3D92CB35450A",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/npsf-8-tips-to-create-a-total-systems-approach-to-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/systems-approach",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/checklists",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 756,
+    "source_record_number": "752"
+  }
+}

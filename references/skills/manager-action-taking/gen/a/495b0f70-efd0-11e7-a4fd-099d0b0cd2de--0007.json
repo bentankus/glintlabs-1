@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_COMMUNICATION]",
+  "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+  "template_name": "Glint Change Communication",
+  "sequence": 7,
+  "focus_area_title": "Make communications relevant to employees",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-context?autoplay=false&claim=AQHfSLGrlAk_eAAAAZPUYFof-zggFzCKcX5q7QtBMNtbee01gDiyYnIqsw0A_0UEpZB_UlUlP8Xm55P8irysUisYfBnYQuUqX_7cd_Cdwz_yQVdC0NELDSIRtW3nycpCprl_ByoSkr-wHUeki4qPKENMoBuuSnMfkLQoggyvYhLB6ij-myIb6nVXFSlBM9ke7wCnCnr_i8fVvgMr8w1bEL8InEUQevuYlEul8L2LZMFaH2X9XaxKjbWsYphczOk13mCuU9p-6rhZk1cv4fBGocbkzmnHvR1RB59PTndIeyCWVWhKxLfpOr2JctJmLz_--ZrQfC9I5y6BeAAw1npuZrEoCVLfttWXNv-ASkv8uAq63rXFdsP_xAonJl-xiTFbLgNHvgYBYy-yTZtPT9mjmbDyUL6i7cgTAM-zvDNN_8bjWtX75zORYBb9bAdVITBOG6VElHQhNIlLqR3wbibMsaiUBmmXI1GeCRasK_swgWgg4iUbYwLYRICHgWXl2988_rrf_5eDiuKyb8kIALshkJT8XNp7V9pYypOVjx_2J2uFZU16k6fyo1tioQKWUWnt7XUOJ1seWBu9jrYWjRtxi8ttSZs1KDZdHO1iTnOY2_6YbjQ9MBgfd_Wex7W1aADlmpDG5TaQgjH0ro6VeVWNe2qY8POtog86FPEFsBKC5wtVemZSRx0k2weAa0M3Fs_lwrRjBQEt9ncM_6sO0cO_8FDYlsd2wXbOJzNo2E4tzZWXYnlZ2r_vlzBZ_I0-pFFtOgL5tQflwJdu1ZDIwZ5LhGIA21Yq_TuMLYNCFaPNvvUkigAXmKIJLz7wb76dsZoVgJCISR9F4NWSiRi85EG5vD-mCp5_hMKUtz5QoyD64SvlgzBy0DIGc9Vs4qLrK-AfWuF1F9RP1t0Zugo4u2L4d56aUac1eUT2dwnFg966n4dKPptvEW_vbkkYC7afEk7OjmrrWDHOjwSezqyy59eIieIkHmY2IHoXTIGTaca4UjiBKdJ2hKDcGokT4EIJ5yi2xcuOJftVBCLdeVLAdvmqHK6a1MHuteAXTD8r_wzl5V9BMGN_RhwJET0zwA8QiGNiI6yN74xa-717AfaNZIg5lirZdGqt55RCrksGt1AmFukOQXs6DX8gkydiTjlvuPp7icbBGx8OMOoT6nRBj-lPBzSm3rImX1WFRugDV25HdOKR0V4VG8YKh21NOQuea3sNc-g7A0A9-qqL8fm9L1WK",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "LiL2_The_four_building_blocks_Context",
+  "resources": [
+    {
+      "type": "video",
+      "title": "The four building blocks: Context",
+      "url": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-context?autoplay=false&claim=AQHfSLGrlAk_eAAAAZPUYFof-zggFzCKcX5q7QtBMNtbee01gDiyYnIqsw0A_0UEpZB_UlUlP8Xm55P8irysUisYfBnYQuUqX_7cd_Cdwz_yQVdC0NELDSIRtW3nycpCprl_ByoSkr-wHUeki4qPKENMoBuuSnMfkLQoggyvYhLB6ij-myIb6nVXFSlBM9ke7wCnCnr_i8fVvgMr8w1bEL8InEUQevuYlEul8L2LZMFaH2X9XaxKjbWsYphczOk13mCuU9p-6rhZk1cv4fBGocbkzmnHvR1RB59PTndIeyCWVWhKxLfpOr2JctJmLz_--ZrQfC9I5y6BeAAw1npuZrEoCVLfttWXNv-ASkv8uAq63rXFdsP_xAonJl-xiTFbLgNHvgYBYy-yTZtPT9mjmbDyUL6i7cgTAM-zvDNN_8bjWtX75zORYBb9bAdVITBOG6VElHQhNIlLqR3wbibMsaiUBmmXI1GeCRasK_swgWgg4iUbYwLYRICHgWXl2988_rrf_5eDiuKyb8kIALshkJT8XNp7V9pYypOVjx_2J2uFZU16k6fyo1tioQKWUWnt7XUOJ1seWBu9jrYWjRtxi8ttSZs1KDZdHO1iTnOY2_6YbjQ9MBgfd_Wex7W1aADlmpDG5TaQgjH0ro6VeVWNe2qY8POtog86FPEFsBKC5wtVemZSRx0k2weAa0M3Fs_lwrRjBQEt9ncM_6sO0cO_8FDYlsd2wXbOJzNo2E4tzZWXYnlZ2r_vlzBZ_I0-pFFtOgL5tQflwJdu1ZDIwZ5LhGIA21Yq_TuMLYNCFaPNvvUkigAXmKIJLz7wb76dsZoVgJCISR9F4NWSiRi85EG5vD-mCp5_hMKUtz5QoyD64SvlgzBy0DIGc9Vs4qLrK-AfWuF1F9RP1t0Zugo4u2L4d56aUac1eUT2dwnFg966n4dKPptvEW_vbkkYC7afEk7OjmrrWDHOjwSezqyy59eIieIkHmY2IHoXTIGTaca4UjiBKdJ2hKDcGokT4EIJ5yi2xcuOJftVBCLdeVLAdvmqHK6a1MHuteAXTD8r_wzl5V9BMGN_RhwJET0zwA8QiGNiI6yN74xa-717AfaNZIg5lirZdGqt55RCrksGt1AmFukOQXs6DX8gkydiTjlvuPp7icbBGx8OMOoT6nRBj-lPBzSm3rImX1WFRugDV25HdOKR0V4VG8YKh21NOQuea3sNc-g7A0A9-qqL8fm9L1WK",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/01/how-to-communicate-change-3-lessons-from-microsofts-recent-layoff",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/forbesagencycouncil/2016/05/03/communicating-effectively-in-times-of-change",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/carolkinseygoman/2013/07/18/communicating-change-what-people-want-to-hear-and-what-they-need-to-see",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 318,
+    "source_record_number": "314"
+  }
+}

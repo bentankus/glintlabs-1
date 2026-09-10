@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:9",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_COMMUNICATION]",
+  "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+  "template_name": "Glint Change Communication",
+  "sequence": 9,
+  "focus_area_title": "Communicate Decisions Effectively",
+  "content_type": "mixed",
+  "action_type": "communication",
+  "selection_signals": [
+    "communication",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "When announcing decisions leaders sometimes forget that others don't have the same context or set of assumptions. The goal is to form a simple communication habit to make sure that your decisions are clearly understood by your organization.\n\n ### Restate the reasons\n\n When communicating a decision to your team, start by reminding everyone what the decision is intended to achieve.\n\n ### Explain your process\n\n Be open about how you made the decision. What sources of information were used (e.g., stakeholder input, data)? Who were the backers and approvers of the decision? Who else contributed to it? What external opinions were sought? How long did it take?\n\n Being transparent about decision making also allows the larger team to observe and provide input on the processes.\n\n ### Be flexible and adjust\n\n Be clear about the assumptions and educated guesses you made while making your decision. Let your team know that you will adjust your decision as you get feedback on what is and isn't working.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/01/how-to-communicate-change-3-lessons-from-microsofts-recent-layoff",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/forbesagencycouncil/2016/05/03/communicating-effectively-in-times-of-change",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/carolkinseygoman/2013/07/18/communicating-change-what-people-want-to-hear-and-what-they-need-to-see",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 320,
+    "source_record_number": "316"
+  }
+}

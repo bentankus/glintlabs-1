@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5a09a170-e108-11ea-8730-a3d92ee38b4f:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_TRAINING"
+  ],
+  "source_question_id_cell": "[Q_GPS_TRAINING]",
+  "action_plan_template_uuid": "5a09a170-e108-11ea-8730-a3d92ee38b4f",
+  "template_name": "Glint Training - GPS",
+  "sequence": 1,
+  "focus_area_title": "Evaluate your Training Programs",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Learn more about TeamSTEPPS and how implementing this program can improve communication and teamwork within your organization.\n\n### Why is it important?\n\nTeamSTEPPS is an evidence-based set of teamwork tools, aimed at optimizing patient outcomes by improving communication and teamwork skills among health care professionals. Several versions of TeamSTEPPS are available, along with individual modules related to specific audiences, settings, or situations. TeamSTEPPS has incorporated the best practices from this research into a program to improve the quality, safety, and efficiency of health care by improving communication and other teamwork skills. These skills lead to important team outcomes.\n\n#### Conduct TeamSTEPPS Curriculum\n\nTeamSTEPPS\u00c2\u00ae is a teamwork system designed for health care professionals that is:\n\n- A powerful solution to improving patient safety within your organization.\n- An evidence-based teamwork system to improve communication and teamwork skills among health care professionals.\n- A source for ready-to-use materials and a training curriculum to successfully integrate teamwork principles into all areas of your health care system.\n- Scientifically rooted in more than 20 years of research and lessons from the application of teamwork principles.\n- Developed by the Department of Defense's Patient Safety Program in collaboration with the Agency for Healthcare Research and Quality.\n\nTeamSTEPPS provides higher quality, safer patient care by:\n\n- Producing highly effective medical teams that optimize the use of information, people, and resources to achieve the best clinical outcomes for patients.\n- Increasing team awareness and clarifying team roles and responsibilities.\n- Resolving conflicts and improving information sharing.\n- Eliminating barriers to quality and safety.\n\nTeamSTEPPS has a three-phased process aimed at creating and sustaining a culture of safety with:\n\n- A pre training assessment for site readiness.\n- Training for onsite trainers and health care staff.\n- Implementation and sustainment.\n\n#### This study highlights the impact of TeamSTEPPS implementation\n\nEffective teamwork facilitates collective learning, which is integral to safety culture. There are no rigorous evaluations of the impact of team training on the four components of safety culture-reporting, just, flexible and learning cultures. This original research from the University of Nebraska Medical Center evaluated the impact of a year-long team training program on safety culture in 24 hospitals using two theoretical frameworks. A theory-driven, longitudinal evaluation of the impact of team training on safety culture in 24 hospitals.  Adoption of team behaviors was significantly associated with odds of an individual reacting more positively at reassessment than baseline to nine items reflecting all four components of safety culture.\n\n> Sources: \n\n>Division of Physical Therapy Education, School of Allied Health Professions, University of Nebraska Medical Center, Omaha, Nebraska, USA\n\n>Department of Biostatistics, College of Public Health, University of Nebraska Medical Center, Omaha, Nebraska, USA\n\n>Industrial/Organizational Psychology Program, Center for Collaboration Science, University of Nebraska at Omaha, Omaha, Nebraska, USA\n\n>Correspondence to Dr Katherine J Jones, Division of Physical Therapy Education, School of Allied Health Professions, 984420 Nebraska Medical Center, Omaha, NE 68198-4420, USA; kjonesj@unmc.edu\n\n>Agency for Healthcare Research and Quality\n\n>THE AMERICAN HOSPITAL ASSOCIATION",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:48:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/professionals/systems/hospital/fallpxtraining/index.html?utm_source=ahrq&utm_medium=dpils&utm_term=&utm_content=1&utm_campaign=ahrq_fallprevent_2017",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://qualitysafety.bmj.com/content/22/5/394.abstract",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.ihi.org/resources/Pages/AudioandVideo/wihi-how-to-make-patient-safety-easy-to-explain-and-champion.aspx",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/teamstepps/index.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.aha.org/system/files/2019-01/TeamTraining_AboutTeamSTEPPS.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 781,
+    "source_record_number": "777"
+  }
+}

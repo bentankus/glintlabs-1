@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2:7",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_EMPATHIZES_360"
+  ],
+  "source_question_id_cell": "[Q_EMPATHIZES_360]",
+  "action_plan_template_uuid": "b2719fe0-ab91-11ea-b2f1-6d6534e57fd2",
+  "template_name": "Glint 360 Empathizes",
+  "sequence": 7,
+  "focus_area_title": "Improve Your Communication Skills",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Team members often report frustration with their manager's poor communication skills or the inability of the manager to foster good communication practices on the team. The objective is to learn how to communicate more effectively, as well as create a culture of trust, respect, and mutual understanding across the team.\n\n### Why is it important?\n\nBy learning how to communicate more effectively, you will create greater understanding of your own and others' perspectives; ensure team members have the information they need to do their jobs well; and foster more honest and open two-way conversations. Establishing good communication behaviors and expectations improves the experience of each team member, as well as overall team effectiveness.\n\n### Learn these key communication skills\n\nKeep this list of [Communication Do's and Don'ts](Glint_Manager_Communication_Dos_and_Donts) handy and regularly practice these behaviors. Ask for feedback from a trusted colleague on how you are doing and ways to improve.\n\n### Create a feedback loop with your team\n\nAsk your team to give you feedback on a regular basis on how well you are communicating and supporting effective communication practices on the team. Ask what you should continue doing, and what to do differently to be more effective.\n\n[How to Improve Communication Immediately](video \"LiL3_Improve_Communication\")\n\n**Watch**: *How to Improve Communication Immediately*\n\n---",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T09:51:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/04/how-to-develop-empathy-for-someone-who-annoys-you",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/melodywilding/2019/08/05/8-habits-of-highly-empathetic-leaders/#658249576de7",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/ellevate/2019/08/19/theres-power-in-being-an-empathetic-leader/#11e346e26e73",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/john-eades/3-science-backed-reasons-empathy-makes-you-a-better-leader.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/justin-bariso/there-are-actually-3-types-of-empathy-heres-how-they-differ-and-how-you-can-develop-them-all.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/11/if-you-cant-empathize-with-your-employees-youd-better-learn-to",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Communication Do's and Don'ts",
+      "url": "",
+      "target": "Glint_Manager_Communication_Dos_and_Donts",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Improve Communication Immediately",
+      "url": "",
+      "target": "video \"LiL3_Improve_Communication\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 89,
+    "source_record_number": "85"
+  }
+}

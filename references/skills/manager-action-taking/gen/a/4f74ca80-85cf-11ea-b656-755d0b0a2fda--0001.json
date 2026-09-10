@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "4f74ca80-85cf-11ea-b656-755d0b0a2fda:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_DISTRESS_TEAM_PRIORITIES"
+  ],
+  "source_question_id_cell": "[Q_DISTRESS_TEAM_PRIORITIES]",
+  "action_plan_template_uuid": "4f74ca80-85cf-11ea-b656-755d0b0a2fda",
+  "template_name": "Glint Distress - Team Priorities",
+  "sequence": 1,
+  "focus_area_title": "Help the Team Prioritize Tasks During Challenging Times",
+  "content_type": "mixed",
+  "action_type": "workload_and_prioritization",
+  "selection_signals": [
+    "workload_and_prioritization",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "In uncertain times, managers need to directly address issues and concerns with empathy and honesty. Acknowledge the uncertainty and anxiety that arise in difficult circumstances. The goal is to clearly define expectations and priorities for your team and provide them with responsibilities that make the best use of their strengths and abilities. \n\n \n\nDuring times of stress, it's particularly important for team members to understand what impact is in their control and the best way to focus their skills and energy to be successful. \n\n \n\n### Think about how you lead your team and answer these questions: \n\n \n\n* *Are you crystal clear on each team member's role? Are they?* \n\n* *Are team members clear about how to best prioritize their time to best leverage their strengths?* \n\n* *Do team members understand what is in their control to work on right now?* \n\n \n\nConsidering your answers, where could you do a better job managing roles on your team? \n\n \n\nEncourage team brainstorming on how to maintain focus on high priority items and engage in frequent communications to check on progress and changing circumstances. \n\n### Create a priority list \n\nBe clear about the order in which you think things should be done and then discuss and finalize with your team. As new items are added to your team's plate, communicate to your management and to the team any impact the new item has on the order of priorities. Consider any internal or external dependencies and how they may affect your team's ability to get tasks completed in the timeframe expected. Work with your team to review and update the priority list as needed. \n\n### Balance speed and quality \n\nPart of prioritizing is determining how quickly a task needs to be done, and the level of quality it requires. Quality can suffer when work is rushed, so for each task clearly communicate your expectations.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-06T05:25:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-to-keep-your-team-focused-and-productive-during-uncertain-times",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://learning.linkedin.com/blog/linkedin-learning-resources/6-free-courses-to-to-help-leaders-clearly-communicate-and-influe",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/partners-in-leadership/helping-teams-focus-when-theyre-suddenly-working-remotely.html?cid=search",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 471,
+    "source_record_number": "467"
+  }
+}

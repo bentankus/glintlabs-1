@@ -1,0 +1,9 @@
+{
+  "name": "EVE Glint demo survey data",
+  "local_file": "glint_demo_data.csv",
+  "config": "config.json",
+  "source_url": "https://microsoft.sharepoint-df.com/:x:/t/EVE/cQp9diwRxAXGSYk_rMGtyVYaEgUCXqA9ae9jA97SvFtVYBRCGw",
+  "input_format": "wide_items",
+  "description": "Reusable demo survey dataset for eve-people-science skills when the user does not provide survey data.",
+  "intake_prompt": "Do you have survey data you would like to reference? If not, you can use demo data."
+}

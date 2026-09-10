@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_CHANGE_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_CHANGE_COMMUNICATION]",
+  "action_plan_template_uuid": "495b0f70-efd0-11e7-a4fd-099d0b0cd2de",
+  "template_name": "Glint Change Communication",
+  "sequence": 5,
+  "focus_area_title": "Communicate with the audience in mind",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-people-and-perspective?autoplay=false&claim=AQEUl-WUX1NglgAAAZPUXz1gRWaOzigBlQ-qmoobcFcrk27ODGTISSuBMLPqrCpdclmG1snL4zsAUc_E_kpHi3Gc3aXd-bLXDjwHNBC5m7hGoRlgyxwXnqZtYGmcj--5SVZlDNTeT4sTUrFM8exFISVHrN6YAS1-qN4VOwqnElNKAfRvmtFEsdWd1Zl-mbRUq3koBqTjoCUWmWFkZeQfFVlG3Pk_OkdAflLzNIvu96lXLGB34cok11lNjimfbuSsr2OivwssxPhf-aGsrQAErkOZogriLuwzM8H6PwO8yYxAjkniKTA2OclgCPgn_fMpT95LYkvigO_BSeMsZkApL5LMWk_pOCf2nZUkPtlNgXc0gAsJdo40Jq77GicFXOnfq4-uc6xNLTltYFjgZgreQBcVdFvmw6k44BvOijT_47iW201ashbeZeXkXbeq3ZAJUhTAojFJNA0WZjsap3GX776kqHPsLEVPo1s4_5g-yWTIdTriGm24SY8IPy83fuJ7WH3RweqA9utcl0ccIHLdJP7lu0wObSExVDh2JNHRqf-qkTxzCr4wHPX2fTl7WIP5dhVUj7pcHmqyYAoYztpj-WzdmElbbaURxfxCmNEQ6mKj1n3LXXrEPt9vtIQcjiyYumD5lkhxnNCCh4JSpJhstijCd9Hz4Z-KIGX2hQeckkNICraLYaFN5XIXHpeMM-dN1P3edWOEzupbcKWVaMi0SACOD6XAJFi5Lf9tX9ALp5N_bcqpL_yemaLbHY2uJ6UioqusCAxJpmO2X0AitTenMc7uNw4-Vt1P_lv9E5ceJtnOVYXRU6bSlS5aeTNmezC91XubbkxUK4abSiXFwMmSrTwLW_eP52Nx8_mbu26escsjQO-MKbO0ud43IL6JdDsI1FgVkAPvmyoH8FFyCZKpunug40C2F0i8XB_Vyj8udBWgD5zxa8p-E0TwWesYt8vpuQAnNzJEmhytFag3ZqCKdubdAy30CBGo--14F6c6atraz05m1c6V1ZBs7VVg1VbipYi7yOAOhiUT3p5NhJfbZ7jGhua0XT42LrMISLFwqmXFWtp_NR1Po2M1hKyWYZYfHyQG4c1I2JMC_Z3B1ByUAO_xyUa4TnIWSMlBv51QkYT3Xdh1xk7-CCJX9rlu58zdAe7POW0N3RY58TRBfX85w5t8vVtJgipw87hLoUxGiDr6_X9L1jhKcXbEW6p6yie6C5f8IO_t3n6e662SJ7Xx",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:18:00+00:00",
+  "video_extract": "LiL2_The_four_building_blocks_People",
+  "resources": [
+    {
+      "type": "video",
+      "title": "The four building blocks: People",
+      "url": "https://www.linkedin.com/learning/embed/communication-foundations-23064093/the-four-building-blocks-people-and-perspective?autoplay=false&claim=AQEUl-WUX1NglgAAAZPUXz1gRWaOzigBlQ-qmoobcFcrk27ODGTISSuBMLPqrCpdclmG1snL4zsAUc_E_kpHi3Gc3aXd-bLXDjwHNBC5m7hGoRlgyxwXnqZtYGmcj--5SVZlDNTeT4sTUrFM8exFISVHrN6YAS1-qN4VOwqnElNKAfRvmtFEsdWd1Zl-mbRUq3koBqTjoCUWmWFkZeQfFVlG3Pk_OkdAflLzNIvu96lXLGB34cok11lNjimfbuSsr2OivwssxPhf-aGsrQAErkOZogriLuwzM8H6PwO8yYxAjkniKTA2OclgCPgn_fMpT95LYkvigO_BSeMsZkApL5LMWk_pOCf2nZUkPtlNgXc0gAsJdo40Jq77GicFXOnfq4-uc6xNLTltYFjgZgreQBcVdFvmw6k44BvOijT_47iW201ashbeZeXkXbeq3ZAJUhTAojFJNA0WZjsap3GX776kqHPsLEVPo1s4_5g-yWTIdTriGm24SY8IPy83fuJ7WH3RweqA9utcl0ccIHLdJP7lu0wObSExVDh2JNHRqf-qkTxzCr4wHPX2fTl7WIP5dhVUj7pcHmqyYAoYztpj-WzdmElbbaURxfxCmNEQ6mKj1n3LXXrEPt9vtIQcjiyYumD5lkhxnNCCh4JSpJhstijCd9Hz4Z-KIGX2hQeckkNICraLYaFN5XIXHpeMM-dN1P3edWOEzupbcKWVaMi0SACOD6XAJFi5Lf9tX9ALp5N_bcqpL_yemaLbHY2uJ6UioqusCAxJpmO2X0AitTenMc7uNw4-Vt1P_lv9E5ceJtnOVYXRU6bSlS5aeTNmezC91XubbkxUK4abSiXFwMmSrTwLW_eP52Nx8_mbu26escsjQO-MKbO0ud43IL6JdDsI1FgVkAPvmyoH8FFyCZKpunug40C2F0i8XB_Vyj8udBWgD5zxa8p-E0TwWesYt8vpuQAnNzJEmhytFag3ZqCKdubdAy30CBGo--14F6c6atraz05m1c6V1ZBs7VVg1VbipYi7yOAOhiUT3p5NhJfbZ7jGhua0XT42LrMISLFwqmXFWtp_NR1Po2M1hKyWYZYfHyQG4c1I2JMC_Z3B1ByUAO_xyUa4TnIWSMlBv51QkYT3Xdh1xk7-CCJX9rlu58zdAe7POW0N3RY58TRBfX85w5t8vVtJgipw87hLoUxGiDr6_X9L1jhKcXbEW6p6yie6C5f8IO_t3n6e662SJ7Xx",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/johnkotter/2011/06/14/think-youre-communicating-enough-think-again/",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/chriscancialosi/2014/09/01/how-to-communicate-change-3-lessons-from-microsofts-recent-layoff",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/forbesagencycouncil/2016/05/03/communicating-effectively-in-times-of-change",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.inc.com/kat-boogaard/8-bad-communication-habits-you-need-to-break-immediately.html",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/06/leadership-is-a-conversation",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/carolkinseygoman/2013/07/18/communicating-change-what-people-want-to-hear-and-what-they-need-to-see",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 316,
+    "source_record_number": "312"
+  }
+}

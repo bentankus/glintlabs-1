@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "60351000-681d-11e7-8b6b-eddfdf1cfba6:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TEAM_INCLUSION"
+  ],
+  "source_question_id_cell": "[Q_TEAM_INCLUSION]",
+  "action_plan_template_uuid": "60351000-681d-11e7-8b6b-eddfdf1cfba6",
+  "template_name": "Glint Inclusion Team",
+  "sequence": 5,
+  "focus_area_title": "Promote and Value Diverse Contributions",
+  "content_type": "mixed",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "Promoting a culture of inclusion involves welcoming and accepting diverse perspectives at the table; hence, the goal of promoting diverse contributions implies creating an organizational culture where all employees believe their contributions are valued.\n\n### Safe environment\n\nCreating and maintaining a safe environment for exchange of ideas is a fundamental element in this process. Employees need to understand a safe environment offers room for exploration, mistakes, collaboration, and authenticity.\n\n### Encourage active participation\n\nExamine the dynamics of participation in your team (e.g. How many employees usually participate in discussion? Is there an employee who never participates? Is there a clique overpowering the discussion?) and determine if additional interventions are necessary to engage all members.\n\n### Celebrate differences\n\nExplicitly express the value of having diverse perspectives in the team and celebrate it! Acknowledge how contributions open opportunities to consider different perspectives and this broadens the team perceptions.\n\nTo learn more how diverse thinking can contribute to your leadership development, read this [article](https://www.forbes.com/sites/forbescoachescouncil/2016/11/17/why-understanding-other-perspectives-is-a-key-leadership-skill/#6858b516d206) describing the skill of perspective-taking.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2025-02-10T13:10:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/how-to-be-good-at-managing-both-introverts-and-extroverts",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/the-new-science-of-team-chemistry#pioneers-drivers-integrators-and-guardians",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/3067346/how-these-top-companies-are-getting-inclusion-right",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "article",
+      "url": "https://www.forbes.com/sites/forbescoachescouncil/2016/11/17/why-understanding-other-perspectives-is-a-key-leadership-skill/#6858b516d206",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 559,
+    "source_record_number": "555"
+  }
+}

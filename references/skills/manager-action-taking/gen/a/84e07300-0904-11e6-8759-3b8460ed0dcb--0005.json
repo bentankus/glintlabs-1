@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "84e07300-0904-11e6-8759-3b8460ed0dcb:5",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_COMPANY_PROSPECTS"
+  ],
+  "source_question_id_cell": "[Q_COMPANY_PROSPECTS]",
+  "action_plan_template_uuid": "84e07300-0904-11e6-8759-3b8460ed0dcb",
+  "template_name": "Glint Prospects",
+  "sequence": 5,
+  "focus_area_title": "Learning from failure in teams",
+  "content_type": "video",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_video",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "https://www.linkedin.com/learning/embed/leading-and-working-in-teams/learning-from-failure-in-teams?claim=AQHJEHbMBJH5DQAAAXBgWchEMrggi4fOrqq3HtVzNTzRbhit_vcfi_AMULKXs6yKL5M5oG1lpXPNBRTxuFBl1xJk9FI2_qkPqj7N1HgpsUF9cZD2UXXBEQjYV4uZe7IzZud80ptDxikUW8mUDKuphyaH1Mc6tMlOcR2cGp7i5Db6Mt9xFD2TrHEi-EIYcrioRIGRaNurDkSikA2x9jU4X6VaOgAt1qHYyBGSPq7B3MLW3lf9JkY0kxJ4si0FYin9vIG7JFIFxVh51CK7iF7VbxkcxBkwpp2yu_76mgkbVPJC8euszWFOPTIu-gi44pv6TANrFSQcVBN9pyDQ5r8nvg3OQEcNpuD5nyBqh4o6iOreK7g0uZhK9mcwac5wB__ib8vtRB4yvt7n-EGXy-N4anyKnJLudfXKW8ZS_ypswf2mdRIMjJDDy7oVGVOPudxTi4lPW8RIPTX02Og0b-yaeytunXkS7kAd5T13m7WR7Hin7BF7W9rVlxrXDCxH9cz-58dC3YkAVn6hdU91XGgURgDQYk82VF37QlG5AubeagRbv0pVbRAfsgXNbPDX9PPat3AoPhrrp3ySg7OM5WxInu_jKPaF6l3JtH3Mi5nvGzmT85nIZtndLN3Q6MNGRmxobtThA3-mF6hxeQJFiL3Hxbojeko2aKEQaGqV2omuoeQU68Z7341VFuLaKaVGSrbwcFhmEQNPHtZjhqMSgCHsww9Z1Is0j1FxDkf-Vv8709QG",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-20T13:43:00+00:00",
+  "video_extract": "LiL3_Learning_from_Failure",
+  "resources": [
+    {
+      "type": "video",
+      "title": "Learning from failure in teams",
+      "url": "https://www.linkedin.com/learning/embed/leading-and-working-in-teams/learning-from-failure-in-teams?claim=AQHJEHbMBJH5DQAAAXBgWchEMrggi4fOrqq3HtVzNTzRbhit_vcfi_AMULKXs6yKL5M5oG1lpXPNBRTxuFBl1xJk9FI2_qkPqj7N1HgpsUF9cZD2UXXBEQjYV4uZe7IzZud80ptDxikUW8mUDKuphyaH1Mc6tMlOcR2cGp7i5Db6Mt9xFD2TrHEi-EIYcrioRIGRaNurDkSikA2x9jU4X6VaOgAt1qHYyBGSPq7B3MLW3lf9JkY0kxJ4si0FYin9vIG7JFIFxVh51CK7iF7VbxkcxBkwpp2yu_76mgkbVPJC8euszWFOPTIu-gi44pv6TANrFSQcVBN9pyDQ5r8nvg3OQEcNpuD5nyBqh4o6iOreK7g0uZhK9mcwac5wB__ib8vtRB4yvt7n-EGXy-N4anyKnJLudfXKW8ZS_ypswf2mdRIMjJDDy7oVGVOPudxTi4lPW8RIPTX02Og0b-yaeytunXkS7kAd5T13m7WR7Hin7BF7W9rVlxrXDCxH9cz-58dC3YkAVn6hdU91XGgURgDQYk82VF37QlG5AubeagRbv0pVbRAfsgXNbPDX9PPat3AoPhrrp3ySg7OM5WxInu_jKPaF6l3JtH3Mi5nvGzmT85nIZtndLN3Q6MNGRmxobtThA3-mF6hxeQJFiL3Hxbojeko2aKEQaGqV2omuoeQU68Z7341VFuLaKaVGSrbwcFhmEQNPHtZjhqMSgCHsww9Z1Is0j1FxDkf-Vv8709QG",
+      "target": "",
+      "sources": [
+        "Video Link"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacobmorgan/2014/03/20/5-reasons-why-long-term-employment-is-dead-and-never-coming-back/#5881f4435027",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/lisaquast/2014/06/02/managers-7-tips-for-laying-off-employees-due-to-downsizing",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/joefolkman/2014/04/22/8-ways-to-ensure-your-vision-is-valued/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/rawnshah/2014/05/02/your-present-versus-future-orientation-mirrors-your-execution-versus-innovation/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/williamarruda/2015/06/17/three-steps-to-engaging-your-people-in-your-company-brand",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 679,
+    "source_record_number": "675"
+  }
+}

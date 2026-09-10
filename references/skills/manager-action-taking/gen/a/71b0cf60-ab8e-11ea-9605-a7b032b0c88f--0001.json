@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_TREATS_OTHERS_FAIRLY_360"
+  ],
+  "source_question_id_cell": "[Q_TREATS_OTHERS_FAIRLY_360]",
+  "action_plan_template_uuid": "71b0cf60-ab8e-11ea-9605-a7b032b0c88f",
+  "template_name": "Glint 360 Treats Others Fairly",
+  "sequence": 1,
+  "focus_area_title": "Make Sure Your Team Members Feel Fairly Treated",
+  "content_type": "mixed",
+  "action_type": "trust_and_inclusion",
+  "selection_signals": [
+    "trust_and_inclusion",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Many employees are dissatisfied with their manager overall because they don't feel like they have a fair shot at sought after opportunities. The goal here is to make sure that you are doing everything you can to make each team member feel that they have an equal opportunity to do well at the company.\n\n[Fairness is Essential](video \"LiL3_Fairness\")\n\n**Watch**: *Fairness is Essential*\n\n---\n\n### Create a simple spreadsheet\n\nTrack how opportunities, privileges, and rewards are distributed among your team. If some people are not getting their fair share, brainstorm ways to ensure everyone is treated fairly.\n\n### Talk to your team\n\nMake sure you have conversations with each team member where you focus on listening. This will help them them feel connected to current and future opportunities. Consider these [Conversation Tips](Glint_Manager_Tips_for_Talking_with_Your_Team).",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-12-19T13:18:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.bizjournals.com/bizjournals/how-to/growth-strategies/2014/02/treating-employees-fairly-not-the-same.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/pay-fairness-isnt-just-about-teaching-employees-to-negotiate",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/10/dont-let-power-corrupt-you",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/should-you-give-your-star-employees-star-treatment",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3036361/hit-the-ground-running/why-the-best-leaders-view-decisions-from-their-employees-perspective",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/03/how-managers-can-avoid-playing-favorites",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Fairness is Essential",
+      "url": "",
+      "target": "video \"LiL3_Fairness\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Conversation Tips",
+      "url": "",
+      "target": "Glint_Manager_Tips_for_Talking_with_Your_Team",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 215,
+    "source_record_number": "211"
+  }
+}

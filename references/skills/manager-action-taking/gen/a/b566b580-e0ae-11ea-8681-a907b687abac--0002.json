@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "b566b580-e0ae-11ea-8681-a907b687abac:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_CHANGE_WILLINGNESS"
+  ],
+  "source_question_id_cell": "[Q_GPS_CHANGE_WILLINGNESS]",
+  "action_plan_template_uuid": "b566b580-e0ae-11ea-8681-a907b687abac",
+  "template_name": "Glint Change Willingness - GPS",
+  "sequence": 2,
+  "focus_area_title": "When Action Planning is Ineffective",
+  "content_type": "mixed",
+  "action_type": "process_and_accountability",
+  "selection_signals": [
+    "process_and_accountability",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "### Why it is important\n\nA recent article published in the Journal of Patient Safety highlighted the most common reasons and myths organizations fail to take action, or why such actions are ineffective in improving safety, and solicited a number of safety experts to provide their thoughts on each point. Keeping in mind that each reason has been debunked can help drive conversation forward toward the improvement of patient safety! Below are some of the more common reasons for inaction in regards to patient safety improvements. **It's important to understand these reasons so they can be overcome internally:**\n\n- **Reason #1**:  \nThe business case; the pure economic return on investment (ROI).\n\n- **Reason #2**:  \nThe evidence for action excuse-that there is not enough compelling evidence to act immediately.\n\n- **Reason #3**:  \nThe capacity and resources excuse-that balancing act of operations and resource allocation.\n\n- **Reason #4**:  \nThe absence of leadership and values, when our leaders fail to live the values of the organization.\n\n- **Reason #5**:  \nPower and autonomy excuses, those hierarchical issues inside an organization and the power dynamic between those inside and doctors outside who do not work for the hospital.\n\n- **Reason #6**:  \nDisclosure fear-that the disclosure of errors to patients and families will increase malpractice claims and public shame.\n\n>Source:\n\n>Denham, Charles & Bagian, James & Daley, Jennifer & Edgman-Levitan, Susan & Gelinas, Lillee & O'Leary, Dennis & Sheridan, Sue & Wachter, Robert. (2005). No Excuses: The Reality That Demands Action. Journal of Patient Safety. 1. 154-169. 10.1097/01.jps.0000183854.29928.4d.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:37:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-safety/patient-safety-resources/resources/advances-in-patient-safety/vol4/Meadows.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://journals.lww.com/journalpatientsafety/pages/articleviewer.aspx?year=2005&issue=09000&article=00007&type=Fulltext",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-safety/patient-safety-resources/resources/advances-in-patient-safety/vol4/Nguyen.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://aeasseincludes.assp.org/professionalsafety/pastissues/059/11/F3Blair_1114.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 323,
+    "source_record_number": "319"
+  }
+}

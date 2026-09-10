@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "eb0ea1f0-ab8b-11ea-9371-fb5be38ee807:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_NAVIGATES_THE_ORGANIZATION_360"
+  ],
+  "source_question_id_cell": "[Q_NAVIGATES_THE_ORGANIZATION_360]",
+  "action_plan_template_uuid": "eb0ea1f0-ab8b-11ea-9371-fb5be38ee807",
+  "template_name": "Glint 360 Navigates the Organization",
+  "sequence": 1,
+  "focus_area_title": "Build community",
+  "content_type": "discussion_prompt",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "quick_start",
+    "has_external_resources"
+  ],
+  "content_description": "Discuss ideas to build a stronger team. Review and decide as a group what ways you can get to know each other better. Select 1 item to take action on.",
+  "content_text_body": "",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T10:04:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/firas-kittaneh/3-ways-leaders-can-become-outstanding-advocates-for-their-team.html",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/08/become-a-stronger-matrix-leade",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/martin-zwilling/6-strategies-for-building-relationships-you-need-to-succeed-in-business.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://sloanreview.mit.edu/article/why-great-leaders-focus-on-mastering-relationships/",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hrexecutive.com/how-to-build-community-among-your-workers/",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 168,
+    "source_record_number": "164"
+  }
+}

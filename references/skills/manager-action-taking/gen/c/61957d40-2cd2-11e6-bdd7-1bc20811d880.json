@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_template_uuid": "61957d40-2cd2-11e6-bdd7-1bc20811d880",
+  "template_name": "Glint Execution",
+  "action_plan_record_ids": [
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:1",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:2",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:3",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:4",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:5",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:6",
+    "61957d40-2cd2-11e6-bdd7-1bc20811d880:7"
+  ]
+}

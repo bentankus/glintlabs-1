@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "484c23b0-e0c5-11ea-a4b1-79e76de49060:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_COMMUNICATION"
+  ],
+  "source_question_id_cell": "[Q_GPS_COMMUNICATION]",
+  "action_plan_template_uuid": "484c23b0-e0c5-11ea-a4b1-79e76de49060",
+  "template_name": "Glint Communication - GPS",
+  "sequence": 1,
+  "focus_area_title": "Questions to Ask that can Lead to Action",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "According to the article, \"Leadership Role in Improving Safety\" by the Agency for Healthcare Research and Quality, data shows that healthcare leaders can improve safety through more direct interactions and communication with frontline workers. Frontline employees can spot issues that can impact patient safety that direct managers or senior leaders may overlook. Conversely, frontline workers need to understand leaders' broader vision and strategy around safety culture so their work is properly aligned to organizational objectives.\n\nYour survey results are very useful in helping you understand your team's strengths and opportunities when it comes to patient safety. However, they aren't enough to develop an effective response to the feedback. Before jumping into action, make sure to think carefully about your results and discuss them with your team. By engaging them in this process, you're giving the team ownership in creating a better safety culture and increasing the likelihood of achieving team goals. Below are some questions to ask yourself and the team to gather more information to help you develop an effective response to this feedback:  \n\n### Questions to ask yourself \n- How often do I and other leaders talk to my team about patient safety?\n- Should these discussions be conducted more frequently or less frequently?\n- Do these patient safety discussions have a set agenda?\n- Are these patient safety discussions interactive or are leaders doing most of the talking?\n- Are these patient safety discussions airing useful information to prevent patient safety issues? \n- How could we make these patient safety discussions more productive?\n- When employees suggest changes to improve patient safety that you and other leaders agree with, are these changes implemented quickly?\n- Do I make sure that employees know they can report safety issues to me or other leaders without fear of retaliation?\n\n### Questions to ask your team\n- Do you feel we are communicating effectively around patient safety?\n- If not, what would your ideal agenda look like for a patient safety discussion?\n- Are there other leaders here that should join these patient safety conversations?\n- Are you receiving enough communication from me and other leaders regarding patient safety policies, procedures, areas to improve, and/or successes?\n- Do you feel your feedback regarding patient safety is taken seriously by myself and other leadership?\n- What are some of the best ways you've seen leaders and employees communicate with one another in other organizations, hospitals, and units?",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T07:21:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ehstoday.com/safety-leadership/article/21910153/communication-strategies-for-achieving-a-total-safety-culture",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://europepmc.org/article/PMC/6626231",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/the-chronic-problem-of-communication-why-it-s-a-patient-safety-issue-and-how-hospitals-can-address-it.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/11/building-a-culture-of-transparency-in-health-care",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=LhoLuui9gX8",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.ultimatemedical.edu/blog/how-to-improve-your-communication-skills-as-a-nurse/",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.nursingworld.org/~4af4f2/globalassets/docs/ana/ethics/principles-of-collaborative-relationships.pdf",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 346,
+    "source_record_number": "342"
+  }
+}

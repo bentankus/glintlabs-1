@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "926499a0-0b04-11e6-8135-4f9e7469f586:3",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_JOB_RESOURCES"
+  ],
+  "source_question_id_cell": "[Q_JOB_RESOURCES]",
+  "action_plan_template_uuid": "926499a0-0b04-11e6-8135-4f9e7469f586",
+  "template_name": "Glint Resources",
+  "sequence": 3,
+  "focus_area_title": "Encourage Your Team to Ask for Support",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "The goal is to create an environment at work where people feel that it's okay to ask each other for support.\n\n[How to Get Better at Asking for Help](video \"LiL3_How_to_Ask_for_Help\")\n\n**Watch**: *How to Get Better at Asking for Help*\n\n---\n\n### Why is it important?\n\nAs a manager, if you model asking for and offering help, your team members are more likely to support each other, work together and have positive relationships. And by discussing why supporting one another is important, you will create a greater sense of 'we are all in it together' on the team.\n\n### Knowledge sharing\n\nSchedule a team meeting focused on knowledge sharing and creating opportunities for support. Ask each team member to share their areas of expertise and experience, as well as development areas where they would like to learn more or improve. Identify opportunities for pairing team members, group lunch and learns, and other ways to bring team members together to support one another in their learning and performance.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:27:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/02/use-your-staff-meeting-for-peer-to-peer-coaching",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/dailymuse/2013/02/10/why-you-never-finish-your-to-do-lists-at-work-and-how-to-change-that",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/01/why-good-jobs-are-good-for-retailers",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/ilyapozin/2013/08/14/9-habits-of-productive-people",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3047784/how-to-be-a-success-at-everything/how-leaders-can-ask-for-help-and-keep-their-teams-confiden",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/jacquelynsmith/2012/08/24/14-things-you-should-do-at-the-start-of-every-work-day",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2010/02/cultivate-your-coaching-networ-2/",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "How to Get Better at Asking for Help",
+      "url": "",
+      "target": "video \"LiL3_How_to_Ask_for_Help\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 723,
+    "source_record_number": "719"
+  }
+}

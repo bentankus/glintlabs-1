@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "da797b60-e0ad-11ea-9614-2b26f428f070:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_ROOT_CAUSE"
+  ],
+  "source_question_id_cell": "[Q_GPS_ROOT_CAUSE]",
+  "action_plan_template_uuid": "da797b60-e0ad-11ea-9614-2b26f428f070",
+  "template_name": "Glint Root Cause - GPS",
+  "sequence": 1,
+  "focus_area_title": "Questions to Ask that can Lead to Action",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "According to the article, \"The essential role of leadership in developing a safety culture\" by the Joint Commission, leaders can help create a culture of safety by making patient safety visible through every day actions. \n\nIn an integrated patient safety system, staff and leaders work together to eliminate complacency, promote collective mindfulness, treat each other with respect and compassion, and learn from their patient safety events, including close calls and other system failures that have not yet led to patient harm.\n\nYour survey results are very useful in helping you understand your team's strengths and opportunities when it comes to patient safety. However, they aren't enough to develop an effective response to the feedback. Before jumping into action, make sure to think carefully about your results and discuss them with your team. By engaging them in this process, you're giving the team ownership in creating a better safety culture and increasing the likelihood of achieving team goals. Below are some questions to ask yourself and the team to gather more information to help you develop an effective response to this feedback:  \n\n- **Questions to Ask Yourself**\n>- Do I understand the problems that are common or reoccurring employees here face?\n>- Do I provide feedback and respond positively to those who report patient safety vulnerabilities?\n>- Do I address the surrounding conditions which may enable or disable the success of safety solutions, such as the environment, unit teamwork, and employee well-being? \n>- Do I take time to delve deep and explore all facets of safety issues reported by employees?\n>- Do I see safety issues as problems caused by bad employees or by bad organizational systems?\n>- Do I hold individuals accountable for \"cutting corners\" or other reckless behavior when it comes to safety?\n>- When they are needed, do I consistently prioritize and implement safety recommendations?\n\n- **Questions to Ask Your Team**\n>- Do you feel the solutions we've put in place to address safety concerns are getting at the core issues?\n>- Do you know what the organization is most focused on right now in terms of improving patient safety?\n>- Do you think we focus enough on developing 'permanent fixes' to address safety concerns? Are there 'temporary fixes' in place which are no longer effective?\n>- What issues do you see that come up again and again? What solutions have we tried in the past that have worked? What solutions have we tried in the past have been ineffective, and why do you think that is?\n>- What safety issues do you feel we've significantly improved upon? What do you think we still need to improve?\n\n>Source: Joint Commission. (2017). Patient safety systems (PS). Comprehensive Accreditation Manual for Hospitals. [https://www. jointcommission.org/patient_safety_systems_chapter_for_the_hospital_program/](https://www.jointcommission.org/patient_safety_systems_chapter_for_the_hospital_program/). Published March, 3.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2020-11-30T11:12:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://youtu.be/JL5GTxDzApk",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2018/10/how-one-hospital-improved-patient-safety-in-10-minutes-a-day",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/ehrs/taking-a-systems-approach-to-improve-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jointcommission.org/-/media/deprecated-unorganized/imported-assets/tjc/system-folders/assetmanager/humanfactorsthe_sourcepdf.pdf?db=web&hash=085A09275C38FACB50BC3D92CB35450A",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.beckershospitalreview.com/quality/npsf-8-tips-to-create-a-total-systems-approach-to-patient-safety.html",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/systems-approach",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://psnet.ahrq.gov/primer/checklists",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "inline_external",
+      "title": "https://www. jointcommission.org/patient_safety_systems_chapter_for_the_hospital_program/",
+      "url": "https://www.jointcommission.org/patient_safety_systems_chapter_for_the_hospital_program/",
+      "target": "",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 755,
+    "source_record_number": "751"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "survey_csv": "survey.csv",
+  "scale_points": 5,
+  "emp_id_col": "Employee ID",
+  "attribute_file": "attributes.csv",
+  "attribute_cols": ["Department"],
+  "min_group_size": 5,
+  "analyses": [
+    "descriptives",
+    "response_distribution",
+    "correlations",
+    "factor_analysis",
+    "by_attribute",
+    "cycle_comparisons",
+    "attrition"
+  ]
+}

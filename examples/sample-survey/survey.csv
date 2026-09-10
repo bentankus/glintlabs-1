@@ -1,0 +1,16 @@
+Employee ID,First Name,Last Name,Email,Status,Manager ID,Survey Cycle Sent Date,Survey Cycle Completion Date,I have the resources I need to do my best work,I have the resources I need to do my best work_COMMENT,I have the resources I need to do my best work_COMMENT_TOPICS,I have the resources I need to do my best work_SENSITIVE_COMMENT_FLAG,My manager supports my growth,My manager supports my growth_COMMENT,My manager supports my growth_COMMENT_TOPICS,My manager supports my growth_SENSITIVE_COMMENT_FLAG,Our team has clear priorities,Our team has clear priorities_COMMENT,Our team has clear priorities_COMMENT_TOPICS,Our team has clear priorities_SENSITIVE_COMMENT_FLAG,I feel energized by my work,I feel energized by my work_COMMENT,I feel energized by my work_COMMENT_TOPICS,I feel energized by my work_SENSITIVE_COMMENT_FLAG,I see myself staying at this company,I see myself staying at this company_COMMENT,I see myself staying at this company_COMMENT_TOPICS,I see myself staying at this company_SENSITIVE_COMMENT_FLAG
+E001,Ada,One,ada@example.com,ACTIVE,M001,2026-07-01 09:00,2026-07-15 09:00,5,,,0,5,,,0,4,,,0,5,,,0,5,,,0
+E002,Ben,Two,ben@example.com,ACTIVE,M001,2026-07-01 09:00,2026-07-15 09:05,4,,,0,4,,,0,4,,,0,4,,,0,4,,,0
+E003,Cam,Three,cam@example.com,ACTIVE,M001,2026-07-01 09:00,2026-07-15 09:10,5,,,0,4,,,0,5,,,0,5,,,0,5,,,0
+E004,Dia,Four,dia@example.com,ACTIVE,M001,2026-07-01 09:00,2026-07-15 09:15,4,,,0,5,,,0,4,,,0,4,,,0,4,,,0
+E005,Eli,Five,eli@example.com,ACTIVE,M001,2026-07-01 09:00,2026-07-15 09:20,3,,,0,4,,,0,3,,,0,4,,,0,3,,,0
+E006,Fay,Six,fay@example.com,ACTIVE,M002,2026-07-01 09:00,2026-07-15 09:25,2,,,0,3,,,0,2,,,0,2,,,0,2,,,0
+E007,Gus,Seven,gus@example.com,ACTIVE,M002,2026-07-01 09:00,2026-07-15 09:30,3,,,0,3,,,0,3,,,0,3,,,0,3,,,0
+E008,Hui,Eight,hui@example.com,ACTIVE,M002,2026-07-01 09:00,2026-07-15 09:35,2,,,0,2,,,0,2,,,0,2,,,0,2,,,0
+E009,Ira,Nine,ira@example.com,ACTIVE,M002,2026-07-01 09:00,2026-07-15 09:40,1,,,0,2,,,0,2,,,0,1,,,0,1,,,0
+E010,Jae,Ten,jae@example.com,ACTIVE,M002,2026-07-01 09:00,2026-07-15 09:45,3,,,0,2,,,0,3,,,0,2,,,0,2,,,0
+E011,Kai,Eleven,kai@example.com,ACTIVE,M003,2026-07-01 09:00,2026-07-15 09:50,5,,,0,4,,,0,5,,,0,4,,,0,5,,,0
+E012,Lee,Twelve,lee@example.com,ACTIVE,M003,2026-07-01 09:00,2026-07-15 09:55,4,,,0,5,,,0,5,,,0,5,,,0,5,,,0
+E013,Mia,Thirteen,mia@example.com,ACTIVE,M003,2026-07-01 09:00,2026-07-15 10:00,4,,,0,4,,,0,4,,,0,4,,,0,4,,,0
+E014,Nia,Fourteen,nia@example.com,ACTIVE,M003,2026-07-01 09:00,2026-07-15 10:05,5,,,0,5,,,0,5,,,0,5,,,0,5,,,0
+E015,Oli,Fifteen,oli@example.com,ACTIVE,M003,2026-07-01 09:00,2026-07-15 10:10,4,,,0,4,,,0,5,,,0,4,,,0,4,,,0

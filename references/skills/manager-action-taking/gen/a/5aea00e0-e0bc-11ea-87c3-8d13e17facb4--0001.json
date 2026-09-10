@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_GPS_JUST_RESPONSE"
+  ],
+  "source_question_id_cell": "[Q_GPS_JUST_RESPONSE]",
+  "action_plan_template_uuid": "5aea00e0-e0bc-11ea-87c3-8d13e17facb4",
+  "template_name": "Glint Just Response - GPS",
+  "sequence": 1,
+  "focus_area_title": "Root Cause Analysis",
+  "content_type": "mixed",
+  "action_type": "resources_and_support",
+  "selection_signals": [
+    "resources_and_support",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "",
+  "content_text_body": "It can be very informative and insightful to utilize a multi-disciplinary team approach tool - known as Root Cause Analysis - to study health care-related adverse events and close calls. The goal of the RCA process is to find out what happened, why it happened, and how to prevent it from happening again\n\n### Why is it important?\n\nPatient safety events can cause serious harm or death. They affect anyone. To address and prevent these threats, health care organizations must dig deep to unearth the root cause(s) and develop solutions that address the problems from a systems perspective. Indeed, the very presence of patient safety events indicates a continuing paradox in contemporary health care. Despite remarkable advances in almost every field of health care, the occurrence of errors persists. When such failures harm patients, the results can be heartbreaking. These events can result in tragedy for individuals served and their families, add costs to an already overburdened healthcare system, adversely affect the public's perception of an organization, and lead to litigation. They can also deeply affect health care professionals who are dedicated to the well-being of their patients. Health care organizations, then, have no choice but to answer one key question: Why do these errors or failures continue to occur? To answer this, a comprehensive systematic analysis must be done. The most commonly used form of comprehensive systematic analysis among accredited organizations is root cause analysis.\n\n**Below are some common steps in the RCA process:**\n\n- **Include participation by the leadership of the organization and those most closely involved in the processes and systems**  \nIt is imperative that organizations include leadership as part of the root cause analysis - this adds credibility to the analysis and leads to stronger implications that action will be taken.\n\n- **Identify causes and contributing factors of an event or a cluster of incidents**  \nAre human factors involved? Is this a one-off event or a recurring event? Is it happening during certain shifts, particular units? First and foremost, identifying the potential causes and contributing factors is a thorough first step in conducting a root cause analysis. The development of an initial sequence of events diagram or flowchart can be very helpful for this step.\n\n- **Identify system vulnerabilities that could lead to patient harm and errors**  \nAs you get deeper into the root cause analysis, investigating potential systematic underlying cause and effects through a series of 'why' questions will aid in understanding vulnerabilities that lead to patient harm and errors. Remember you are looking for truth about systems issues, not individuals and the primary goals are to find what happened and why it happened.\n\n- **Implement risk reduction strategies that decrease the likelihood of a recurrence of the event or incidents**  \nIdentification of risks and their potential contributions is integral in ensuring that reduction strategies that will decrease the likelihood of these incidents recurring. Closing the loop on events and the necessary action recommendations will drive effective and efficient improvement to your processes and performance.\n\n- **Determine effective and efficient ways of measuring and improving performance**  \nReporting back to leadership and/or following up on our root cause analysis report to measure effectiveness of our improvement initiatives will drive continuous advancement in our processes and build momentum in ensuring action and follow-up are taken in future events.\n\n>Sources: \n\n>VA National Center for Patient Safety:  Root Cause Analysis\n\n>The Joint Commission:  Root Cause Analysis in Healthcare: Tools and Technique",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:45:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://incident-prevention.com/ip-articles/near-miss-and-good-catch-reporting-1#:~:text=The%20intent%20of%20a%20near,from%20happening%20in%20the%20future.",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.jcrinc.com/-/media/deprecated-unorganized/imported-assets/jcr/default-folders/items/ebrca15samplepdf.pdf?db=web&hash=D9A527F917C81876009A950394FE8D69",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.youtube.com/watch?v=zeldVu-3DpM",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 601,
+    "source_record_number": "597"
+  }
+}

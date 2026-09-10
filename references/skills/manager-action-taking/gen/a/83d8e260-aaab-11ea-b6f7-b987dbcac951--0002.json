@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "83d8e260-aaab-11ea-b6f7-b987dbcac951:2",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_HOLDS_SELF_ACCOUNTABLE_360"
+  ],
+  "source_question_id_cell": "[Q_HOLDS_SELF_ACCOUNTABLE_360]",
+  "action_plan_template_uuid": "83d8e260-aaab-11ea-b6f7-b987dbcac951",
+  "template_name": "Glint 360 Holds Self Accountable",
+  "sequence": 2,
+  "focus_area_title": "Understand Your Strengths and Weaknesses",
+  "content_type": "mixed",
+  "action_type": "growth_and_development",
+  "selection_signals": [
+    "growth_and_development",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "\"I would recommend my manager\u00e2\u20ac\u009d is a broad topic. In order to address it effectively you will need to narrow in on your key improvement opportunities.\n\n### Communicate with your team\n\nLet them know how much you appreciate them for giving their candid feedback on the survey. Share with them how committed your are to improving, that you are going to spend a couple of weeks zeroing in on an improvement opportunity, and that you will continue to need their candid feedback as you do that.\n\n### Assess yourself\n\nSpend 30 minutes this week thinking about your strengths and weaknesses as a manager. Use this [Manager Self-Assessment](Glint_Manager_Manager_Self-Assessment) to create a summary of your current status and goals for improvement.\n\nThen seek candid advice from someone you trust at work on your assessment of yourself and on your proposed goals.\n\n### Ask your team for feedback\n\nShare your self-assessment and proposed solutions with your team. Ask them to help you select your single most important improvement goal.\n\n### Commit to one thing\n\nOnce you've determined your most important goal, set achievable and measurable milestones that will help you achieve it. Seek feedback along the way from your team and others you trust.\n\n[Understanding Strengths and Weaknesses](video \"LiL3_Strengths_and_Weaknesses\")\n\n**Watch**: *Understanding Strengths and Weaknesses*\n\n---",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2024-10-17T13:34:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/06/be-a-leader-who-can-admit-mistakes",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2019/06/how-to-move-from-self-awareness-to-self-improvement",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://sloanreview.mit.edu/article/learning-for-a-living/",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.fastcompany.com/40543815/how-to-turn-your-biggest-goals-into-monthly-weekly-and-daily-to-dos",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/kevinkruse/2020/01/13/improve-personal-accountability-12-things-to-do-in-12-weeks/#50ba76c46e63",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.inc.com/lolly-daskal/4-impressive-ways-great-leaders-handle-their-mistakes.html",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Manager Self-Assessment",
+      "url": "",
+      "target": "Glint_Manager_Manager_Self-Assessment",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Understanding Strengths and Weaknesses",
+      "url": "",
+      "target": "video \"LiL3_Strengths_and_Weaknesses\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 145,
+    "source_record_number": "141"
+  }
+}

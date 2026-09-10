@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "ae3c4e60-7d46-11e7-8517-63521c71a395:4",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_INFORMED_CROSSTEAM"
+  ],
+  "source_question_id_cell": "[Q_INFORMED_CROSSTEAM]",
+  "action_plan_template_uuid": "ae3c4e60-7d46-11e7-8517-63521c71a395",
+  "template_name": "Awareness",
+  "sequence": 4,
+  "focus_area_title": "Identify and Reward Good Cross-Functional Sharing",
+  "content_type": "mixed",
+  "action_type": "resource_learning",
+  "selection_signals": [
+    "resource_learning",
+    "has_detailed_guidance",
+    "has_external_resources",
+    "has_unresolved_internal_references"
+  ],
+  "content_description": "",
+  "content_text_body": "Instead of creating another meeting or action step to share information from other parts of the business, look for work that is already underway in different departments.\n\n[Making Collaboration a Habit](video \"LiL3_Collaboration_Habit\")\n\n**Watch**: *Making Collaboration a Habit*\n\n---\n\n* Some groups already have weekly or monthly newsletters. Ask to be added to the distribution list and scan the headlines for information that is relevant to your team.\n\n* Look for recurring Town Hall or team meetings that a member of your team can audit and report back key takeaways.\n\n* Encourage your team to invite cross-functional partners in their own planning meetings where an outside perspective would be valuable.\n\n* If you see an example of a missed opportunity due to poor cross-functional communication, diagnose where the miss was and how you can better communicate in advance before it becomes a bigger problem.\n\n* Have senior leaders encourage and reward \"intrapreneurial\u00e2\u20ac\u009d behavior when departments and teams adapt ideas/approaches/tools from other areas of the business and use them in a new way.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-06-07T00:02:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/theyec/2014/10/03/4-steps-for-building-a-culture-of-open-communication",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/johnkotter/2011/05/03/breaking-down-silos/#7f25e99f63b6",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/12/a-simpler-way-to-get-employees-to-share.html",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2014/07/collaborate-across-teams-silos-and-even-companies",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.forbes.com/sites/brentgleeson/2013/10/02/the-silo-mentality-how-to-break-down-the-barriers",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://www.forbes.com/sites/chuckcohn/2014/10/24/strategies-to-strengthen-communication-within-your-company/2/#7b029d175214",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "internal_reference",
+      "title": "Making Collaboration a Habit",
+      "url": "",
+      "target": "video \"LiL3_Collaboration_Habit\"",
+      "sources": [
+        "content_text_body"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 7,
+    "source_record_number": "3"
+  }
+}

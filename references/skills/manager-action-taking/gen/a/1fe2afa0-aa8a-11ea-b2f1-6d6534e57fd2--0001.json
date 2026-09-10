@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0.0",
+  "action_plan_record_id": "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2:1",
+  "id_strategy": "action_plan_template_uuid:sequence",
+  "question_ids": [
+    "Q_PSYCHOLOGICAL_SAFETY_360"
+  ],
+  "source_question_id_cell": "[Q_PSYCHOLOGICAL_SAFETY_360]",
+  "action_plan_template_uuid": "1fe2afa0-aa8a-11ea-b2f1-6d6534e57fd2",
+  "template_name": "Glint 360 Psychological Safety",
+  "sequence": 1,
+  "focus_area_title": "Show Your Team That You Value Their Input",
+  "content_type": "mixed",
+  "action_type": "team_conversation",
+  "selection_signals": [
+    "team_conversation",
+    "has_detailed_guidance",
+    "has_external_resources"
+  ],
+  "content_description": "Input Action Item",
+  "content_text_body": "When employees see their leaders visibly demonstrate that they value team members' input, they develop greater trust and connection. The goal is to help your team see how you value their feedback and ideas by listening and taking action.\n\n### Collect and share stories\n\nCapture stories where team members' ideas helped them overcome big challenges, achieve better results, or work together more efficiently or effectively. Share these positive stories with the team. Also, acknowledge past times where you might not have done all you could to advocate for your team's ideas, and express your commitment to being more supportive going forward.\n\n### Be an Effective Advocate\n\nTo be an advocate for your team, you must understand each team member's experiences and needs and seek out the appropriate support for them.  \n\nPractice asking your team members how they are doing, if they need any support, and what concerns they have about their work or the business.  \n\nAsk them to help you build a case for implementing a new idea, solving a significant problem, or if necessary, gaining more resources.\n\nMake a commitment to them to share their concerns, ideas, and experiences with senior leaders. Be specific about when and how you will do that.  And be clear and concise about when and why you chose not to pursue a particular request.",
+  "content_resource_version_id": "",
+  "template_version_last_modified_at": "2023-05-26T10:05:00+00:00",
+  "video_extract": "",
+  "resources": [
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/listening-is-an-overlooked-leadership-tool",
+      "target": "",
+      "sources": [
+        "Ext Link 1"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/02/diversity-doesnt-stick-without-inclusion",
+      "target": "",
+      "sources": [
+        "Ext Link 2"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2015/11/authentic-workplaces-dont-try-to-make-everyone-the-same",
+      "target": "",
+      "sources": [
+        "Ext Link 3"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2012/12/what-being-an-authentic-leader-really-means",
+      "target": "",
+      "sources": [
+        "Ext Link 4"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/podcast/2019/01/creating-psychological-safety-in-the-workplace",
+      "target": "",
+      "sources": [
+        "Ext Link 5"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2016/05/most-employees-feel-authentic-at-work-but-it-can-take-a-while",
+      "target": "",
+      "sources": [
+        "Ext Link 6"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2011/07/how-to-make-diversity-and-incl",
+      "target": "",
+      "sources": [
+        "Ext Link 7"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "https://hbr.org/2017/08/high-performing-teams-need-psychological-safety-heres-how-to-create-it",
+      "target": "",
+      "sources": [
+        "Ext Link 8"
+      ],
+      "status": "unchecked"
+    },
+    {
+      "type": "external_link",
+      "title": "",
+      "url": "http://www.fastcompany.com/3034144/hit-the-ground-running/6-ways-humility-can-make-you-a-better-leader",
+      "target": "",
+      "sources": [
+        "Ext Link 9"
+      ],
+      "status": "unchecked"
+    }
+  ],
+  "source": {
+    "workbook_sha256": "c25d0d2553a1329bbdd1253a04becb0a321fb6f951408287dca5944354129408",
+    "sheet": "APTemplate_FocusAreas_Ext",
+    "excel_row": 172,
+    "source_record_number": "168"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "eve-people-science",
-  "description": "People Science analytics plugin suite for Viva Glint survey data: run pinned vivaglint analyses, validate output quality, and interpret findings.",
-  "version": "2.0.0",
+  "description": "People Science plugin suite for Viva Glint survey analysis, interpretation, and externally shareable published knowledge.",
+  "version": "2.1.0",
   "author": {
     "name": "Ben Tankus",
     "email": "bentankus@microsoft.com"
@@ -12,6 +12,7 @@
     "viva-glint",
     "survey",
     "analytics",
+    "knowledge",
     "vivaglint"
   ]
 }

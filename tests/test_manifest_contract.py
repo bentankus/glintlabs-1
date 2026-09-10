@@ -17,5 +17,5 @@ def test_plugin_manifest_matches_standalone_layout():
     )
 
     assert manifest["name"] == "eve-people-science"
-    assert manifest["version"] == "2.0.0"
+    assert manifest["version"] == "2.1.0"
     assert "mcpServers" not in manifest

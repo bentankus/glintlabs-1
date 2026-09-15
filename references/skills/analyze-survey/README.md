@@ -1,40 +1,99 @@
-# Analyze Survey references
+# Analyze Survey reference
 
-Place first-priority documents for `analyze-survey` here.
+`analyze-survey` accepts a survey export directly and deterministically creates
+the analysis manifest, aggregate artifacts, interactive HTML report, and safe
+share ZIP.
 
-Use this folder for:
+## Supported input
 
-- input-data requirements
-- codebook runbooks
-- supported Glint export formats
-- analysis configuration examples
-- package-version notes
-- deterministic/repeatability expectations
-- known `vivaglint` edge cases
-- `interactive-report-contract.md`, the required user-facing output format
+- CSV survey exports
+- XLSX/XLSM workbooks
+- Wide item data with one row per respondent and numeric `Q_*` columns
+- Optional employee attributes in the same table or a workbook sheet named
+  `user_properties`, `attributes`, `employee attributes`, or `demographics`
 
-When `analyze-survey` runs, inspect this folder before `references/general/`.
+Automatic employee ID detection recognizes common forms such as `user_id`,
+`employee_id`, and `respondent_id`. Use explicit command options when an export
+uses different names.
 
-## Canonical demo workbook
+## Registered linked source
 
-When a user does not have their own survey data, reference and use:
+The sole registered sample source is `Viva Glint Dataset with Attributes.xlsx`
+at:
 
-- **File:** `Demo Viva Glint Dataset with Attributes.xlsx`
-- **Worksheet:** `Sheet1`
-- **Attributes:** `user_properties`
-- **URL:** https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
-- **Defaults:** `input_format: wide_items`, `emp_id_col: user_id`, scale points
-  `5`
+```text
+https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
+```
 
-Export `Sheet1` to CSV for the current runner and join `user_properties` by
-`user_id`. If authenticated SharePoint access is unavailable, use
-`demo-data/survey/config.json` and `demo-data/survey/glint_demo_data.csv` as
-the disclosed offline fallback.
+Use `Sheet1`, join `user_properties` by `user_id`, and use a 5-point scale.
+Do not replace it with bundled, generated, or synthetic survey data. If access
+is unavailable, report the access problem instead of silently substituting a
+different dataset.
 
-## Required report
+## Deterministic entry point
 
-After the analysis passes repeatability, generate the interactive report and
-shareable ZIP defined in `interactive-report-contract.md`. Use precomputed
-aggregate interactions rather than browser-side employee analysis.
-`scripts/run_vivaglint_analysis.py` invokes
-`scripts/build_interactive_report.py` automatically.
+```text
+scripts/analyze_survey_export.py
+```
+
+This script is the only normal user-facing entry point. It prepares an internal
+config under `<output>/_input/`, then calls:
+
+1. `scripts/run_vivaglint_analysis.py`
+2. `scripts/build_interactive_report.py`
+
+The analysis must pass the two-run artifact hash comparison before the report
+builder runs.
+
+## Privacy
+
+- Minimum displayed group size defaults to 5.
+- Raw survey and attribute files stay outside the share ZIP.
+- Names, email addresses, comments, phone numbers, and addresses are never
+  automatically selected as report attributes.
+- Browser interactions use embedded aggregate data, not respondent rows.
+
+## Report
+
+The required behavior and packaging are defined in
+`interactive-report-contract.md`.
+
+`golden-report.html` is the user-approved canonical HTML example. The report
+builder reads that file directly and replaces only the `const D=...` aggregate
+data payload. Do not restyle, restructure, rename, or independently recreate
+the report shell. The aggregate values embedded in the golden file are example
+values and must never be reused for another analysis.
+
+Before changing the golden report or any report colors, load
+`references/design/glint-ui-system.md`. It points to the canonical
+`glint-ui-system` skill and records the required Glint/Fluent design rules.
+
+The golden report intentionally excludes Overview, Item results, and Heatmap.
+Its six tabs are Scores change, Relationships, Alerts, Factors, Attrition
+analysis, and Downloads.
+
+The Scores change table layout is grounded in `scores-change-format.png`.
+Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value
+indicator, alternating rows, and proportional score-difference bars.
+Include a Respondent population control with All respondents and Repeat
+respondents. Repeat-only values must be precomputed from employee IDs present
+in both selected cycles and remain subject to minimum-N suppression.
+
+The Relationships matrix classifies absolute Pearson `r` as Low (`< .30`),
+Medium (`.30-.49`), High (`.50-.69`), or Very high (`>= .70`). Preserve the
+minimum-strength filter, strength-color toggle, significance toggle,
+add/remove question highlights, summary counts, and click-through cell details
+in the golden report. Keep the matrix visually compact: full question names on
+both axes in small regular-weight text, subtle-to-strong blue intensity,
+significance hidden by default, and no empty highlight or detail panels.
+Use deterministic average-linkage clustering over positive-correlation
+distance. Show the silhouette-based recommendation in a short blurb, default
+to it, and allow selection from 3 through 10 clusters or through the
+recommendation when it is higher.
+
+The Alerts tab is a triage table. Preserve severity summary counts,
+company-adjusted change, Welch significance, compact filters and sorting, and
+expandable top-five item declines. Severity rules and minimum-N behavior are
+defined in `interactive-report-contract.md`; do not replace them with visual
+judgment or causal language. Every alert group must have at least 20 responses
+in both compared cycles, including filtered intersections.

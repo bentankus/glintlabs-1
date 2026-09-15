@@ -11,14 +11,17 @@ import zipfile
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import pandas as pd
+from scipy.cluster.hierarchy import cut_tree, linkage
+from scipy.spatial.distance import squareform
 from scipy.stats import t as student_t
 
 
 MIN_N = 5
 RELATIONSHIP_MIN_N = 30
-ALERT_MIN_N = 10
-FILTERED_ALERT_MIN_N = 5
+ALERT_MIN_N = 20
+FILTERED_ALERT_MIN_N = 20
 
 
 def args() -> argparse.Namespace:
@@ -50,6 +53,11 @@ def normalize_items(frame: pd.DataFrame, questions: list[str], scale: int) -> No
 
 
 def bucket_numeric(frame: pd.DataFrame, protected: set[str]) -> dict[str, list[str]]:
+    def bucket_label(item: Any) -> str | None:
+        if not hasattr(item, "left"):
+            return None
+        return f"{math.floor(item.left) + 1}-{math.floor(item.right)}"
+
     bucketed = {}
     for column in frame.select_dtypes(include="number").columns:
         if column in protected or frame[column].nunique(dropna=True) <= 10:
@@ -59,14 +67,10 @@ def bucket_numeric(frame: pd.DataFrame, protected: set[str]) -> dict[str, list[s
             positive = values[values > 0]
             cuts = pd.qcut(positive, 4, duplicates="drop")
             mapped = pd.Series("0", index=frame.index, dtype="object")
-            mapped.loc[positive.index] = cuts.map(
-                lambda item: f"{math.floor(item.left) + 1}-{math.floor(item.right)}"
-            ).astype("object")
+            mapped.loc[positive.index] = cuts.map(bucket_label).astype("object")
         else:
             cuts = pd.qcut(values, 5, duplicates="drop")
-            mapped = cuts.map(
-                lambda item: f"{math.floor(item.left) + 1}-{math.floor(item.right)}"
-            ).astype("object")
+            mapped = cuts.map(bucket_label).astype("object")
         frame[column] = mapped
         bucketed[column] = sorted(frame[column].dropna().astype(str).unique())
     return bucketed
@@ -112,33 +116,90 @@ def cycle_cube(
     cycle_col: str | None,
 ) -> dict[str, Any]:
     if not cycle_col:
-        return {"cycles": [], "overall": {}, "segments": {}}
-    cycles = sorted(frame[cycle_col].dropna().astype(str).unique())
-    if len(cycles) != 2:
-        return {"cycles": cycles, "overall": {}, "segments": {}}
-    overall = {
-        cycle: {
-            "n": int(len(group)),
-            "items": metrics(group, questions),
+        return {
+            "cycles": [],
+            "overall": {},
+            "segments": {},
+            "repeat": {"overall": {}, "segments": {}},
         }
-        for cycle, group in frame.groupby(cycle_col)
-    }
+    cycles = list(dict.fromkeys(frame[cycle_col].dropna().astype(str)))
+
+    def cycle_metrics(source: pd.DataFrame) -> list[list[float | int]]:
+        rows = []
+        for question in questions:
+            values = source[question].dropna()
+            rows.append(
+                [
+                    round(float((values.mean() - 1) * 25), 1),
+                    round(float(values.std(ddof=1) * 25), 1),
+                    int(len(values)),
+                ]
+            )
+        return rows
+
+    def cycle_values(source: pd.DataFrame) -> dict[str, Any]:
+        return {
+            cycle: {
+                "n": int(len(group)),
+                "items": cycle_metrics(group),
+            }
+            for cycle, group in source.groupby(cycle_col, sort=False)
+            if len(group) >= MIN_N
+        }
+
+    def repeat_values(source: pd.DataFrame) -> dict[str, Any]:
+        employee_ids = {
+            cycle: set(
+                source.loc[
+                    source[cycle_col].astype(str) == cycle,
+                    "__employee_id",
+                ].dropna()
+            )
+            for cycle in cycles
+        }
+        pairs = {}
+        for old_index, old_cycle in enumerate(cycles):
+            for new_cycle in cycles[old_index + 1:]:
+                repeat_ids = employee_ids[old_cycle] & employee_ids[new_cycle]
+                if len(repeat_ids) < MIN_N:
+                    continue
+                pair = {}
+                for cycle in (old_cycle, new_cycle):
+                    subset = source[
+                        (source[cycle_col].astype(str) == cycle)
+                        & source["__employee_id"].isin(repeat_ids)
+                    ]
+                    pair[cycle] = {
+                        "n": int(len(subset)),
+                        "items": cycle_metrics(subset),
+                    }
+                pairs[f"{old_cycle}\u241f{new_cycle}"] = pair
+        return pairs
+
+    overall = cycle_values(frame)
     segments = {}
+    repeat_segments = {}
     for attribute in attributes:
         values = {}
-        for value, group in frame.dropna(subset=[attribute]).groupby(attribute):
-            cycle_values = {}
-            for cycle in cycles:
-                subset = group[group[cycle_col].astype(str) == cycle]
-                if len(subset) >= MIN_N:
-                    cycle_values[cycle] = {
-                        "n": int(len(subset)),
-                        "items": metrics(subset, questions),
-                    }
-            if len(cycle_values) == 2:
-                values[str(value)] = cycle_values
+        repeat_attribute_values = {}
+        for value, group in frame.dropna(subset=[attribute]).groupby(attribute, sort=True):
+            group_cycles = cycle_values(group)
+            if len(group_cycles) >= 2:
+                values[str(value)] = group_cycles
+                repeated = repeat_values(group)
+                if repeated:
+                    repeat_attribute_values[str(value)] = repeated
         segments[attribute] = values
-    return {"cycles": cycles, "overall": overall, "segments": segments}
+        repeat_segments[attribute] = repeat_attribute_values
+    return {
+        "cycles": cycles,
+        "overall": overall,
+        "segments": segments,
+        "repeat": {
+            "overall": repeat_values(frame),
+            "segments": repeat_segments,
+        },
+    }
 
 
 def correlation_rows(frame: pd.DataFrame, questions: list[str]) -> list[list[Any]]:
@@ -156,18 +217,83 @@ def correlation_rows(frame: pd.DataFrame, questions: list[str]) -> list[list[Any
     return rows
 
 
+def silhouette_score(distance: np.ndarray, assignments: np.ndarray) -> float:
+    scores = []
+    for index, cluster in enumerate(assignments):
+        same = np.flatnonzero(assignments == cluster)
+        other_clusters = np.unique(assignments[assignments != cluster])
+        if len(same) <= 1 or len(other_clusters) == 0:
+            scores.append(0.0)
+            continue
+        within = float(distance[index, same[same != index]].mean())
+        nearest = min(
+            float(distance[index, assignments == other].mean())
+            for other in other_clusters
+        )
+        denominator = max(within, nearest)
+        scores.append((nearest - within) / denominator if denominator else 0.0)
+    return float(np.mean(scores))
+
+
+def cluster_plan(rows: list[list[Any]], question_count: int) -> dict[str, Any]:
+    if question_count < 4:
+        return {"recommended": None, "scores": {}, "assignments": {}}
+    correlation = np.eye(question_count)
+    for first, second, value, _, _ in rows:
+        correlation[int(first), int(second)] = float(value)
+        correlation[int(second), int(first)] = float(value)
+    distance = np.clip(1 - correlation, 0, 1)
+    tree = linkage(squareform(distance, checks=False), method="average")
+    maximum = min(15, question_count - 1)
+    scores: dict[str, float] = {}
+    assignments: dict[str, list[int]] = {}
+    for cluster_count in range(3, maximum + 1):
+        labels = cut_tree(tree, n_clusters=[cluster_count]).reshape(-1)
+        remap = {
+            value: index
+            for index, value in enumerate(
+                sorted(np.unique(labels), key=lambda value: int(np.flatnonzero(labels == value)[0]))
+            )
+        }
+        normalized = np.array([remap[value] for value in labels], dtype=int)
+        assignments[str(cluster_count)] = normalized.tolist()
+        scores[str(cluster_count)] = round(
+            silhouette_score(distance, normalized), 4
+        )
+    recommended = max(
+        (int(value) for value in scores),
+        key=lambda value: (scores[str(value)], -value),
+    )
+    return {
+        "recommended": recommended,
+        "scores": scores,
+        "assignments": assignments,
+    }
+
+
 def relationship_cube(
     frame: pd.DataFrame, questions: list[str], attributes: list[str]
 ) -> dict[str, Any]:
-    result = {"overall": correlation_rows(frame, questions), "segments": {}}
+    overall = correlation_rows(frame, questions)
+    result = {
+        "overall": overall,
+        "segments": {},
+        "clusters": {
+            "overall": cluster_plan(overall, len(questions)),
+            "segments": {},
+        },
+    }
     for attribute in attributes:
         values = {}
+        cluster_values = {}
         for value, group in frame.dropna(subset=[attribute]).groupby(attribute):
             if len(group) >= RELATIONSHIP_MIN_N:
                 rows = correlation_rows(group, questions)
                 if len(rows) == len(questions) * (len(questions) - 1) // 2:
                     values[str(value)] = rows
+                    cluster_values[str(value)] = cluster_plan(rows, len(questions))
         result["segments"][attribute] = values
+        result["clusters"]["segments"][attribute] = cluster_values
     return result
 
 
@@ -225,37 +351,121 @@ def alerts(
     cycle_col: str | None,
     team_col: str | None,
     minimum: int,
-) -> list[dict[str, Any]]:
+) -> dict[str, Any]:
     if not cycle_col or not team_col:
-        return []
+        return {"rows": [], "suppressed": 0, "cycles": [], "companyChange": None}
     cycles = sorted(frame[cycle_col].dropna().astype(str).unique())
     if len(cycles) != 2:
-        return []
+        return {"rows": [], "suppressed": 0, "cycles": cycles, "companyChange": None}
+
+    def composite(source: pd.DataFrame) -> pd.Series:
+        return (source[questions].mean(axis=1) - 1) * 25
+
+    def comparison(first: pd.Series, second: pd.Series) -> tuple[float, float]:
+        first = first.dropna()
+        second = second.dropna()
+        change = float(second.mean() - first.mean())
+        if len(first) < 2 or len(second) < 2:
+            return change, 1.0
+        denominator = math.sqrt(
+            first.var(ddof=1) / len(first) + second.var(ddof=1) / len(second)
+        )
+        if not math.isfinite(denominator) or denominator == 0:
+            return change, 1.0
+        statistic = change / denominator
+        first_term = first.var(ddof=1) / len(first)
+        second_term = second.var(ddof=1) / len(second)
+        degrees = (first_term + second_term) ** 2 / (
+            first_term**2 / (len(first) - 1)
+            + second_term**2 / (len(second) - 1)
+        )
+        return change, float(2 * student_t.sf(abs(statistic), degrees))
+
+    company_subsets = [
+        frame[frame[cycle_col].astype(str) == cycle] for cycle in cycles
+    ]
+    company_change, _ = comparison(
+        composite(company_subsets[0]),
+        composite(company_subsets[1]),
+    )
     output = []
+    suppressed = 0
+    decline_threshold = max(3, math.ceil(len(questions) * 0.25))
     for team, group in frame.dropna(subset=[team_col]).groupby(team_col):
         subsets = [group[group[cycle_col].astype(str) == cycle] for cycle in cycles]
         if any(len(item) < minimum for item in subsets):
+            suppressed += 1
             continue
-        first, second = [metrics(item, questions) for item in subsets]
-        first_scores = [item[0] for item in first]
-        second_scores = [item[0] for item in second]
+        first_scores = [
+            round(float((subsets[0][question].mean() - 1) * 25), 1)
+            for question in questions
+        ]
+        second_scores = [
+            round(float((subsets[1][question].mean() - 1) * 25), 1)
+            for question in questions
+        ]
         deltas = [b - a for a, b in zip(first_scores, second_scores)]
-        worst = min(range(len(deltas)), key=deltas.__getitem__)
+        change, p_value = comparison(composite(subsets[0]), composite(subsets[1]))
+        adjusted = change - company_change
+        declining = sum(value < 0 for value in deltas)
+        if adjusted <= -3 and p_value < 0.05 and declining >= decline_threshold:
+            severity = "critical"
+        elif adjusted <= -2 or (change <= -3 and declining >= 3):
+            severity = "watch"
+        elif adjusted >= 3 and p_value < 0.05:
+            severity = "improving"
+        else:
+            severity = "stable"
+        item_changes = sorted(
+            (
+                {
+                    "question": index,
+                    "from": first_scores[index],
+                    "to": second_scores[index],
+                    "delta": round(delta, 1),
+                }
+                for index, delta in enumerate(deltas)
+            ),
+            key=lambda item: item["delta"],
+        )
         output.append(
             {
-                "team": str(team),
-                "from": round(sum(first_scores) / len(first_scores)),
-                "to": round(sum(second_scores) / len(second_scores)),
-                "delta": round(sum(second_scores) / len(second_scores))
-                - round(sum(first_scores) / len(first_scores)),
+                "team": (
+                    str(int(team))
+                    if isinstance(team, (int, float, np.integer, np.floating))
+                    and float(team).is_integer()
+                    else str(team)
+                ),
+                "severity": severity,
+                "from": round(float(composite(subsets[0]).mean()), 1),
+                "to": round(float(composite(subsets[1]).mean()), 1),
+                "delta": round(change, 1),
+                "companyChange": round(company_change, 1),
+                "adjustedDelta": round(adjusted, 1),
+                "pValue": p_value,
+                "significant": p_value < 0.05,
                 "nFrom": len(subsets[0]),
                 "nTo": len(subsets[1]),
-                "declining": sum(value < 0 for value in deltas),
-                "worstQuestion": worst,
-                "worstDelta": deltas[worst],
+                "declining": declining,
+                "topDeclines": item_changes[:5],
             }
         )
-    return sorted(output, key=lambda item: (item["delta"], item["worstDelta"]))
+    rank = {"critical": 0, "watch": 1, "improving": 2, "stable": 3}
+    return {
+        "rows": sorted(
+            output,
+            key=lambda item: (
+                rank[item["severity"]],
+                item["adjustedDelta"],
+                item["delta"],
+            ),
+        ),
+        "suppressed": suppressed,
+        "cycles": cycles,
+        "companyChange": round(company_change, 1),
+        "minimum": minimum,
+        "declineThreshold": decline_threshold,
+    }
 
 
 def alert_cube(
@@ -267,17 +477,20 @@ def alert_cube(
 ) -> dict[str, Any]:
     filtered = {}
     for attribute in attributes:
+        if attribute in {cycle_col, team_col}:
+            filtered[attribute] = {}
+            continue
         values = {}
         for value, group in frame.dropna(subset=[attribute]).groupby(attribute):
-            rows = alerts(
+            result = alerts(
                 group,
                 questions,
                 cycle_col,
                 team_col,
                 FILTERED_ALERT_MIN_N,
             )
-            if rows:
-                values[str(value)] = rows
+            if result["rows"] or result["suppressed"]:
+                values[str(value)] = result
         filtered[attribute] = values
     return {
         "overall": alerts(frame, questions, cycle_col, team_col, ALERT_MIN_N),
@@ -288,54 +501,18 @@ def alert_cube(
 
 def html_page(data: dict[str, Any]) -> str:
     encoded = json.dumps(data, separators=(",", ":")).replace("<", "\\u003c")
-    return """<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Viva Glint survey analysis</title>
-<script>document.documentElement.setAttribute("data-theme","light")</script>
-<style>
-:root{--bg:#fafafa;--surface:#fff;--soft:#f5f5f5;--border:#e0e0e0;--text:#242424;--muted:#616161;--blue:#335ccc;--tint:#e5eeff;--red:#bc2f32;--green:#0e700e}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI",Aptos,Calibri,sans-serif}.page{width:min(1380px,calc(100% - 40px));margin:auto;padding:32px 0 56px}h1{font-size:40px;margin:20px 0 8px}h2{font-size:24px;margin:0 0 8px}.muted{color:var(--muted)}.tabs,.tools{display:flex;gap:8px;flex-wrap:wrap}.tabs{border-bottom:1px solid var(--border);margin-top:24px}.tab{border:0;border-bottom:3px solid transparent;background:transparent;padding:12px;color:var(--muted);cursor:pointer}.tab[aria-selected=true]{border-bottom-color:var(--blue);color:var(--blue);font-weight:700}.panel{margin-top:20px;padding:26px;background:var(--surface);border:1px solid var(--border);border-radius:16px}select,input{min-height:40px;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface)}label{display:grid;gap:4px;font-size:12px;color:var(--muted)}[hidden]{display:none!important}.tools{align-items:end;margin:16px 0}.notice{padding:14px;border-left:4px solid var(--blue);background:var(--tint);border-radius:10px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{border:1px solid var(--border);border-radius:12px;padding:14px}.card strong{font-size:22px;color:var(--blue)}.stack{display:flex;height:13px;border-radius:8px;overflow:hidden;background:var(--soft)}.u{background:var(--red)}.n{background:#b8b8b8}.f{background:var(--blue)}.row{display:grid;grid-template-columns:minmax(210px,1fr) minmax(300px,2fr) 80px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}.pair{display:grid;gap:6px}.delta{font-weight:700}.down{color:var(--red)}.up{color:var(--green)}.scroll{overflow:auto;max-height:720px;border:1px solid var(--border)}table{border-collapse:collapse;width:100%}th,td{padding:8px;border-bottom:1px solid var(--border);text-align:left}th{position:sticky;top:0;background:var(--surface)}.matrix td,.heat td{text-align:center;cursor:pointer;min-width:48px}.heat th:first-child{min-width:210px}.download{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.download a{padding:12px;border:1px solid var(--border);border-radius:10px;color:var(--blue)}@media(max-width:800px){.grid,.download{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}}@media(max-width:520px){.grid,.download{grid-template-columns:1fr}}
-</style></head><body><main class="page"><div><strong style="color:var(--blue)">Viva Glint</strong><h1>Survey analysis</h1><p class="muted">Interactive, privacy-safe aggregate report</p></div>
-<nav class="tabs">__TABS__</nav>
-<div class="panel"><div class="tools"><label>Report attribute<select id="attr"><option value="">Company overall</option></select></label><label>Value<select id="value" disabled></select></label><span id="filterNote" class="muted"></span></div></div>
-__PANELS__
-</main><script>const D=__DATA__;
-const names=D.questions.map(q=>D.labels[q]);const tabs=[...document.querySelectorAll(".tab")];tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.setAttribute("aria-selected",x===t));document.querySelectorAll("[role=tabpanel]").forEach(p=>p.hidden=p.id!==t.dataset.id)});const attr=document.querySelector("#attr"),val=document.querySelector("#value");Object.entries(D.segments).forEach(([k,v])=>{if(Object.keys(v.values).length)attr.add(new Option(v.label,k))});function selected(){if(!attr.value)return null;return D.segments[attr.value].values[val.value]}function loadValues(){val.innerHTML="";if(!attr.value){val.disabled=true}else{val.disabled=false;Object.entries(D.segments[attr.value].values).forEach(([k,v])=>val.add(new Option(k+" · n="+v.n,k)))}render()}attr.onchange=loadValues;val.onchange=render;
-function item(x,i){return{score:x[0],u:x[1],n:x[2],f:x[3],count:x[4],question:D.questions[i]}}function stack(x){return`<div class=stack><i class=u style="width:${x.u}%"></i><i class=n style="width:${x.n}%"></i><i class=f style="width:${x.f}%"></i></div>`}function current(){const s=selected();return s?s.items.map(item):D.overall.map(item)}function renderOverview(){const rows=current(),avg=Math.round(rows.reduce((a,x)=>a+x.score,0)/rows.length);document.querySelector("#kpis").innerHTML=[["Responses",rows[0].count.toLocaleString()],["Items",rows.length],["Average",avg],["Filter",attr.value?val.value:"Company"]].map(x=>`<div class=card><span class=muted>${x[0]}</span><br><strong>${x[1]}</strong></div>`).join("");document.querySelector("#high").innerHTML=[...rows].sort((a,b)=>b.score-a.score).slice(0,5).map(x=>`<div class=card>${D.labels[x.question]} <strong>${x.score}</strong>${stack(x)}</div>`).join("");document.querySelector("#low").innerHTML=[...rows].sort((a,b)=>a.score-b.score).slice(0,5).map(x=>`<div class=card>${D.labels[x.question]} <strong>${x.score}</strong>${stack(x)}</div>`).join("")}
-function renderItems(){const rows=current();document.querySelector("#itemsList").innerHTML=rows.map((x,i)=>{const c=item(D.overall[i],i),d=x.score-c.score;return`<div class=row><div><b>${D.labels[x.question]}</b><br><span class=muted>${x.question}</span></div><div class=pair><span>Segment ${x.score}${stack(x)}</span><span>Company ${c.score}${stack(c)}</span></div><div class="delta ${d<0?"down":d>0?"up":""}">${d>0?"+":""}${d}</div></div>`}).join("")}
-function cycleSource(){if(D.cycles.cycles.length!==2)return null;if(!attr.value)return D.cycles.overall;return D.cycles.segments[attr.value]?.[val.value]}function renderChanges(){const source=cycleSource(),box=document.querySelector("#changesList");if(!source){box.innerHTML="<div class=notice>Two privacy-safe survey cycles are required for this selection.</div>";return}const [a,b]=D.cycles.cycles;const rows=D.questions.map((q,i)=>({q,a:item(source[a].items[i],i),b:item(source[b].items[i],i)})).sort((x,y)=>Math.abs(y.b.score-y.a.score)-Math.abs(x.b.score-x.a.score));box.innerHTML=rows.map(x=>{const d=x.b.score-x.a.score;return`<div class=row><b>${D.labels[x.q]}</b><span>${a}: ${x.a.score} (n=${source[a].n.toLocaleString()}) → ${b}: ${x.b.score} (n=${source[b].n.toLocaleString()})</span><span class="delta ${d<0?"down":d>0?"up":""}">${d>0?"+":""}${d}</span></div>`}).join("")}
-const heatCycle=document.querySelector("#heatCycle"),heatAttr=document.querySelector("#heatAttr");function heatSource(){return attr.value?D.heat.filtered[attr.value]?.[val.value]:D.heat.overall}function loadHeat(){const source=heatSource()||{};heatCycle.innerHTML="";Object.keys(source).forEach(x=>heatCycle.add(new Option(x,x)));heatAttr.innerHTML="";Object.entries(source[heatCycle.value]||{}).forEach(([k,v])=>heatAttr.add(new Option(v.label,k)));renderHeat()}function renderHeat(){const block=heatSource()?.[heatCycle.value]?.[heatAttr.value],table=document.querySelector("#heatTable");if(!block){table.innerHTML="<tr><td>No four- or five-value heatmap is available for this filtered segment.</td></tr>";return}table.innerHTML=`<thead><tr><th>Question</th>${block.values.map(x=>`<th>${x.value}<br><small>n=${x.n}</small></th>`).join("")}</tr></thead><tbody>${D.questions.map((q,i)=>`<tr><th>${D.labels[q]}</th>${block.values.map(x=>`<td>${x.items[i][0]}</td>`).join("")}</tr>`).join("")}</tbody>`}heatCycle.onchange=()=>{heatAttr.innerHTML="";Object.entries(heatSource()?.[heatCycle.value]||{}).forEach(([k,v])=>heatAttr.add(new Option(v.label,k)));renderHeat()};heatAttr.onchange=renderHeat;
-function relSource(){if(!attr.value)return D.relationships.overall;return D.relationships.segments[attr.value]?.[val.value]}function renderRelationships(){const rows=relSource(),table=document.querySelector("#corr");if(!rows){table.innerHTML="<tr><td>No segment matrix is available below 30 response rows.</td></tr>";return}const map=new Map(rows.flatMap(x=>[[x[0]+"|"+x[1],x],[x[1]+"|"+x[0],x]]));table.innerHTML=`<thead><tr><th>Item</th>${names.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${names.map((name,i)=>`<tr><th>${name}</th>${names.map((_,j)=>i===j?"<td>1.00</td>":`<td>${map.get(i+"|"+j)[2].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody>`}
-function renderAlerts(){const source=attr.value?(D.alerts.filtered[attr.value]?.[val.value]||[]):D.alerts.overall;document.querySelector("#alertsList").innerHTML=!D.alerts.available?"<div class=notice>Team and two-cycle columns are required.</div>":source.slice(0,50).map(x=>`<div class=row><b>${x.team}</b><span>${x.from} → ${x.to}; n=${x.nFrom}/${x.nTo}; ${x.declining} items down; largest: ${names[x.worstQuestion]} ${x.worstDelta}</span><span class=down>${x.delta}</span></div>`).join("")||"<div class=notice>No teams meet the minimum N for this filter.</div>"}
-function renderStatic(){document.querySelector("#factorList").innerHTML=D.factors.map(x=>`<div class=card><b>${D.labels[x.question]||x.question}</b><br>Factor ${x.factor}; loading ${Number(x.loading).toFixed(3)}</div>`).join("")||"<div class=notice>Factor analysis was not completed.</div>";document.querySelector("#attritionStatus").textContent=D.attrition;document.querySelector("#downloadList").innerHTML=D.downloads.map(x=>`<a href="${x}">${x}</a>`).join("")}
-function render(){document.querySelector("#filterNote").textContent=attr.value?D.segments[attr.value].label+": "+val.value:"All employees";renderOverview();renderItems();renderChanges();loadHeat();renderRelationships();renderAlerts()}renderStatic();loadValues();</script></body></html>""".replace(
-        "__DATA__", encoded
-    ).replace(
-        "__TABS__",
-        "".join(
-            f'<button class="tab" data-id="{key}" aria-selected="{"true" if index == 0 else "false"}">{title}</button>'
-            for index, (key, title) in enumerate(
-                [
-                    ("overview", "Overview"), ("items", "Item results"),
-                    ("changes", "Scores change"), ("heatmap", "Heatmap"),
-                    ("relationships", "Relationships"), ("alerts", "Alerts"),
-                    ("factors", "Factors"), ("attrition", "Attrition analysis"),
-                    ("downloads", "Downloads"),
-                ]
-            )
-        ),
-    ).replace(
-        "__PANELS__",
-        """<section class=panel id=overview role=tabpanel><h2>Overview</h2><div class=grid id=kpis></div><h3>Highest scores</h3><div class=grid id=high></div><h3>Focus opportunities</h3><div class=grid id=low></div></section>
-<section class=panel id=items role=tabpanel hidden><h2>Item results</h2><div id=itemsList></div></section>
-<section class=panel id=changes role=tabpanel hidden><h2>Scores change</h2><div id=changesList></div></section>
-<section class=panel id=heatmap role=tabpanel hidden><h2>Heatmap</h2><div class=tools><label>Survey<select id=heatCycle></select></label><label>Attribute<select id=heatAttr></select></label></div><div class=scroll><table class=heat id=heatTable></table></div></section>
-<section class=panel id=relationships role=tabpanel hidden><h2>Relationships</h2><div class=scroll><table class=matrix id=corr></table></div></section>
-<section class=panel id=alerts role=tabpanel hidden><h2>Alerts</h2><div class=notice>Screening signals only. Company alerts require n=10 per cycle; filtered alerts require n=5.</div><div id=alertsList></div></section>
-<section class=panel id=factors role=tabpanel hidden><h2>Factors</h2><div class=notice>Factor structure remains company-wide pending stability and measurement-invariance review.</div><div id=factorList></div></section>
-<section class=panel id=attrition role=tabpanel hidden><h2>Attrition analysis</h2><div class=notice id=attritionStatus></div></section>
-<section class=panel id=downloads role=tabpanel hidden><h2>Downloads</h2><div class=download id=downloadList></div></section>""",
+    template_path = (
+        Path(__file__).resolve().parents[1]
+        / "references"
+        / "skills"
+        / "analyze-survey"
+        / "golden-report.html"
     )
+    template = template_path.read_text(encoding="utf-8")
+    marker = "<script>const D="
+    payload_start = template.index(marker) + len(marker)
+    payload_end = template.index(";\nconst names=", payload_start)
+    return template[:payload_start] + encoded + template[payload_end:]
 
 
 def main() -> int:
@@ -387,18 +564,17 @@ def main() -> int:
         ),
     ]))
     attributes = [column for column in attributes if column in frame.columns]
-    bucket_numeric(frame, {emp_id, "__employee_id", *questions})
     cycle_col = "survey_cycle_title" if "survey_cycle_title" in frame.columns else None
     team_col = next(
         (column for column in ("team_id", "manager_id", "Manager ID") if column in frame.columns),
         None,
     )
+    bucket_numeric(frame, {emp_id, "__employee_id", *questions, team_col})
 
     overall = metrics(frame, questions)
     segments = segment_cube(frame, questions, attributes)
     cycles = cycle_cube(frame, questions, attributes, cycle_col)
     relationships = relationship_cube(frame, questions, attributes)
-    heat = heatmap_cube(frame, questions, attributes, cycle_col)
     alert_data = alert_cube(frame, questions, attributes, cycle_col, team_col)
     factors_path = output / "factor_analysis_summary.csv"
     factors = pd.read_csv(factors_path).to_dict("records") if factors_path.exists() else []
@@ -437,7 +613,6 @@ def main() -> int:
         "segments": segments,
         "cycles": cycles,
         "relationships": relationships,
-        "heat": heat,
         "alerts": alert_data,
         "factors": factors,
         "attrition": attrition_status,

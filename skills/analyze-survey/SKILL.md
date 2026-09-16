@@ -1,15 +1,16 @@
 ---
 name: analyze-survey
 description: "Analyze a CSV or Excel employee survey export and create a self-contained interactive HTML report plus a privacy-safe share ZIP. Use when the user asks to analyze survey data, a Viva Glint export, or an employee survey workbook."
-allowed-tools: Bash, Read, Write, Glob, Grep
+allowed-tools: Bash, Read, Write, Glob, Grep, WebFetch
 ---
 
 # Analyze Survey
 
 Turn a provided survey export into a repeatable local analysis and the standard
 interactive report. The skill owns export inspection, safe configuration,
-`vivaglint` execution, repeatability validation, HTML generation, and packaging.
-It does not own People Science interpretation or manager recommendations.
+`vivaglint` execution, repeatability validation, HTML generation, tab-level
+People Science summaries, and packaging. It does not own a broader customer
+readout or manager action plan.
 
 ## Start here
 
@@ -41,8 +42,12 @@ Read these references in order:
 4. `references/skills/analyze-survey/golden-report.html`
 5. `references/skills/analyze-survey/scores-change-format.png`
 6. `references/skills/analyze-survey/interactive-report-contract.md`
-7. `references/general/privacy-and-minimum-n.md`
-8. `references/general/codebook-catalog.md`
+7. `references/skills/analyze-survey/people-science-summaries.schema.json`
+8. `references/skills/analyze-survey/people-science-source-index.json`
+9. `references/skills/people-science-knowledge-vault/`
+10. `references/general/interpretation-guardrails.md`
+11. `references/general/privacy-and-minimum-n.md`
+12. `references/general/codebook-catalog.md`
 
 The Glint UI system is mandatory for all color, typography, spacing, component,
 and accessibility decisions. Do not invent report colors or visual patterns.
@@ -115,6 +120,36 @@ The runner automatically:
 Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
 verification, relationship clustering, alert aggregation, and ZIP packaging.
+
+After the deterministic analysis completes:
+
+1. Inspect `analysis-manifest.json` and
+   `people-science-summary-context.json`.
+2. Apply the `interpret-analysis` guardrails to distinguish observation,
+   interpretation, recommendation, and caveat.
+3. Use `people-science-knowledge-vault` to retrieve relevant externally
+   published article bodies. Cite only claims supported by those sources.
+4. Write `people-science-summaries.json` using
+   `people-science-summaries.schema.json`. Include all six tabs.
+5. Rerun `scripts/build_interactive_report.py` with the existing config and
+   output directory so the summaries are embedded in the HTML and share ZIP.
+
+Every tab must begin with an AI-generated People Science perspective containing
+a headline, what the results show, a professional interpretation, a recommended
+next step, a caveat, and relevant published-source links. Keep the narrative
+concise, non-causal, privacy-safe, and explicit when evidence is unavailable.
+The summary must recalculate whenever the report attribute or value changes.
+Recompute its headline and observation from the selected filter's aggregate
+cycle, relationship, and alert results. Preserve the grounded interpretation,
+recommendation, caveat, and source links unless an authored filter-specific
+narrative is available. For tabs without filter-specific analysis, explicitly
+state that the displayed evidence remains company-wide or unavailable.
+
+Use the checked-in People Science source index to select references from key
+terms in the current headline and observation. Show three distinct references
+for every summary. Prefer exact analytical or item-theme matches over generic
+survey resources, and never reuse a source merely because it is broadly about
+employee surveys.
 
 Use explicit options only when automatic detection is wrong:
 

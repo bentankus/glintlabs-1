@@ -10,10 +10,35 @@ references/skills/analyze-survey/golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`fd3051b881cfb10148534b4b43c13eb8e8732a92b1db0fad741f5968660acba2`.
+`94abd69a1135d5de0346508227868df6b3ad5014450129c4e1e1e95ce1f12c07`.
 Generated reports must match its static HTML shell exactly. The only intended
 substitution is the JSON value assigned to `const D`, which must come from the
 current analysis.
+
+## AI-generated People Science summaries
+
+- Begin every tab with a compact People Science perspective card.
+- Require six summaries: Scores change, Relationships, Alerts, Factors,
+  Attrition analysis, and Downloads.
+- Each summary must contain a headline, observed evidence, professional
+  interpretation, recommended next step, caveat, and published-source links
+  when relevant.
+- Generate narratives from `people-science-summary-context.json`, never raw
+  respondent rows. Conform to `people-science-summaries.schema.json`.
+- Use `interpret-analysis` guardrails and
+  `people-science-knowledge-vault` source priority. Do not present correlation,
+  factors, alerts, or attrition associations as causal.
+- Recalculate the summary whenever the report attribute or value changes.
+  Derive the filtered headline and observation from the same aggregate source
+  currently rendered by that tab. Authored segment narratives take precedence.
+- For tabs without filter-specific analysis, update the scope statement and
+  explicitly say that the evidence remains company-wide or unavailable.
+- Select three public references for each rendered summary by matching key
+  terms in its current headline and observation against
+  `people-science-source-index.json`. Prefer specific analytical and item-theme
+  matches; use the tab defaults only to fill unmatched positions.
+- If summaries have not been generated, show an honest unavailable state
+  rather than invented or deterministic text labeled as AI-generated.
 
 The deterministic implementation is
 `scripts/build_interactive_report.py`. The analysis runner invokes it

@@ -16,18 +16,17 @@ Automatic employee ID detection recognizes common forms such as `user_id`,
 `employee_id`, and `respondent_id`. Use explicit command options when an export
 uses different names.
 
-## Registered linked source
+## Registered demo source
 
-The sole registered sample source is `Viva Glint Dataset with Attributes.xlsx`
-at:
+The sole registered fallback source is:
 
 ```text
-https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
+examples/demo-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
 ```
 
 Use `Sheet1`, join `user_properties` by `user_id`, and use a 5-point scale.
-Do not replace it with bundled, generated, or synthetic survey data. If access
-is unavailable, report the access problem instead of silently substituting a
+The workbook contains synthetic respondent-level demo data, including H1, H2,
+and research-guided Exit survey outcomes. Do not silently substitute a
 different dataset.
 
 ## Deterministic entry point

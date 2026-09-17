@@ -16,21 +16,21 @@ readout or manager action plan.
 
 Ask:
 
-> Do you have your own survey data you would like to analyze? If not, I can use the linked Viva Glint workbook.
+> Do you have your own survey data you would like to analyze? If not, I can use the included Viva Glint demo workbook.
 
 Accept `.csv`, `.xlsx`, and `.xlsm` exports. Keep respondent-level data local
 and never paste employee rows into chat.
 
-If the user does not provide another export, use this workbook:
+If the user does not provide another export, use this repository workbook:
 
 ```text
-Viva Glint Dataset with Attributes.xlsx
-https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
+examples/demo-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
 ```
 
 Use worksheet `Sheet1`, join worksheet `user_properties` by `user_id`, and use
-a 5-point scale. The linked workbook is the only registered sample source. Do
-not substitute bundled, generated, or synthetic survey data.
+a 5-point scale. The included workbook is synthetic demo data and is the only
+registered fallback source. Do not substitute another bundled or generated
+dataset.
 
 ## Required grounding
 

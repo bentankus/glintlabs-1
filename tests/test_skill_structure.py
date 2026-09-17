@@ -34,26 +34,36 @@ def test_each_skill_has_first_priority_reference_folder():
     assert missing == []
 
 
-def test_analyze_survey_points_to_linked_dataset():
+def test_analyze_survey_points_to_included_demo_dataset():
     skill = (ROOT / "skills/analyze-survey/SKILL.md").read_text(encoding="utf-8")
     source_path = (
         ROOT / "references/skills/analyze-survey/linked-dataset.json"
     )
     source = json.loads(source_path.read_text(encoding="utf-8"))
-    source_url = (
-        "https://microsoft.sharepoint-df.com/:x:/t/EVE/"
-        "cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg"
+    source_relative_path = (
+        "examples/demo-data/"
+        "Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx"
     )
+    source_file = ROOT / source_relative_path
 
     assert (
         "Do you have your own survey data you would like to analyze? "
-        "If not, I can use the linked Viva Glint workbook."
+        "If not, I can use the included Viva Glint demo workbook."
     ) in skill
-    assert source["source_url"] == source_url
+    assert source["source_path"] == source_relative_path
+    assert source_file.exists()
+    assert source_file.stat().st_size > 1_000_000
+    assert source["source_url"].startswith(
+        "https://github.com/microsoft/glintlabs/raw/"
+    )
     assert source["worksheet"] == "Sheet1"
     assert source["attribute_worksheet"] == "user_properties"
-    assert source_url in skill
-    assert "synthetic survey data" in skill
+    assert len(source["question_cols"]) == 27
+    assert "Q_EXIT_TREATMENT" not in source["question_cols"]
+    assert "Q_EXIT_ESAT_RECOMMEND" not in source["question_cols"]
+    assert "Q_REHIRE" not in source["question_cols"]
+    assert source_relative_path in skill
+    assert "synthetic demo data" in skill
     assert "scripts/analyze_survey_export.py" in skill
     assert "--survey-export" in skill
     assert "references/design/glint-ui-system.md" in skill
@@ -272,6 +282,13 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     },
                 }
             )
+        writer.writerow(
+            {
+                "user_id": 41,
+                "survey_cycle_title": "Exit survey",
+                **{question: "" for question in questions},
+            }
+        )
     with attributes.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
             handle,
@@ -286,6 +303,13 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     "team_id": "Team A",
                 }
             )
+        writer.writerow(
+            {
+                "user_id": 41,
+                "segment": "Group 1",
+                "team_id": "Team A",
+            }
+        )
 
     config = tmp_path / "analysis-config.json"
     config.write_text(

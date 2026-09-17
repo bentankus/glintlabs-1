@@ -189,11 +189,25 @@ def safe_attribute(column: str) -> bool:
 def sidecar_config(source: Path) -> dict[str, Any]:
     config_path = source.with_name("config.json")
     if not config_path.exists():
-        return {}
-    config = json.loads(config_path.read_text(encoding="utf-8"))
-    configured_source = config.get("survey_csv")
-    if configured_source and Path(configured_source).name == source.name:
-        return config
+        config = {}
+    else:
+        config = json.loads(config_path.read_text(encoding="utf-8"))
+        configured_source = config.get("survey_csv")
+        if configured_source and Path(configured_source).name == source.name:
+            return config
+
+    registry = (
+        Path(__file__).resolve().parents[1]
+        / "references"
+        / "skills"
+        / "analyze-survey"
+        / "linked-dataset.json"
+    )
+    if registry.exists():
+        registered = json.loads(registry.read_text(encoding="utf-8"))
+        registered_path = registered.get("source_path")
+        if registered_path and Path(registered_path).name == source.name:
+            return registered
     return {}
 
 
@@ -317,7 +331,7 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
     questions = detect_questions(
         survey,
         emp_id_col,
-        options.question_cols,
+        options.question_cols or registered_defaults.get("question_cols"),
         options.scale_points,
     )
     normalized_survey_path = input_dir / "survey.csv"

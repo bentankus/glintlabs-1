@@ -9,6 +9,8 @@ share ZIP.
 - CSV survey exports
 - XLSX/XLSM workbooks
 - Wide item data with one row per respondent and numeric `Q_*` columns
+- Outcome-style `Q_*` fields that do not match the configured response scale
+  are excluded from automatic item detection.
 - Optional employee attributes in the same table or a workbook sheet named
   `user_properties`, `attributes`, `employee attributes`, or `demographics`
 
@@ -18,14 +20,19 @@ uses different names.
 
 ## Registered linked source
 
-The sole registered sample source is `Viva Glint Dataset with Attributes.xlsx`
+The sole registered sample source is
+`Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx`
 at:
 
 ```text
-https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
+https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqHblj5v7HPSLyUK88GtXJ8EgUCiNQuV5Sunz9fysTlpgCt9Q
 ```
 
 Use `Sheet1`, join `user_properties` by `user_id`, and use a 5-point scale.
+The registered sample also defines an H2-to-Exit attrition analysis: cycle
+`1002` is the predictor survey, cycle `1003` is the Exit cohort,
+`attrition date` is the outcome date, and December 15, 2025 is the registered
+H2 completion date. The deterministic windows are 90, 180, and 365 days.
 Do not replace it with bundled, generated, or synthetic survey data. If access
 is unavailable, report the access problem instead of silently substituting a
 different dataset.
@@ -65,6 +72,9 @@ share ZIP.
 - Raw survey and attribute files stay outside the share ZIP.
 - Names, email addresses, comments, phone numbers, and addresses are never
   automatically selected as report attributes.
+- Identifier-like employee, manager, team, client, UUID, and GUID fields are
+  excluded from report filters and aggregate downloads. Manager-defined alert
+  groups receive deterministic generic team labels before entering the report.
 - Browser interactions use embedded aggregate data, not respondent rows.
 
 ## Report
@@ -75,17 +85,23 @@ The required behavior and packaging are defined in
 Each tab begins with a concise AI-generated People Science perspective. It
 separates observation from interpretation, recommends a next step, states a
 caveat, and links relevant published evidence. Whenever the report attribute
-or value changes, the summary immediately recalculates its headline and
-observation from that filter's aggregate results. Authored segment narratives
-take precedence. Tabs without filter-specific analysis state that limitation
-instead of presenting company-wide evidence as filtered evidence.
+or value changes, the summary immediately recalculates its headline,
+observation, interpretation, recommendation, caveat, and references from that
+filter's aggregate results. Authored segment narratives take precedence. Tabs
+without filter-specific analysis state that limitation instead of presenting
+company-wide evidence as filtered evidence.
+
+Live summaries remain compact by stating the selected scope once in the
+headline and avoiding repeated metrics or findings across the observation,
+interpretation, recommendation, and caveat.
 
 `people-science-source-index.json` is the fast retrieval layer for report
 grounding. It contains reviewed public sources, concept terms, and three
-defaults per tab. The browser ranks sources against key terms in the current
-headline and observation, so filtered findings about topics such as belonging,
-action taking, work-life, confidentiality, or attrition receive different
-references. Every rendered summary shows three sources.
+defaults per tab. The browser ranks sources against key terms across the
+current headline, observation, interpretation, recommendation, and caveat, so
+filtered findings about topics such as belonging, action taking, work-life,
+confidentiality, or attrition receive different references. Every rendered
+summary shows three sources.
 
 `golden-report.html` is the user-approved canonical HTML example. The report
 builder reads that file directly and replaces only the `const D=...` aggregate
@@ -126,3 +142,18 @@ expandable top-five item declines. Severity rules and minimum-N behavior are
 defined in `interactive-report-contract.md`; do not replace them with visual
 judgment or causal language. Every alert group must have at least 20 responses
 in both compared cycles, including filtered intersections.
+
+The Factors tab re-estimates item loadings for each eligible report
+attribute/value cut with the same factor count and varimax rotation as the
+company solution. A cut requires at least the greater of 100 complete responses
+or five complete responses per item; otherwise the report displays the
+suppression reason. The tab includes loading-dimension cards and filter-aware
+clustered horizontal bar small multiples. Each dimension repeats the loading
+axis from 0 to 1 while sharing one vertical set of question labels. Bar colors
+reuse the Relationships Low, Medium, High, and Very high strength bands. Sort
+the shared question axis high to low using MR1 loading only; do not combine
+strengths across dimensions for ordering. Give every bar a high-contrast
+outline and every two-decimal value label a contrasting outline for
+readability. Treat labels as working hypotheses and never interpret matching
+factor numbers across cuts as proof of equivalent constructs or measurement
+invariance.

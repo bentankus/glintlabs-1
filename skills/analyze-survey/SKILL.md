@@ -24,8 +24,8 @@ and never paste employee rows into chat.
 If the user does not provide another export, use this workbook:
 
 ```text
-Viva Glint Dataset with Attributes.xlsx
-https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqUFHaCVNxhR5SuuM1bWSpIEgUCf21SzklCzncCB16W6hH3Kg
+Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
+https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqHblj5v7HPSLyUK88GtXJ8EgUCiNQuV5Sunz9fysTlpgCt9Q
 ```
 
 Use worksheet `Sheet1`, join worksheet `user_properties` by `user_id`, and use
@@ -108,9 +108,18 @@ The runner automatically:
 - shows a live percentage, progress bar, elapsed time, and current phase
 - detects standard employee ID columns
 - detects numeric `Q_*` survey items
+- excludes outcome-style `Q_*` fields that do not match the configured scale
 - reads `Sheet1` or the first worksheet from Excel workbooks
 - joins a `user_properties` or attributes worksheet when present
 - selects privacy-safe categorical report attributes
+- excludes identifier-like employee, manager, team, client, UUID, and GUID
+  fields from report filters and aggregate downloads
+- replaces manager-defined alert identifiers with deterministic generic team
+  labels before creating the report payload
+- runs attrition whenever valid Exit or termination outcomes are present; for
+  the registered demo, H2 (`survey_cycle_id = 1002`) is linked to Exit
+  (`survey_cycle_id = 1003`) using the registered December 15, 2025 H2
+  completion date and 90-, 180-, and 365-day windows
 - creates an internal `analysis-config.json`
 - runs the standard `vivaglint` analyses twice
 - requires SHA-256 repeatability
@@ -139,17 +148,46 @@ a headline, what the results show, a professional interpretation, a recommended
 next step, a caveat, and relevant published-source links. Keep the narrative
 concise, non-causal, privacy-safe, and explicit when evidence is unavailable.
 The summary must recalculate whenever the report attribute or value changes.
-Recompute its headline and observation from the selected filter's aggregate
-cycle, relationship, and alert results. Preserve the grounded interpretation,
-recommendation, caveat, and source links unless an authored filter-specific
-narrative is available. For tabs without filter-specific analysis, explicitly
-state that the displayed evidence remains company-wide or unavailable.
+Recompute its headline, observation, interpretation, recommendation, caveat,
+and references from the selected filter's aggregate cycle, relationship,
+alert, and factor results unless an authored filter-specific narrative is
+available. Factor summaries must describe the selected cut's re-estimated
+solution or its explicit suppression reason. For tabs without filter-specific
+analysis, explicitly state that the displayed evidence remains company-wide or
+unavailable.
+
+Keep live summaries compact. State the selected scope once in the headline,
+avoid repeating the same metric or finding across fields, and make the
+observation, interpretation, recommendation, and caveat add distinct
+information.
+
+For Factors, use the company solution's factor count and varimax rotation to
+re-estimate loadings for every eligible attribute/value cut. Require at least
+the greater of 100 complete responses or five complete responses per survey
+item. Suppress smaller or failed cuts. Show the selected cut's complete N,
+loading-dimension cards, and clustered horizontal bar small multiples. Repeat
+the loading axis for each dimension and show the shared vertical question
+labels once. Plot positive loading magnitudes from 0 to 1 and reuse the
+Relationships Low, Medium, High, and Very high thresholds and colors. State
+Sort questions high to low by MR1 loading only; do not combine loading
+strengths across dimensions for ordering. Add a high-contrast outline to every
+bar plus a contrasting outline around each two-decimal data label. State that
+factor labels are exploratory working hypotheses,
+dimensions can rotate or reorder across cuts, and this is not evidence of
+measurement invariance.
+
+For Attrition, rank all eligible items by the unfavorable-to-favorable
+attrition-rate multiplier. Default to 180 days and allow 90-, 180-, and
+365-day windows. Apply the shared report filter, suppress cells with fewer
+than five favorable or unfavorable respondents, and describe associations as
+screening signals rather than causal estimates. Never report individual
+flight-risk predictions.
 
 Use the checked-in People Science source index to select references from key
-terms in the current headline and observation. Show three distinct references
-for every summary. Prefer exact analytical or item-theme matches over generic
-survey resources, and never reuse a source merely because it is broadly about
-employee surveys.
+terms across the current headline, observation, interpretation,
+recommendation, and caveat. Show three distinct references for every summary.
+Prefer exact analytical or item-theme matches over generic survey resources,
+and never reuse a source merely because it is broadly about employee surveys.
 
 Use explicit options only when automatic detection is wrong:
 
@@ -174,6 +212,7 @@ response_distribution.csv
 correlations.csv
 factor_analysis_summary.csv
 by_attribute.csv
+attrition.csv
 <output-directory-name>-report.html
 <output-directory-name>-share.zip
 ```

@@ -29,6 +29,14 @@ The workbook contains synthetic respondent-level demo data, including H1, H2,
 and research-guided Exit survey outcomes. Do not silently substitute a
 different dataset.
 
+Attrition analysis is mandatory whenever usable termination-date or Exit
+survey outcome data is present. For this demo source, link H2
+(`survey_cycle_id` 1002) responses to the Exit survey cohort
+(`survey_cycle_id` 1003), use `attrition date`, and treat December 15, 2025 as
+the H2 completion date. Keep the 27 shared H1/H2 items in the engagement model
+and present their attrition multipliers for 90, 180, and 365 days with the
+report's live filters.
+
 ## Deterministic entry point
 
 ```text

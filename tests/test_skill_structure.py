@@ -62,8 +62,17 @@ def test_analyze_survey_points_to_included_demo_dataset():
     assert "Q_EXIT_TREATMENT" not in source["question_cols"]
     assert "Q_EXIT_ESAT_RECOMMEND" not in source["question_cols"]
     assert "Q_REHIRE" not in source["question_cols"]
+    assert source["attrition"] == {
+        "predictor_cycle_id": 1002,
+        "outcome_cycle_id": 1003,
+        "term_date_col": "attrition date",
+        "predictor_completion_date": "2025-12-15",
+        "time_periods": [90, 180, 365],
+        "required": True,
+    }
     assert source_relative_path in skill
     assert "synthetic demo data" in skill
+    assert "always configure and run attrition analysis" in skill
     assert "scripts/analyze_survey_export.py" in skill
     assert "--survey-export" in skill
     assert "references/design/glint-ui-system.md" in skill

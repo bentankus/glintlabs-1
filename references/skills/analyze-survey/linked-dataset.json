@@ -36,6 +36,14 @@
     "Q_TEAM_COLLABORATION",
     "Q_MANAGER_QP"
   ],
+  "attrition": {
+    "predictor_cycle_id": 1002,
+    "outcome_cycle_id": 1003,
+    "term_date_col": "attrition date",
+    "predictor_completion_date": "2025-12-15",
+    "time_periods": [90, 180, 365],
+    "required": true
+  },
   "description": "The sole registered synthetic demo source for analyze-survey when the user does not provide another export.",
   "intake_prompt": "Do you have your own survey data you would like to analyze? If not, I can use the included Viva Glint demo workbook."
 }

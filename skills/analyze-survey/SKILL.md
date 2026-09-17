@@ -121,6 +121,18 @@ Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
 verification, relationship clustering, alert aggregation, and ZIP packaging.
 
+If the export or joined attributes contain attrition, termination-date, or
+Exit survey outcome data, always configure and run attrition analysis. Do not
+finish with attrition marked as unavailable or not requested when usable
+outcome data is present. Use the latest pre-exit survey as the predictor cycle
+and keep Exit-only questions out of the shared engagement factor model.
+
+For the included demo workbook, use H2 (`survey_cycle_id` 1002) as the
+predictor survey, Exit survey (`survey_cycle_id` 1003) as the outcome cohort,
+`attrition date` as the termination date, and December 15, 2025 as the H2
+completion date. The Attrition analysis tab must include all 27 H2 items,
+90/180/365-day windows, and the same live report filters as the other tabs.
+
 After the deterministic analysis completes:
 
 1. Inspect `analysis-manifest.json` and
@@ -189,6 +201,8 @@ required after repeatability passes. Open the HTML report before finishing.
 - If an analysis fails, preserve the explicit failure in the manifest.
 - If cycle, alert, or attrition inputs are unavailable, keep the
   corresponding report tab and explain what is missing.
+- If attrition inputs are present, a skipped or missing attrition artifact is a
+  failed run and must be corrected before returning the report.
 - Never substitute synthetic attrition outcomes.
 
 ## Boundaries

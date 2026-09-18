@@ -259,6 +259,50 @@ def linked_source_url(source: Path) -> str | None:
     return linked_source_registry(source).get("source_url")
 
 
+def resolve_attrition_settings(
+    survey: pd.DataFrame,
+    settings: dict[str, Any],
+) -> dict[str, Any]:
+    resolved = dict(settings)
+    completion_column = settings.get("predictor_completion_date_column")
+    if not completion_column:
+        return resolved
+
+    cycle_column = settings["cycle_column"]
+    predictor_cycle = settings["predictor_cycle"]
+    values = survey.loc[
+        survey[cycle_column] == predictor_cycle,
+        completion_column,
+    ].dropna()
+    if pd.api.types.is_datetime64_any_dtype(values):
+        dates = pd.to_datetime(values, errors="coerce")
+    else:
+        numeric = pd.to_numeric(values, errors="coerce")
+        all_numeric = (
+            numeric.notna().sum() == values.notna().sum()
+            and numeric.notna().any()
+        )
+        if all_numeric:
+            dates = pd.to_datetime(
+                numeric,
+                unit="D",
+                origin="1899-12-30",
+                errors="coerce",
+            )
+        else:
+            dates = pd.to_datetime(values, errors="coerce")
+    unique_dates = dates.dropna().dt.normalize().unique()
+    if len(unique_dates) != 1:
+        raise ValueError(
+            f"Expected one completion date in '{completion_column}' for "
+            f"predictor cycle {predictor_cycle}; found {len(unique_dates)}."
+        )
+    resolved["predictor_completion_date"] = pd.Timestamp(
+        unique_dates[0]
+    ).date().isoformat()
+    return resolved
+
+
 def detect_attributes(
     frame: pd.DataFrame,
     excluded: set[str],
@@ -413,11 +457,14 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
             attrition["cycle_column"],
             attrition["termination_date_column"],
         }
+        if attrition.get("predictor_completion_date_column"):
+            required.add(attrition["predictor_completion_date_column"])
         available_columns = set(survey.columns)
         if attribute_frame is not None:
             available_columns.update(attribute_frame.columns)
         if required.issubset(available_columns):
             analyses.append("attrition")
+            attrition = resolve_attrition_settings(survey, attrition)
 
     config: dict[str, Any] = {
         "survey_csv": str(survey_path),

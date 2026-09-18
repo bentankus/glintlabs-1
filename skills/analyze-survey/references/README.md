@@ -31,8 +31,9 @@ https://microsoft.sharepoint-df.com/:x:/t/EVE/cQqHblj5v7HPSLyUK88GtXJ8EgUCiNQuV5
 Use `Sheet1`, join `user_properties` by `user_id`, and use a 5-point scale.
 The registered sample also defines an H2-to-Exit attrition analysis: cycle
 `1002` is the predictor survey, cycle `1003` is the Exit cohort,
-`attrition date` is the outcome date, and December 15, 2025 is the registered
-H2 completion date. The deterministic windows are 90, 180, and 365 days.
+`attrition date` is the outcome date, and `survey_completion_date` supplies
+the predictor date. The current H2 completion date is June 1, 2026. The
+deterministic windows are 90, 180, and 365 days.
 Do not replace it with bundled, generated, or synthetic survey data. If access
 is unavailable, report the access problem instead of silently substituting a
 different dataset.

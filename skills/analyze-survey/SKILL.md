@@ -123,8 +123,8 @@ The runner automatically:
   labels before creating the report payload
 - runs attrition whenever valid Exit or termination outcomes are present; for
   the registered demo, H2 (`survey_cycle_id = 1002`) is linked to Exit
-  (`survey_cycle_id = 1003`) using the registered December 15, 2025 H2
-  completion date and 90-, 180-, and 365-day windows
+  (`survey_cycle_id = 1003`) using H2's `survey_completion_date`
+  (`2026-06-01`) and 90-, 180-, and 365-day windows
 - creates an internal `analysis-config.json`
 - runs the standard `vivaglint` analyses twice
 - requires SHA-256 repeatability

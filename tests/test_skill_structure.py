@@ -299,6 +299,11 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
         {
             "user_id": [1, 2, 1],
             "survey_cycle_id": [1002, 1002, 1003],
+            "survey_completion_date": [
+                module.pd.Timestamp("2026-06-01"),
+                module.pd.Timestamp("2026-06-01"),
+                module.pd.NaT,
+            ],
             "Q_ONE": [4, 2, None],
         }
     )
@@ -333,7 +338,11 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
     assert "attrition" in config["analyses"]
     assert config["embedded_attrition"]["predictor_cycle"] == 1002
     assert config["embedded_attrition"]["outcome_cycle"] == 1003
-    assert config["embedded_attrition"]["predictor_completion_date"] == "2025-12-15"
+    assert (
+        config["embedded_attrition"]["predictor_completion_date_column"]
+        == "survey_completion_date"
+    )
+    assert config["embedded_attrition"]["predictor_completion_date"] == "2026-06-01"
 
 
 def test_embedded_exit_attrition_uses_registered_cycles_and_windows(tmp_path):

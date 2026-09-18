@@ -11,7 +11,7 @@
     "predictor_cycle": 1002,
     "outcome_cycle": 1003,
     "termination_date_column": "attrition date",
-    "predictor_completion_date": "2025-12-15",
+    "predictor_completion_date_column": "survey_completion_date",
     "time_periods": [90, 180, 365],
     "minimum_category_n": 5
   },

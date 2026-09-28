@@ -31,8 +31,10 @@ Always create `people-science-summary-context.json` from aggregate results so a
 completed analysis can be reused by the preview workflow without rerunning the
 codebooks. When summaries are enabled:
 
-- Require six summaries: Scores change, Relationships, Alerts, Factors,
-  Attrition analysis, and Downloads.
+- Require six summary objects for schema stability: Scores change,
+  Correlation (`relationships`), Attrition alerts (`alerts`), Factors,
+  Attrition analysis, and Downloads. Render only summaries for tabs present in
+  the report.
 - Each summary must contain a headline, observed evidence, professional
   interpretation, recommended next step, caveat, and published-source links.
 - Generate narratives from `people-science-summary-context.json`, never raw
@@ -89,21 +91,22 @@ staging data from the ZIP.
 Keep this tab order and naming:
 
 1. **Scores change**
-2. **Relationships**
-3. **Alerts**
-4. **Factors**
-5. **Attrition analysis**
+2. **Correlation**
+3. **Factors**
+4. **Attrition analysis** (only when attrition completes)
+5. **Attrition alerts** (only when attrition completes)
 6. **Downloads**
 
-If an analysis cannot run, keep its tab and explain exactly which input is
-missing. Never remove the tab or fabricate data.
+If attrition cannot run, omit both attrition tabs. Never fabricate attrition
+data. For other analyses, keep the tab and explain why results are unavailable.
 
 ## Shared report filter
 
 Place one report-level attribute/value filter above the tabs.
 
-- Apply it to Scores change, Relationships, and Alerts.
-- Treat it as a parent filter. Alerts must calculate their displayed
+- Apply it to Scores change, Correlation, Attrition analysis, and Attrition
+  alerts.
+- Treat it as a parent filter. Attrition alerts must select their displayed
   dimensions within the selected segment.
 - Use saved aggregate values in the browser. Do not embed or recalculate from
   respondent-level rows.
@@ -131,7 +134,7 @@ Place one report-level attribute/value filter above the tabs.
 - Keep questions in survey order and use alternating row shading.
 - Apply the shared report filter only when both cycles meet minimum N.
 
-### Relationships
+### Correlation
 
 - Run the full Pearson correlation analysis and show the complete item-by-item
   matrix.
@@ -167,31 +170,25 @@ Place one report-level attribute/value filter above the tabs.
 - Emphasize practical magnitude when large N makes most results significant.
 - Save segment matrices only where there are at least 30 response rows.
 
-### Alerts
+### Attrition alerts
 
-- Present manager-defined teams as a triage table with Critical, Watch,
-  Improving, Stable, and Suppressed summary counts.
-- Calculate each team's composite-score change, Welch significance, and
-  company-adjusted change across exactly two cycles.
-- Classify **Critical** when company-adjusted change is at most -3 points,
-  p-value is below .05, and at least 25% of items (minimum 3) decline.
-- Classify **Watch** when company-adjusted change is at most -2 points or raw
-  change is at most -3 points with at least 3 declining items.
-- Classify **Improving** when company-adjusted change is at least 3 points and
-  p-value is below .05. Treat remaining eligible teams as Stable.
-- Show prior/current score, raw and company-adjusted change, both sample sizes,
-  number of declining items, and significance status.
-- Add filters for severity, minimum adjusted decline, minimum declining items,
-  team search, and significant-only results.
-- Allow sorting by severity, adjusted decline, raw change, or declining-item
-  count.
-- Expand each team to show its five largest item declines with old score, new
-  score, and delta.
-- Require at least 20 responses in both compared cycles for every team alert,
-  including report-filtered team intersections. Suppress every smaller group
-  and state the threshold.
-- Explain the classification rules in a compact disclosure. Describe alerts as
-  screening signals, not causal findings.
+- For each report attribute and outcome window, calculate each item's median
+  attrition multiplier across privacy-eligible attribute values.
+- Rank items by that median and retain the top five per attribute.
+- Show Attribute, Group, Attrition item, Group score, Company score, Gap,
+  Attrition multiplier, and N.
+- At company level, show the lowest-scoring privacy-eligible group for each top
+  item and attribute. Sort the table by the largest negative score gap first.
+- When an attribute/value filter is selected, show that group's results for the
+  selected attribute's top five items.
+- Exclude an attrition row when either its favorable or unfavorable category N
+  is below the configured minimum. Continue applying normal report minimum-N
+  suppression to the displayed group score.
+- Provide 90-, 180-, and 365-day controls when those outcome windows exist.
+  Default to 180 days when it has eligible alerts; otherwise default to the
+  first outcome window with eligible alerts.
+- Describe alerts as aggregate screening signals. Do not present multipliers as
+  individual predictions or group score gaps as causal explanations.
 
 ### Factors
 
@@ -206,7 +203,7 @@ Place one report-level attribute/value filter above the tabs.
   panel per loading dimension, repeat the horizontal loading axis in every
   panel, and show the shared vertical question labels only once.
 - Plot loading magnitudes on a positive `0` to `1` axis. Apply the same
-  strength bands and colors as Relationships: Low (`< .30`), Medium
+  strength bands and colors as Correlation: Low (`< .30`), Medium
   (`.30-.49`), High (`.50-.69`), and Very high (`>= .70`).
 - Sort the shared question axis from high to low by each item's MR1 loading
   only; do not combine loading strengths across dimensions for sorting. Give
@@ -225,7 +222,7 @@ Place one report-level attribute/value filter above the tabs.
 - Do not display favorable or unfavorable counts or percentages in the report.
   Retain them only in the privacy-safe aggregate artifact for auditability and
   suppression enforcement.
-- Otherwise show **Not run** and list the missing inputs.
+- If attrition cannot run, omit both Attrition analysis and Attrition alerts.
 - Never generate synthetic attrition outcomes.
 
 ### Downloads
@@ -238,10 +235,8 @@ correlation matrices, score-change, and alert outputs when available.
 - Default minimum displayed group size is 5.
 - Keep respondent-level data local and outside the shareable package.
 - Exclude identifier-like employee, respondent, manager, team, client, UUID,
-  and GUID columns from report filters and aggregate downloads. Replace
-  manager-defined alert identifiers with deterministic generic team labels
-  before creating the browser payload.
-- Precompute score, distribution, change, relationship, and alert
+  and GUID columns from report filters and aggregate downloads.
+- Precompute score, distribution, change, correlation, and attrition-alert
   aggregates. Browser interactions must select saved values rather than rerun
   analysis over employee rows.
 - Validate all download links and JavaScript syntax before sharing.

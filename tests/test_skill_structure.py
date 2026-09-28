@@ -91,9 +91,9 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "positive-correlation distance (`1 - r`)" in skill
     assert "highest average silhouette score" in skill
     assert "dropdown from 3 through 10 clusters" in skill
-    assert "company-adjusted" in skill
-    assert "expandable top-five item declines" in skill
-    assert "20 responses" in skill
+    assert "median privacy-eligible attrition multiplier" in skill
+    assert "top-five results" in skill
+    assert "lowest-scoring group" in skill
     assert "greater of 100 complete responses or five complete responses" in skill
     assert "clustered horizontal bar small multiples" in skill
     assert "progress bar" in skill
@@ -117,10 +117,10 @@ def test_analyze_survey_points_to_linked_dataset():
     ).read_text(encoding="utf-8")
     required_tabs = (
         "Scores change",
-        "Relationships",
-        "Alerts",
+        "Correlation",
         "Factors",
         "Attrition analysis",
+        "Attrition alerts",
         "Downloads",
     )
     positions = [report_contract.index(f"**{name}**") for name in required_tabs]
@@ -137,10 +137,10 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "average-linkage hierarchical clustering" in report_contract
     assert "3 through 15 clusters" in report_contract
     assert "extend the dropdown through the recommended count" in report_contract
-    assert "Classify **Critical**" in report_contract
-    assert "Welch significance" in report_contract
-    assert "five largest item declines" in report_contract
-    assert "at least 20 responses in both compared cycles" in report_contract
+    assert "top five" in report_contract.lower()
+    assert "median" in report_contract
+    assert "lowest-scoring privacy-eligible group" in report_contract
+    assert "favorable or unfavorable category N" in report_contract
     assert "`off`: render no AI summary cards" in report_contract
     assert "`required`: fail report generation" in report_contract
     assert "Recalculate summaries when the report attribute or value changes" in report_contract
@@ -483,14 +483,30 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
         ]
     ).to_csv(attrition, index=False)
     payload = module.attrition_payload(attrition, ["Q_ONE"], {}, 5)
+    alerts_payload = {
+        "questions": ["Q_ONE"],
+        "labels": ["One"],
+        "days": [90, 180, 365],
+        "defaultDays": 180,
+        "byDay": {},
+        "minimumCategoryN": 5,
+        "method": "test",
+    }
     golden = (
         ROOT / "skills/analyze-survey/references/golden-report.html"
     ).read_text(encoding="utf-8")
-    report = module.inject_attrition_report(golden, payload, "2025-12-15")
+    report = module.inject_attrition_report(
+        module.prepare_report_shell(golden, True),
+        payload,
+        alerts_payload,
+        "2025-12-15",
+    )
 
     assert payload["days"] == [90, 180, 365]
     assert len(payload["rows"]) == 3
     assert "id=attritionTableBody" in report
+    assert "id=alertsList" in report
+    assert ">Attrition alerts</button>" in report
     assert "<option value=1 selected>180 days (6 months)</option>" in report
     assert "ATTRITION_DATA" in report
     assert "attr.addEventListener(\"change\"" in report
@@ -737,22 +753,15 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     report = tmp_path / f"{tmp_path.name}-report.html"
     share_zip = tmp_path / f"{tmp_path.name}-share.zip"
     report_text = report.read_text(encoding="utf-8")
-    golden_text = (
-        ROOT / "skills/analyze-survey/references/golden-report.html"
-    ).read_text(encoding="utf-8")
-    payload = re.compile(r"(?s)(<script>const D=).*?(;\nconst names=)")
-    assert payload.sub(r"\1__DATA__\2", report_text) == payload.sub(
-        r"\1__DATA__\2", golden_text
-    )
     for tab in (
         "Scores change",
-        "Relationships",
-        "Alerts",
+        "Correlation",
         "Factors",
-        "Attrition analysis",
         "Downloads",
     ):
         assert f">{tab}</button>" in report_text
+    for unavailable_tab in ("Attrition analysis", "Attrition alerts", "Alerts"):
+        assert f">{unavailable_tab}</button>" not in report_text
     for removed_tab in ("Overview", "Item results", "Heatmap"):
         assert f">{removed_tab}</button>" not in report_text
     for heading in (
@@ -772,13 +781,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         "Very high",
         "Recommended:",
         "Clusters",
-        "How alerts are identified",
-        "Minimum adjusted decline",
-        "Minimum declining items",
-        "Search teams",
-        "Significant only",
-        "Vs. company",
-        "Suppressed",
         "Loading magnitude",
         "extracted dimension",
     ):
@@ -794,10 +796,12 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "id=relClusters" in report_text
     assert "cluster-start-col" in report_text
     assert "cluster-start-row" in report_text
-    assert "alertSeverity" in report_text
-    assert "alertSearch" in report_text
-    assert "topDeclines" in report_text
-    assert report_text.count("data-summary=") == 6
+    assert "alertSeverity" not in report_text
+    assert "alertSearch" not in report_text
+    assert "topDeclines" not in report_text
+    assert "id=attritionTableBody" not in report_text
+    assert "id=alertsList" not in report_text
+    assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text
     assert "function attritionSummaryRows()" in report_text
@@ -891,7 +895,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         text=True,
     )
     report_text = report.read_text(encoding="utf-8")
-    assert report_text.count("data-summary=") == 6
+    assert report_text.count("data-summary=") == 4
     manifest = json.loads(
         (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
     )
@@ -1044,86 +1048,107 @@ def test_relationship_cluster_plan_is_deterministic():
     assert len(set(first["assignments"]["3"])) == 3
 
 
-def test_alert_triage_uses_real_team_ids_and_suppression():
+def test_attrition_alerts_select_top_five_and_preserve_score_gaps(tmp_path):
     script_path = ROOT / "scripts/build_interactive_report.py"
     spec = importlib.util.spec_from_file_location("build_interactive_report", script_path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(module)
 
+    questions = [f"Q_{index}" for index in range(1, 7)]
     rows = []
-    for cycle, team, count, score in (
-        ("H1", 101.0, 12, 5),
-        ("H2", 101.0, 12, 3),
-        ("H1", 202.0, 12, 3),
-        ("H2", 202.0, 12, 5),
-        ("H1", 303.0, 3, 3),
-        ("H2", 303.0, 3, 3),
-    ):
-        for index in range(count):
+    for value, offset in (("A", 0.0), ("B", 0.2)):
+        for index, question in enumerate(questions):
+            ratio = 6 - index + offset
             rows.append(
                 {
-                    "survey_cycle_title": cycle,
-                    "manager_id": team,
-                    "Q_ONE": score,
-                    "Q_TWO": score,
-                    "Q_THREE": score,
-                    "Q_FOUR": score,
+                    "analysis_scope": "attribute",
+                    "attribute_name": "department",
+                    "attribute_value": value,
+                    "question": question,
+                    "days": 180,
+                    "favorable_n": 10,
+                    "unfavorable_n": 10,
+                    "attrition_ratio": ratio,
                 }
             )
-    frame = module.pd.DataFrame(rows)
-    result = module.alerts(
-        frame,
-        ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"],
-        "survey_cycle_title",
-        "manager_id",
-        20,
+    attrition = tmp_path / "attrition.csv"
+    module.pd.DataFrame(rows).to_csv(attrition, index=False)
+    segments = {
+        "department": {
+            "label": "Department",
+            "values": {
+                "A": {"items": [[50 + index, 0, 0, 0, 20] for index in range(6)]},
+                "B": {"items": [[60 + index, 0, 0, 0, 20] for index in range(6)]},
+            },
+        }
+    }
+    overall = [[70, 0, 0, 0, 40] for _ in questions]
+    result = module.attrition_alert_payload(
+        attrition, questions, segments, overall, 5
     )
 
-    assert result["cycles"] == ["H1", "H2"]
-    assert result["suppressed"] == 3
-    assert result["rows"] == []
+    department = result["byDay"]["180"]["department"]
+    assert result["defaultDays"] == 180
+    assert [row[0] for row in department["topItems"]] == [0, 1, 2, 3, 4]
+    assert len(department["rows"]) == 10
+    group_a_first = next(
+        row for row in department["rows"] if row[0] == "A" and row[1] == 0
+    )
+    assert group_a_first == ["A", 0, 50.0, 70.0, -20.0, 20, 6.0, 6.1]
 
 
-def test_alert_triage_includes_groups_at_twenty_per_cycle():
+def test_attrition_alerts_suppress_small_attrition_categories(tmp_path):
     script_path = ROOT / "scripts/build_interactive_report.py"
     spec = importlib.util.spec_from_file_location("build_interactive_report", script_path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(module)
 
-    rows = []
-    for cycle, team, score in (
-        ("H1", 101.0, 5),
-        ("H2", 101.0, 3),
-        ("H1", 202.0, 3),
-        ("H2", 202.0, 5),
-    ):
-        for _ in range(20):
-            rows.append(
-                {
-                    "survey_cycle_title": cycle,
-                    "manager_id": team,
-                    "Q_ONE": score,
-                    "Q_TWO": score,
-                    "Q_THREE": score,
-                    "Q_FOUR": score,
-                }
-            )
-    result = module.alerts(
-        module.pd.DataFrame(rows),
-        ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"],
-        "survey_cycle_title",
-        "manager_id",
-        20,
+    attrition = tmp_path / "attrition.csv"
+    module.pd.DataFrame(
+        [
+            {
+                "analysis_scope": "attribute",
+                "attribute_name": "department",
+                "attribute_value": "A",
+                "question": "Q_ONE",
+                "days": 180,
+                "favorable_n": 4,
+                "unfavorable_n": 20,
+                "attrition_ratio": 3.0,
+            },
+            {
+                "analysis_scope": "attribute",
+                "attribute_name": "department",
+                "attribute_value": "B",
+                "question": "Q_ONE",
+                "days": 180,
+                "favorable_n": 20,
+                "unfavorable_n": 20,
+                "attrition_ratio": 2.0,
+            },
+        ]
+    ).to_csv(attrition, index=False)
+    segments = {
+        "department": {
+            "label": "Department",
+            "values": {
+                "A": {"items": [[40, 0, 0, 0, 20]]},
+                "B": {"items": [[50, 0, 0, 0, 20]]},
+            },
+        }
+    }
+    result = module.attrition_alert_payload(
+        attrition,
+        ["Q_ONE"],
+        segments,
+        [[60, 0, 0, 0, 40]],
+        5,
     )
 
-    assert result["suppressed"] == 0
-    assert {row["team"] for row in result["rows"]} == {"101", "202"}
-    declining = next(row for row in result["rows"] if row["team"] == "101")
-    assert declining["severity"] == "watch"
-    assert declining["adjustedDelta"] < 0
-    assert len(declining["topDeclines"]) == 4
+    rows = result["byDay"]["180"]["department"]["rows"]
+    assert rows == [["B", 0, 50.0, 60.0, -10.0, 20, 2.0, 2.0]]
 
 
 def test_numeric_attribute_bucketing_handles_missing_values():

@@ -28,8 +28,6 @@ from scipy.stats import t as student_t
 
 MIN_N = 5
 RELATIONSHIP_MIN_N = 30
-ALERT_MIN_N = 20
-FILTERED_ALERT_MIN_N = 20
 FACTOR_MIN_N = 100
 FACTOR_RESPONDENTS_PER_ITEM = 5
 SUMMARY_TABS = (
@@ -410,160 +408,6 @@ def heatmap_cube(
     return {"cycles": cycles, "attributes": eligible, "overall": build(frame), "filtered": filtered}
 
 
-def alerts(
-    frame: pd.DataFrame,
-    questions: list[str],
-    cycle_col: str | None,
-    team_col: str | None,
-    minimum: int,
-) -> dict[str, Any]:
-    if not cycle_col or not team_col:
-        return {"rows": [], "suppressed": 0, "cycles": [], "companyChange": None}
-    cycles = sorted(frame[cycle_col].dropna().astype(str).unique())
-    if len(cycles) != 2:
-        return {"rows": [], "suppressed": 0, "cycles": cycles, "companyChange": None}
-
-    def composite(source: pd.DataFrame) -> pd.Series:
-        return (source[questions].mean(axis=1) - 1) * 25
-
-    def comparison(first: pd.Series, second: pd.Series) -> tuple[float, float]:
-        first = first.dropna()
-        second = second.dropna()
-        change = float(second.mean() - first.mean())
-        if len(first) < 2 or len(second) < 2:
-            return change, 1.0
-        denominator = math.sqrt(
-            first.var(ddof=1) / len(first) + second.var(ddof=1) / len(second)
-        )
-        if not math.isfinite(denominator) or denominator == 0:
-            return change, 1.0
-        statistic = change / denominator
-        first_term = first.var(ddof=1) / len(first)
-        second_term = second.var(ddof=1) / len(second)
-        degrees = (first_term + second_term) ** 2 / (
-            first_term**2 / (len(first) - 1)
-            + second_term**2 / (len(second) - 1)
-        )
-        return change, float(2 * student_t.sf(abs(statistic), degrees))
-
-    company_subsets = [
-        frame[frame[cycle_col].astype(str) == cycle] for cycle in cycles
-    ]
-    company_change, _ = comparison(
-        composite(company_subsets[0]),
-        composite(company_subsets[1]),
-    )
-    output = []
-    suppressed = 0
-    decline_threshold = max(3, math.ceil(len(questions) * 0.25))
-    for team, group in frame.dropna(subset=[team_col]).groupby(team_col):
-        subsets = [group[group[cycle_col].astype(str) == cycle] for cycle in cycles]
-        if any(len(item) < minimum for item in subsets):
-            suppressed += 1
-            continue
-        first_scores = [
-            round(float((subsets[0][question].mean() - 1) * 25), 1)
-            for question in questions
-        ]
-        second_scores = [
-            round(float((subsets[1][question].mean() - 1) * 25), 1)
-            for question in questions
-        ]
-        deltas = [b - a for a, b in zip(first_scores, second_scores)]
-        change, p_value = comparison(composite(subsets[0]), composite(subsets[1]))
-        adjusted = change - company_change
-        declining = sum(value < 0 for value in deltas)
-        if adjusted <= -3 and p_value < 0.05 and declining >= decline_threshold:
-            severity = "critical"
-        elif adjusted <= -2 or (change <= -3 and declining >= 3):
-            severity = "watch"
-        elif adjusted >= 3 and p_value < 0.05:
-            severity = "improving"
-        else:
-            severity = "stable"
-        item_changes = sorted(
-            (
-                {
-                    "question": index,
-                    "from": first_scores[index],
-                    "to": second_scores[index],
-                    "delta": round(delta, 1),
-                }
-                for index, delta in enumerate(deltas)
-            ),
-            key=lambda item: item["delta"],
-        )
-        output.append(
-            {
-                "team": (
-                    str(int(team))
-                    if isinstance(team, (int, float, np.integer, np.floating))
-                    and float(team).is_integer()
-                    else str(team)
-                ),
-                "severity": severity,
-                "from": round(float(composite(subsets[0]).mean()), 1),
-                "to": round(float(composite(subsets[1]).mean()), 1),
-                "delta": round(change, 1),
-                "companyChange": round(company_change, 1),
-                "adjustedDelta": round(adjusted, 1),
-                "pValue": p_value,
-                "significant": p_value < 0.05,
-                "nFrom": len(subsets[0]),
-                "nTo": len(subsets[1]),
-                "declining": declining,
-                "topDeclines": item_changes[:5],
-            }
-        )
-    rank = {"critical": 0, "watch": 1, "improving": 2, "stable": 3}
-    return {
-        "rows": sorted(
-            output,
-            key=lambda item: (
-                rank[item["severity"]],
-                item["adjustedDelta"],
-                item["delta"],
-            ),
-        ),
-        "suppressed": suppressed,
-        "cycles": cycles,
-        "companyChange": round(company_change, 1),
-        "minimum": minimum,
-        "declineThreshold": decline_threshold,
-    }
-
-
-def alert_cube(
-    frame: pd.DataFrame,
-    questions: list[str],
-    attributes: list[str],
-    cycle_col: str | None,
-    team_col: str | None,
-) -> dict[str, Any]:
-    filtered = {}
-    for attribute in attributes:
-        if attribute in {cycle_col, team_col}:
-            filtered[attribute] = {}
-            continue
-        values = {}
-        for value, group in frame.dropna(subset=[attribute]).groupby(attribute):
-            result = alerts(
-                group,
-                questions,
-                cycle_col,
-                team_col,
-                FILTERED_ALERT_MIN_N,
-            )
-            if result["rows"] or result["suppressed"]:
-                values[str(value)] = result
-        filtered[attribute] = values
-    return {
-        "overall": alerts(frame, questions, cycle_col, team_col, ALERT_MIN_N),
-        "filtered": filtered,
-        "available": bool(cycle_col and team_col),
-    }
-
-
 def factor_cube(
     frame: pd.DataFrame,
     questions: list[str],
@@ -847,9 +691,183 @@ def attrition_payload(
     }
 
 
+def attrition_alert_payload(
+    path: Path,
+    questions: list[str],
+    segments: dict[str, Any],
+    overall: list[list[float | int]],
+    minimum_category_n: int,
+) -> dict[str, Any]:
+    frame = pd.read_csv(
+        path,
+        dtype={"attribute_name": str, "attribute_value": str},
+        low_memory=False,
+    )
+    days = sorted(int(value) for value in frame["days"].dropna().unique())
+    frame = frame[frame["analysis_scope"] == "attribute"].copy()
+    frame["attrition_ratio"] = pd.to_numeric(
+        frame["attrition_ratio"], errors="coerce"
+    )
+    frame = frame[
+        frame["attribute_name"].isin(segments)
+        & (frame["favorable_n"] >= minimum_category_n)
+        & (frame["unfavorable_n"] >= minimum_category_n)
+        & np.isfinite(frame["attrition_ratio"])
+    ]
+    question_index = {question: index for index, question in enumerate(questions)}
+    by_day: dict[str, Any] = {}
+    for days_value in days:
+        day_frame = frame[frame["days"] == days_value]
+        attributes: dict[str, Any] = {}
+        for attribute in segments:
+            attribute_frame = day_frame[day_frame["attribute_name"] == attribute]
+            if attribute_frame.empty:
+                continue
+            item_multipliers = (
+                attribute_frame.groupby("question", sort=False)["attrition_ratio"]
+                .median()
+                .dropna()
+            )
+            top_questions = sorted(
+                (
+                    (question_index[question], float(multiplier))
+                    for question, multiplier in item_multipliers.items()
+                    if question in question_index
+                ),
+                key=lambda item: (-item[1], item[0]),
+            )[:5]
+            rows = []
+            for item_index, priority_multiplier in top_questions:
+                question = questions[item_index]
+                item_frame = attribute_frame[
+                    attribute_frame["question"] == question
+                ]
+                for record in item_frame.to_dict("records"):
+                    value = str(record["attribute_value"])
+                    segment = segments[attribute]["values"].get(value)
+                    if not segment:
+                        continue
+                    group_score = float(segment["items"][item_index][0])
+                    company_score = float(overall[item_index][0])
+                    rows.append(
+                        [
+                            value,
+                            item_index,
+                            group_score,
+                            company_score,
+                            round(group_score - company_score, 1),
+                            int(segment["items"][item_index][4]),
+                            round(float(record["attrition_ratio"]), 2),
+                            round(priority_multiplier, 2),
+                        ]
+                    )
+            if rows:
+                attributes[attribute] = {
+                    "label": segments[attribute]["label"],
+                    "topItems": [
+                        [item_index, round(multiplier, 2)]
+                        for item_index, multiplier in top_questions
+                    ],
+                    "rows": rows,
+                }
+        by_day[str(days_value)] = attributes
+    default_days = next(
+        (
+            candidate
+            for candidate in ([180] + days)
+            if candidate in days and by_day.get(str(candidate))
+        ),
+        180 if 180 in days else (days[0] if days else None),
+    )
+    return {
+        "questions": questions,
+        "labels": [label(question) for question in questions],
+        "days": days,
+        "defaultDays": default_days,
+        "byDay": by_day,
+        "minimumCategoryN": minimum_category_n,
+        "method": "Top items use the median eligible attrition multiplier across "
+        "values within each attribute.",
+    }
+
+
+def remove_legacy_alert_script(html: str) -> str:
+    start = html.find("const alertSeverity=")
+    end_marker = "alertSearch.oninput=renderAlerts;"
+    end = html.find(end_marker, start)
+    if start >= 0 and end >= 0:
+        html = (
+            html[:start]
+            + 'function signed(value){return`${value>0?"+":""}${Number(value).toFixed(1)}`}'
+            + html[end + len(end_marker):]
+        )
+    return html.replace("renderAlerts();", "")
+
+
+def remove_section(html: str, section_id: str, next_section_id: str) -> str:
+    start = html.index(f"<section class=panel id={section_id}")
+    end = html.index(f"<section class=panel id={next_section_id}", start)
+    return html[:start] + html[end:]
+
+
+def replace_live_alert_summary(html: str) -> str:
+    start = html.index('else if(tab==="alerts"){')
+    end_marker = '}else if(tab==="factors"){'
+    end = html.index(end_marker, start)
+    replacement = r'''else if(tab==="alerts"){const days=D.alerts.defaultDays,source=D.alerts.byDay?.[String(days)]||{},attribute=attr.value?source[attr.value]:null;let rows=[];if(attribute&&val.value){rows=attribute.rows.filter(row=>row[0]===val.value).map(row=>({label:attribute.label,row}))}else{for(const item of Object.values(source)){for(const [itemIndex] of item.topItems){const candidates=item.rows.filter(row=>row[1]===itemIndex).sort((a,b)=>a[4]-b[4]||a[0].localeCompare(b[0]));if(candidates[0])rows.push({label:item.label,row:candidates[0]})}}}rows.sort((a,b)=>a.row[4]-b.row[4]);const top=rows[0];if(top){summary.headline=`${scope}: ${D.labels[D.alerts.questions[top.row[1]]]} has the largest visible score gap`;summary.observation=`At ${days} days, ${top.label}: ${top.row[0]} scores ${Math.abs(top.row[4]).toFixed(1)} points ${top.row[4]<0?"below":"above"} company overall on ${D.labels[D.alerts.questions[top.row[1]]]}, with a ${top.row[6].toFixed(2)}x attrition multiplier.`;summary.interpretation=`This combines an aggregate attrition association with a group score gap to prioritize follow-up, not to predict individual departures.`;summary.recommendation=`Validate the experience behind the item with the selected group and review related lifecycle context before choosing an action.`;summary.caveat=`Items are selected from the top five median eligible attrition multipliers for the attribute; group results remain descriptive and non-causal.`}else{summary.headline=`${scope}: attrition alerts are unavailable`;summary.observation=`No privacy-eligible group comparison is available for the selected population.`;summary.interpretation=`Unavailable alerts do not imply low attrition risk or a strong employee experience.`;summary.recommendation=`Use a broader population or improve outcome coverage before interpreting this view.`;summary.caveat=`Do not bypass minimum-category thresholds or infer individual risk.`}}else if(tab==="factors"){'''
+    return html[:start] + replacement + html[end + len(end_marker):]
+
+
+def prepare_report_shell(html: str, has_attrition: bool) -> str:
+    html = html.replace(
+        'data-id="relationships" aria-selected="false">Relationships</button>',
+        'data-id="relationships" aria-selected="false">Correlation</button>',
+        1,
+    ).replace("<h2>Relationships</h2>", "<h2>Correlation</h2>", 1)
+    html = remove_legacy_alert_script(html)
+    html = replace_live_alert_summary(html)
+    html = remove_section(html, "alerts", "factors")
+    html = html.replace(
+        '<button class="tab" data-id="alerts" aria-selected="false">Alerts</button>',
+        "",
+        1,
+    )
+    if has_attrition:
+        old_navigation = (
+            '<button class="tab" data-id="factors" aria-selected="false">Factors</button>'
+            '<button class="tab" data-id="attrition" aria-selected="false">'
+            'Attrition analysis</button>'
+        )
+        new_navigation = (
+            '<button class="tab" data-id="factors" aria-selected="false">Factors</button>'
+            '<button class="tab" data-id="attrition" aria-selected="false">'
+            'Attrition analysis</button>'
+            '<button class="tab" data-id="alerts" aria-selected="false">'
+            'Attrition alerts</button>'
+        )
+        return html.replace(old_navigation, new_navigation, 1)
+
+    html = html.replace(
+        '<button class="tab" data-id="attrition" aria-selected="false">'
+        'Attrition analysis</button>',
+        "",
+        1,
+    )
+    attrition_start = html.index("<section class=panel id=attrition")
+    downloads_start = html.index("<section class=panel id=downloads", attrition_start)
+    html = html[:attrition_start] + html[downloads_start:]
+    return html.replace(
+        'function renderStatic(){document.querySelector("#attritionStatus").textContent='
+        'D.attrition;document.querySelector("#downloadList").innerHTML=',
+        'function renderStatic(){document.querySelector("#downloadList").innerHTML=',
+        1,
+    )
+
+
 def inject_attrition_report(
     html: str,
     payload: dict[str, Any],
+    alerts_payload: dict[str, Any],
     completion_date: str | None,
 ) -> str:
     old_section = (
@@ -864,7 +882,7 @@ def inject_attrition_report(
         if completion_date
         else ""
     )
-    new_section = (
+    attrition_section = (
         '<section class=panel id=attrition role=tabpanel hidden>'
         '<div class=attrition-heading><div><h2>Attrition analysis</h2>'
         '<p class=muted>Survey item multipliers linked to subsequent Exit outcomes.</p>'
@@ -891,6 +909,36 @@ def inject_attrition_report(
         'respondents are suppressed. These are screening associations, not causal '
         f'estimates.{completion_text}</p></section>'
     )
+    alerts_section = (
+        '<section class=panel id=alerts role=tabpanel hidden>'
+        '<div class=alert-heading><div><h2>Attrition alerts</h2>'
+        '<p class=muted>Find low-scoring groups on the items most associated '
+        'with later attrition.</p></div><label>Outcome window'
+        '<select id=alertDays>'
+        + "".join(
+            (
+                f'<option value={days}'
+                + (" selected" if days == alerts_payload["defaultDays"] else "")
+                + f'>{days} days'
+                + (" (6 months)" if days == 180 else "")
+                + "</option>"
+            )
+            for days in alerts_payload["days"]
+        )
+        + '</select></label></div><div class=ai-summary data-summary=alerts></div>'
+        '<p class="notice">For each attribute, the five items with the highest '
+        'median eligible attrition multipliers are selected. The table compares '
+        'group scores on those items with company overall.</p>'
+        '<p class=muted id=alertNote></p><div class=scroll>'
+        '<table class=alert-table><thead><tr><th>Attribute</th><th>Group</th>'
+        '<th>Attrition item</th><th>Group score</th><th>Company</th>'
+        '<th>Gap</th><th>Attrition multiplier</th><th>n</th></tr></thead>'
+        '<tbody id=alertsList></tbody></table></div>'
+        '<p class="muted attrition-method">Item priority uses the median eligible '
+        'multiplier across values within each attribute. Group alerts are '
+        'screening signals, not causal estimates or individual predictions.</p>'
+        '</section>'
+    )
     css = """
 /* attrition-live-table */
 .attrition-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:16px}
@@ -905,6 +953,9 @@ def inject_attrition_report(
 .attrition-multiplier{font-size:18px;font-weight:700;color:var(--blue);text-align:right}
 .attrition-method{margin:12px 0 0}.attrition-empty{text-align:center!important;padding:28px!important}
 .attrition-suppressed{color:var(--muted);font-style:italic}
+.alert-heading label{min-width:210px}.alert-table{min-width:980px}
+.alert-table td:nth-child(3){min-width:190px;white-space:normal}
+.alert-gap{font-weight:700}.alert-gap.negative{color:var(--red)}
 @media(max-width:800px){.attrition-heading{display:block}.attrition-heading label{margin-top:12px}}
 """
     encoded = (
@@ -913,9 +964,16 @@ def inject_attrition_report(
         .replace("<", "\\u003c")
         .replace(">", "\\u003e")
     )
+    alerts_encoded = (
+        json.dumps(alerts_payload, separators=(",", ":"))
+        .replace("&", "\\u0026")
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+    )
     script = """
 <script>
 const ATTRITION_DATA=__PAYLOAD__;
+const ATTRITION_ALERTS=__ALERTS_PAYLOAD__;
 const attritionIndex=new Map();
 for(const row of ATTRITION_DATA.rows){
   const key=`${row[0]}|${row[1]}|${row[3]}`;
@@ -963,11 +1021,44 @@ function renderAttritionTable(){
 document.querySelector("#attritionDays").addEventListener("change",renderAttritionTable);
 attr.addEventListener("change",()=>setTimeout(renderAttritionTable,0));
 val.addEventListener("change",renderAttritionTable);
+function renderAttritionAlerts(){
+  const body=document.querySelector("#alertsList");
+  const note=document.querySelector("#alertNote");
+  const days=document.querySelector("#alertDays").value;
+  const source=ATTRITION_ALERTS.byDay[days]||{};
+  let rows=[];
+  if(attr.value){
+    const attribute=source[attr.value];
+    rows=(attribute?.rows||[]).filter(row=>row[0]===val.value)
+      .map(row=>[attribute.label,...row]);
+  }else{
+    for(const attribute of Object.values(source)){
+      for(const [itemIndex] of attribute.topItems){
+        const candidates=attribute.rows.filter(row=>row[1]===itemIndex)
+          .sort((a,b)=>a[4]-b[4]||a[0].localeCompare(b[0]));
+        if(candidates[0])rows.push([attribute.label,...candidates[0]]);
+      }
+    }
+  }
+  rows.sort((a,b)=>a[5]-b[5]||a[0].localeCompare(b[0])||a[1].localeCompare(b[1]));
+  const scope=attr.value?`${D.segments[attr.value].label}: ${val.value}`:"Lowest group for each top item and attribute";
+  note.textContent=`${scope} · ${days}-day outcome window · ${rows.length} alerts shown`;
+  body.innerHTML=rows.map(row=>`<tr><td>${escapeHtml(row[0])}</td>
+    <td>${escapeHtml(row[1])}</td><td>${escapeHtml(ATTRITION_ALERTS.labels[row[2]])}</td>
+    <td>${Number(row[3]).toFixed(1)}</td><td>${Number(row[4]).toFixed(1)}</td>
+    <td class="alert-gap ${row[5]<0?"negative":""}">${signed(row[5])}</td>
+    <td>${Number(row[7]).toFixed(2)}x</td><td>${Number(row[6]).toLocaleString()}</td></tr>`).join("")
+    ||'<tr><td colspan=8>No privacy-eligible attrition alert is available for this selection.</td></tr>';
+}
+document.querySelector("#alertDays").addEventListener("change",renderAttritionAlerts);
+attr.addEventListener("change",()=>setTimeout(renderAttritionAlerts,0));
+val.addEventListener("change",renderAttritionAlerts);
 renderAttritionTable();
+renderAttritionAlerts();
 </script>
-""".replace("__PAYLOAD__", encoded)
+""".replace("__PAYLOAD__", encoded).replace("__ALERTS_PAYLOAD__", alerts_encoded)
     return (
-        html.replace(old_section, new_section, 1)
+        html.replace(old_section, attrition_section + alerts_section, 1)
         .replace("</style>", css + "</style>", 1)
         .replace("</body>", script + "</body>", 1)
     )
@@ -1034,29 +1125,39 @@ def summary_context(
         ),
     }
 
-    overall_alerts = alerts_data.get("overall", {})
-    alert_rows = overall_alerts.get("rows", [])
+    default_days = alerts_data.get("defaultDays")
+    default_alerts = alerts_data.get("byDay", {}).get(str(default_days), {})
+    alert_rows = []
+    for attribute, attribute_data in default_alerts.items():
+        for item_index, priority_multiplier in attribute_data["topItems"]:
+            candidates = sorted(
+                (
+                    row for row in attribute_data["rows"]
+                    if row[1] == item_index
+                ),
+                key=lambda row: (row[4], row[0]),
+            )
+            if candidates:
+                row = candidates[0]
+                alert_rows.append(
+                    {
+                        "attribute": attribute_data["label"],
+                        "group": row[0],
+                        "question": labels[questions[item_index]],
+                        "group_score": row[2],
+                        "company_score": row[3],
+                        "gap": row[4],
+                        "n": row[5],
+                        "group_multiplier": row[6],
+                        "priority_multiplier": priority_multiplier,
+                    }
+                )
     alert_context = {
-        "available": alerts_data.get("available", False),
-        "minimum_n": overall_alerts.get("minimum"),
-        "suppressed": overall_alerts.get("suppressed", 0),
-        "severity_counts": {
-            severity: sum(row["severity"] == severity for row in alert_rows)
-            for severity in ("critical", "watch", "improving", "stable")
-        },
-        "highest_priority_patterns": [
-            {
-                "severity": row["severity"],
-                "change": row["delta"],
-                "company_adjusted_change": row["adjustedDelta"],
-                "p_value": row["pValue"],
-                "declining_items": row["declining"],
-                "n_old": row["nFrom"],
-                "n_new": row["nTo"],
-                "top_item_declines": row["topDeclines"],
-            }
-            for row in alert_rows[:8]
-        ],
+        "available": bool(alert_rows),
+        "outcome_window_days": default_days,
+        "method": alerts_data.get("method"),
+        "attributes": len(default_alerts),
+        "alerts": sorted(alert_rows, key=lambda row: row["gap"])[:12],
     }
     return {
         "schema_version": "1.0.0",
@@ -1229,12 +1330,7 @@ def main() -> int:
         if column in frame.columns and not identifier_column(column)
     ]
     cycle_col = "survey_cycle_title" if "survey_cycle_title" in frame.columns else None
-    team_col = next(
-        (column for column in ("team_id", "manager_id", "Manager ID") if column in frame.columns),
-        None,
-    )
-    bucket_numeric(frame, {emp_id, "__employee_id", *questions, team_col})
-    alert_frame, alert_team_col = privacy_safe_team_frame(frame, team_col)
+    bucket_numeric(frame, {emp_id, "__employee_id", *questions})
 
     overall = metrics(frame, questions)
     segments = segment_cube(frame, questions, attributes)
@@ -1245,30 +1341,21 @@ def main() -> int:
     progress.update(45, "Clustering relationship matrices for each filter view")
     relationships = relationship_cube(frame, questions, attributes)
     progress.update(60, "Relationship matrices and cluster recommendations prepared")
-    progress.update(62, "Aggregating and classifying alert groups")
-    alert_data = alert_cube(
-        alert_frame,
-        questions,
-        attributes,
-        cycle_col,
-        alert_team_col,
-    )
-    progress.update(72, "Alert groups classified and privacy thresholds applied")
     factors_path = output / "factor_analysis_summary.csv"
     overall_factor_rows = (
         pd.read_csv(factors_path).to_dict("records") if factors_path.exists() else []
     )
-    progress.update(74, "Preparing filter-specific factor models")
+    progress.update(62, "Preparing filter-specific factor models")
     factors = factor_cube(
         frame,
         questions,
         attributes,
         overall_factor_rows,
         progress,
-        74,
-        90,
+        62,
+        84,
     )
-    progress.update(90, "Filter-specific factor models prepared")
+    progress.update(84, "Filter-specific factor models prepared")
     attrition_status = next(
         (
             item.get("message", item["status"])
@@ -1280,14 +1367,37 @@ def main() -> int:
     attrition_path = output / "attrition.csv"
     attrition_settings = config.get("embedded_attrition") or {}
     attrition_data: dict[str, Any] | None = None
+    alert_data: dict[str, Any] = {
+        "questions": questions,
+        "labels": [label(question) for question in questions],
+        "days": [],
+        "defaultDays": None,
+        "byDay": {},
+        "minimumCategoryN": int(
+            attrition_settings.get("minimum_category_n", MIN_N)
+        ),
+        "method": "",
+    }
     if attrition_path.exists():
         attrition_status = "H2-to-Exit attrition analysis completed."
+        progress.update(86, "Preparing attrition analysis and alerts")
+        minimum_category_n = int(
+            attrition_settings.get("minimum_category_n", MIN_N)
+        )
         attrition_data = attrition_payload(
             attrition_path,
             questions,
             segments,
-            int(attrition_settings.get("minimum_category_n", MIN_N)),
+            minimum_category_n,
         )
+        alert_data = attrition_alert_payload(
+            attrition_path,
+            questions,
+            segments,
+            overall,
+            minimum_category_n,
+        )
+        progress.update(90, "Attrition analysis and alerts prepared")
     report_name = f"{output.name}-report.html"
     zip_name = f"{output.name}-share.zip"
     ai_summaries = (
@@ -1358,6 +1468,7 @@ def main() -> int:
     }
     report_path = output / report_name
     report_html = html_page(data)
+    report_html = prepare_report_shell(report_html, attrition_data is not None)
     if attrition_data is not None:
         minimum_category_n = int(
             attrition_settings.get("minimum_category_n", MIN_N)
@@ -1365,6 +1476,7 @@ def main() -> int:
         report_html = inject_attrition_report(
             report_html,
             attrition_data,
+            alert_data,
             attrition_settings.get("predictor_completion_date"),
         )
         manifest["attrition_report"] = {
@@ -1375,6 +1487,16 @@ def main() -> int:
             "uses_shared_report_filter": True,
             "embedded_aggregate_rows": len(attrition_data["rows"]),
             "minimum_category_n": minimum_category_n,
+            "source_artifact": attrition_path.name,
+        }
+        default_alert_days = alert_data["defaultDays"]
+        manifest["attrition_alerts_report"] = {
+            "format": "top_attrition_items_lowest_group_scores",
+            "default_window_days": default_alert_days,
+            "top_items_per_attribute": 5,
+            "attributes": len(
+                alert_data["byDay"].get(str(default_alert_days), {})
+            ),
             "source_artifact": attrition_path.name,
         }
         (output / "analysis-manifest.json").write_text(

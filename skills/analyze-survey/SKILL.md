@@ -51,9 +51,10 @@ and accessibility decisions. Do not invent report colors or visual patterns.
 `golden-report.html` is the canonical report shell. Future reports must preserve
 its markup, styling, tab order, labels, and browser interactions exactly while
 replacing its embedded aggregate data payload with the current analysis.
-The required tabs are Scores change, Relationships, Alerts, Factors,
-Attrition analysis, and Downloads. Do not add Overview, Item results, or
-Heatmap tabs.
+The required base tabs are Scores change, Correlation, Factors, and Downloads.
+When attrition analysis completes, add Attrition analysis followed immediately
+by Attrition alerts between Factors and Downloads. If attrition is unavailable,
+omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
 
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score
@@ -63,7 +64,7 @@ All respondents and Repeat respondents. Repeat respondents are employees with
 responses in both selected cycles; never infer repeat status from aggregate
 counts.
 
-The Relationships tab must classify absolute Pearson relationship strength as
+The Correlation tab must classify absolute Pearson relationship strength as
 Low (`|r| < .30`), Medium (`.30-.49`), High (`.50-.69`), or Very high
 (`>= .70`). Preserve controls for minimum strength, strength-color visibility,
 statistical-significance visibility, and adding/removing multiple highlighted
@@ -82,18 +83,19 @@ and a dropdown from 3 through 10 clusters, extending through the recommendation
 when it is higher. Reorder both axes and show cluster labels/boundaries.
 Describe clusters as exploratory rather than validated survey constructs.
 
-The Alerts tab must use the triage model in the report contract: Critical,
-Watch, Improving, Stable, and Suppressed counts; raw and company-adjusted
-change; Welch significance; severity/search/threshold filters; sorting; and
-expandable top-five item declines. Keep alert language screening-oriented and
-non-causal. Suppress every alert group unless both compared cycles have at
-least 20 responses; apply the same threshold after report filtering.
+The Attrition alerts tab must use the attrition-priority model in the report
+contract. For each report attribute and outcome window, rank items by the
+median privacy-eligible attrition multiplier across its groups and retain the
+top five. Compare each eligible group's item score with company overall. At
+company level, show the lowest-scoring group for each top item and attribute;
+under a report filter, show the selected group's top-five results. Keep the
+language screening-oriented and non-causal.
 
 ## Primary workflow
 
 Before starting the runner, give the user a concise estimated completion time.
 Base the estimate on the export size and prior runs when available, and state
-that relationship clustering, alert aggregation, and repeatability are the
+that correlation clustering, attrition-alert aggregation, and repeatability are the
 most variable phases. Do this in the first response that starts the run.
 
 Use the direct export runner:
@@ -115,8 +117,6 @@ The runner automatically:
 - selects privacy-safe categorical report attributes
 - excludes identifier-like employee, manager, team, client, UUID, and GUID
   fields from report filters and aggregate downloads
-- replaces manager-defined alert identifiers with deterministic generic team
-  labels before creating the report payload
 - runs attrition whenever valid Exit or termination outcomes are present; for
   the registered demo, H2 (`survey_cycle_id = 1002`) is linked to Exit
   (`survey_cycle_id = 1003`) using H2's `survey_completion_date`
@@ -129,7 +129,7 @@ The runner automatically:
 
 Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
-verification, relationship clustering, alert aggregation, and ZIP packaging.
+verification, correlation clustering, attrition-alert aggregation, and ZIP packaging.
 
 The standard workflow uses `--summary-mode off`, which is also the runner
 default. It still writes `people-science-summary-context.json` so the same
@@ -145,7 +145,7 @@ item. Suppress smaller or failed cuts. Show the selected cut's complete N,
 loading-dimension cards, and clustered horizontal bar small multiples. Repeat
 the loading axis for each dimension and show the shared vertical question
 labels once. Plot positive loading magnitudes from 0 to 1 and reuse the
-Relationships Low, Medium, High, and Very high thresholds and colors. State
+Correlation Low, Medium, High, and Very high thresholds and colors. State
 Sort questions high to low by MR1 loading only; do not combine loading
 strengths across dimensions for ordering. Add a high-contrast outline to every
 bar plus a contrasting outline around each two-decimal data label. State that

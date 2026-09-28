@@ -55,8 +55,8 @@ builder runs.
 
 The runner prints durable progress updates with an ASCII bar, percentage,
 elapsed time, and current phase. Keep progress visible during both analysis
-passes and the interactive-report build, especially relationship clustering
-and alert aggregation, which can take several minutes on large exports.
+passes and the interactive-report build, especially correlation clustering
+and attrition-alert aggregation, which can take several minutes on large exports.
 Before launching it, give the user a concise completion-time estimate based on
 the export size and prior observed runs when available.
 
@@ -114,8 +114,9 @@ Before changing the golden report or any report colors, load
 `glint-ui-system` skill and records the required Glint/Fluent design rules.
 
 The golden report intentionally excludes Overview, Item results, and Heatmap.
-Its six tabs are Scores change, Relationships, Alerts, Factors, Attrition
-analysis, and Downloads.
+Generated reports use Scores change, Correlation, Factors, and Downloads.
+When attrition is available, they insert Attrition analysis and Attrition
+alerts after Factors; otherwise both tabs are absent.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value
@@ -124,7 +125,7 @@ Include a Respondent population control with All respondents and Repeat
 respondents. Repeat-only values must be precomputed from employee IDs present
 in both selected cycles and remain subject to minimum-N suppression.
 
-The Relationships matrix classifies absolute Pearson `r` as Low (`< .30`),
+The Correlation matrix classifies absolute Pearson `r` as Low (`< .30`),
 Medium (`.30-.49`), High (`.50-.69`), or Very high (`>= .70`). Preserve the
 minimum-strength filter, strength-color toggle, significance toggle,
 add/remove question highlights, summary counts, and click-through cell details
@@ -136,12 +137,12 @@ distance. Show the silhouette-based recommendation in a short blurb, default
 to it, and allow selection from 3 through 10 clusters or through the
 recommendation when it is higher.
 
-The Alerts tab is a triage table. Preserve severity summary counts,
-company-adjusted change, Welch significance, compact filters and sorting, and
-expandable top-five item declines. Severity rules and minimum-N behavior are
-defined in `interactive-report-contract.md`; do not replace them with visual
-judgment or causal language. Every alert group must have at least 20 responses
-in both compared cycles, including filtered intersections.
+The Attrition alerts tab ranks the top five attrition-multiplier items per
+attribute and outcome window, then compares privacy-eligible group scores with
+company overall. Company view shows the lowest-scoring group for each top
+item; a selected report filter shows that group's top-five results. Ranking,
+suppression, and interpretation rules are defined in
+`interactive-report-contract.md`.
 
 The Factors tab re-estimates item loadings for each eligible report
 attribute/value cut with the same factor count and varimax rotation as the
@@ -150,7 +151,7 @@ or five complete responses per item; otherwise the report displays the
 suppression reason. The tab includes loading-dimension cards and filter-aware
 clustered horizontal bar small multiples. Each dimension repeats the loading
 axis from 0 to 1 while sharing one vertical set of question labels. Bar colors
-reuse the Relationships Low, Medium, High, and Very high strength bands. Sort
+reuse the Correlation Low, Medium, High, and Very high strength bands. Sort
 the shared question axis high to low using MR1 loading only; do not combine
 strengths across dimensions for ordering. Give every bar a high-contrast
 outline and every two-decimal value label a contrasting outline for

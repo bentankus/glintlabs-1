@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import math
 import re
@@ -50,6 +51,7 @@ IDENTIFIER_ATTRIBUTE_NAMES = {
     "surveycycleid",
 }
 COMMENT_THEME_MIN_N = 5
+COMMENT_FAVORABILITY = ("favorable", "neutral", "unfavorable")
 QUESTION_LABEL_OVERRIDES = {
     "Q_ROLE_STRENGTHS": "Role fit",
 }
@@ -297,7 +299,12 @@ def comment_theme_payload(
     question_col: str,
     text_col: str,
 ) -> dict[str, Any]:
-    empty = {"overall": {}, "segments": {}, "minimumComments": COMMENT_THEME_MIN_N}
+    empty = {
+        "overall": {},
+        "segments": {},
+        "minimumComments": COMMENT_THEME_MIN_N,
+        "favorability": {"available": [], "default": [], "views": {}},
+    }
     if not path or not path.exists():
         return empty
     comments = pd.read_csv(path, low_memory=False)
@@ -362,6 +369,61 @@ def comment_theme_payload(
         if cycle_col and cycle_col in comments.columns
         else "__all__"
     )
+    normalized_columns = {
+        re.sub(r"[^a-z0-9]+", "", str(column).casefold()): str(column)
+        for column in comments.columns
+    }
+    favorability_col = next(
+        (
+            normalized_columns[candidate]
+            for candidate in ("sentiment", "favorability", "commentfavorability")
+            if candidate in normalized_columns
+        ),
+        None,
+    )
+    if favorability_col:
+        favorability_aliases = {
+            "favorable": "favorable",
+            "positive": "favorable",
+            "neutral": "neutral",
+            "unfavorable": "unfavorable",
+            "negative": "unfavorable",
+        }
+        comments["__favorability"] = comments[favorability_col].map(
+            lambda value: favorability_aliases.get(str(value).strip().casefold())
+        )
+    else:
+        score_col = normalized_columns.get("score")
+        numeric_scores = (
+            pd.to_numeric(comments[score_col], errors="coerce")
+            if score_col
+            else pd.Series(np.nan, index=comments.index)
+        )
+        if numeric_scores.notna().any():
+            hundred_point_scale = numeric_scores.max() > 5
+
+            def score_favorability(value: float) -> str | None:
+                if pd.isna(value):
+                    return None
+                if hundred_point_scale:
+                    if value >= 75:
+                        return "favorable"
+                    if value == 50:
+                        return "neutral"
+                    if value <= 25:
+                        return "unfavorable"
+                else:
+                    if value >= 4:
+                        return "favorable"
+                    if value == 3:
+                        return "neutral"
+                    if value <= 2:
+                        return "unfavorable"
+                return None
+
+            comments["__favorability"] = numeric_scores.map(score_favorability)
+        else:
+            comments["__favorability"] = None
 
     def normalize_text(value: Any) -> str:
         return " " + re.sub(
@@ -393,31 +455,51 @@ def comment_theme_payload(
                 ]
         return result
 
-    overall = {
-        cycle: themes(group)
-        for cycle, group in comments.groupby("__cycle", sort=False)
-        if len(group) >= COMMENT_THEME_MIN_N
-    }
-    filtered: dict[str, Any] = {}
-    for attribute, segment in segments.items():
-        if attribute not in comments.columns:
-            continue
-        values = {}
-        for value in segment["values"]:
-            group = comments[comments[attribute].astype(str) == value]
-            cycles = {
-                cycle: themes(cycle_group)
-                for cycle, cycle_group in group.groupby("__cycle", sort=False)
-                if len(cycle_group) >= COMMENT_THEME_MIN_N
-            }
-            if cycles:
-                values[value] = cycles
-        if values:
-            filtered[attribute] = values
+    def build_view(source: pd.DataFrame) -> dict[str, Any]:
+        overall = {
+            cycle: themes(group)
+            for cycle, group in source.groupby("__cycle", sort=False)
+            if len(group) >= COMMENT_THEME_MIN_N
+        }
+        filtered: dict[str, Any] = {}
+        for attribute, segment in segments.items():
+            if attribute not in source.columns:
+                continue
+            values = {}
+            for value in segment["values"]:
+                group = source[source[attribute].astype(str) == value]
+                cycles = {
+                    cycle: themes(cycle_group)
+                    for cycle, cycle_group in group.groupby("__cycle", sort=False)
+                    if len(cycle_group) >= COMMENT_THEME_MIN_N
+                }
+                if cycles:
+                    values[value] = cycles
+            if values:
+                filtered[attribute] = values
+        return {"overall": overall, "segments": filtered}
+
+    default_view = build_view(comments)
+    available = [
+        value
+        for value in COMMENT_FAVORABILITY
+        if comments["__favorability"].eq(value).any()
+    ]
+    favorability_views = {}
+    for size in range(1, len(available) + 1):
+        for selected in itertools.combinations(available, size):
+            key = "|".join(selected)
+            favorability_views[key] = build_view(
+                comments[comments["__favorability"].isin(selected)]
+            )
     return {
-        "overall": overall,
-        "segments": filtered,
+        **default_view,
         "minimumComments": COMMENT_THEME_MIN_N,
+        "favorability": {
+            "available": available,
+            "default": available,
+            "views": favorability_views,
+        },
     }
 
 

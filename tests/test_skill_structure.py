@@ -700,6 +700,11 @@ def test_comment_themes_require_privacy_threshold_and_follow_filters(tmp_path):
             "user_id": list(range(1, 10)) + list(range(1, 5)),
             "survey_cycle_title": ["H2"] * 13,
             "question_uuid": ["Q_ONE"] * 9 + ["Q_TWO"] * 4,
+            "sentiment": (
+                ["favorable"] * 5
+                + ["neutral"] * 4
+                + ["unfavorable"] * 4
+            ),
             "comment": (
                 ["private career growth wording"] * 9
                 + ["private manager coaching wording"] * 4
@@ -723,6 +728,20 @@ def test_comment_themes_require_privacy_threshold_and_follow_filters(tmp_path):
     assert "Q_TWO" not in payload["overall"]["H2"]
     assert payload["segments"]["segment"]["A"]["H2"]["Q_ONE"]
     assert "B" not in payload["segments"]["segment"]
+    assert payload["favorability"]["available"] == [
+        "favorable",
+        "neutral",
+        "unfavorable",
+    ]
+    assert len(payload["favorability"]["views"]) == 7
+    assert payload["favorability"]["views"]["favorable"]["overall"]["H2"][
+        "Q_ONE"
+    ][0][0] == "Career growth and development"
+    assert not payload["favorability"]["views"]["neutral"]["overall"].get("H2")
+    assert (
+        payload["favorability"]["views"]["favorable|neutral|unfavorable"]["overall"]
+        == payload["overall"]
+    )
     assert "private career growth wording" not in serialized
     assert "private manager coaching wording" not in serialized
 
@@ -811,6 +830,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                 "user_id",
                 "survey_cycle_title",
                 "question_uuid",
+                "sentiment",
                 "comment",
             ],
         )
@@ -822,6 +842,13 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                         "user_id": row + 1,
                         "survey_cycle_title": "H1" if row < 20 else "H2",
                         "question_uuid": question,
+                        "sentiment": (
+                            "favorable"
+                            if row % 3 == 0
+                            else "neutral"
+                            if row % 3 == 1
+                            else "unfavorable"
+                        ),
                         "comment": "private career growth wording",
                     }
                 )
@@ -975,6 +1002,10 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "id=themeCycle" in report_text
     assert "id=themeAttribute" in report_text
     assert "id=themeGroup" in report_text
+    assert "id=themeFavorabilityControl" in report_text
+    assert report_text.count("<input type=checkbox name=themeFavorability") == 3
+    assert "function themeFilterKey()" in report_text
+    assert "function themeData()" in report_text
     assert "function renderThemes()" in report_text
     assert "Theme pattern by group" in report_text
     assert "Coded theme mentions" in report_text
@@ -1011,6 +1042,12 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert report_payload["commentThemes"]["overall"]["H2"]["Q_ONE"][0][0] == (
         "Career growth and development"
     )
+    assert report_payload["commentThemes"]["favorability"]["available"] == [
+        "favorable",
+        "neutral",
+        "unfavorable",
+    ]
+    assert len(report_payload["commentThemes"]["favorability"]["views"]) == 7
     assert len(report_payload["knowledgeSources"]["sources"]) >= 10
     assert set(report_payload["segments"]) == {"survey_cycle_title", "segment"}
     summary_context = json.loads(

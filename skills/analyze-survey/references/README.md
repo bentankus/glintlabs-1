@@ -79,6 +79,9 @@ with summary mode `required`.
   roughly 2% theme recurrence are required for a theme. Raw comment text stays
   in `_input`, never enters the HTML, AI context, share ZIP, or chat, and is
   never shown to report recipients.
+- When comment favorability is available, the Thematic analysis tab can filter
+  to favorable, neutral, unfavorable, or any non-empty combination. Each
+  combination is thresholded locally before aggregate results enter the HTML.
 - Identifier-like employee, manager, team, client, UUID, and GUID fields are
   excluded from report filters and aggregate downloads. Manager-defined alert
   groups receive deterministic generic team labels before entering the report.
@@ -134,6 +137,11 @@ three privacy-safe aggregate comment themes for each displayed item. When at
 least six scored items have sufficient linked comment coverage, the cards rank
 within those items; otherwise they retain the full score ranking and identify
 items without eligible themes. It remains present when AI summary mode is off.
+
+The Thematic analysis tab provides cycle, comparison-attribute, focus-group,
+and comment-favorability controls. All available favorability categories are
+selected by default, and users may compare any non-empty mix while preserving
+the minimum comment and recurrence thresholds.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

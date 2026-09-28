@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`b2c2313a79174938a8e6426a006f6ea701615b0a9db20c680c6c2216248b46ef`.
+`ba5f6b04842578e5c394a06d0c92fcfec9a8efbf1d261ccc0fac40b64575c706`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -274,7 +274,13 @@ exploratory, and attrition results are not individual predictions.
 
 - Use only deterministic aggregate labels derived from linked comments; never
   embed or display raw comment text.
-- Provide survey-cycle, comparison-attribute, and focus-group controls.
+- Provide survey-cycle, comparison-attribute, focus-group, and comment-
+  favorability controls.
+- Let users analyze favorable, neutral, unfavorable, or any non-empty
+  combination, with all available categories selected by default.
+- Precompute each exact favorability combination locally and reapply the
+  five-comment and recurrence thresholds. Do not combine thresholded category
+  totals in the browser.
 - Show ranked horizontal bars for leading coded themes, a heatmap comparing
   each theme's share of coded mentions across attribute groups, and item-level
   theme chips.

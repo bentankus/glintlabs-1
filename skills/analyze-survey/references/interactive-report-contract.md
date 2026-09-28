@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`e810654c8d3f3e44b9894d8c466391d3094618c2d8c8c588b1642efce7cfe11d`.
+`66ef1f05c6053c111dd246519712a78a3de84fb7ea5ddc9af39ec5435a9d3ad6`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -274,18 +274,21 @@ exploratory, and attrition results are not individual predictions.
 
 - Use only deterministic aggregate labels derived from linked comments; never
   embed or display raw comment text.
-- Provide survey-cycle, survey-question, comparison-attribute, focus-group,
-  and comment-favorability controls.
-- Let users analyze favorable, neutral, unfavorable, or any non-empty
-  combination, with all available categories selected by default.
+- Provide survey-cycle, survey-question, comparison-attribute, and focus-group
+  controls.
 - Precompute each exact favorability combination locally and reapply the
   five-comment and recurrence thresholds. Do not combine thresholded category
   totals in the browser.
-- Add a direct favorable-versus-unfavorable comparison on a common two-sided
-  scale. Show both percentages and coded-mention counts, and state that each
-  percentage uses its own favorability group's coded mentions as denominator.
-- Apply the survey-question filter to the direct comparison, selected-mix
-  rankings, group heatmap, and item-level themes.
+- Add direct favorable-versus-unfavorable comparisons for both themes and
+  survey items. Put the row label first, followed by unfavorable and favorable
+  columns. Show both percentages and coded-mention counts, sort descending by
+  unfavorable percentage, and state that each percentage uses its own
+  favorability group's coded mentions as denominator.
+- Add a theme favorability profile where each stacked row sums to 100% across
+  unfavorable, neutral, and favorable mentions for that theme.
+- Apply the survey-question filter to all three visuals.
+- Do not show a selected-favorability-mix ranking, group heatmap, or item-theme
+  chips.
 - Show ranked horizontal bars for leading coded themes, a heatmap comparing
   each theme's share of coded mentions across attribute groups, and item-level
   theme chips.

@@ -1003,19 +1003,23 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "id=themeQuestion" in report_text
     assert "id=themeAttribute" in report_text
     assert "id=themeGroup" in report_text
-    assert "id=themeFavorabilityControl" in report_text
-    assert report_text.count("<input type=checkbox name=themeFavorability") == 3
-    assert "function themeFilterKey()" in report_text
-    assert "function themeData()" in report_text
+    assert "id=themeFavorabilityControl" not in report_text
+    assert "Leading themes for selected mix" not in report_text
+    assert "Theme pattern by group" not in report_text
     assert "function themeSource(" in report_text
-    assert "function renderThemeComparison(" in report_text
+    assert "function aggregateThemeItems(" in report_text
+    assert "function comparisonRows(" in report_text
+    assert "function renderComparison(" in report_text
+    assert "function renderThemeProfile(" in report_text
     assert "function renderThemes()" in report_text
     assert "Favorable vs. unfavorable themes" in report_text
+    assert "Favorable vs. unfavorable survey items" in report_text
+    assert "Theme favorability profile" in report_text
+    assert "Sorted by descending share of unfavorable coded mentions" in report_text
     assert "Unfavorable comments" in report_text
     assert "Favorable comments" in report_text
     assert "All questions" in report_text
-    assert "Theme pattern by group" in report_text
-    assert "Coded theme mentions" in report_text
+    assert "Unfavorable coded mentions" in report_text
     assert "private career growth wording" not in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text

@@ -139,12 +139,11 @@ within those items; otherwise they retain the full score ranking and identify
 items without eligible themes. It remains present when AI summary mode is off.
 
 The Thematic analysis tab provides cycle, survey-question,
-comparison-attribute, focus-group, and comment-favorability controls. All
-available favorability categories are selected by default, and users may
-compare any non-empty mix while preserving the minimum comment and recurrence
-thresholds. A two-sided comparison makes favorable and unfavorable theme
-shares directly comparable; the question selector filters every visual in the
-tab.
+comparison-attribute, and focus-group controls. It compares unfavorable and
+favorable coded-mention shares for themes and survey items, with rows sorted
+from the highest unfavorable share. A separate stacked profile shows each
+theme's unfavorable, neutral, and favorable composition. The question
+selector filters all three visuals.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

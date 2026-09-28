@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`eb95304be01a9341e0061f4af87a538d75962496710218a9ba0be49d29d217a3`.
+`b2c2313a79174938a8e6426a006f6ea701615b0a9db20c680c6c2216248b46ef`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -44,9 +44,9 @@ codebooks. When summaries are enabled:
   factors, alerts, or attrition associations as causal.
 - Recalculate summaries when the report attribute or value changes. Authored
   segment narratives take precedence over live aggregate summaries.
-- Keep the Scores change AI summary container hidden because the current-survey
-  summary already provides the primary landing-page narrative. Continue to
-  render AI perspectives on the other available analysis tabs.
+- Keep every tab-level AI summary container hidden. The current-survey summary
+  remains the primary landing-page narrative, and each tab uses its concise
+  static introduction for interpretation guidance.
 - Select three public references for each rendered summary using
   `people-science-source-index.json`.
 
@@ -118,10 +118,11 @@ Keep this tab order and naming:
 
 1. **Scores change**
 2. **Correlation**
-3. **Factors**
-4. **Attrition analysis** (only when attrition completes)
-5. **Attrition alerts** (only when attrition completes)
-6. **Downloads**
+3. **Thematic analysis**
+4. **Factors**
+5. **Attrition analysis** (only when attrition completes)
+6. **Attrition alerts** (only when attrition completes)
+7. **Downloads**
 
 If attrition cannot run, omit both attrition tabs. Never fabricate attrition
 data. For other analyses, keep the tab and explain why results are unavailable.
@@ -144,12 +145,12 @@ Place one report-level attribute/value filter above the tabs.
 
 ## Tab behavior
 
-Begin every available tab with a compact, plain-language guide containing
-**What this shows** and **How to use it**. Keep each explanation to one short
-paragraph, avoid statistical jargon where a familiar phrase is sufficient, and
-give the user a concrete first action. The guidance must preserve the analysis
-guardrails: comparisons are descriptive, correlation is non-causal, factors
-are exploratory, and attrition results are not individual predictions.
+Begin every available tab with one concise narrative paragraph that explains
+what the analysis means and how to use it. It should read like a friendly
+section description rather than a callout card. Avoid statistical jargon where
+a familiar phrase is sufficient and preserve the analysis guardrails:
+comparisons are descriptive, correlation is non-causal, factors are
+exploratory, and attrition results are not individual predictions.
 
 ### Scores change
 
@@ -196,6 +197,10 @@ are exploratory, and attrition results are not individual predictions.
   show labeled cluster boundaries without replacing relationship-strength
   colors.
 - Treat clusters as exploratory groupings, not validated survey constructs.
+- Explain that a cluster contains items with similar response patterns. Use
+  clusters to review content overlap and potential survey shortening, but do
+  not remove items without preserving content coverage and checking reliability
+  and stability across groups and cycles.
 - Keep the legend and summary compact, hide empty highlight/detail regions, and
   reveal relationship details only after a cell is selected.
 - Clicking a cell shows `r`, p-value, N, and significance status.
@@ -245,6 +250,10 @@ are exploratory, and attrition results are not individual predictions.
 - Explain that factor labels are working hypotheses, factor numbers can rotate
   or reorder across cuts, and filtered solutions do not establish measurement
   invariance.
+- Explain that loadings represent item-to-dimension alignment from 0 to 1. A
+  .70 loading is stronger than .60, but the .10 difference is not inherently
+  meaningful without the broader loading pattern, item content, and
+  cross-loadings.
 
 ### Attrition analysis
 
@@ -257,6 +266,22 @@ are exploratory, and attrition results are not individual predictions.
   suppression enforcement.
 - If attrition cannot run, omit both Attrition analysis and Attrition alerts.
 - Never generate synthetic attrition outcomes.
+- Calculate a two-sided Fisher exact test from the favorable and unfavorable
+  exit counts. Visually flag multipliers with `p < .05`, show the p-value, and
+  retain the non-causal screening language.
+
+### Thematic analysis
+
+- Use only deterministic aggregate labels derived from linked comments; never
+  embed or display raw comment text.
+- Provide survey-cycle, comparison-attribute, and focus-group controls.
+- Show ranked horizontal bars for leading coded themes, a heatmap comparing
+  each theme's share of coded mentions across attribute groups, and item-level
+  theme chips.
+- Keep the five-comment and approximate 2% recurrence thresholds active for
+  every displayed group and cycle.
+- Describe themes as a guide for deeper listening, not a complete or causal
+  account of employee experience.
 
 ### Downloads
 

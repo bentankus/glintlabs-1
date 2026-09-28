@@ -89,12 +89,10 @@ with summary mode `required`.
 The required behavior and packaging are defined in
 `interactive-report-contract.md`.
 
-Standard reports contain no AI summary cards. Preview reports begin every tab
-with a concise AI-generated People Science perspective that separates
-observation from interpretation, recommends a next step, states a caveat, and
-links relevant published evidence. Whenever the report attribute or value
-changes, the preview summary immediately recalculates from that filter's
-aggregate results. Authored segment narratives take precedence.
+Standard reports contain no AI summary cards. Preview reports may retain
+validated AI narrative data for future development, but tab-level AI cards are
+hidden. Every tab begins with one concise plain-language paragraph describing
+what the analysis means and how to use it.
 
 Live summaries remain compact by stating the selected scope once in the
 headline and avoiding repeated metrics or findings across the observation,
@@ -123,7 +121,8 @@ rows, and high-contrast closing section. The Glint UI system remains the source
 of truth for tokens, typography, interaction states, and accessibility.
 
 The golden report intentionally excludes Overview, Item results, and Heatmap.
-Generated reports use Scores change, Correlation, Factors, and Downloads.
+Generated reports use Scores change, Correlation, Thematic analysis, Factors,
+and Downloads.
 When attrition is available, they insert Attrition analysis and Attrition
 alerts after Factors; otherwise both tabs are absent.
 

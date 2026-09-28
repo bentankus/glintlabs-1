@@ -51,7 +51,8 @@ and accessibility decisions. Do not invent report colors or visual patterns.
 `golden-report.html` is the canonical report shell. Future reports must preserve
 its markup, styling, tab order, labels, and browser interactions exactly while
 replacing its embedded aggregate data payload with the current analysis.
-The required base tabs are Scores change, Correlation, Factors, and Downloads.
+The required base tabs are Scores change, Correlation, Thematic analysis,
+Factors, and Downloads.
 When attrition analysis completes, add Attrition analysis followed immediately
 by Attrition alerts between Factors and Downloads. If attrition is unavailable,
 omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
@@ -68,6 +69,10 @@ the report, AI context, share ZIP, or chat. Treat scores and themes as
 descriptive within-survey signals rather than benchmarks or causal findings.
 This summary must render in standard no-AI reports as well as AI-preview
 reports.
+
+Keep all tab-level AI summary cards hidden. Every tab instead begins with one
+concise narrative paragraph that explains what the analysis means and how to
+use it.
 
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score
@@ -95,6 +100,9 @@ through 15, capped below the item count. Show a concise recommendation blurb
 and a dropdown from 3 through 10 clusters, extending through the recommendation
 when it is higher. Reorder both axes and show cluster labels/boundaries.
 Describe clusters as exploratory rather than validated survey constructs.
+Explain that clustered items share response patterns and may indicate
+overlapping content. Item reduction must preserve content coverage and be
+validated for reliability and stability across groups and cycles.
 
 The Attrition alerts tab must use the attrition-priority model in the report
 contract. For each report attribute and outcome window, rank items by the
@@ -166,6 +174,11 @@ factor labels are exploratory working hypotheses,
 dimensions can rotate or reorder across cuts, and this is not evidence of
 measurement invariance.
 
+Explain factor loadings as item-to-dimension alignment on a 0-to-1 scale.
+Clarify that .70 is more closely aligned than .60, but a .10 difference is not
+automatically practically meaningful without considering the full loading
+pattern, item content, and cross-loadings.
+
 For Attrition, rank all eligible items by the unfavorable-to-favorable
 attrition-rate multiplier. Default to 180 days and allow 90-, 180-, and
 365-day windows. Show the item text and a horizontal multiplier bar with a
@@ -174,6 +187,15 @@ counts or percentages in the report. Apply the shared report filter, suppress
 cells with fewer than five favorable or unfavorable respondents, and describe
 associations as screening signals rather than causal estimates. Never report
 individual flight-risk predictions.
+Flag multipliers with a two-sided Fisher exact test p-value below .05 as
+statistically significant while retaining the multiplier and non-causal
+interpretation.
+
+The Thematic analysis tab must use only privacy-safe deterministic aggregate
+comment themes. Provide cycle, comparison-attribute, and focus-group controls;
+rank leading themes with horizontal bars; compare groups with a heatmap of each
+theme's share of coded mentions; and show item-level theme chips. Never expose
+raw comment text.
 
 Use the checked-in People Science source index to select references from key
 terms across the current headline, observation, interpretation,

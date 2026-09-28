@@ -123,6 +123,7 @@ def test_analyze_survey_points_to_linked_dataset():
     required_tabs = (
         "Scores change",
         "Correlation",
+        "Thematic analysis",
         "Factors",
         "Attrition analysis",
         "Attrition alerts",
@@ -546,12 +547,12 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
                 "attribute_value": "",
                 "question": "Q_ONE",
                 "days": days,
-                "favorable_n": 10,
+                "favorable_n": 100,
                 "favorable_attrition": 0.1,
-                "unfavorable_n": 8,
-                "unfavorable_attrition": 0.2,
-                "attrition_ratio": 2.0,
-                "group_size": 20,
+                "unfavorable_n": 100,
+                "unfavorable_attrition": 0.3,
+                "attrition_ratio": 3.0,
+                "group_size": 200,
             }
             for days in (90, 180, 365)
         ]
@@ -578,6 +579,8 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
 
     assert payload["days"] == [90, 180, 365]
     assert len(payload["rows"]) == 3
+    assert payload["rows"][0][10] < 0.05
+    assert payload["rows"][0][11] == 1
     assert "id=attritionTableBody" in report
     assert "id=alertsList" in report
     assert ">Attrition alerts</button>" in report
@@ -588,6 +591,8 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
     assert "attrition-bar-track" in report
     assert "attrition-baseline" in report
     assert "marker = 1.00x" in report
+    assert "Statistically significant" in report
+    assert "Fisher exact test" in report
     assert "Compare later exit rates for respondents" in report
     assert "Start with the largest score gaps" in report
     assert "<th>Favorable n</th>" not in report
@@ -908,6 +913,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     for tab in (
         "Scores change",
         "Correlation",
+        "Thematic analysis",
         "Factors",
         "Downloads",
     ):
@@ -958,16 +964,20 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "High scoring items" in report_text
     assert "Low scoring items" in report_text
     assert "Comment themes:" in report_text
-    assert '.ai-summary[data-summary~="changes"]{display:none}' in report_text
-    assert report_text.count("What this shows") == 4
-    assert report_text.count("How to use it") == 4
+    assert ".ai-summary{display:none" in report_text
     for guidance in (
-        "Choose the cycles, review the largest movements",
-        "Highlight an item you want to understand",
-        "Review the highest-loading items together",
-        "Open the manifest first",
+        "Compare two survey cycles to see where scores moved",
+        "Use them to spot overlapping content",
+        "A .70 loading is stronger than .60",
+        "Start with the manifest",
     ):
         assert guidance in report_text
+    assert "id=themeCycle" in report_text
+    assert "id=themeAttribute" in report_text
+    assert "id=themeGroup" in report_text
+    assert "function renderThemes()" in report_text
+    assert "Theme pattern by group" in report_text
+    assert "Coded theme mentions" in report_text
     assert "private career growth wording" not in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text

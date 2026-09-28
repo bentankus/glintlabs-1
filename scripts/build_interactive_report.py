@@ -23,6 +23,7 @@ if SCRIPT_DIR not in sys.path:
 from progress import ProgressReporter
 from scipy.cluster.hierarchy import cut_tree, linkage
 from scipy.spatial.distance import squareform
+from scipy.stats import fisher_exact
 from scipy.stats import t as student_t
 
 
@@ -900,6 +901,33 @@ def attrition_payload(
             or unfavorable_n < minimum_category_n
         )
         multiplier = record["attrition_ratio"]
+        favorable_rate = record["favorable_attrition"]
+        unfavorable_rate = record["unfavorable_attrition"]
+        p_value = None
+        significant = False
+        if (
+            not suppressed
+            and not pd.isna(favorable_rate)
+            and not pd.isna(unfavorable_rate)
+        ):
+            favorable_exits = min(
+                favorable_n,
+                max(0, round(favorable_n * float(favorable_rate))),
+            )
+            unfavorable_exits = min(
+                unfavorable_n,
+                max(0, round(unfavorable_n * float(unfavorable_rate))),
+            )
+            _, calculated_p = fisher_exact(
+                [
+                    [unfavorable_exits, unfavorable_n - unfavorable_exits],
+                    [favorable_exits, favorable_n - favorable_exits],
+                ],
+                alternative="two-sided",
+            )
+            if math.isfinite(float(calculated_p)):
+                p_value = round(float(calculated_p), 4)
+                significant = calculated_p < 0.05
         rows.append(
             [
                 attr_i,
@@ -926,6 +954,8 @@ def attrition_payload(
                     else round(float(multiplier), 2)
                 ),
                 1 if suppressed else 0,
+                p_value,
+                1 if significant else 0,
             ]
         )
     return {
@@ -1120,12 +1150,10 @@ def inject_attrition_report(
 ) -> str:
     old_section = (
         "<section class=panel id=attrition role=tabpanel hidden><h2>Attrition analysis</h2>"
-        "<div class=tab-guide><div><strong>What this shows</strong><p>Compare "
-        "later exit rates for respondents with favorable and unfavorable item "
-        "responses.</p></div><div><strong>How to use it</strong><p>Look for "
-        "larger multipliers that repeat across outcome windows, then investigate "
-        "the employee experience behind those items without predicting individual "
-        "departures.</p></div></div>"
+        "<p class=tab-intro>Compare later exit rates for respondents with favorable "
+        "and unfavorable item responses. Focus on multipliers that are statistically "
+        "significant and repeat across outcome windows, then investigate the employee "
+        "experience behind those items without predicting individual departures.</p>"
         "<div class=ai-summary data-summary=attrition></div>"
         "<div class=notice id=attritionStatus></div></section>"
     )
@@ -1151,12 +1179,11 @@ def inject_attrition_report(
             )
             for index, days in enumerate(payload["days"])
         )
-        + '</select></label></div><div class=tab-guide><div><strong>What this '
-        'shows</strong><p>Compare later exit rates for respondents with favorable '
-        'and unfavorable item responses.</p></div><div><strong>How to use it'
-        '</strong><p>Look for larger multipliers that repeat across outcome '
+        + '</select></label></div><p class=tab-intro>Compare later exit rates for '
+        'respondents with favorable and unfavorable item responses. Focus on '
+        'multipliers that are statistically significant and repeat across outcome '
         'windows, then investigate the employee experience behind those items '
-        'without predicting individual departures.</p></div></div>'
+        'without predicting individual departures.</p>'
         '<div class=ai-summary data-summary=attrition></div>'
         '<div class=notice id=attritionStatus></div>'
         '<p class=muted id=attritionFilterNote></p>'
@@ -1185,12 +1212,11 @@ def inject_attrition_report(
             )
             for days in alerts_payload["days"]
         )
-        + '</select></label></div><div class=tab-guide><div><strong>What this '
-        'shows</strong><p>Find privacy-eligible groups that score lower on the '
-        'items most associated with later exits.</p></div><div><strong>How to '
-        'use it</strong><p>Start with the largest score gaps, confirm the local '
-        'context, and use the result to plan a focused listening conversation—not '
-        'to rank managers or predict departures.</p></div></div>'
+        + '</select></label></div><p class=tab-intro>Find privacy-eligible groups '
+        'that score lower on the items most associated with later exits. Start '
+        'with the largest score gaps, confirm the local context, and use the result '
+        'to plan a focused listening conversation—not to rank managers or predict '
+        'departures.</p>'
         '<div class=ai-summary data-summary=alerts></div>'
         '<p class="notice">For each attribute, the five items with the highest '
         'median eligible attrition multipliers are selected. The table compares '
@@ -1212,11 +1238,13 @@ def inject_attrition_report(
 .attrition-table{min-width:760px;font-size:12px}.attrition-table th,.attrition-table td{padding:12px}
 .attrition-table th:last-child{width:48%}.attrition-rank{color:var(--muted);font-weight:600}
 .attrition-question{font-size:14px;font-weight:600}.attrition-question-id{font-size:11px}
-.attrition-bar-cell{display:grid;grid-template-columns:minmax(240px,1fr) 64px;align-items:center;gap:12px}
+.attrition-bar-cell{display:grid;grid-template-columns:minmax(240px,1fr) 180px;align-items:center;gap:12px}
 .attrition-bar-track{position:relative;height:22px;border-radius:3px;background:var(--soft);overflow:hidden}
 .attrition-bar{display:block;height:100%;width:var(--bar-width);min-width:2px;background:var(--blue);border-radius:3px}
 .attrition-baseline{position:absolute;top:0;bottom:0;left:var(--baseline);width:2px;background:var(--text);opacity:.65}
-.attrition-multiplier{font-size:18px;font-weight:700;color:var(--blue);text-align:right}
+.attrition-multiplier{display:block;font-size:18px;font-weight:700;color:var(--blue);text-align:left}
+.attrition-significant{display:inline-block;margin-top:4px;padding:3px 7px;border-radius:99px;background:var(--success-soft);color:var(--green);font-size:10px;font-weight:700}
+.attrition-not-significant{display:block;margin-top:4px;color:var(--muted);font-size:10px}
 .attrition-method{margin:12px 0 0}.attrition-empty{text-align:center!important;padding:28px!important}
 .attrition-suppressed{color:var(--muted);font-style:italic}
 .alert-heading label{min-width:210px}.alert-table{min-width:980px}
@@ -1272,16 +1300,20 @@ function renderAttritionTable(){
   });
   const visible=rows.filter(row=>row[9]!==1&&row[8]!==null);
   const scaleMax=Math.max(2,...visible.map(row=>row[8]));
-  note.textContent+=` · bars use a 0–${scaleMax.toFixed(1)}x scale; marker = 1.00x`;
+  const significantCount=visible.filter(row=>row[11]===1).length;
+  note.textContent+=` · bars use a 0–${scaleMax.toFixed(1)}x scale; marker = 1.00x · ${significantCount} statistically significant`;
   body.innerHTML=rows.map((row,index)=>{
     const suppressed=row[9]===1;
     const multiplier=suppressed?"Suppressed":row[8]===null?"—":`${row[8].toFixed(2)}x`;
     const barWidth=row[8]===null?0:Math.min(100,row[8]/scaleMax*100);
     const baseline=Math.min(100,1/scaleMax*100);
+    const significance=row[11]===1
+      ?`<span class=attrition-significant title="Fisher exact test p=${row[10]?.toFixed(4)}">Statistically significant</span>`
+      :row[10]===null?"":`<span class=attrition-not-significant>p=${row[10].toFixed(3)}</span>`;
     return`<tr><td class=attrition-rank>${index+1}</td>
       <td><span class=attrition-question>${ATTRITION_DATA.labels[row[2]]}</span><br><span class="muted attrition-question-id">${ATTRITION_DATA.questions[row[2]]}</span></td>
       <td>${suppressed?`<span class=attrition-suppressed>${multiplier}</span>`:
-        `<div class=attrition-bar-cell><div class=attrition-bar-track style="--baseline:${baseline}%"><span class=attrition-bar style="--bar-width:${barWidth}%"></span><i class=attrition-baseline aria-hidden=true></i></div><strong class=attrition-multiplier>${multiplier}</strong></div>`}</td></tr>`;
+        `<div class=attrition-bar-cell><div class=attrition-bar-track style="--baseline:${baseline}%"><span class=attrition-bar style="--bar-width:${barWidth}%"></span><i class=attrition-baseline aria-hidden=true></i></div><div><strong class=attrition-multiplier>${multiplier}</strong>${significance}</div></div>`}</td></tr>`;
   }).join("");
 }
 document.querySelector("#attritionDays").addEventListener("change",renderAttritionTable);

@@ -127,6 +127,7 @@ def test_analyze_survey_points_to_linked_dataset():
     assert positions == sorted(positions)
     assert "OPEN_REPORT.html" in report_contract
     assert "Force the light Glint report theme" in report_contract
+    assert "Glint Labs Figma Home frame" in report_contract
     assert "Do not embed or recalculate from" in report_contract
     assert "Exclude\nraw respondent data" in report_contract
     assert "scripts/build_interactive_report.py" in report_contract
@@ -151,6 +152,15 @@ def test_analyze_survey_points_to_linked_dataset():
         golden.read_bytes().replace(b"\r\n", b"\n")
     ).hexdigest()
     assert golden_sha in report_contract
+    golden_text = golden.read_text(encoding="utf-8")
+    for design_hook in (
+        "lab-nav",
+        "report-hero",
+        "hero-proof",
+        "filter-panel",
+        "report-footer",
+    ):
+        assert design_hook in golden_text
     design_reference = ROOT / "references/design/glint-ui-system.md"
     assert design_reference.exists()
     design_text = design_reference.read_text(encoding="utf-8")

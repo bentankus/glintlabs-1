@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`d641445b17209f41ee0bf1e8ad30d9139d19d011fb09f21fdba8bfff85455f64`.
+`9804f58a38f58744398d3f9f89476e019d58d01c61d42dd27ee9261f414b1add`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -78,12 +78,18 @@ staging data from the ZIP.
 
 - Load and follow `references/design/glint-ui-system.md`, which points to the
   published `glint-ui-system` skill and canonical upstream reference.
+- Adapt the visual hierarchy of the Glint Labs Figma Home frame: a rounded
+  masthead, editorial report hero, pill navigation, generous whitespace,
+  resource-style cards and downloads, and a high-contrast closing section.
+  Preserve the Glint UI system as the token and accessibility authority.
 - Force the light Glint report theme; do not follow operating-system dark mode.
-- Use `#FAFAFA` for the canvas, white cards, `#335CCC` as the primary Glint
-  blue, `#E5EEFF` for blue tint, Glint status colors, and the approved
+- Use a white canvas, `#FAFAFA` supporting surfaces, `#335CCC` as the primary
+  Glint blue, `#E5EEFF` for blue tint, Glint status colors, and the approved
   favorable/unfavorable treatments.
 - Use Segoe UI typography, approved Glint radii, subtle
   borders and shadows, accessible focus states, and responsive layouts.
+- Keep analytical tables and charts dense enough for comparison; apply the
+  editorial treatment around them rather than weakening statistical encodings.
 - Do not substitute a generic dashboard theme.
 
 ## Required navigation

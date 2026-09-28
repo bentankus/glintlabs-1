@@ -112,6 +112,10 @@ values and must never be reused for another analysis.
 Before changing the golden report or any report colors, load
 `references/design/glint-ui-system.md`. It points to the canonical
 `glint-ui-system` skill and records the required Glint/Fluent design rules.
+The report shell adapts the Glint Labs Figma Home page through its rounded
+masthead, editorial hero, pill navigation, airy cards, resource-style download
+rows, and high-contrast closing section. The Glint UI system remains the source
+of truth for tokens, typography, interaction states, and accessibility.
 
 The golden report intentionally excludes Overview, Item results, and Heatmap.
 Generated reports use Scores change, Correlation, Factors, and Downloads.

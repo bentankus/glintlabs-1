@@ -56,6 +56,14 @@ When attrition analysis completes, add Attrition analysis followed immediately
 by Attrition alerts between Factors and Downloads. If attrition is unavailable,
 omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
 
+Before the navigation, show a deterministic, filter-aware current-survey
+summary. Use the latest privacy-eligible cycle for the selected population and
+describe its average item score, three highest-scoring strengths, three
+lowest-scoring opportunities, and movement from the prior cycle when
+available. Label strengths and opportunities as relative within-survey
+priorities rather than benchmarks or causal findings. This summary must render
+in standard no-AI reports as well as AI-preview reports.
+
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score
 Difference (New - Old) with proportional difference bars.

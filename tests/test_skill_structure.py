@@ -94,6 +94,8 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "median privacy-eligible attrition multiplier" in skill
     assert "top-five results" in skill
     assert "lowest-scoring group" in skill
+    assert "deterministic, filter-aware current-survey" in skill
+    assert "three highest-scoring strengths" in skill
     assert "greater of 100 complete responses or five complete responses" in skill
     assert "clustered horizontal bar small multiples" in skill
     assert "progress bar" in skill
@@ -156,7 +158,8 @@ def test_analyze_survey_points_to_linked_dataset():
     for design_hook in (
         "lab-nav",
         "report-hero",
-        "hero-proof",
+        "surveySummary",
+        "summary-card",
         "filter-panel",
         "report-footer",
     ):
@@ -811,6 +814,10 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "topDeclines" not in report_text
     assert "id=attritionTableBody" not in report_text
     assert "id=alertsList" not in report_text
+    assert "id=surveySummary" in report_text
+    assert "function renderSurveySummary()" in report_text
+    assert "Strengths to sustain" in report_text
+    assert "Opportunities to explore" in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text

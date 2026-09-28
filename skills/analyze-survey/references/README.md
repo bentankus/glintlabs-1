@@ -122,6 +122,13 @@ Generated reports use Scores change, Correlation, Factors, and Downloads.
 When attrition is available, they insert Attrition analysis and Attrition
 alerts after Factors; otherwise both tabs are absent.
 
+The top of every report contains a deterministic current-survey summary before
+the navigation. It responds to the shared attribute/value filter and presents
+the latest privacy-eligible cycle, average item score, three relative
+strengths, three relative opportunities, and prior-cycle movement when
+available. It is aggregate-only and remains present when AI summary mode is
+off.
+
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value
 indicator, alternating rows, and proportional score-difference bars.

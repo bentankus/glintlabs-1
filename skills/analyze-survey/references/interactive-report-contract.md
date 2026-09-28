@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`9804f58a38f58744398d3f9f89476e019d58d01c61d42dd27ee9261f414b1add`.
+`5078d3525a75195739f1f62220d9a060c75be57ea3b5b6411256446d359ce9c7`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -82,6 +82,14 @@ staging data from the ZIP.
   masthead, editorial report hero, pill navigation, generous whitespace,
   resource-style cards and downloads, and a high-contrast closing section.
   Preserve the Glint UI system as the token and accessibility authority.
+- Use the hero for a deterministic **current survey summary**, not generic
+  marketing copy. It must update with the shared report filter and show:
+  latest privacy-eligible cycle and response count, average item score, the
+  three highest-scoring strengths, the three lowest-scoring opportunities,
+  and average/leading movement from the prior cycle when available.
+- Describe strengths and opportunities as relative positions within the
+  current survey. Do not imply an external benchmark, root cause, or causal
+  interpretation. Keep the summary available in summary mode `off`.
 - Force the light Glint report theme; do not follow operating-system dark mode.
 - Use a white canvas, `#FAFAFA` supporting surfaces, `#335CCC` as the primary
   Glint blue, `#E5EEFF` for blue tint, Glint status colors, and the approved

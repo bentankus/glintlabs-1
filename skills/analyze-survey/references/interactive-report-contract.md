@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`3e29c7f156b1b2bfe984b54e712b682e1c1fc4711036f9ac596f494393664988`.
+`5bb0a7f68687b8b6be6dc0460c6caa0adbdb7059694a48a17999facd01af8c5a`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -229,7 +229,7 @@ Place one report-level attribute/value filter above the tabs.
   strength bands and colors as Correlation: Low (`< .30`), Medium
   (`.30-.49`), High (`.50-.69`), and Very high (`>= .70`).
 - Sort the shared question axis from high to low by each item's MR1 loading
-  only; do not combine loading strengths across dimensions for sorting. Give
+  only; do not combine loading values across dimensions for sorting. Give
   every bar a high-contrast outline and
   every two-decimal loading label a contrasting outline for readability.
 - Explain that factor labels are working hypotheses, factor numbers can rotate

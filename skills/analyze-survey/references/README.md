@@ -171,7 +171,7 @@ clustered horizontal bar small multiples. Each dimension repeats the loading
 axis from 0 to 1 while sharing one vertical set of question labels. Bar colors
 reuse the Correlation Low, Medium, High, and Very high strength bands. Sort
 the shared question axis high to low using MR1 loading only; do not combine
-strengths across dimensions for ordering. Give every bar a high-contrast
+loading values across dimensions for ordering. Give every bar a high-contrast
 outline and every two-decimal value label a contrasting outline for
 readability. Treat labels as working hypotheses and never interpret matching
 factor numbers across cuts as proof of equivalent constructs or measurement

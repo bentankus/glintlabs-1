@@ -49,6 +49,9 @@ IDENTIFIER_ATTRIBUTE_NAMES = {
     "surveycycleid",
 }
 COMMENT_THEME_MIN_N = 5
+QUESTION_LABEL_OVERRIDES = {
+    "Q_ROLE_STRENGTHS": "Role fit",
+}
 COMMENT_THEME_LEXICON = {
     "Career growth and development": (
         "career",
@@ -58,7 +61,6 @@ COMMENT_THEME_LEXICON = {
         "promotion",
         "learning",
         "training",
-        "opportunity",
     ),
     "Manager support and coaching": (
         "manager",
@@ -182,7 +184,10 @@ def resolve(base: Path, value: str | None) -> Path | None:
 
 
 def label(value: str) -> str:
-    return re.sub(r"\s+", " ", value.removeprefix("Q_").replace("_", " ")).title()
+    return QUESTION_LABEL_OVERRIDES.get(
+        value,
+        re.sub(r"\s+", " ", value.removeprefix("Q_").replace("_", " ")).title(),
+    )
 
 
 def identifier_column(value: str) -> bool:

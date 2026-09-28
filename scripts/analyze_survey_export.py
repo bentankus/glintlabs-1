@@ -107,6 +107,12 @@ def parse_args() -> argparse.Namespace:
         help="Explicit report attributes. Defaults to privacy-safe categorical columns.",
     )
     parser.add_argument("--min-group-size", type=int, default=5)
+    parser.add_argument(
+        "--summary-mode",
+        choices=("off", "optional", "required"),
+        default="off",
+        help="Control AI People Science summaries in the generated report.",
+    )
     return parser.parse_args()
 
 
@@ -501,6 +507,7 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         "question_cols": questions,
         "attribute_cols": attribute_cols,
         "min_group_size": options.min_group_size,
+        "summary_mode": getattr(options, "summary_mode", "off"),
         "analyses": analyses,
         "source_file_name": source.name,
         "source_sha256": file_sha256(source),

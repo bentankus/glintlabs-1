@@ -11,39 +11,39 @@ golden-report.html
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
 `d641445b17209f41ee0bf1e8ad30d9139d19d011fb09f21fdba8bfff85455f64`.
-Generated reports must match its static HTML shell exactly. The only intended
-substitution is the JSON value assigned to `const D`, which must come from the
-current analysis.
+Generated reports in `required` mode must match its static HTML shell exactly.
+The intended substitution is the JSON value assigned to `const D`. In `off`
+mode, the six empty AI summary containers are also removed from the generated
+report.
 
-## AI-generated People Science summaries
+## AI-generated People Science summary modes
 
-- Begin every tab with a compact People Science perspective card.
+The shared report builder supports three explicit modes:
+
+- `off`: render no AI summary cards, ignore any stale summary file, and exclude
+  that file from the share ZIP. This is the default for `analyze-survey`.
+- `optional`: render summaries only when a valid summary file exists; otherwise
+  render no summary cards.
+- `required`: fail report generation unless a valid summary file exists. This
+  is required by `analyze-survey-ai-preview`.
+
+Always create `people-science-summary-context.json` from aggregate results so a
+completed analysis can be reused by the preview workflow without rerunning the
+codebooks. When summaries are enabled:
+
 - Require six summaries: Scores change, Relationships, Alerts, Factors,
   Attrition analysis, and Downloads.
 - Each summary must contain a headline, observed evidence, professional
-  interpretation, recommended next step, caveat, and published-source links
-  when relevant.
+  interpretation, recommended next step, caveat, and published-source links.
 - Generate narratives from `people-science-summary-context.json`, never raw
-  respondent rows. Conform to `people-science-summaries.schema.json`.
+  respondent rows, and conform to `people-science-summaries.schema.json`.
 - Use `interpret-analysis` guardrails and
   `people-science-knowledge-vault` source priority. Do not present correlation,
   factors, alerts, or attrition associations as causal.
-- Recalculate the summary whenever the report attribute or value changes.
-  Derive the filtered headline, observation, interpretation, recommendation,
-  caveat, and references from the same aggregate source currently rendered by
-  that tab. Authored segment narratives take precedence.
-- Keep the card compact: state the selected scope once in the headline, avoid
-  repeating the same metric or finding across fields, and ensure each field
-  adds distinct decision-relevant information.
-- For tabs without filter-specific analysis, update the scope statement and
-  explicitly say that the evidence remains company-wide or unavailable.
-- Select three public references for each rendered summary by matching key
-  terms across its current headline, observation, interpretation,
-  recommendation, and caveat against
-  `people-science-source-index.json`. Prefer specific analytical and item-theme
-  matches; use the tab defaults only to fill unmatched positions.
-- If summaries have not been generated, show an honest unavailable state
-  rather than invented or deterministic text labeled as AI-generated.
+- Recalculate summaries when the report attribute or value changes. Authored
+  segment narratives take precedence over live aggregate summaries.
+- Select three public references for each rendered summary using
+  `people-science-source-index.json`.
 
 The deterministic implementation is
 `scripts/build_interactive_report.py`. The analysis runner invokes it

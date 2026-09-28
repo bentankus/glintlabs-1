@@ -8,9 +8,9 @@ allowed-tools: Bash, Read, Write, Glob, Grep, WebFetch
 
 Turn a provided survey export into a repeatable local analysis and the standard
 interactive report. The skill owns export inspection, safe configuration,
-`vivaglint` execution, repeatability validation, HTML generation, tab-level
-People Science summaries, and packaging. It does not own a broader customer
-readout or manager action plan.
+`vivaglint` execution, repeatability validation, HTML generation, and
+packaging. It does not generate AI interpretation, a broader customer readout,
+or a manager action plan.
 
 ## Start here
 
@@ -42,12 +42,8 @@ Read these references in order:
 4. `references/golden-report.html`
 5. `references/scores-change-format.png`
 6. `references/interactive-report-contract.md`
-7. `references/people-science-summaries.schema.json`
-8. `references/people-science-source-index.json`
-9. `../people-science-knowledge-vault/references/`
-10. `../../references/general/interpretation-guardrails.md`
-11. `../../references/general/privacy-and-minimum-n.md`
-12. `../../references/general/codebook-catalog.md`
+7. `../../references/general/privacy-and-minimum-n.md`
+8. `../../references/general/codebook-catalog.md`
 
 The Glint UI system is mandatory for all color, typography, spacing, component,
 and accessibility decisions. Do not invent report colors or visual patterns.
@@ -135,36 +131,12 @@ Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
 verification, relationship clustering, alert aggregation, and ZIP packaging.
 
-After the deterministic analysis completes:
-
-1. Inspect `analysis-manifest.json` and
-   `people-science-summary-context.json`.
-2. Apply the `interpret-analysis` guardrails to distinguish observation,
-   interpretation, recommendation, and caveat.
-3. Use `people-science-knowledge-vault` to retrieve relevant externally
-   published article bodies. Cite only claims supported by those sources.
-4. Write `people-science-summaries.json` using
-   `people-science-summaries.schema.json`. Include all six tabs.
-5. Rerun `scripts/build_interactive_report.py` with the existing config and
-   output directory so the summaries are embedded in the HTML and share ZIP.
-
-Every tab must begin with an AI-generated People Science perspective containing
-a headline, what the results show, a professional interpretation, a recommended
-next step, a caveat, and relevant published-source links. Keep the narrative
-concise, non-causal, privacy-safe, and explicit when evidence is unavailable.
-The summary must recalculate whenever the report attribute or value changes.
-Recompute its headline, observation, interpretation, recommendation, caveat,
-and references from the selected filter's aggregate cycle, relationship,
-alert, and factor results unless an authored filter-specific narrative is
-available. Factor summaries must describe the selected cut's re-estimated
-solution or its explicit suppression reason. For tabs without filter-specific
-analysis, explicitly state that the displayed evidence remains company-wide or
-unavailable.
-
-Keep live summaries compact. State the selected scope once in the headline,
-avoid repeating the same metric or finding across fields, and make the
-observation, interpretation, recommendation, and caveat add distinct
-information.
+The standard workflow uses `--summary-mode off`, which is also the runner
+default. It still writes `people-science-summary-context.json` so the same
+completed analysis can be used later by the explicitly invoked
+`analyze-survey-ai-preview` skill. A stale `people-science-summaries.json` in
+the output directory must not appear in the report or share ZIP when summary
+mode is off.
 
 For Factors, use the company solution's factor count and varimax rotation to
 re-estimate loadings for every eligible attribute/value cut. Require at least
@@ -206,6 +178,7 @@ Use explicit options only when automatic detection is wrong:
 --question-cols <item1> <item2> ...
 --attribute-cols <attribute1> <attribute2> ...
 --min-group-size <5-or-higher>
+--summary-mode off
 ```
 
 ## Successful output
@@ -225,7 +198,8 @@ attrition.csv
 ```
 
 Only completed analysis CSVs are required. The HTML report and ZIP are always
-required after repeatability passes. Open the HTML report before finishing.
+required after repeatability passes. The standard report contains no AI summary
+cards. Open the HTML report before finishing.
 
 ## Failure handling
 

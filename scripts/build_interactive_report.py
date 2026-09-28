@@ -56,6 +56,11 @@ def args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
     parser.add_argument("--output-dir", required=True)
+    parser.add_argument(
+        "--summary-mode",
+        choices=("off", "optional", "required"),
+        help="Override the report summary mode from the analysis config.",
+    )
     parser.add_argument("--progress-start", type=int, default=0, help=argparse.SUPPRESS)
     parser.add_argument("--progress-end", type=int, default=100, help=argparse.SUPPRESS)
     parser.add_argument("--progress-started-at", type=float, help=argparse.SUPPRESS)
@@ -1077,9 +1082,17 @@ def summary_context(
     }
 
 
-def load_ai_summaries(output: Path) -> dict[str, Any]:
+def load_ai_summaries(
+    output: Path,
+    *,
+    required: bool = False,
+) -> dict[str, Any]:
     path = output / "people-science-summaries.json"
     if not path.exists():
+        if required:
+            raise ValueError(
+                "Summary mode 'required' needs people-science-summaries.json."
+            )
         return {}
     summaries = json.loads(path.read_text(encoding="utf-8"))
     if summaries.get("schema_version") != "1.0.0":
@@ -1144,6 +1157,15 @@ def load_ai_summaries(output: Path) -> dict[str, Any]:
     return tabs
 
 
+def remove_ai_summary_cards(html: str) -> str:
+    for tab in SUMMARY_TABS:
+        html = html.replace(
+            f"<div class=ai-summary data-summary={tab}></div>",
+            "",
+        )
+    return html
+
+
 def main() -> int:
     options = args()
     progress = ProgressReporter(
@@ -1155,6 +1177,11 @@ def main() -> int:
     config_path = Path(options.config).resolve()
     output = Path(options.output_dir).resolve()
     config = json.loads(config_path.read_text(encoding="utf-8"))
+    summary_mode = options.summary_mode or config.get("summary_mode", "off")
+    if summary_mode not in {"off", "optional", "required"}:
+        raise ValueError(
+            "summary_mode must be one of: off, optional, required."
+        )
     manifest = json.loads((output / "analysis-manifest.json").read_text(encoding="utf-8"))
     if manifest["repeatability_check"]["status"] != "passed":
         raise ValueError("Interactive report requires a passed repeatability check.")
@@ -1181,9 +1208,10 @@ def main() -> int:
     frame = survey_response_rows(frame, questions)
 
     configured = config.get("attribute_cols") or []
-    attributes = list(dict.fromkeys([
-        *configured,
-        *(
+    attributes = (
+        list(dict.fromkeys(configured))
+        if configured
+        else [
             column
             for column in (
                 "client_uuid",
@@ -1193,8 +1221,8 @@ def main() -> int:
                 "meeting_hours",
             )
             if column in frame.columns
-        ),
-    ]))
+        ]
+    )
     attributes = [
         column
         for column in attributes
@@ -1262,10 +1290,16 @@ def main() -> int:
         )
     report_name = f"{output.name}-report.html"
     zip_name = f"{output.name}-share.zip"
+    ai_summaries = (
+        {}
+        if summary_mode == "off"
+        else load_ai_summaries(output, required=summary_mode == "required")
+    )
     manifest["report_generation"] = {
         "status": "completed",
         "report": report_name,
         "share_zip": zip_name,
+        "summary_mode": summary_mode,
         "format_contract": "skills/analyze-survey/references/interactive-report-contract.md",
     }
     (output / "analysis-manifest.json").write_text(
@@ -1274,6 +1308,8 @@ def main() -> int:
     excluded_downloads = {survey_path.name}
     if attribute_file:
         excluded_downloads.add(attribute_file.name)
+    if summary_mode == "off":
+        excluded_downloads.add("people-science-summaries.json")
     downloads = sorted(
         path.name
         for path in output.iterdir()
@@ -1298,7 +1334,7 @@ def main() -> int:
         downloads.append(context_path.name)
         downloads.sort()
     data = {
-        "aiSummaries": load_ai_summaries(output),
+        "aiSummaries": ai_summaries,
         "knowledgeSources": json.loads(
             (
                 Path(__file__).resolve().parents[1]
@@ -1307,7 +1343,7 @@ def main() -> int:
                 / "references"
                 / "people-science-source-index.json"
             ).read_text(encoding="utf-8")
-        ),
+        ) if ai_summaries else {},
         "questions": questions,
         "labels": {question: label(question) for question in questions},
         "overall": overall,
@@ -1345,6 +1381,8 @@ def main() -> int:
             json.dumps(manifest, indent=2) + "\n",
             encoding="utf-8",
         )
+    if not ai_summaries:
+        report_html = remove_ai_summary_cards(report_html)
     report_path.write_text(report_html, encoding="utf-8")
     progress.update(96, "Interactive HTML report written")
 

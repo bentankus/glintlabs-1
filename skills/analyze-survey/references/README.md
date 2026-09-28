@@ -62,12 +62,11 @@ the export size and prior observed runs when available.
 
 The first report build also writes
 `people-science-summary-context.json`, a compact aggregate-only input for AI
-interpretation. Use `interpret-analysis` for statistical guardrails and
-`people-science-knowledge-vault` for externally published knowledge grounding.
-Write all six tab narratives to `people-science-summaries.json` using
-`people-science-summaries.schema.json`, then rerun the report builder. The
-summary file and context are safe aggregate artifacts and are included in the
-share ZIP.
+interpretation. Standard `analyze-survey` runs use summary mode `off`, so no AI
+summary cards or summary file appear in the report package. The explicitly
+invoked `analyze-survey-ai-preview` skill uses this context, writes all six tab
+narratives to `people-science-summaries.json`, and rebuilds the shared report
+with summary mode `required`.
 
 ## Privacy
 
@@ -85,14 +84,12 @@ share ZIP.
 The required behavior and packaging are defined in
 `interactive-report-contract.md`.
 
-Each tab begins with a concise AI-generated People Science perspective. It
-separates observation from interpretation, recommends a next step, states a
-caveat, and links relevant published evidence. Whenever the report attribute
-or value changes, the summary immediately recalculates its headline,
-observation, interpretation, recommendation, caveat, and references from that
-filter's aggregate results. Authored segment narratives take precedence. Tabs
-without filter-specific analysis state that limitation instead of presenting
-company-wide evidence as filtered evidence.
+Standard reports contain no AI summary cards. Preview reports begin every tab
+with a concise AI-generated People Science perspective that separates
+observation from interpretation, recommends a next step, states a caveat, and
+links relevant published evidence. Whenever the report attribute or value
+changes, the preview summary immediately recalculates from that filter's
+aggregate results. Authored segment narratives take precedence.
 
 Live summaries remain compact by stating the selected scope once in the
 headline and avoiding repeated metrics or findings across the observation,
@@ -104,7 +101,7 @@ defaults per tab. The browser ranks sources against key terms across the
 current headline, observation, interpretation, recommendation, and caveat, so
 filtered findings about topics such as belonging, action taking, work-life,
 confidentiality, or attrition receive different references. Every rendered
-summary shows three sources.
+preview summary shows three sources.
 
 `golden-report.html` is the user-approved canonical HTML example. The report
 builder reads that file directly and replaces only the `const D=...` aggregate

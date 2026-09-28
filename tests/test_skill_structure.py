@@ -20,6 +20,7 @@ def test_each_skill_has_first_priority_reference_folder():
     assert skill_names == [
         "analysis-qa",
         "analyze-survey",
+        "analyze-survey-ai-preview",
         "interpret-analysis",
         "people-science-knowledge-vault",
     ]
@@ -99,11 +100,17 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "estimated completion time" in skill
     assert "first response that starts the run" in skill
     assert "people-science-summary-context.json" in skill
-    assert "people-science-summaries.schema.json" in skill
-    assert "`interpret-analysis`" in skill
-    assert "`people-science-knowledge-vault`" in skill
+    assert "--summary-mode off" in skill
+    assert "analyze-survey-ai-preview" in skill
     assert "<output-directory-name>-report.html" in skill
     assert "<output-directory-name>-share.zip" in skill
+    preview_skill = (
+        ROOT / "skills/analyze-survey-ai-preview/SKILL.md"
+    ).read_text(encoding="utf-8")
+    assert "--summary-mode required" in preview_skill
+    assert "people-science-summaries.schema.json" in preview_skill
+    assert "`interpret-analysis`" in preview_skill
+    assert "`people-science-knowledge-vault`" in preview_skill
 
     report_contract = (
         ROOT / "skills/analyze-survey/references/interactive-report-contract.md"
@@ -134,10 +141,9 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "Welch significance" in report_contract
     assert "five largest item declines" in report_contract
     assert "at least 20 responses in both compared cycles" in report_contract
-    assert "Begin every tab with a compact People Science perspective card" in report_contract
-    assert "Recalculate the summary whenever the report attribute or value changes" in report_contract
-    assert "filtered headline, observation, interpretation, recommendation" in report_contract
-    assert "state the selected scope once in the headline" in report_contract
+    assert "`off`: render no AI summary cards" in report_contract
+    assert "`required`: fail report generation" in report_contract
+    assert "Recalculate summaries when the report attribute or value changes" in report_contract
     assert (ROOT / "scripts/build_interactive_report.py").exists()
     golden = ROOT / "skills/analyze-survey/references/golden-report.html"
     assert golden.exists()
@@ -241,6 +247,7 @@ def test_direct_export_runner_detects_csv_contract(tmp_path):
     assert config["emp_id_col"] == "user_id"
     assert config["question_cols"] == ["Q_ONE", "Q_TWO"]
     assert config["attribute_cols"] == ["department"]
+    assert config["summary_mode"] == "off"
     assert "email" not in config["attribute_cols"]
     assert config["source_file_name"] == survey.name
     assert len(config["source_sha256"]) == 64
@@ -614,7 +621,12 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     with survey.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
             handle,
-            fieldnames=["user_id", "survey_cycle_title", *questions],
+            fieldnames=[
+                "user_id",
+                "survey_cycle_title",
+                "after_hours_collab",
+                *questions,
+            ],
         )
         writer.writeheader()
         for row in range(40):
@@ -622,6 +634,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                 {
                     "user_id": row + 1,
                     "survey_cycle_title": "H1" if row < 20 else "H2",
+                    "after_hours_collab": "Low" if row % 2 else "High",
                     **{
                         question: ((row + index) % 5) + 1
                         for index, question in enumerate(questions)
@@ -714,6 +727,8 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
             str(config),
             "--output-dir",
             str(tmp_path),
+            "--summary-mode",
+            "required",
         ],
         check=True,
         capture_output=True,
@@ -805,12 +820,14 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "summary.caveat=" in report_text
     assert "Factor solutions are exploratory working hypotheses" in report_text
     assert "Factor numbers can rotate or reorder" in report_text
-    assert len(json.loads(
+    report_payload = json.loads(
         report_text[
             report_text.index("<script>const D=") + len("<script>const D="):
             report_text.index(";\nconst names=")
         ]
-    )["knowledgeSources"]["sources"]) >= 10
+    )
+    assert len(report_payload["knowledgeSources"]["sources"]) >= 10
+    assert set(report_payload["segments"]) == {"survey_cycle_title", "segment"}
     summary_context = json.loads(
         (tmp_path / "people-science-summary-context.json").read_text(encoding="utf-8")
     )
@@ -830,6 +847,55 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert attributes.name not in names
     assert "people-science-summary-context.json" in names
     assert "people-science-summaries.json" in names
+
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/build_interactive_report.py"),
+            "--config",
+            str(config),
+            "--output-dir",
+            str(tmp_path),
+            "--summary-mode",
+            "off",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    report_text = report.read_text(encoding="utf-8")
+    assert "data-summary=" not in report_text
+    assert '"aiSummaries":{}' in report_text
+    with zipfile.ZipFile(share_zip) as archive:
+        names = set(archive.namelist())
+    assert "people-science-summary-context.json" in names
+    assert "people-science-summaries.json" not in names
+    manifest = json.loads(
+        (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
+    )
+    assert manifest["report_generation"]["summary_mode"] == "off"
+
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/build_interactive_report.py"),
+            "--config",
+            str(config),
+            "--output-dir",
+            str(tmp_path),
+            "--summary-mode",
+            "optional",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    report_text = report.read_text(encoding="utf-8")
+    assert report_text.count("data-summary=") == 6
+    manifest = json.loads(
+        (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
+    )
+    assert manifest["report_generation"]["summary_mode"] == "optional"
 
 
 def test_factor_cube_reestimates_eligible_cuts_and_suppresses_small_ones(monkeypatch):
@@ -945,6 +1011,14 @@ def test_people_science_summary_validation_and_script_escaping(tmp_path):
         assert "missing tab summaries: downloads" in str(error)
     else:
         raise AssertionError("Missing summaries must be rejected")
+
+    (tmp_path / "people-science-summaries.json").unlink()
+    try:
+        module.load_ai_summaries(tmp_path, required=True)
+    except ValueError as error:
+        assert "Summary mode 'required'" in str(error)
+    else:
+        raise AssertionError("Required summary mode must reject a missing file")
 
 
 def test_relationship_cluster_plan_is_deterministic():

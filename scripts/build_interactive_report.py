@@ -48,6 +48,115 @@ IDENTIFIER_ATTRIBUTE_NAMES = {
     "clientuuid",
     "surveycycleid",
 }
+COMMENT_THEME_MIN_N = 5
+COMMENT_THEME_LEXICON = {
+    "Career growth and development": (
+        "career",
+        "growth",
+        "development",
+        "develop",
+        "promotion",
+        "learning",
+        "training",
+        "opportunity",
+    ),
+    "Manager support and coaching": (
+        "manager",
+        "management",
+        "leader",
+        "leadership",
+        "coaching",
+        "supervisor",
+        "one on one",
+    ),
+    "Communication and transparency": (
+        "communication",
+        "communicate",
+        "information",
+        "transparency",
+        "transparent",
+        "clarity",
+        "clear direction",
+    ),
+    "Recognition and feedback": (
+        "recognition",
+        "recognize",
+        "appreciation",
+        "appreciate",
+        "feedback",
+        "reward",
+    ),
+    "Workload and work-life balance": (
+        "workload",
+        "work load",
+        "burnout",
+        "work life",
+        "work-life",
+        "hours",
+        "capacity",
+        "staffing",
+    ),
+    "Tools, resources, and processes": (
+        "tools",
+        "resources",
+        "systems",
+        "technology",
+        "process",
+        "processes",
+        "equipment",
+    ),
+    "Empowerment and autonomy": (
+        "empowerment",
+        "empowered",
+        "autonomy",
+        "ownership",
+        "decision making",
+        "decision-making",
+        "trust",
+    ),
+    "Teamwork and collaboration": (
+        "team",
+        "teamwork",
+        "collaboration",
+        "collaborate",
+        "colleagues",
+        "coworkers",
+        "co-workers",
+    ),
+    "Inclusion, belonging, and respect": (
+        "inclusion",
+        "inclusive",
+        "belonging",
+        "diversity",
+        "respect",
+        "fair treatment",
+    ),
+    "Pay, benefits, and rewards": (
+        "pay",
+        "salary",
+        "compensation",
+        "benefits",
+        "bonus",
+        "rewards",
+    ),
+    "Purpose and meaningful impact": (
+        "purpose",
+        "meaningful",
+        "impact",
+        "mission",
+        "customer",
+    ),
+    "Strategy, priorities, and change": (
+        "strategy",
+        "strategic",
+        "priorities",
+        "priority",
+        "change",
+        "direction",
+        "reorganization",
+        "reorg",
+    ),
+}
 
 
 def args() -> argparse.Namespace:
@@ -170,6 +279,140 @@ def segment_cube(
                 }
         result[attribute] = {"label": label(attribute), "values": values}
     return result
+
+
+def comment_theme_payload(
+    path: Path | None,
+    frame: pd.DataFrame,
+    questions: list[str],
+    segments: dict[str, Any],
+    emp_id: str,
+    cycle_col: str | None,
+    question_col: str,
+    text_col: str,
+) -> dict[str, Any]:
+    empty = {"overall": {}, "segments": {}, "minimumComments": COMMENT_THEME_MIN_N}
+    if not path or not path.exists():
+        return empty
+    comments = pd.read_csv(path, low_memory=False)
+    if question_col not in comments or text_col not in comments:
+        return empty
+
+    normalized_columns = {
+        re.sub(r"[^a-z0-9]+", "", str(column).casefold()): str(column)
+        for column in comments.columns
+    }
+    comment_emp_id = normalized_columns.get(
+        re.sub(r"[^a-z0-9]+", "", emp_id.casefold())
+    )
+    if not comment_emp_id:
+        comment_emp_id = next(
+            (
+                normalized_columns.get(candidate)
+                for candidate in (
+                    "userid",
+                    "employeeid",
+                    "respondentid",
+                    "personid",
+                )
+                if normalized_columns.get(candidate)
+            ),
+            None,
+        )
+    if not comment_emp_id:
+        return empty
+    if comment_emp_id != emp_id:
+        comments = comments.rename(columns={comment_emp_id: emp_id})
+
+    join_keys = [emp_id]
+    for candidate in ("survey_cycle_id", "survey_cycle_title"):
+        if candidate in comments.columns and candidate in frame.columns:
+            join_keys.append(candidate)
+            break
+    lookup_columns = list(dict.fromkeys([
+        *join_keys,
+        *segments.keys(),
+        *([cycle_col] if cycle_col else []),
+    ]))
+    lookup = frame[lookup_columns].drop_duplicates(subset=join_keys)
+    comments = comments.merge(lookup, on=join_keys, how="left", validate="many_to_one")
+    question_lookup: dict[str, str] = {}
+    for question in questions:
+        normalized = str(question).strip().casefold()
+        question_lookup[normalized] = question
+        if normalized.startswith("q_"):
+            question_lookup[normalized[2:]] = question
+    comments["__question"] = comments[question_col].map(
+        lambda value: question_lookup.get(str(value).strip().casefold())
+    )
+    comments = comments[
+        comments["__question"].notna()
+        & comments[text_col].fillna("").astype(str).str.strip().ne("")
+    ].copy()
+    if comments.empty:
+        return empty
+    comments["__cycle"] = (
+        comments[cycle_col].fillna("__all__").astype(str)
+        if cycle_col and cycle_col in comments.columns
+        else "__all__"
+    )
+
+    def normalize_text(value: Any) -> str:
+        return " " + re.sub(
+            r"[^a-z0-9]+", " ", str(value).casefold()
+        ).strip() + " "
+
+    normalized_keywords = {
+        theme: tuple(normalize_text(keyword).strip() for keyword in keywords)
+        for theme, keywords in COMMENT_THEME_LEXICON.items()
+    }
+
+    def themes(source: pd.DataFrame) -> dict[str, list[list[Any]]]:
+        result = {}
+        for question, group in source.groupby("__question", sort=False):
+            texts = [normalize_text(value) for value in group[text_col]]
+            threshold = max(COMMENT_THEME_MIN_N, math.ceil(len(texts) * 0.02))
+            counts = []
+            for theme, keywords in normalized_keywords.items():
+                count = sum(
+                    any(f" {keyword} " in text for keyword in keywords)
+                    for text in texts
+                )
+                if count >= threshold:
+                    counts.append((theme, count))
+            selected = sorted(counts, key=lambda item: (-item[1], item[0]))[:3]
+            if selected:
+                result[str(question)] = [
+                    [theme, int(count)] for theme, count in selected
+                ]
+        return result
+
+    overall = {
+        cycle: themes(group)
+        for cycle, group in comments.groupby("__cycle", sort=False)
+        if len(group) >= COMMENT_THEME_MIN_N
+    }
+    filtered: dict[str, Any] = {}
+    for attribute, segment in segments.items():
+        if attribute not in comments.columns:
+            continue
+        values = {}
+        for value in segment["values"]:
+            group = comments[comments[attribute].astype(str) == value]
+            cycles = {
+                cycle: themes(cycle_group)
+                for cycle, cycle_group in group.groupby("__cycle", sort=False)
+                if len(cycle_group) >= COMMENT_THEME_MIN_N
+            }
+            if cycles:
+                values[value] = cycles
+        if values:
+            filtered[attribute] = values
+    return {
+        "overall": overall,
+        "segments": filtered,
+        "minimumComments": COMMENT_THEME_MIN_N,
+    }
 
 
 def cycle_cube(
@@ -1338,6 +1581,16 @@ def main() -> int:
     progress.update(28, "Building cycle comparisons and repeat-respondent views")
     cycles = cycle_cube(frame, questions, attributes, cycle_col)
     progress.update(42, "Cycle comparisons and repeat-respondent views prepared")
+    comment_themes = comment_theme_payload(
+        resolve(config_path.parent, config.get("comments_file")),
+        frame,
+        questions,
+        segments,
+        emp_id,
+        cycle_col,
+        config.get("comments_question_col", "question_uuid"),
+        config.get("comments_text_col", "comment"),
+    )
     progress.update(45, "Clustering relationship matrices for each filter view")
     relationships = relationship_cube(frame, questions, attributes)
     progress.update(60, "Relationship matrices and cluster recommendations prepared")
@@ -1459,6 +1712,7 @@ def main() -> int:
         "overall": overall,
         "segments": segments,
         "cycles": cycles,
+        "commentThemes": comment_themes,
         "relationships": relationships,
         "alerts": alert_data,
         "factors": factors,

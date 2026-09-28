@@ -95,7 +95,10 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "top-five results" in skill
     assert "lowest-scoring group" in skill
     assert "deterministic, filter-aware current-survey" in skill
-    assert "three highest-scoring strengths" in skill
+    assert "three high-scoring items" in skill
+    assert "three low-scoring items" in skill
+    assert "privacy-safe aggregate comment themes" in skill
+    assert "Never include raw comments" in skill
     assert "greater of 100 complete responses or five complete responses" in skill
     assert "clustered horizontal bar small multiples" in skill
     assert "progress bar" in skill
@@ -144,6 +147,8 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "median" in report_contract
     assert "lowest-scoring privacy-eligible group" in report_contract
     assert "favorable or unfavorable category N" in report_contract
+    assert "deterministic keyword coding" in report_contract
+    assert "Raw comments must never enter HTML" in report_contract
     assert "`off`: render no AI summary cards" in report_contract
     assert "`required`: fail report generation" in report_contract
     assert "Recalculate summaries when the report attribute or value changes" in report_contract
@@ -319,6 +324,57 @@ def test_direct_export_runner_accepts_attributes_from_both_workbook_sheets(tmp_p
     assert config["attribute_file"].endswith("attributes.csv")
 
 
+def test_direct_export_runner_extracts_linked_comments_for_local_aggregation(tmp_path):
+    survey = tmp_path / "survey.xlsx"
+    script_path = ROOT / "scripts/analyze_survey_export.py"
+    spec = importlib.util.spec_from_file_location(
+        "analyze_survey_export_comments", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+
+    with module.pd.ExcelWriter(survey) as writer:
+        module.pd.DataFrame(
+            {
+                "user_id": [1, 2, 3, 4, 5],
+                "survey_cycle_title": ["H2"] * 5,
+                "Q_ONE": [1, 2, 3, 4, 5],
+                "Q_TWO": [2, 3, 4, 5, 1],
+            }
+        ).to_excel(writer, sheet_name="Sheet1", index=False)
+        module.pd.DataFrame(
+            {
+                "user_id": [1, 2, 3, 4, 5],
+                "question_uuid": ["Q_ONE"] * 5,
+                "comment": ["private career growth wording"] * 5,
+            }
+        ).to_excel(writer, sheet_name="comments", index=False)
+
+    class Args:
+        survey_export = str(survey)
+        output_dir = str(tmp_path / "output")
+        sheet = None
+        attribute_sheet = None
+        emp_id_col = None
+        scale_points = 5
+        question_cols = None
+        attribute_cols = None
+        min_group_size = 5
+
+    config_path = module.build_config(Args(), Path(Args.output_dir))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    comments_path = Path(config["comments_file"])
+
+    assert config["source_comment_sheet"] == "comments"
+    assert config["comments_question_col"] == "question_uuid"
+    assert config["comments_text_col"] == "comment"
+    assert comments_path.name == "comments.csv"
+    assert comments_path.parent.name == "_input"
+    assert comments_path.exists()
+
+
 def test_direct_export_runner_ignores_incompatible_q_outcomes(tmp_path):
     survey = tmp_path / "survey.csv"
     survey.write_text(
@@ -391,7 +447,12 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
         survey,
         attributes,
         tmp_path / "attributes.csv",
-        {"survey_sheet": "Sheet1", "attribute_sheet": "user_properties"},
+        None,
+        {
+            "survey_sheet": "Sheet1",
+            "attribute_sheet": "user_properties",
+            "comment_sheet": None,
+        },
     )
 
     class Args:
@@ -608,6 +669,57 @@ def test_report_builder_excludes_rows_without_selected_item_responses():
     assert filtered["user_id"].tolist() == [1, 2]
 
 
+def test_comment_themes_require_privacy_threshold_and_follow_filters(tmp_path):
+    script_path = ROOT / "scripts/build_interactive_report.py"
+    spec = importlib.util.spec_from_file_location(
+        "build_interactive_report_comment_themes", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    spec.loader.exec_module(module)
+    frame = module.pd.DataFrame(
+        {
+            "user_id": list(range(1, 10)),
+            "survey_cycle_title": ["H2"] * 9,
+            "segment": ["A"] * 5 + ["B"] * 4,
+            "Q_ONE": [5] * 9,
+            "Q_TWO": [2] * 9,
+        }
+    )
+    frame["__employee_id"] = frame["user_id"]
+    comments = tmp_path / "comments.csv"
+    module.pd.DataFrame(
+        {
+            "user_id": list(range(1, 10)) + list(range(1, 5)),
+            "survey_cycle_title": ["H2"] * 13,
+            "question_uuid": ["Q_ONE"] * 9 + ["Q_TWO"] * 4,
+            "comment": (
+                ["private career growth wording"] * 9
+                + ["private manager coaching wording"] * 4
+            ),
+        }
+    ).to_csv(comments, index=False)
+
+    payload = module.comment_theme_payload(
+        comments,
+        frame,
+        ["Q_ONE", "Q_TWO"],
+        {"segment": {"values": ["A", "B"]}},
+        "user_id",
+        "survey_cycle_title",
+        "question_uuid",
+        "comment",
+    )
+    serialized = json.dumps(payload)
+
+    assert payload["overall"]["H2"]["Q_ONE"][0][0] == "Career growth and development"
+    assert "Q_TWO" not in payload["overall"]["H2"]
+    assert payload["segments"]["segment"]["A"]["H2"]["Q_ONE"]
+    assert "B" not in payload["segments"]["segment"]
+    assert "private career growth wording" not in serialized
+    assert "private manager coaching wording" not in serialized
+
+
 def test_direct_export_runner_normalizes_glint_score_encoding(tmp_path):
     survey = tmp_path / "survey.csv"
     survey.write_text(
@@ -646,6 +758,7 @@ def test_direct_export_runner_normalizes_glint_score_encoding(tmp_path):
 def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     survey = tmp_path / "survey.csv"
     attributes = tmp_path / "attributes.csv"
+    comments = tmp_path / "comments.csv"
     questions = ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"]
     with survey.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
@@ -684,6 +797,27 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     "team_id": "Team A",
                 }
             )
+    with comments.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "user_id",
+                "survey_cycle_title",
+                "question_uuid",
+                "comment",
+            ],
+        )
+        writer.writeheader()
+        for row in range(40):
+            for question in questions:
+                writer.writerow(
+                    {
+                        "user_id": row + 1,
+                        "survey_cycle_title": "H1" if row < 20 else "H2",
+                        "question_uuid": question,
+                        "comment": "private career growth wording",
+                    }
+                )
 
     config = tmp_path / "analysis-config.json"
     config.write_text(
@@ -696,6 +830,9 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                 "input_format": "wide_items",
                 "scale_points": 5,
                 "emp_id_col": "user_id",
+                "comments_file": comments.name,
+                "comments_question_col": "question_uuid",
+                "comments_text_col": "comment",
             }
         ),
         encoding="utf-8",
@@ -816,8 +953,12 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "id=alertsList" not in report_text
     assert "id=surveySummary" in report_text
     assert "function renderSurveySummary()" in report_text
-    assert "Strengths to sustain" in report_text
-    assert "Opportunities to explore" in report_text
+    assert "High scoring items" in report_text
+    assert "Low scoring items" in report_text
+    assert "Comment themes:" in report_text
+    assert "Strengths to sustain" not in report_text
+    assert "Opportunities to explore" not in report_text
+    assert "private career growth wording" not in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text
@@ -846,6 +987,9 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
             report_text.index("<script>const D=") + len("<script>const D="):
             report_text.index(";\nconst names=")
         ]
+    )
+    assert report_payload["commentThemes"]["overall"]["H2"]["Q_ONE"][0][0] == (
+        "Career growth and development"
     )
     assert len(report_payload["knowledgeSources"]["sources"]) >= 10
     assert set(report_payload["segments"]) == {"survey_cycle_title", "segment"}

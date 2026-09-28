@@ -58,11 +58,16 @@ omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
 
 Before the navigation, show a deterministic, filter-aware current-survey
 summary. Use the latest privacy-eligible cycle for the selected population and
-describe its average item score, three highest-scoring strengths, three
-lowest-scoring opportunities, and movement from the prior cycle when
-available. Label strengths and opportunities as relative within-survey
-priorities rather than benchmarks or causal findings. This summary must render
-in standard no-AI reports as well as AI-preview reports.
+describe its average item score, three high-scoring items, three low-scoring items,
+and movement from the prior cycle when available. Add up to three
+privacy-safe aggregate comment themes for each displayed item when linked
+comments meet the minimum threshold. Prefer score-ranked items with sufficient
+comment coverage when at least six are available; otherwise retain the score
+ranking and state when themes are unavailable. Never include raw comments in
+the report, AI context, share ZIP, or chat. Treat scores and themes as
+descriptive within-survey signals rather than benchmarks or causal findings.
+This summary must render in standard no-AI reports as well as AI-preview
+reports.
 
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score

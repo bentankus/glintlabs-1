@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`5078d3525a75195739f1f62220d9a060c75be57ea3b5b6411256446d359ce9c7`.
+`3e29c7f156b1b2bfe984b54e712b682e1c1fc4711036f9ac596f494393664988`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -85,11 +85,20 @@ staging data from the ZIP.
 - Use the hero for a deterministic **current survey summary**, not generic
   marketing copy. It must update with the shared report filter and show:
   latest privacy-eligible cycle and response count, average item score, the
-  three highest-scoring strengths, the three lowest-scoring opportunities,
-  and average/leading movement from the prior cycle when available.
-- Describe strengths and opportunities as relative positions within the
-  current survey. Do not imply an external benchmark, root cause, or causal
-  interpretation. Keep the summary available in summary mode `off`.
+  three high-scoring items, the three low-scoring items, privacy-safe aggregate
+  comment themes for each item when available, and average/leading movement
+  from the prior cycle when available.
+- Prefer score-ranked items with sufficient linked comment coverage when at
+  least six are available. Otherwise retain the full score ranking and state
+  when an item has no privacy-eligible linked themes. Describe all results as
+  relative positions within the current survey. Do not imply an external
+  benchmark, root cause, or causal interpretation. Keep the summary available
+  in summary mode `off`.
+- Derive comment themes locally using deterministic keyword coding. Count a
+  theme at most once per comment, require at least five comments and roughly
+  2% recurrence in the applicable item/cut, and show no more than three theme
+  labels per item. Raw comments must never enter HTML, AI prompts or context,
+  the share ZIP, or chat.
 - Force the light Glint report theme; do not follow operating-system dark mode.
 - Use a white canvas, `#FAFAFA` supporting surfaces, `#335CCC` as the primary
   Glint blue, `#E5EEFF` for blue tint, Glint status colors, and the approved

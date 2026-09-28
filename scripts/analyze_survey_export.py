@@ -37,6 +37,7 @@ ATTRIBUTE_SHEET_CANDIDATES = (
     "employee attributes",
     "demographics",
 )
+COMMENT_SHEET_CANDIDATES = ("comments", "comment", "verbatims", "open text")
 SENSITIVE_ATTRIBUTE_TOKENS = (
     "comment",
     "email",
@@ -348,12 +349,20 @@ def read_export(
     input_dir: Path,
     sheet: str | None,
     attribute_sheet: str | None,
-) -> tuple[pd.DataFrame, Path, pd.DataFrame | None, Path | None, dict[str, str | None]]:
+) -> tuple[
+    pd.DataFrame,
+    Path,
+    pd.DataFrame | None,
+    Path | None,
+    Path | None,
+    dict[str, str | None],
+]:
     suffix = source.suffix.casefold()
     if suffix == ".csv":
-        return pd.read_csv(source), source, None, None, {
+        return pd.read_csv(source), source, None, None, None, {
             "survey_sheet": None,
             "attribute_sheet": None,
+            "comment_sheet": None,
         }
     if suffix not in {".xlsx", ".xlsm"}:
         raise ValueError("Survey export must be a .csv, .xlsx, or .xlsm file.")
@@ -363,6 +372,23 @@ def read_export(
     survey = pd.read_excel(workbook, sheet_name=survey_sheet)
     survey_csv = input_dir / "survey.csv"
     survey.to_csv(survey_csv, index=False)
+
+    comment_sheet = next(
+        (
+            name
+            for name in workbook.sheet_names
+            if normalized_name(name)
+            in {normalized_name(candidate) for candidate in COMMENT_SHEET_CANDIDATES}
+        ),
+        None,
+    )
+    comments_csv = None
+    if comment_sheet:
+        comments = pd.read_excel(workbook, sheet_name=comment_sheet)
+        required_comment_columns = {"comment", "question_uuid"}
+        if required_comment_columns.issubset(comments.columns):
+            comments_csv = input_dir / "comments.csv"
+            comments.to_csv(comments_csv, index=False)
 
     selected_attribute_sheet = attribute_sheet
     if not selected_attribute_sheet:
@@ -374,9 +400,10 @@ def read_export(
         ]
         selected_attribute_sheet = matches[0] if matches else None
     if not selected_attribute_sheet:
-        return survey, survey_csv, None, None, {
+        return survey, survey_csv, None, None, comments_csv, {
             "survey_sheet": survey_sheet,
             "attribute_sheet": None,
+            "comment_sheet": comment_sheet,
         }
     if selected_attribute_sheet not in workbook.sheet_names:
         raise ValueError(f"Attribute worksheet '{selected_attribute_sheet}' was not found.")
@@ -384,9 +411,10 @@ def read_export(
     attributes = pd.read_excel(workbook, sheet_name=selected_attribute_sheet)
     attributes_csv = input_dir / "attributes.csv"
     attributes.to_csv(attributes_csv, index=False)
-    return survey, survey_csv, attributes, attributes_csv, {
+    return survey, survey_csv, attributes, attributes_csv, comments_csv, {
         "survey_sheet": survey_sheet,
         "attribute_sheet": selected_attribute_sheet,
+        "comment_sheet": comment_sheet,
     }
 
 
@@ -402,9 +430,14 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
     input_dir = output / "_input"
     input_dir.mkdir(parents=True, exist_ok=True)
     registered_defaults = sidecar_config(source)
-    survey, survey_path, attribute_frame, attribute_path, workbook_source = read_export(
-        source, input_dir, options.sheet, options.attribute_sheet
-    )
+    (
+        survey,
+        survey_path,
+        attribute_frame,
+        attribute_path,
+        comments_path,
+        workbook_source,
+    ) = read_export(source, input_dir, options.sheet, options.attribute_sheet)
     emp_id_col = detect_emp_id(
         survey,
         options.emp_id_col or registered_defaults.get("emp_id_col"),
@@ -514,6 +547,7 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         "source_url": linked_source_url(source),
         "source_survey_sheet": workbook_source["survey_sheet"],
         "source_attribute_sheet": workbook_source["attribute_sheet"],
+        "source_comment_sheet": workbook_source["comment_sheet"],
     }
     if attrition and "attrition" in analyses:
         config["embedded_attrition"] = attrition
@@ -522,6 +556,10 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         config["attribute_view_mode"] = "separate"
     if attribute_path:
         config["attribute_file"] = str(attribute_path)
+    if comments_path:
+        config["comments_file"] = str(comments_path)
+        config["comments_question_col"] = "question_uuid"
+        config["comments_text_col"] = "comment"
 
     config_path = input_dir / "analysis-config.json"
     config_path.write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")

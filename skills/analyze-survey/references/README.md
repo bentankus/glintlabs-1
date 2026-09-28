@@ -72,8 +72,13 @@ with summary mode `required`.
 
 - Minimum displayed group size defaults to 5.
 - Raw survey and attribute files stay outside the share ZIP.
-- Names, email addresses, comments, phone numbers, and addresses are never
+- Names, email addresses, raw comments, phone numbers, and addresses are never
   automatically selected as report attributes.
+- When a workbook contains a linked comments worksheet, the runner may derive
+  deterministic aggregate theme labels locally. At least five comments and
+  roughly 2% theme recurrence are required for a theme. Raw comment text stays
+  in `_input`, never enters the HTML, AI context, share ZIP, or chat, and is
+  never shown to report recipients.
 - Identifier-like employee, manager, team, client, UUID, and GUID fields are
   excluded from report filters and aggregate downloads. Manager-defined alert
   groups receive deterministic generic team labels before entering the report.
@@ -124,10 +129,12 @@ alerts after Factors; otherwise both tabs are absent.
 
 The top of every report contains a deterministic current-survey summary before
 the navigation. It responds to the shared attribute/value filter and presents
-the latest privacy-eligible cycle, average item score, three relative
-strengths, three relative opportunities, and prior-cycle movement when
-available. It is aggregate-only and remains present when AI summary mode is
-off.
+the latest privacy-eligible cycle, average item score, three high-scoring
+items, three low-scoring items, prior-cycle movement when available, and up to
+three privacy-safe aggregate comment themes for each displayed item. When at
+least six scored items have sufficient linked comment coverage, the cards rank
+within those items; otherwise they retain the full score ranking and identify
+items without eligible themes. It remains present when AI summary mode is off.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

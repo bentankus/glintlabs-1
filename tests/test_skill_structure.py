@@ -588,6 +588,8 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
     assert "attrition-bar-track" in report
     assert "attrition-baseline" in report
     assert "marker = 1.00x" in report
+    assert "Compare later exit rates for respondents" in report
+    assert "Start with the largest score gaps" in report
     assert "<th>Favorable n</th>" not in report
     assert "<th>Favorable attrition</th>" not in report
     assert "<th>Unfavorable n</th>" not in report
@@ -957,6 +959,15 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "Low scoring items" in report_text
     assert "Comment themes:" in report_text
     assert '.ai-summary[data-summary~="changes"]{display:none}' in report_text
+    assert report_text.count("What this shows") == 4
+    assert report_text.count("How to use it") == 4
+    for guidance in (
+        "Choose the cycles, review the largest movements",
+        "Highlight an item you want to understand",
+        "Review the highest-loading items together",
+        "Open the manifest first",
+    ):
+        assert guidance in report_text
     assert "private career growth wording" not in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text

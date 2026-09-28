@@ -1120,6 +1120,12 @@ def inject_attrition_report(
 ) -> str:
     old_section = (
         "<section class=panel id=attrition role=tabpanel hidden><h2>Attrition analysis</h2>"
+        "<div class=tab-guide><div><strong>What this shows</strong><p>Compare "
+        "later exit rates for respondents with favorable and unfavorable item "
+        "responses.</p></div><div><strong>How to use it</strong><p>Look for "
+        "larger multipliers that repeat across outcome windows, then investigate "
+        "the employee experience behind those items without predicting individual "
+        "departures.</p></div></div>"
         "<div class=ai-summary data-summary=attrition></div>"
         "<div class=notice id=attritionStatus></div></section>"
     )
@@ -1145,7 +1151,13 @@ def inject_attrition_report(
             )
             for index, days in enumerate(payload["days"])
         )
-        + '</select></label></div><div class=ai-summary data-summary=attrition></div>'
+        + '</select></label></div><div class=tab-guide><div><strong>What this '
+        'shows</strong><p>Compare later exit rates for respondents with favorable '
+        'and unfavorable item responses.</p></div><div><strong>How to use it'
+        '</strong><p>Look for larger multipliers that repeat across outcome '
+        'windows, then investigate the employee experience behind those items '
+        'without predicting individual departures.</p></div></div>'
+        '<div class=ai-summary data-summary=attrition></div>'
         '<div class=notice id=attritionStatus></div>'
         '<p class=muted id=attritionFilterNote></p>'
         '<div class=scroll><table class=attrition-table><thead><tr>'
@@ -1173,7 +1185,13 @@ def inject_attrition_report(
             )
             for days in alerts_payload["days"]
         )
-        + '</select></label></div><div class=ai-summary data-summary=alerts></div>'
+        + '</select></label></div><div class=tab-guide><div><strong>What this '
+        'shows</strong><p>Find privacy-eligible groups that score lower on the '
+        'items most associated with later exits.</p></div><div><strong>How to '
+        'use it</strong><p>Start with the largest score gaps, confirm the local '
+        'context, and use the result to plan a focused listening conversation—not '
+        'to rank managers or predict departures.</p></div></div>'
+        '<div class=ai-summary data-summary=alerts></div>'
         '<p class="notice">For each attribute, the five items with the highest '
         'median eligible attrition multipliers are selected. The table compares '
         'group scores on those items with company overall.</p>'

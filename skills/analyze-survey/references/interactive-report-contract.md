@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`eca5b6858852e77670ad7653ee0ce6232ea034515f34ae2737b79ea30c9ae0b7`.
+`eb95304be01a9341e0061f4af87a538d75962496710218a9ba0be49d29d217a3`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -143,6 +143,13 @@ Place one report-level attribute/value filter above the tabs.
   non-overlapping, clearly labeled buckets.
 
 ## Tab behavior
+
+Begin every available tab with a compact, plain-language guide containing
+**What this shows** and **How to use it**. Keep each explanation to one short
+paragraph, avoid statistical jargon where a familiar phrase is sufficient, and
+give the user a concrete first action. The guidance must preserve the analysis
+guardrails: comparisons are descriptive, correlation is non-causal, factors
+are exploratory, and attrition results are not individual predictions.
 
 ### Scores change
 

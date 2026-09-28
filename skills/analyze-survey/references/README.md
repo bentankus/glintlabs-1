@@ -143,10 +143,7 @@ comparison-attribute, and focus-group controls. It compares unfavorable and
 favorable coded-mention shares for themes and survey items, with rows sorted
 from the highest unfavorable share. A separate stacked profile shows each
 theme's unfavorable, neutral, and favorable composition. The question
-selector filters all three visuals. Every theme and item comparison row has an
-expandable Details control with the top three aggregate contributors for
-unfavorable and favorable responses. Verbatim comments remain excluded from
-the report and share package.
+selector filters all three visuals.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

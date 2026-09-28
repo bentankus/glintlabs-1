@@ -1010,9 +1010,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "function aggregateThemeItems(" in report_text
     assert "function comparisonRows(" in report_text
     assert "function renderComparison(" in report_text
-    assert "function themeContributors(" in report_text
-    assert "function itemContributors(" in report_text
-    assert "function evidenceDetails(" in report_text
     assert "function renderThemeProfile(" in report_text
     assert "function renderThemes()" in report_text
     assert "Favorable vs. unfavorable themes" in report_text
@@ -1021,9 +1018,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "Sorted by descending share of unfavorable coded mentions" in report_text
     assert "Unfavorable comments" in report_text
     assert "Favorable comments" in report_text
-    assert "data-detail=" in report_text
-    assert "Privacy-safe aggregate evidence only" in report_text
-    assert "Verbatim employee comments are not included" in report_text
     assert "All questions" in report_text
     assert "Unfavorable coded mentions" in report_text
     assert "private career growth wording" not in report_text

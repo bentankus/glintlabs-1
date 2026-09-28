@@ -416,32 +416,59 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
     configured_attributes = options.attribute_cols or registered_defaults.get(
         "attribute_cols"
     )
-    inline_attributes = (
-        detect_attributes(
+    inline_attributes: list[str] = []
+    external_attributes: list[str] = []
+    if attribute_frame is None:
+        inline_attributes = detect_attributes(
             survey,
             {emp_id_col, *questions},
             configured_attributes,
         )
-        if attribute_frame is None
-        else []
-    )
-    external_attributes: list[str] = []
-    if attribute_frame is not None:
+    else:
         external_emp_id = detect_emp_id(attribute_frame, emp_id_col)
         if external_emp_id != emp_id_col:
             attribute_frame = attribute_frame.rename(columns={external_emp_id: emp_id_col})
             assert attribute_path is not None
             attribute_frame.to_csv(attribute_path, index=False)
-        external_attributes = detect_attributes(
-            attribute_frame,
-            {emp_id_col},
-            configured_attributes,
-        )
-        external_attributes = [
-            column for column in external_attributes if column not in survey.columns
-        ]
+        if configured_attributes:
+            available = set(survey.columns) | set(attribute_frame.columns)
+            missing = [
+                column for column in configured_attributes
+                if column not in available
+            ]
+            if missing:
+                raise ValueError("Attribute columns not found: " + ", ".join(missing))
+            unsafe = [
+                column for column in configured_attributes
+                if not safe_attribute(column)
+            ]
+            if unsafe:
+                raise ValueError(
+                    "Attribute columns cannot contain identifiers or sensitive data: "
+                    + ", ".join(unsafe)
+                )
+            inline_attributes = [
+                column for column in configured_attributes
+                if column in survey.columns
+            ]
+            external_attributes = [
+                column for column in configured_attributes
+                if column not in survey.columns and column in attribute_frame.columns
+            ]
+        else:
+            external_attributes = detect_attributes(
+                attribute_frame,
+                {emp_id_col},
+                None,
+            )
+            external_attributes = [
+                column for column in external_attributes
+                if column not in survey.columns
+            ]
 
-    attribute_cols = list(dict.fromkeys([*inline_attributes, *external_attributes]))
+    attribute_cols = list(dict.fromkeys(
+        configured_attributes or [*inline_attributes, *external_attributes]
+    ))
     analyses = [
         "descriptives",
         "response_distribution",

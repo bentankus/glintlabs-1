@@ -642,9 +642,14 @@ def main() -> int:
                 if attribute_view_mode == "separate":
                     frames = []
                     for attribute_col in attribute_cols:
+                        source_file = (
+                            None
+                            if attribute_col in survey.data.columns
+                            else str(attribute_file) if attribute_file else None
+                        )
                         attribute_frame = analyze_by_attributes(
                             survey,
-                            attribute_file=str(attribute_file) if attribute_file else None,
+                            attribute_file=source_file,
                             scale_points=scale_points,
                             attribute_cols=[attribute_col],
                             emp_id_col=emp_id_col,

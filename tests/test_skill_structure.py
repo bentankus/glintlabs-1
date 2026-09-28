@@ -246,6 +246,59 @@ def test_direct_export_runner_detects_csv_contract(tmp_path):
     assert len(config["source_sha256"]) == 64
 
 
+def test_direct_export_runner_accepts_attributes_from_both_workbook_sheets(tmp_path):
+    survey = tmp_path / "survey.xlsx"
+    script_path = ROOT / "scripts/analyze_survey_export.py"
+    spec = importlib.util.spec_from_file_location(
+        "analyze_survey_export_mixed_attributes", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+
+    survey_frame = module.pd.DataFrame(
+        {
+            "user_id": [1, 2, 3, 4, 5],
+            "survey_cycle_title": ["H1", "H1", "H2", "H2", "H2"],
+            "Q_ONE": [1, 2, 3, 4, 5],
+            "Q_TWO": [2, 3, 4, 5, 1],
+        }
+    )
+    attributes_frame = module.pd.DataFrame(
+        {
+            "user_id": [1, 2, 3, 4, 5],
+            "Organization Group": ["A", "A", "B", "B", "B"],
+            "Location": ["East", "West", "East", "West", "East"],
+        }
+    )
+    with module.pd.ExcelWriter(survey) as writer:
+        survey_frame.to_excel(writer, sheet_name="Sheet1", index=False)
+        attributes_frame.to_excel(writer, sheet_name="user_properties", index=False)
+
+    class Args:
+        survey_export = str(survey)
+        output_dir = str(tmp_path / "output")
+        sheet = "Sheet1"
+        attribute_sheet = "user_properties"
+        emp_id_col = "user_id"
+        scale_points = 5
+        question_cols = None
+        attribute_cols = [
+            "Organization Group",
+            "Location",
+            "survey_cycle_title",
+        ]
+        min_group_size = 5
+
+    config_path = module.build_config(Args(), Path(Args.output_dir))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+
+    assert config["attribute_cols"] == Args.attribute_cols
+    assert config["attribute_view_mode"] == "separate"
+    assert config["attribute_file"].endswith("attributes.csv")
+
+
 def test_direct_export_runner_ignores_incompatible_q_outcomes(tmp_path):
     survey = tmp_path / "survey.csv"
     survey.write_text(

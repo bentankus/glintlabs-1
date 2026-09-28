@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`5bb0a7f68687b8b6be6dc0460c6caa0adbdb7059694a48a17999facd01af8c5a`.
+`eca5b6858852e77670ad7653ee0ce6232ea034515f34ae2737b79ea30c9ae0b7`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -44,6 +44,9 @@ codebooks. When summaries are enabled:
   factors, alerts, or attrition associations as causal.
 - Recalculate summaries when the report attribute or value changes. Authored
   segment narratives take precedence over live aggregate summaries.
+- Keep the Scores change AI summary container hidden because the current-survey
+  summary already provides the primary landing-page narrative. Continue to
+  render AI perspectives on the other available analysis tabs.
 - Select three public references for each rendered summary using
   `people-science-source-index.json`.
 

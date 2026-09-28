@@ -956,6 +956,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "High scoring items" in report_text
     assert "Low scoring items" in report_text
     assert "Comment themes:" in report_text
+    assert '.ai-summary[data-summary~="changes"]{display:none}' in report_text
     assert "private career growth wording" not in report_text
     assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text

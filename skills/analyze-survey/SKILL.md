@@ -200,7 +200,11 @@ coded mentions. Add a separate theme favorability profile showing how each
 theme's mentions are distributed across unfavorable, neutral, and favorable
 responses. Apply the question control to all three visuals. Do not show a
 selected-favorability-mix ranking, group heatmap, or item-theme chips. Never
-expose raw comment text.
+expose raw comment text. Add a far-right Details control to each theme and item
+comparison row. Expanded theme details show the top three contributing survey
+items for unfavorable and favorable responses; expanded item details show the
+top three contributing themes for each response group. Keep all detail content
+aggregate and explicitly state that verbatim comments are excluded.
 
 Use the checked-in People Science source index to select references from key
 terms across the current headline, observation, interpretation,

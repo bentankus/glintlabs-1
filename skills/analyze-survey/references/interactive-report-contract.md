@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`66ef1f05c6053c111dd246519712a78a3de84fb7ea5ddc9af39ec5435a9d3ad6`.
+`8c35a81c12b7a0aff7c698bb2c53ff196249b8e05d5ed8bbccec1e5fccfab3a9`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -286,6 +286,12 @@ exploratory, and attrition results are not individual predictions.
   favorability group's coded mentions as denominator.
 - Add a theme favorability profile where each stacked row sums to 100% across
   unfavorable, neutral, and favorable mentions for that theme.
+- Put a Details control at the far right of every theme and item comparison
+  row. On expansion, show the top three privacy-eligible aggregate
+  contributors for unfavorable and favorable responses: survey items for a
+  theme row, and themes for an item row.
+- Never place verbatim comments in the report HTML or share ZIP. Expanded
+  details must state that they contain aggregate evidence only.
 - Apply the survey-question filter to all three visuals.
 - Do not show a selected-favorability-mix ranking, group heatmap, or item-theme
   chips.

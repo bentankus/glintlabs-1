@@ -192,13 +192,16 @@ statistically significant while retaining the multiplier and non-causal
 interpretation.
 
 The Thematic analysis tab must use only privacy-safe deterministic aggregate
-comment themes. Provide cycle, comparison-attribute, focus-group, and comment
-favorability controls. Let users include favorable, neutral, unfavorable, or
-any non-empty combination, with all available categories selected by default.
-Reapply the comment-count and recurrence thresholds to each exact combination;
-do not combine already-thresholded results in the browser. Rank leading themes
-with horizontal bars, compare groups with a heatmap of each theme's share of
-coded mentions, and show item-level theme chips. Never expose raw comment text.
+comment themes. Provide cycle, survey-question, comparison-attribute,
+focus-group, and comment-favorability controls. Let users include favorable,
+neutral, unfavorable, or any non-empty combination, with all available
+categories selected by default. Reapply the comment-count and recurrence
+thresholds to each exact combination; do not combine already-thresholded
+results in the browser. Add a direct favorable-versus-unfavorable comparison
+that shows each theme's share of coded mentions on a common two-sided scale.
+The question control must filter that comparison, the selected-mix ranking,
+the group heatmap, and the item-level results together. Never expose raw
+comment text.
 
 Use the checked-in People Science source index to select references from key
 terms across the current headline, observation, interpretation,

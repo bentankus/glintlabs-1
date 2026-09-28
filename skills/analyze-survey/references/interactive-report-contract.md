@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`ba5f6b04842578e5c394a06d0c92fcfec9a8efbf1d261ccc0fac40b64575c706`.
+`e810654c8d3f3e44b9894d8c466391d3094618c2d8c8c588b1642efce7cfe11d`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the six empty AI summary containers are also removed from the generated
@@ -274,13 +274,18 @@ exploratory, and attrition results are not individual predictions.
 
 - Use only deterministic aggregate labels derived from linked comments; never
   embed or display raw comment text.
-- Provide survey-cycle, comparison-attribute, focus-group, and comment-
-  favorability controls.
+- Provide survey-cycle, survey-question, comparison-attribute, focus-group,
+  and comment-favorability controls.
 - Let users analyze favorable, neutral, unfavorable, or any non-empty
   combination, with all available categories selected by default.
 - Precompute each exact favorability combination locally and reapply the
   five-comment and recurrence thresholds. Do not combine thresholded category
   totals in the browser.
+- Add a direct favorable-versus-unfavorable comparison on a common two-sided
+  scale. Show both percentages and coded-mention counts, and state that each
+  percentage uses its own favorability group's coded mentions as denominator.
+- Apply the survey-question filter to the direct comparison, selected-mix
+  rankings, group heatmap, and item-level themes.
 - Show ranked horizontal bars for leading coded themes, a heatmap comparing
   each theme's share of coded mentions across attribute groups, and item-level
   theme chips.

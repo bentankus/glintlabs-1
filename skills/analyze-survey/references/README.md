@@ -138,10 +138,13 @@ least six scored items have sufficient linked comment coverage, the cards rank
 within those items; otherwise they retain the full score ranking and identify
 items without eligible themes. It remains present when AI summary mode is off.
 
-The Thematic analysis tab provides cycle, comparison-attribute, focus-group,
-and comment-favorability controls. All available favorability categories are
-selected by default, and users may compare any non-empty mix while preserving
-the minimum comment and recurrence thresholds.
+The Thematic analysis tab provides cycle, survey-question,
+comparison-attribute, focus-group, and comment-favorability controls. All
+available favorability categories are selected by default, and users may
+compare any non-empty mix while preserving the minimum comment and recurrence
+thresholds. A two-sided comparison makes favorable and unfavorable theme
+shares directly comparable; the question selector filters every visual in the
+tab.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

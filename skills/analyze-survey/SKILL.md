@@ -8,9 +8,9 @@ allowed-tools: Bash, Read, Write, Glob, Grep, WebFetch
 
 Turn a provided survey export into a repeatable local analysis and the standard
 interactive report. The skill owns export inspection, safe configuration,
-`vivaglint` execution, repeatability validation, HTML generation, tab-level
-People Science summaries, and packaging. It does not own a broader customer
-readout or manager action plan.
+`vivaglint` execution, repeatability validation, HTML generation, and
+packaging. It does not generate AI interpretation, a broader customer readout,
+or a manager action plan.
 
 ## Start here
 
@@ -42,12 +42,8 @@ Read these references in order:
 4. `references/golden-report.html`
 5. `references/scores-change-format.png`
 6. `references/interactive-report-contract.md`
-7. `references/people-science-summaries.schema.json`
-8. `references/people-science-source-index.json`
-9. `../people-science-knowledge-vault/references/`
-10. `../../references/general/interpretation-guardrails.md`
-11. `../../references/general/privacy-and-minimum-n.md`
-12. `../../references/general/codebook-catalog.md`
+7. `../../references/general/privacy-and-minimum-n.md`
+8. `../../references/general/codebook-catalog.md`
 
 The Glint UI system is mandatory for all color, typography, spacing, component,
 and accessibility decisions. Do not invent report colors or visual patterns.
@@ -55,9 +51,28 @@ and accessibility decisions. Do not invent report colors or visual patterns.
 `golden-report.html` is the canonical report shell. Future reports must preserve
 its markup, styling, tab order, labels, and browser interactions exactly while
 replacing its embedded aggregate data payload with the current analysis.
-The required tabs are Scores change, Relationships, Alerts, Factors,
-Attrition analysis, and Downloads. Do not add Overview, Item results, or
-Heatmap tabs.
+The required base tabs are Scores change, Correlation, Thematic analysis,
+Factors, and Downloads.
+When attrition analysis completes, add Attrition analysis followed immediately
+by Attrition alerts between Factors and Downloads. If attrition is unavailable,
+omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
+
+Before the navigation, show a deterministic, filter-aware current-survey
+summary. Use the latest privacy-eligible cycle for the selected population and
+describe its average item score, three high-scoring items, three low-scoring items,
+and movement from the prior cycle when available. Add up to three
+privacy-safe aggregate comment themes for each displayed item when linked
+comments meet the minimum threshold. Prefer score-ranked items with sufficient
+comment coverage when at least six are available; otherwise retain the score
+ranking and state when themes are unavailable. Never include raw comments in
+the report, AI context, share ZIP, or chat. Treat scores and themes as
+descriptive within-survey signals rather than benchmarks or causal findings.
+This summary must render in standard no-AI reports as well as AI-preview
+reports.
+
+Keep all tab-level AI summary cards hidden. Every tab instead begins with one
+concise narrative paragraph that explains what the analysis means and how to
+use it.
 
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score
@@ -67,7 +82,7 @@ All respondents and Repeat respondents. Repeat respondents are employees with
 responses in both selected cycles; never infer repeat status from aggregate
 counts.
 
-The Relationships tab must classify absolute Pearson relationship strength as
+The Correlation tab must classify absolute Pearson relationship strength as
 Low (`|r| < .30`), Medium (`.30-.49`), High (`.50-.69`), or Very high
 (`>= .70`). Preserve controls for minimum strength, strength-color visibility,
 statistical-significance visibility, and adding/removing multiple highlighted
@@ -85,19 +100,23 @@ through 15, capped below the item count. Show a concise recommendation blurb
 and a dropdown from 3 through 10 clusters, extending through the recommendation
 when it is higher. Reorder both axes and show cluster labels/boundaries.
 Describe clusters as exploratory rather than validated survey constructs.
+Explain that clustered items share response patterns and may indicate
+overlapping content. Item reduction must preserve content coverage and be
+validated for reliability and stability across groups and cycles.
 
-The Alerts tab must use the triage model in the report contract: Critical,
-Watch, Improving, Stable, and Suppressed counts; raw and company-adjusted
-change; Welch significance; severity/search/threshold filters; sorting; and
-expandable top-five item declines. Keep alert language screening-oriented and
-non-causal. Suppress every alert group unless both compared cycles have at
-least 20 responses; apply the same threshold after report filtering.
+The Attrition alerts tab must use the attrition-priority model in the report
+contract. For each report attribute and outcome window, rank items by the
+median privacy-eligible attrition multiplier across its groups and retain the
+top five. Compare each eligible group's item score with company overall. At
+company level, show the lowest-scoring group for each top item and attribute;
+under a report filter, show the selected group's top-five results. Keep the
+language screening-oriented and non-causal.
 
 ## Primary workflow
 
 Before starting the runner, give the user a concise estimated completion time.
 Base the estimate on the export size and prior runs when available, and state
-that relationship clustering, alert aggregation, and repeatability are the
+that correlation clustering, attrition-alert aggregation, and repeatability are the
 most variable phases. Do this in the first response that starts the run.
 
 Use the direct export runner:
@@ -119,12 +138,10 @@ The runner automatically:
 - selects privacy-safe categorical report attributes
 - excludes identifier-like employee, manager, team, client, UUID, and GUID
   fields from report filters and aggregate downloads
-- replaces manager-defined alert identifiers with deterministic generic team
-  labels before creating the report payload
 - runs attrition whenever valid Exit or termination outcomes are present; for
   the registered demo, H2 (`survey_cycle_id = 1002`) is linked to Exit
-  (`survey_cycle_id = 1003`) using the registered December 15, 2025 H2
-  completion date and 90-, 180-, and 365-day windows
+  (`survey_cycle_id = 1003`) using H2's `survey_completion_date`
+  (`2026-06-01`) and 90-, 180-, and 365-day windows
 - creates an internal `analysis-config.json`
 - runs the standard `vivaglint` analyses twice
 - requires SHA-256 repeatability
@@ -133,38 +150,14 @@ The runner automatically:
 
 Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
-verification, relationship clustering, alert aggregation, and ZIP packaging.
+verification, correlation clustering, attrition-alert aggregation, and ZIP packaging.
 
-After the deterministic analysis completes:
-
-1. Inspect `analysis-manifest.json` and
-   `people-science-summary-context.json`.
-2. Apply the `interpret-analysis` guardrails to distinguish observation,
-   interpretation, recommendation, and caveat.
-3. Use `people-science-knowledge-vault` to retrieve relevant externally
-   published article bodies. Cite only claims supported by those sources.
-4. Write `people-science-summaries.json` using
-   `people-science-summaries.schema.json`. Include all six tabs.
-5. Rerun `scripts/build_interactive_report.py` with the existing config and
-   output directory so the summaries are embedded in the HTML and share ZIP.
-
-Every tab must begin with an AI-generated People Science perspective containing
-a headline, what the results show, a professional interpretation, a recommended
-next step, a caveat, and relevant published-source links. Keep the narrative
-concise, non-causal, privacy-safe, and explicit when evidence is unavailable.
-The summary must recalculate whenever the report attribute or value changes.
-Recompute its headline, observation, interpretation, recommendation, caveat,
-and references from the selected filter's aggregate cycle, relationship,
-alert, and factor results unless an authored filter-specific narrative is
-available. Factor summaries must describe the selected cut's re-estimated
-solution or its explicit suppression reason. For tabs without filter-specific
-analysis, explicitly state that the displayed evidence remains company-wide or
-unavailable.
-
-Keep live summaries compact. State the selected scope once in the headline,
-avoid repeating the same metric or finding across fields, and make the
-observation, interpretation, recommendation, and caveat add distinct
-information.
+The standard workflow uses `--summary-mode off`, which is also the runner
+default. It still writes `people-science-summary-context.json` so the same
+completed analysis can be used later by the explicitly invoked
+`analyze-survey-ai-preview` skill. A stale `people-science-summaries.json` in
+the output directory must not appear in the report or share ZIP when summary
+mode is off.
 
 For Factors, use the company solution's factor count and varimax rotation to
 re-estimate loadings for every eligible attribute/value cut. Require at least
@@ -173,13 +166,18 @@ item. Suppress smaller or failed cuts. Show the selected cut's complete N,
 loading-dimension cards, and clustered horizontal bar small multiples. Repeat
 the loading axis for each dimension and show the shared vertical question
 labels once. Plot positive loading magnitudes from 0 to 1 and reuse the
-Relationships Low, Medium, High, and Very high thresholds and colors. State
+Correlation Low, Medium, High, and Very high thresholds and colors. State
 Sort questions high to low by MR1 loading only; do not combine loading
-strengths across dimensions for ordering. Add a high-contrast outline to every
+values across dimensions for ordering. Add a high-contrast outline to every
 bar plus a contrasting outline around each two-decimal data label. State that
 factor labels are exploratory working hypotheses,
 dimensions can rotate or reorder across cuts, and this is not evidence of
 measurement invariance.
+
+Explain factor loadings as item-to-dimension alignment on a 0-to-1 scale.
+Clarify that .70 is more closely aligned than .60, but a .10 difference is not
+automatically practically meaningful without considering the full loading
+pattern, item content, and cross-loadings.
 
 For Attrition, rank all eligible items by the unfavorable-to-favorable
 attrition-rate multiplier. Default to 180 days and allow 90-, 180-, and
@@ -189,12 +187,28 @@ counts or percentages in the report. Apply the shared report filter, suppress
 cells with fewer than five favorable or unfavorable respondents, and describe
 associations as screening signals rather than causal estimates. Never report
 individual flight-risk predictions.
+Flag multipliers with a two-sided Fisher exact test p-value below .05 as
+statistically significant while retaining the multiplier and non-causal
+interpretation.
+
+The Thematic analysis tab must use only privacy-safe deterministic aggregate
+comment themes. Provide cycle, survey-question, comparison-attribute, and
+focus-group controls. Show direct favorable-versus-unfavorable comparisons for
+both themes and survey items. Put the row label first, followed by unfavorable
+and favorable columns, and sort descending by the percentage of unfavorable
+coded mentions. Add a separate theme favorability profile showing how each
+theme's mentions are distributed across unfavorable, neutral, and favorable
+responses. Apply the question control to all three visuals. Do not show a
+selected-favorability-mix ranking, group heatmap, or item-theme chips. Never
+expose raw comment text.
 
 Use the checked-in People Science source index to select references from key
 terms across the current headline, observation, interpretation,
 recommendation, and caveat. Show three distinct references for every summary.
 Prefer exact analytical or item-theme matches over generic survey resources,
 and never reuse a source merely because it is broadly about employee surveys.
+Use neutral score-based language for item rankings and avoid company-specific
+classification vocabulary.
 
 Use explicit options only when automatic detection is wrong:
 
@@ -206,6 +220,7 @@ Use explicit options only when automatic detection is wrong:
 --question-cols <item1> <item2> ...
 --attribute-cols <attribute1> <attribute2> ...
 --min-group-size <5-or-higher>
+--summary-mode off
 ```
 
 ## Successful output
@@ -225,7 +240,8 @@ attrition.csv
 ```
 
 Only completed analysis CSVs are required. The HTML report and ZIP are always
-required after repeatability passes. Open the HTML report before finishing.
+required after repeatability passes. The standard report contains no AI summary
+cards. Open the HTML report before finishing.
 
 ## Failure handling
 

@@ -37,6 +37,7 @@ ATTRIBUTE_SHEET_CANDIDATES = (
     "employee attributes",
     "demographics",
 )
+COMMENT_SHEET_CANDIDATES = ("comments", "comment", "verbatims", "open text")
 SENSITIVE_ATTRIBUTE_TOKENS = (
     "comment",
     "email",
@@ -107,6 +108,12 @@ def parse_args() -> argparse.Namespace:
         help="Explicit report attributes. Defaults to privacy-safe categorical columns.",
     )
     parser.add_argument("--min-group-size", type=int, default=5)
+    parser.add_argument(
+        "--summary-mode",
+        choices=("off", "optional", "required"),
+        default="off",
+        help="Control AI People Science summaries in the generated report.",
+    )
     return parser.parse_args()
 
 
@@ -259,6 +266,50 @@ def linked_source_url(source: Path) -> str | None:
     return linked_source_registry(source).get("source_url")
 
 
+def resolve_attrition_settings(
+    survey: pd.DataFrame,
+    settings: dict[str, Any],
+) -> dict[str, Any]:
+    resolved = dict(settings)
+    completion_column = settings.get("predictor_completion_date_column")
+    if not completion_column:
+        return resolved
+
+    cycle_column = settings["cycle_column"]
+    predictor_cycle = settings["predictor_cycle"]
+    values = survey.loc[
+        survey[cycle_column] == predictor_cycle,
+        completion_column,
+    ].dropna()
+    if pd.api.types.is_datetime64_any_dtype(values):
+        dates = pd.to_datetime(values, errors="coerce")
+    else:
+        numeric = pd.to_numeric(values, errors="coerce")
+        all_numeric = (
+            numeric.notna().sum() == values.notna().sum()
+            and numeric.notna().any()
+        )
+        if all_numeric:
+            dates = pd.to_datetime(
+                numeric,
+                unit="D",
+                origin="1899-12-30",
+                errors="coerce",
+            )
+        else:
+            dates = pd.to_datetime(values, errors="coerce")
+    unique_dates = dates.dropna().dt.normalize().unique()
+    if len(unique_dates) != 1:
+        raise ValueError(
+            f"Expected one completion date in '{completion_column}' for "
+            f"predictor cycle {predictor_cycle}; found {len(unique_dates)}."
+        )
+    resolved["predictor_completion_date"] = pd.Timestamp(
+        unique_dates[0]
+    ).date().isoformat()
+    return resolved
+
+
 def detect_attributes(
     frame: pd.DataFrame,
     excluded: set[str],
@@ -298,12 +349,20 @@ def read_export(
     input_dir: Path,
     sheet: str | None,
     attribute_sheet: str | None,
-) -> tuple[pd.DataFrame, Path, pd.DataFrame | None, Path | None, dict[str, str | None]]:
+) -> tuple[
+    pd.DataFrame,
+    Path,
+    pd.DataFrame | None,
+    Path | None,
+    Path | None,
+    dict[str, str | None],
+]:
     suffix = source.suffix.casefold()
     if suffix == ".csv":
-        return pd.read_csv(source), source, None, None, {
+        return pd.read_csv(source), source, None, None, None, {
             "survey_sheet": None,
             "attribute_sheet": None,
+            "comment_sheet": None,
         }
     if suffix not in {".xlsx", ".xlsm"}:
         raise ValueError("Survey export must be a .csv, .xlsx, or .xlsm file.")
@@ -313,6 +372,23 @@ def read_export(
     survey = pd.read_excel(workbook, sheet_name=survey_sheet)
     survey_csv = input_dir / "survey.csv"
     survey.to_csv(survey_csv, index=False)
+
+    comment_sheet = next(
+        (
+            name
+            for name in workbook.sheet_names
+            if normalized_name(name)
+            in {normalized_name(candidate) for candidate in COMMENT_SHEET_CANDIDATES}
+        ),
+        None,
+    )
+    comments_csv = None
+    if comment_sheet:
+        comments = pd.read_excel(workbook, sheet_name=comment_sheet)
+        required_comment_columns = {"comment", "question_uuid"}
+        if required_comment_columns.issubset(comments.columns):
+            comments_csv = input_dir / "comments.csv"
+            comments.to_csv(comments_csv, index=False)
 
     selected_attribute_sheet = attribute_sheet
     if not selected_attribute_sheet:
@@ -324,9 +400,10 @@ def read_export(
         ]
         selected_attribute_sheet = matches[0] if matches else None
     if not selected_attribute_sheet:
-        return survey, survey_csv, None, None, {
+        return survey, survey_csv, None, None, comments_csv, {
             "survey_sheet": survey_sheet,
             "attribute_sheet": None,
+            "comment_sheet": comment_sheet,
         }
     if selected_attribute_sheet not in workbook.sheet_names:
         raise ValueError(f"Attribute worksheet '{selected_attribute_sheet}' was not found.")
@@ -334,9 +411,10 @@ def read_export(
     attributes = pd.read_excel(workbook, sheet_name=selected_attribute_sheet)
     attributes_csv = input_dir / "attributes.csv"
     attributes.to_csv(attributes_csv, index=False)
-    return survey, survey_csv, attributes, attributes_csv, {
+    return survey, survey_csv, attributes, attributes_csv, comments_csv, {
         "survey_sheet": survey_sheet,
         "attribute_sheet": selected_attribute_sheet,
+        "comment_sheet": comment_sheet,
     }
 
 
@@ -352,9 +430,14 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
     input_dir = output / "_input"
     input_dir.mkdir(parents=True, exist_ok=True)
     registered_defaults = sidecar_config(source)
-    survey, survey_path, attribute_frame, attribute_path, workbook_source = read_export(
-        source, input_dir, options.sheet, options.attribute_sheet
-    )
+    (
+        survey,
+        survey_path,
+        attribute_frame,
+        attribute_path,
+        comments_path,
+        workbook_source,
+    ) = read_export(source, input_dir, options.sheet, options.attribute_sheet)
     emp_id_col = detect_emp_id(
         survey,
         options.emp_id_col or registered_defaults.get("emp_id_col"),
@@ -372,32 +455,59 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
     configured_attributes = options.attribute_cols or registered_defaults.get(
         "attribute_cols"
     )
-    inline_attributes = (
-        detect_attributes(
+    inline_attributes: list[str] = []
+    external_attributes: list[str] = []
+    if attribute_frame is None:
+        inline_attributes = detect_attributes(
             survey,
             {emp_id_col, *questions},
             configured_attributes,
         )
-        if attribute_frame is None
-        else []
-    )
-    external_attributes: list[str] = []
-    if attribute_frame is not None:
+    else:
         external_emp_id = detect_emp_id(attribute_frame, emp_id_col)
         if external_emp_id != emp_id_col:
             attribute_frame = attribute_frame.rename(columns={external_emp_id: emp_id_col})
             assert attribute_path is not None
             attribute_frame.to_csv(attribute_path, index=False)
-        external_attributes = detect_attributes(
-            attribute_frame,
-            {emp_id_col},
-            configured_attributes,
-        )
-        external_attributes = [
-            column for column in external_attributes if column not in survey.columns
-        ]
+        if configured_attributes:
+            available = set(survey.columns) | set(attribute_frame.columns)
+            missing = [
+                column for column in configured_attributes
+                if column not in available
+            ]
+            if missing:
+                raise ValueError("Attribute columns not found: " + ", ".join(missing))
+            unsafe = [
+                column for column in configured_attributes
+                if not safe_attribute(column)
+            ]
+            if unsafe:
+                raise ValueError(
+                    "Attribute columns cannot contain identifiers or sensitive data: "
+                    + ", ".join(unsafe)
+                )
+            inline_attributes = [
+                column for column in configured_attributes
+                if column in survey.columns
+            ]
+            external_attributes = [
+                column for column in configured_attributes
+                if column not in survey.columns and column in attribute_frame.columns
+            ]
+        else:
+            external_attributes = detect_attributes(
+                attribute_frame,
+                {emp_id_col},
+                None,
+            )
+            external_attributes = [
+                column for column in external_attributes
+                if column not in survey.columns
+            ]
 
-    attribute_cols = list(dict.fromkeys([*inline_attributes, *external_attributes]))
+    attribute_cols = list(dict.fromkeys(
+        configured_attributes or [*inline_attributes, *external_attributes]
+    ))
     analyses = [
         "descriptives",
         "response_distribution",
@@ -413,11 +523,14 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
             attrition["cycle_column"],
             attrition["termination_date_column"],
         }
+        if attrition.get("predictor_completion_date_column"):
+            required.add(attrition["predictor_completion_date_column"])
         available_columns = set(survey.columns)
         if attribute_frame is not None:
             available_columns.update(attribute_frame.columns)
         if required.issubset(available_columns):
             analyses.append("attrition")
+            attrition = resolve_attrition_settings(survey, attrition)
 
     config: dict[str, Any] = {
         "survey_csv": str(survey_path),
@@ -427,12 +540,14 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         "question_cols": questions,
         "attribute_cols": attribute_cols,
         "min_group_size": options.min_group_size,
+        "summary_mode": getattr(options, "summary_mode", "off"),
         "analyses": analyses,
         "source_file_name": source.name,
         "source_sha256": file_sha256(source),
         "source_url": linked_source_url(source),
         "source_survey_sheet": workbook_source["survey_sheet"],
         "source_attribute_sheet": workbook_source["attribute_sheet"],
+        "source_comment_sheet": workbook_source["comment_sheet"],
     }
     if attrition and "attrition" in analyses:
         config["embedded_attrition"] = attrition
@@ -441,6 +556,10 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         config["attribute_view_mode"] = "separate"
     if attribute_path:
         config["attribute_file"] = str(attribute_path)
+    if comments_path:
+        config["comments_file"] = str(comments_path)
+        config["comments_question_col"] = "question_uuid"
+        config["comments_text_col"] = "comment"
 
     config_path = input_dir / "analysis-config.json"
     config_path.write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")

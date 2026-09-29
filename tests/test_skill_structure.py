@@ -20,6 +20,7 @@ def test_each_skill_has_first_priority_reference_folder():
     assert skill_names == [
         "analysis-qa",
         "analyze-survey",
+        "analyze-survey-ai-preview",
         "interpret-analysis",
         "people-science-knowledge-vault",
     ]
@@ -90,36 +91,49 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "positive-correlation distance (`1 - r`)" in skill
     assert "highest average silhouette score" in skill
     assert "dropdown from 3 through 10 clusters" in skill
-    assert "company-adjusted" in skill
-    assert "expandable top-five item declines" in skill
-    assert "20 responses" in skill
+    assert "median privacy-eligible attrition multiplier" in skill
+    assert "top-five results" in skill
+    assert "lowest-scoring group" in skill
+    assert "deterministic, filter-aware current-survey" in skill
+    assert "three high-scoring items" in skill
+    assert "three low-scoring items" in skill
+    assert "privacy-safe aggregate comment themes" in skill
+    assert "Never include raw comments" in skill
     assert "greater of 100 complete responses or five complete responses" in skill
     assert "clustered horizontal bar small multiples" in skill
     assert "progress bar" in skill
     assert "estimated completion time" in skill
     assert "first response that starts the run" in skill
     assert "people-science-summary-context.json" in skill
-    assert "people-science-summaries.schema.json" in skill
-    assert "`interpret-analysis`" in skill
-    assert "`people-science-knowledge-vault`" in skill
+    assert "--summary-mode off" in skill
+    assert "analyze-survey-ai-preview" in skill
     assert "<output-directory-name>-report.html" in skill
     assert "<output-directory-name>-share.zip" in skill
+    preview_skill = (
+        ROOT / "skills/analyze-survey-ai-preview/SKILL.md"
+    ).read_text(encoding="utf-8")
+    assert "--summary-mode required" in preview_skill
+    assert "people-science-summaries.schema.json" in preview_skill
+    assert "`interpret-analysis`" in preview_skill
+    assert "`people-science-knowledge-vault`" in preview_skill
 
     report_contract = (
         ROOT / "skills/analyze-survey/references/interactive-report-contract.md"
     ).read_text(encoding="utf-8")
     required_tabs = (
         "Scores change",
-        "Relationships",
-        "Alerts",
+        "Correlation",
+        "Thematic analysis",
         "Factors",
         "Attrition analysis",
+        "Attrition alerts",
         "Downloads",
     )
     positions = [report_contract.index(f"**{name}**") for name in required_tabs]
     assert positions == sorted(positions)
     assert "OPEN_REPORT.html" in report_contract
     assert "Force the light Glint report theme" in report_contract
+    assert "Glint Labs Figma Home frame" in report_contract
     assert "Do not embed or recalculate from" in report_contract
     assert "Exclude\nraw respondent data" in report_contract
     assert "scripts/build_interactive_report.py" in report_contract
@@ -130,14 +144,15 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "average-linkage hierarchical clustering" in report_contract
     assert "3 through 15 clusters" in report_contract
     assert "extend the dropdown through the recommended count" in report_contract
-    assert "Classify **Critical**" in report_contract
-    assert "Welch significance" in report_contract
-    assert "five largest item declines" in report_contract
-    assert "at least 20 responses in both compared cycles" in report_contract
-    assert "Begin every tab with a compact People Science perspective card" in report_contract
-    assert "Recalculate the summary whenever the report attribute or value changes" in report_contract
-    assert "filtered headline, observation, interpretation, recommendation" in report_contract
-    assert "state the selected scope once in the headline" in report_contract
+    assert "top five" in report_contract.lower()
+    assert "median" in report_contract
+    assert "lowest-scoring privacy-eligible group" in report_contract
+    assert "favorable or unfavorable category N" in report_contract
+    assert "deterministic keyword coding" in report_contract
+    assert "Raw comments must never enter HTML" in report_contract
+    assert "`off`: render no AI summary cards" in report_contract
+    assert "`required`: fail report generation" in report_contract
+    assert "Recalculate summaries when the report attribute or value changes" in report_contract
     assert (ROOT / "scripts/build_interactive_report.py").exists()
     golden = ROOT / "skills/analyze-survey/references/golden-report.html"
     assert golden.exists()
@@ -145,6 +160,16 @@ def test_analyze_survey_points_to_linked_dataset():
         golden.read_bytes().replace(b"\r\n", b"\n")
     ).hexdigest()
     assert golden_sha in report_contract
+    golden_text = golden.read_text(encoding="utf-8")
+    for design_hook in (
+        "lab-nav",
+        "report-hero",
+        "surveySummary",
+        "summary-card",
+        "filter-panel",
+        "report-footer",
+    ):
+        assert design_hook in golden_text
     design_reference = ROOT / "references/design/glint-ui-system.md"
     assert design_reference.exists()
     design_text = design_reference.read_text(encoding="utf-8")
@@ -241,9 +266,114 @@ def test_direct_export_runner_detects_csv_contract(tmp_path):
     assert config["emp_id_col"] == "user_id"
     assert config["question_cols"] == ["Q_ONE", "Q_TWO"]
     assert config["attribute_cols"] == ["department"]
+    assert config["summary_mode"] == "off"
     assert "email" not in config["attribute_cols"]
     assert config["source_file_name"] == survey.name
     assert len(config["source_sha256"]) == 64
+
+
+def test_direct_export_runner_accepts_attributes_from_both_workbook_sheets(tmp_path):
+    survey = tmp_path / "survey.xlsx"
+    script_path = ROOT / "scripts/analyze_survey_export.py"
+    spec = importlib.util.spec_from_file_location(
+        "analyze_survey_export_mixed_attributes", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+
+    survey_frame = module.pd.DataFrame(
+        {
+            "user_id": [1, 2, 3, 4, 5],
+            "survey_cycle_title": ["H1", "H1", "H2", "H2", "H2"],
+            "Q_ONE": [1, 2, 3, 4, 5],
+            "Q_TWO": [2, 3, 4, 5, 1],
+        }
+    )
+    attributes_frame = module.pd.DataFrame(
+        {
+            "user_id": [1, 2, 3, 4, 5],
+            "Organization Group": ["A", "A", "B", "B", "B"],
+            "Location": ["East", "West", "East", "West", "East"],
+        }
+    )
+    with module.pd.ExcelWriter(survey) as writer:
+        survey_frame.to_excel(writer, sheet_name="Sheet1", index=False)
+        attributes_frame.to_excel(writer, sheet_name="user_properties", index=False)
+
+    class Args:
+        survey_export = str(survey)
+        output_dir = str(tmp_path / "output")
+        sheet = "Sheet1"
+        attribute_sheet = "user_properties"
+        emp_id_col = "user_id"
+        scale_points = 5
+        question_cols = None
+        attribute_cols = [
+            "Organization Group",
+            "Location",
+            "survey_cycle_title",
+        ]
+        min_group_size = 5
+
+    config_path = module.build_config(Args(), Path(Args.output_dir))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+
+    assert config["attribute_cols"] == Args.attribute_cols
+    assert config["attribute_view_mode"] == "separate"
+    assert config["attribute_file"].endswith("attributes.csv")
+
+
+def test_direct_export_runner_extracts_linked_comments_for_local_aggregation(tmp_path):
+    survey = tmp_path / "survey.xlsx"
+    script_path = ROOT / "scripts/analyze_survey_export.py"
+    spec = importlib.util.spec_from_file_location(
+        "analyze_survey_export_comments", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+
+    with module.pd.ExcelWriter(survey) as writer:
+        module.pd.DataFrame(
+            {
+                "user_id": [1, 2, 3, 4, 5],
+                "survey_cycle_title": ["H2"] * 5,
+                "Q_ONE": [1, 2, 3, 4, 5],
+                "Q_TWO": [2, 3, 4, 5, 1],
+            }
+        ).to_excel(writer, sheet_name="Sheet1", index=False)
+        module.pd.DataFrame(
+            {
+                "user_id": [1, 2, 3, 4, 5],
+                "question_uuid": ["Q_ONE"] * 5,
+                "comment": ["private career growth wording"] * 5,
+            }
+        ).to_excel(writer, sheet_name="comments", index=False)
+
+    class Args:
+        survey_export = str(survey)
+        output_dir = str(tmp_path / "output")
+        sheet = None
+        attribute_sheet = None
+        emp_id_col = None
+        scale_points = 5
+        question_cols = None
+        attribute_cols = None
+        min_group_size = 5
+
+    config_path = module.build_config(Args(), Path(Args.output_dir))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    comments_path = Path(config["comments_file"])
+
+    assert config["source_comment_sheet"] == "comments"
+    assert config["comments_question_col"] == "question_uuid"
+    assert config["comments_text_col"] == "comment"
+    assert comments_path.name == "comments.csv"
+    assert comments_path.parent.name == "_input"
+    assert comments_path.exists()
 
 
 def test_direct_export_runner_ignores_incompatible_q_outcomes(tmp_path):
@@ -299,6 +429,11 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
         {
             "user_id": [1, 2, 1],
             "survey_cycle_id": [1002, 1002, 1003],
+            "survey_completion_date": [
+                module.pd.Timestamp("2026-06-01"),
+                module.pd.Timestamp("2026-06-01"),
+                module.pd.NaT,
+            ],
             "Q_ONE": [4, 2, None],
         }
     )
@@ -313,7 +448,12 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
         survey,
         attributes,
         tmp_path / "attributes.csv",
-        {"survey_sheet": "Sheet1", "attribute_sheet": "user_properties"},
+        None,
+        {
+            "survey_sheet": "Sheet1",
+            "attribute_sheet": "user_properties",
+            "comment_sheet": None,
+        },
     )
 
     class Args:
@@ -333,7 +473,11 @@ def test_registered_demo_requests_embedded_attrition(tmp_path):
     assert "attrition" in config["analyses"]
     assert config["embedded_attrition"]["predictor_cycle"] == 1002
     assert config["embedded_attrition"]["outcome_cycle"] == 1003
-    assert config["embedded_attrition"]["predictor_completion_date"] == "2025-12-15"
+    assert (
+        config["embedded_attrition"]["predictor_completion_date_column"]
+        == "survey_completion_date"
+    )
+    assert config["embedded_attrition"]["predictor_completion_date"] == "2026-06-01"
 
 
 def test_embedded_exit_attrition_uses_registered_cycles_and_windows(tmp_path):
@@ -403,25 +547,43 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
                 "attribute_value": "",
                 "question": "Q_ONE",
                 "days": days,
-                "favorable_n": 10,
+                "favorable_n": 100,
                 "favorable_attrition": 0.1,
-                "unfavorable_n": 8,
-                "unfavorable_attrition": 0.2,
-                "attrition_ratio": 2.0,
-                "group_size": 20,
+                "unfavorable_n": 100,
+                "unfavorable_attrition": 0.3,
+                "attrition_ratio": 3.0,
+                "group_size": 200,
             }
             for days in (90, 180, 365)
         ]
     ).to_csv(attrition, index=False)
     payload = module.attrition_payload(attrition, ["Q_ONE"], {}, 5)
+    alerts_payload = {
+        "questions": ["Q_ONE"],
+        "labels": ["One"],
+        "days": [90, 180, 365],
+        "defaultDays": 180,
+        "byDay": {},
+        "minimumCategoryN": 5,
+        "method": "test",
+    }
     golden = (
         ROOT / "skills/analyze-survey/references/golden-report.html"
     ).read_text(encoding="utf-8")
-    report = module.inject_attrition_report(golden, payload, "2025-12-15")
+    report = module.inject_attrition_report(
+        module.prepare_report_shell(golden, True),
+        payload,
+        alerts_payload,
+        "2025-12-15",
+    )
 
     assert payload["days"] == [90, 180, 365]
     assert len(payload["rows"]) == 3
+    assert payload["rows"][0][10] < 0.05
+    assert payload["rows"][0][11] == 1
     assert "id=attritionTableBody" in report
+    assert "id=alertsList" in report
+    assert ">Attrition alerts</button>" in report
     assert "<option value=1 selected>180 days (6 months)</option>" in report
     assert "ATTRITION_DATA" in report
     assert "attr.addEventListener(\"change\"" in report
@@ -429,6 +591,10 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
     assert "attrition-bar-track" in report
     assert "attrition-baseline" in report
     assert "marker = 1.00x" in report
+    assert "Statistically significant" in report
+    assert "Fisher exact test" in report
+    assert "Compare later exit rates for respondents" in report
+    assert "Start with the largest score gaps" in report
     assert "<th>Favorable n</th>" not in report
     assert "<th>Favorable attrition</th>" not in report
     assert "<th>Unfavorable n</th>" not in report
@@ -510,6 +676,76 @@ def test_report_builder_excludes_rows_without_selected_item_responses():
     assert filtered["user_id"].tolist() == [1, 2]
 
 
+def test_comment_themes_require_privacy_threshold_and_follow_filters(tmp_path):
+    script_path = ROOT / "scripts/build_interactive_report.py"
+    spec = importlib.util.spec_from_file_location(
+        "build_interactive_report_comment_themes", script_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec and spec.loader
+    spec.loader.exec_module(module)
+    frame = module.pd.DataFrame(
+        {
+            "user_id": list(range(1, 10)),
+            "survey_cycle_title": ["H2"] * 9,
+            "segment": ["A"] * 5 + ["B"] * 4,
+            "Q_ONE": [5] * 9,
+            "Q_TWO": [2] * 9,
+        }
+    )
+    frame["__employee_id"] = frame["user_id"]
+    comments = tmp_path / "comments.csv"
+    module.pd.DataFrame(
+        {
+            "user_id": list(range(1, 10)) + list(range(1, 5)),
+            "survey_cycle_title": ["H2"] * 13,
+            "question_uuid": ["Q_ONE"] * 9 + ["Q_TWO"] * 4,
+            "sentiment": (
+                ["favorable"] * 5
+                + ["neutral"] * 4
+                + ["unfavorable"] * 4
+            ),
+            "comment": (
+                ["private career growth wording"] * 9
+                + ["private manager coaching wording"] * 4
+            ),
+        }
+    ).to_csv(comments, index=False)
+
+    payload = module.comment_theme_payload(
+        comments,
+        frame,
+        ["Q_ONE", "Q_TWO"],
+        {"segment": {"values": ["A", "B"]}},
+        "user_id",
+        "survey_cycle_title",
+        "question_uuid",
+        "comment",
+    )
+    serialized = json.dumps(payload)
+
+    assert payload["overall"]["H2"]["Q_ONE"][0][0] == "Career growth and development"
+    assert "Q_TWO" not in payload["overall"]["H2"]
+    assert payload["segments"]["segment"]["A"]["H2"]["Q_ONE"]
+    assert "B" not in payload["segments"]["segment"]
+    assert payload["favorability"]["available"] == [
+        "favorable",
+        "neutral",
+        "unfavorable",
+    ]
+    assert len(payload["favorability"]["views"]) == 7
+    assert payload["favorability"]["views"]["favorable"]["overall"]["H2"][
+        "Q_ONE"
+    ][0][0] == "Career growth and development"
+    assert not payload["favorability"]["views"]["neutral"]["overall"].get("H2")
+    assert (
+        payload["favorability"]["views"]["favorable|neutral|unfavorable"]["overall"]
+        == payload["overall"]
+    )
+    assert "private career growth wording" not in serialized
+    assert "private manager coaching wording" not in serialized
+
+
 def test_direct_export_runner_normalizes_glint_score_encoding(tmp_path):
     survey = tmp_path / "survey.csv"
     survey.write_text(
@@ -548,11 +784,17 @@ def test_direct_export_runner_normalizes_glint_score_encoding(tmp_path):
 def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     survey = tmp_path / "survey.csv"
     attributes = tmp_path / "attributes.csv"
+    comments = tmp_path / "comments.csv"
     questions = ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"]
     with survey.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
             handle,
-            fieldnames=["user_id", "survey_cycle_title", *questions],
+            fieldnames=[
+                "user_id",
+                "survey_cycle_title",
+                "after_hours_collab",
+                *questions,
+            ],
         )
         writer.writeheader()
         for row in range(40):
@@ -560,6 +802,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                 {
                     "user_id": row + 1,
                     "survey_cycle_title": "H1" if row < 20 else "H2",
+                    "after_hours_collab": "Low" if row % 2 else "High",
                     **{
                         question: ((row + index) % 5) + 1
                         for index, question in enumerate(questions)
@@ -580,6 +823,35 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     "team_id": "Team A",
                 }
             )
+    with comments.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "user_id",
+                "survey_cycle_title",
+                "question_uuid",
+                "sentiment",
+                "comment",
+            ],
+        )
+        writer.writeheader()
+        for row in range(40):
+            for question in questions:
+                writer.writerow(
+                    {
+                        "user_id": row + 1,
+                        "survey_cycle_title": "H1" if row < 20 else "H2",
+                        "question_uuid": question,
+                        "sentiment": (
+                            "favorable"
+                            if row % 3 == 0
+                            else "neutral"
+                            if row % 3 == 1
+                            else "unfavorable"
+                        ),
+                        "comment": "private career growth wording",
+                    }
+                )
 
     config = tmp_path / "analysis-config.json"
     config.write_text(
@@ -592,6 +864,9 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                 "input_format": "wide_items",
                 "scale_points": 5,
                 "emp_id_col": "user_id",
+                "comments_file": comments.name,
+                "comments_question_col": "question_uuid",
+                "comments_text_col": "comment",
             }
         ),
         encoding="utf-8",
@@ -652,6 +927,8 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
             str(config),
             "--output-dir",
             str(tmp_path),
+            "--summary-mode",
+            "required",
         ],
         check=True,
         capture_output=True,
@@ -660,22 +937,16 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     report = tmp_path / f"{tmp_path.name}-report.html"
     share_zip = tmp_path / f"{tmp_path.name}-share.zip"
     report_text = report.read_text(encoding="utf-8")
-    golden_text = (
-        ROOT / "skills/analyze-survey/references/golden-report.html"
-    ).read_text(encoding="utf-8")
-    payload = re.compile(r"(?s)(<script>const D=).*?(;\nconst names=)")
-    assert payload.sub(r"\1__DATA__\2", report_text) == payload.sub(
-        r"\1__DATA__\2", golden_text
-    )
     for tab in (
         "Scores change",
-        "Relationships",
-        "Alerts",
+        "Correlation",
+        "Thematic analysis",
         "Factors",
-        "Attrition analysis",
         "Downloads",
     ):
         assert f">{tab}</button>" in report_text
+    for unavailable_tab in ("Attrition analysis", "Attrition alerts", "Alerts"):
+        assert f">{unavailable_tab}</button>" not in report_text
     for removed_tab in ("Overview", "Item results", "Heatmap"):
         assert f">{removed_tab}</button>" not in report_text
     for heading in (
@@ -695,13 +966,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         "Very high",
         "Recommended:",
         "Clusters",
-        "How alerts are identified",
-        "Minimum adjusted decline",
-        "Minimum declining items",
-        "Search teams",
-        "Significant only",
-        "Vs. company",
-        "Suppressed",
         "Loading magnitude",
         "extracted dimension",
     ):
@@ -717,10 +981,47 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "id=relClusters" in report_text
     assert "cluster-start-col" in report_text
     assert "cluster-start-row" in report_text
-    assert "alertSeverity" in report_text
-    assert "alertSearch" in report_text
-    assert "topDeclines" in report_text
-    assert report_text.count("data-summary=") == 6
+    assert "alertSeverity" not in report_text
+    assert "alertSearch" not in report_text
+    assert "topDeclines" not in report_text
+    assert "id=attritionTableBody" not in report_text
+    assert "id=alertsList" not in report_text
+    assert "id=surveySummary" in report_text
+    assert "function renderSurveySummary()" in report_text
+    assert "High scoring items" in report_text
+    assert "Low scoring items" in report_text
+    assert "Comment themes:" in report_text
+    assert ".ai-summary{display:none" in report_text
+    for guidance in (
+        "Compare two survey cycles to see where scores moved",
+        "Use them to spot overlapping content",
+        "A .70 loading is stronger than .60",
+        "Start with the manifest",
+    ):
+        assert guidance in report_text
+    assert "id=themeCycle" in report_text
+    assert "id=themeQuestion" in report_text
+    assert "id=themeAttribute" in report_text
+    assert "id=themeGroup" in report_text
+    assert "id=themeFavorabilityControl" not in report_text
+    assert "Leading themes for selected mix" not in report_text
+    assert "Theme pattern by group" not in report_text
+    assert "function themeSource(" in report_text
+    assert "function aggregateThemeItems(" in report_text
+    assert "function comparisonRows(" in report_text
+    assert "function renderComparison(" in report_text
+    assert "function renderThemeProfile(" in report_text
+    assert "function renderThemes()" in report_text
+    assert "Favorable vs. unfavorable themes" in report_text
+    assert "Favorable vs. unfavorable survey items" in report_text
+    assert "Theme favorability profile" in report_text
+    assert "Sorted by descending share of unfavorable coded mentions" in report_text
+    assert "Unfavorable comments" in report_text
+    assert "Favorable comments" in report_text
+    assert "All questions" in report_text
+    assert "Unfavorable coded mentions" in report_text
+    assert "private career growth wording" not in report_text
+    assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text
     assert "function attritionSummaryRows()" in report_text
@@ -743,12 +1044,23 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "summary.caveat=" in report_text
     assert "Factor solutions are exploratory working hypotheses" in report_text
     assert "Factor numbers can rotate or reorder" in report_text
-    assert len(json.loads(
+    report_payload = json.loads(
         report_text[
             report_text.index("<script>const D=") + len("<script>const D="):
             report_text.index(";\nconst names=")
         ]
-    )["knowledgeSources"]["sources"]) >= 10
+    )
+    assert report_payload["commentThemes"]["overall"]["H2"]["Q_ONE"][0][0] == (
+        "Career growth and development"
+    )
+    assert report_payload["commentThemes"]["favorability"]["available"] == [
+        "favorable",
+        "neutral",
+        "unfavorable",
+    ]
+    assert len(report_payload["commentThemes"]["favorability"]["views"]) == 7
+    assert len(report_payload["knowledgeSources"]["sources"]) >= 10
+    assert set(report_payload["segments"]) == {"survey_cycle_title", "segment"}
     summary_context = json.loads(
         (tmp_path / "people-science-summary-context.json").read_text(encoding="utf-8")
     )
@@ -768,6 +1080,55 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert attributes.name not in names
     assert "people-science-summary-context.json" in names
     assert "people-science-summaries.json" in names
+
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/build_interactive_report.py"),
+            "--config",
+            str(config),
+            "--output-dir",
+            str(tmp_path),
+            "--summary-mode",
+            "off",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    report_text = report.read_text(encoding="utf-8")
+    assert "data-summary=" not in report_text
+    assert '"aiSummaries":{}' in report_text
+    with zipfile.ZipFile(share_zip) as archive:
+        names = set(archive.namelist())
+    assert "people-science-summary-context.json" in names
+    assert "people-science-summaries.json" not in names
+    manifest = json.loads(
+        (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
+    )
+    assert manifest["report_generation"]["summary_mode"] == "off"
+
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/build_interactive_report.py"),
+            "--config",
+            str(config),
+            "--output-dir",
+            str(tmp_path),
+            "--summary-mode",
+            "optional",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    report_text = report.read_text(encoding="utf-8")
+    assert report_text.count("data-summary=") == 4
+    manifest = json.loads(
+        (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
+    )
+    assert manifest["report_generation"]["summary_mode"] == "optional"
 
 
 def test_factor_cube_reestimates_eligible_cuts_and_suppresses_small_ones(monkeypatch):
@@ -884,6 +1245,14 @@ def test_people_science_summary_validation_and_script_escaping(tmp_path):
     else:
         raise AssertionError("Missing summaries must be rejected")
 
+    (tmp_path / "people-science-summaries.json").unlink()
+    try:
+        module.load_ai_summaries(tmp_path, required=True)
+    except ValueError as error:
+        assert "Summary mode 'required'" in str(error)
+    else:
+        raise AssertionError("Required summary mode must reject a missing file")
+
 
 def test_relationship_cluster_plan_is_deterministic():
     script_path = ROOT / "scripts/build_interactive_report.py"
@@ -908,86 +1277,107 @@ def test_relationship_cluster_plan_is_deterministic():
     assert len(set(first["assignments"]["3"])) == 3
 
 
-def test_alert_triage_uses_real_team_ids_and_suppression():
+def test_attrition_alerts_select_top_five_and_preserve_score_gaps(tmp_path):
     script_path = ROOT / "scripts/build_interactive_report.py"
     spec = importlib.util.spec_from_file_location("build_interactive_report", script_path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(module)
 
+    questions = [f"Q_{index}" for index in range(1, 7)]
     rows = []
-    for cycle, team, count, score in (
-        ("H1", 101.0, 12, 5),
-        ("H2", 101.0, 12, 3),
-        ("H1", 202.0, 12, 3),
-        ("H2", 202.0, 12, 5),
-        ("H1", 303.0, 3, 3),
-        ("H2", 303.0, 3, 3),
-    ):
-        for index in range(count):
+    for value, offset in (("A", 0.0), ("B", 0.2)):
+        for index, question in enumerate(questions):
+            ratio = 6 - index + offset
             rows.append(
                 {
-                    "survey_cycle_title": cycle,
-                    "manager_id": team,
-                    "Q_ONE": score,
-                    "Q_TWO": score,
-                    "Q_THREE": score,
-                    "Q_FOUR": score,
+                    "analysis_scope": "attribute",
+                    "attribute_name": "department",
+                    "attribute_value": value,
+                    "question": question,
+                    "days": 180,
+                    "favorable_n": 10,
+                    "unfavorable_n": 10,
+                    "attrition_ratio": ratio,
                 }
             )
-    frame = module.pd.DataFrame(rows)
-    result = module.alerts(
-        frame,
-        ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"],
-        "survey_cycle_title",
-        "manager_id",
-        20,
+    attrition = tmp_path / "attrition.csv"
+    module.pd.DataFrame(rows).to_csv(attrition, index=False)
+    segments = {
+        "department": {
+            "label": "Department",
+            "values": {
+                "A": {"items": [[50 + index, 0, 0, 0, 20] for index in range(6)]},
+                "B": {"items": [[60 + index, 0, 0, 0, 20] for index in range(6)]},
+            },
+        }
+    }
+    overall = [[70, 0, 0, 0, 40] for _ in questions]
+    result = module.attrition_alert_payload(
+        attrition, questions, segments, overall, 5
     )
 
-    assert result["cycles"] == ["H1", "H2"]
-    assert result["suppressed"] == 3
-    assert result["rows"] == []
+    department = result["byDay"]["180"]["department"]
+    assert result["defaultDays"] == 180
+    assert [row[0] for row in department["topItems"]] == [0, 1, 2, 3, 4]
+    assert len(department["rows"]) == 10
+    group_a_first = next(
+        row for row in department["rows"] if row[0] == "A" and row[1] == 0
+    )
+    assert group_a_first == ["A", 0, 50.0, 70.0, -20.0, 20, 6.0, 6.1]
 
 
-def test_alert_triage_includes_groups_at_twenty_per_cycle():
+def test_attrition_alerts_suppress_small_attrition_categories(tmp_path):
     script_path = ROOT / "scripts/build_interactive_report.py"
     spec = importlib.util.spec_from_file_location("build_interactive_report", script_path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(module)
 
-    rows = []
-    for cycle, team, score in (
-        ("H1", 101.0, 5),
-        ("H2", 101.0, 3),
-        ("H1", 202.0, 3),
-        ("H2", 202.0, 5),
-    ):
-        for _ in range(20):
-            rows.append(
-                {
-                    "survey_cycle_title": cycle,
-                    "manager_id": team,
-                    "Q_ONE": score,
-                    "Q_TWO": score,
-                    "Q_THREE": score,
-                    "Q_FOUR": score,
-                }
-            )
-    result = module.alerts(
-        module.pd.DataFrame(rows),
-        ["Q_ONE", "Q_TWO", "Q_THREE", "Q_FOUR"],
-        "survey_cycle_title",
-        "manager_id",
-        20,
+    attrition = tmp_path / "attrition.csv"
+    module.pd.DataFrame(
+        [
+            {
+                "analysis_scope": "attribute",
+                "attribute_name": "department",
+                "attribute_value": "A",
+                "question": "Q_ONE",
+                "days": 180,
+                "favorable_n": 4,
+                "unfavorable_n": 20,
+                "attrition_ratio": 3.0,
+            },
+            {
+                "analysis_scope": "attribute",
+                "attribute_name": "department",
+                "attribute_value": "B",
+                "question": "Q_ONE",
+                "days": 180,
+                "favorable_n": 20,
+                "unfavorable_n": 20,
+                "attrition_ratio": 2.0,
+            },
+        ]
+    ).to_csv(attrition, index=False)
+    segments = {
+        "department": {
+            "label": "Department",
+            "values": {
+                "A": {"items": [[40, 0, 0, 0, 20]]},
+                "B": {"items": [[50, 0, 0, 0, 20]]},
+            },
+        }
+    }
+    result = module.attrition_alert_payload(
+        attrition,
+        ["Q_ONE"],
+        segments,
+        [[60, 0, 0, 0, 40]],
+        5,
     )
 
-    assert result["suppressed"] == 0
-    assert {row["team"] for row in result["rows"]} == {"101", "202"}
-    declining = next(row for row in result["rows"] if row["team"] == "101")
-    assert declining["severity"] == "watch"
-    assert declining["adjustedDelta"] < 0
-    assert len(declining["topDeclines"]) == 4
+    rows = result["byDay"]["180"]["department"]["rows"]
+    assert rows == [["B", 0, 50.0, 60.0, -10.0, 20, 2.0, 2.0]]
 
 
 def test_numeric_attribute_bucketing_handles_missing_values():

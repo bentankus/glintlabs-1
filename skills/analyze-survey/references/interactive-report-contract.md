@@ -10,40 +10,45 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`d641445b17209f41ee0bf1e8ad30d9139d19d011fb09f21fdba8bfff85455f64`.
-Generated reports must match its static HTML shell exactly. The only intended
-substitution is the JSON value assigned to `const D`, which must come from the
-current analysis.
+`66ef1f05c6053c111dd246519712a78a3de84fb7ea5ddc9af39ec5435a9d3ad6`.
+Generated reports in `required` mode must match its static HTML shell exactly.
+The intended substitution is the JSON value assigned to `const D`. In `off`
+mode, the six empty AI summary containers are also removed from the generated
+report.
 
-## AI-generated People Science summaries
+## AI-generated People Science summary modes
 
-- Begin every tab with a compact People Science perspective card.
-- Require six summaries: Scores change, Relationships, Alerts, Factors,
-  Attrition analysis, and Downloads.
+The shared report builder supports three explicit modes:
+
+- `off`: render no AI summary cards, ignore any stale summary file, and exclude
+  that file from the share ZIP. This is the default for `analyze-survey`.
+- `optional`: render summaries only when a valid summary file exists; otherwise
+  render no summary cards.
+- `required`: fail report generation unless a valid summary file exists. This
+  is required by `analyze-survey-ai-preview`.
+
+Always create `people-science-summary-context.json` from aggregate results so a
+completed analysis can be reused by the preview workflow without rerunning the
+codebooks. When summaries are enabled:
+
+- Require six summary objects for schema stability: Scores change,
+  Correlation (`relationships`), Attrition alerts (`alerts`), Factors,
+  Attrition analysis, and Downloads. Render only summaries for tabs present in
+  the report.
 - Each summary must contain a headline, observed evidence, professional
-  interpretation, recommended next step, caveat, and published-source links
-  when relevant.
+  interpretation, recommended next step, caveat, and published-source links.
 - Generate narratives from `people-science-summary-context.json`, never raw
-  respondent rows. Conform to `people-science-summaries.schema.json`.
+  respondent rows, and conform to `people-science-summaries.schema.json`.
 - Use `interpret-analysis` guardrails and
   `people-science-knowledge-vault` source priority. Do not present correlation,
   factors, alerts, or attrition associations as causal.
-- Recalculate the summary whenever the report attribute or value changes.
-  Derive the filtered headline, observation, interpretation, recommendation,
-  caveat, and references from the same aggregate source currently rendered by
-  that tab. Authored segment narratives take precedence.
-- Keep the card compact: state the selected scope once in the headline, avoid
-  repeating the same metric or finding across fields, and ensure each field
-  adds distinct decision-relevant information.
-- For tabs without filter-specific analysis, update the scope statement and
-  explicitly say that the evidence remains company-wide or unavailable.
-- Select three public references for each rendered summary by matching key
-  terms across its current headline, observation, interpretation,
-  recommendation, and caveat against
-  `people-science-source-index.json`. Prefer specific analytical and item-theme
-  matches; use the tab defaults only to fill unmatched positions.
-- If summaries have not been generated, show an honest unavailable state
-  rather than invented or deterministic text labeled as AI-generated.
+- Recalculate summaries when the report attribute or value changes. Authored
+  segment narratives take precedence over live aggregate summaries.
+- Keep every tab-level AI summary container hidden. The current-survey summary
+  remains the primary landing-page narrative, and each tab uses its concise
+  static introduction for interpretation guidance.
+- Select three public references for each rendered summary using
+  `people-science-source-index.json`.
 
 The deterministic implementation is
 `scripts/build_interactive_report.py`. The analysis runner invokes it
@@ -76,12 +81,35 @@ staging data from the ZIP.
 
 - Load and follow `references/design/glint-ui-system.md`, which points to the
   published `glint-ui-system` skill and canonical upstream reference.
+- Adapt the visual hierarchy of the Glint Labs Figma Home frame: a rounded
+  masthead, editorial report hero, pill navigation, generous whitespace,
+  resource-style cards and downloads, and a high-contrast closing section.
+  Preserve the Glint UI system as the token and accessibility authority.
+- Use the hero for a deterministic **current survey summary**, not generic
+  marketing copy. It must update with the shared report filter and show:
+  latest privacy-eligible cycle and response count, average item score, the
+  three high-scoring items, the three low-scoring items, privacy-safe aggregate
+  comment themes for each item when available, and average/leading movement
+  from the prior cycle when available.
+- Prefer score-ranked items with sufficient linked comment coverage when at
+  least six are available. Otherwise retain the full score ranking and state
+  when an item has no privacy-eligible linked themes. Describe all results as
+  relative positions within the current survey. Do not imply an external
+  benchmark, root cause, or causal interpretation. Keep the summary available
+  in summary mode `off`.
+- Derive comment themes locally using deterministic keyword coding. Count a
+  theme at most once per comment, require at least five comments and roughly
+  2% recurrence in the applicable item/cut, and show no more than three theme
+  labels per item. Raw comments must never enter HTML, AI prompts or context,
+  the share ZIP, or chat.
 - Force the light Glint report theme; do not follow operating-system dark mode.
-- Use `#FAFAFA` for the canvas, white cards, `#335CCC` as the primary Glint
-  blue, `#E5EEFF` for blue tint, Glint status colors, and the approved
+- Use a white canvas, `#FAFAFA` supporting surfaces, `#335CCC` as the primary
+  Glint blue, `#E5EEFF` for blue tint, Glint status colors, and the approved
   favorable/unfavorable treatments.
 - Use Segoe UI typography, approved Glint radii, subtle
   borders and shadows, accessible focus states, and responsive layouts.
+- Keep analytical tables and charts dense enough for comparison; apply the
+  editorial treatment around them rather than weakening statistical encodings.
 - Do not substitute a generic dashboard theme.
 
 ## Required navigation
@@ -89,21 +117,23 @@ staging data from the ZIP.
 Keep this tab order and naming:
 
 1. **Scores change**
-2. **Relationships**
-3. **Alerts**
+2. **Correlation**
+3. **Thematic analysis**
 4. **Factors**
-5. **Attrition analysis**
-6. **Downloads**
+5. **Attrition analysis** (only when attrition completes)
+6. **Attrition alerts** (only when attrition completes)
+7. **Downloads**
 
-If an analysis cannot run, keep its tab and explain exactly which input is
-missing. Never remove the tab or fabricate data.
+If attrition cannot run, omit both attrition tabs. Never fabricate attrition
+data. For other analyses, keep the tab and explain why results are unavailable.
 
 ## Shared report filter
 
 Place one report-level attribute/value filter above the tabs.
 
-- Apply it to Scores change, Relationships, and Alerts.
-- Treat it as a parent filter. Alerts must calculate their displayed
+- Apply it to Scores change, Correlation, Attrition analysis, and Attrition
+  alerts.
+- Treat it as a parent filter. Attrition alerts must select their displayed
   dimensions within the selected segment.
 - Use saved aggregate values in the browser. Do not embed or recalculate from
   respondent-level rows.
@@ -114,6 +144,13 @@ Place one report-level attribute/value filter above the tabs.
   non-overlapping, clearly labeled buckets.
 
 ## Tab behavior
+
+Begin every available tab with one concise narrative paragraph that explains
+what the analysis means and how to use it. It should read like a friendly
+section description rather than a callout card. Avoid statistical jargon where
+a familiar phrase is sufficient and preserve the analysis guardrails:
+comparisons are descriptive, correlation is non-causal, factors are
+exploratory, and attrition results are not individual predictions.
 
 ### Scores change
 
@@ -131,7 +168,7 @@ Place one report-level attribute/value filter above the tabs.
 - Keep questions in survey order and use alternating row shading.
 - Apply the shared report filter only when both cycles meet minimum N.
 
-### Relationships
+### Correlation
 
 - Run the full Pearson correlation analysis and show the complete item-by-item
   matrix.
@@ -160,6 +197,10 @@ Place one report-level attribute/value filter above the tabs.
   show labeled cluster boundaries without replacing relationship-strength
   colors.
 - Treat clusters as exploratory groupings, not validated survey constructs.
+- Explain that a cluster contains items with similar response patterns. Use
+  clusters to review content overlap and potential survey shortening, but do
+  not remove items without preserving content coverage and checking reliability
+  and stability across groups and cycles.
 - Keep the legend and summary compact, hide empty highlight/detail regions, and
   reveal relationship details only after a cell is selected.
 - Clicking a cell shows `r`, p-value, N, and significance status.
@@ -167,31 +208,25 @@ Place one report-level attribute/value filter above the tabs.
 - Emphasize practical magnitude when large N makes most results significant.
 - Save segment matrices only where there are at least 30 response rows.
 
-### Alerts
+### Attrition alerts
 
-- Present manager-defined teams as a triage table with Critical, Watch,
-  Improving, Stable, and Suppressed summary counts.
-- Calculate each team's composite-score change, Welch significance, and
-  company-adjusted change across exactly two cycles.
-- Classify **Critical** when company-adjusted change is at most -3 points,
-  p-value is below .05, and at least 25% of items (minimum 3) decline.
-- Classify **Watch** when company-adjusted change is at most -2 points or raw
-  change is at most -3 points with at least 3 declining items.
-- Classify **Improving** when company-adjusted change is at least 3 points and
-  p-value is below .05. Treat remaining eligible teams as Stable.
-- Show prior/current score, raw and company-adjusted change, both sample sizes,
-  number of declining items, and significance status.
-- Add filters for severity, minimum adjusted decline, minimum declining items,
-  team search, and significant-only results.
-- Allow sorting by severity, adjusted decline, raw change, or declining-item
-  count.
-- Expand each team to show its five largest item declines with old score, new
-  score, and delta.
-- Require at least 20 responses in both compared cycles for every team alert,
-  including report-filtered team intersections. Suppress every smaller group
-  and state the threshold.
-- Explain the classification rules in a compact disclosure. Describe alerts as
-  screening signals, not causal findings.
+- For each report attribute and outcome window, calculate each item's median
+  attrition multiplier across privacy-eligible attribute values.
+- Rank items by that median and retain the top five per attribute.
+- Show Attribute, Group, Attrition item, Group score, Company score, Gap,
+  Attrition multiplier, and N.
+- At company level, show the lowest-scoring privacy-eligible group for each top
+  item and attribute. Sort the table by the largest negative score gap first.
+- When an attribute/value filter is selected, show that group's results for the
+  selected attribute's top five items.
+- Exclude an attrition row when either its favorable or unfavorable category N
+  is below the configured minimum. Continue applying normal report minimum-N
+  suppression to the displayed group score.
+- Provide 90-, 180-, and 365-day controls when those outcome windows exist.
+  Default to 180 days when it has eligible alerts; otherwise default to the
+  first outcome window with eligible alerts.
+- Describe alerts as aggregate screening signals. Do not present multipliers as
+  individual predictions or group score gaps as causal explanations.
 
 ### Factors
 
@@ -206,15 +241,19 @@ Place one report-level attribute/value filter above the tabs.
   panel per loading dimension, repeat the horizontal loading axis in every
   panel, and show the shared vertical question labels only once.
 - Plot loading magnitudes on a positive `0` to `1` axis. Apply the same
-  strength bands and colors as Relationships: Low (`< .30`), Medium
+  strength bands and colors as Correlation: Low (`< .30`), Medium
   (`.30-.49`), High (`.50-.69`), and Very high (`>= .70`).
 - Sort the shared question axis from high to low by each item's MR1 loading
-  only; do not combine loading strengths across dimensions for sorting. Give
+  only; do not combine loading values across dimensions for sorting. Give
   every bar a high-contrast outline and
   every two-decimal loading label a contrasting outline for readability.
 - Explain that factor labels are working hypotheses, factor numbers can rotate
   or reorder across cuts, and filtered solutions do not establish measurement
   invariance.
+- Explain that loadings represent item-to-dimension alignment from 0 to 1. A
+  .70 loading is stronger than .60, but the .10 difference is not inherently
+  meaningful without the broader loading pattern, item content, and
+  cross-loadings.
 
 ### Attrition analysis
 
@@ -225,8 +264,38 @@ Place one report-level attribute/value filter above the tabs.
 - Do not display favorable or unfavorable counts or percentages in the report.
   Retain them only in the privacy-safe aggregate artifact for auditability and
   suppression enforcement.
-- Otherwise show **Not run** and list the missing inputs.
+- If attrition cannot run, omit both Attrition analysis and Attrition alerts.
 - Never generate synthetic attrition outcomes.
+- Calculate a two-sided Fisher exact test from the favorable and unfavorable
+  exit counts. Visually flag multipliers with `p < .05`, show the p-value, and
+  retain the non-causal screening language.
+
+### Thematic analysis
+
+- Use only deterministic aggregate labels derived from linked comments; never
+  embed or display raw comment text.
+- Provide survey-cycle, survey-question, comparison-attribute, and focus-group
+  controls.
+- Precompute each exact favorability combination locally and reapply the
+  five-comment and recurrence thresholds. Do not combine thresholded category
+  totals in the browser.
+- Add direct favorable-versus-unfavorable comparisons for both themes and
+  survey items. Put the row label first, followed by unfavorable and favorable
+  columns. Show both percentages and coded-mention counts, sort descending by
+  unfavorable percentage, and state that each percentage uses its own
+  favorability group's coded mentions as denominator.
+- Add a theme favorability profile where each stacked row sums to 100% across
+  unfavorable, neutral, and favorable mentions for that theme.
+- Apply the survey-question filter to all three visuals.
+- Do not show a selected-favorability-mix ranking, group heatmap, or item-theme
+  chips.
+- Show ranked horizontal bars for leading coded themes, a heatmap comparing
+  each theme's share of coded mentions across attribute groups, and item-level
+  theme chips.
+- Keep the five-comment and approximate 2% recurrence thresholds active for
+  every displayed group and cycle.
+- Describe themes as a guide for deeper listening, not a complete or causal
+  account of employee experience.
 
 ### Downloads
 
@@ -238,10 +307,8 @@ correlation matrices, score-change, and alert outputs when available.
 - Default minimum displayed group size is 5.
 - Keep respondent-level data local and outside the shareable package.
 - Exclude identifier-like employee, respondent, manager, team, client, UUID,
-  and GUID columns from report filters and aggregate downloads. Replace
-  manager-defined alert identifiers with deterministic generic team labels
-  before creating the browser payload.
-- Precompute score, distribution, change, relationship, and alert
+  and GUID columns from report filters and aggregate downloads.
+- Precompute score, distribution, change, correlation, and attrition-alert
   aggregates. Browser interactions must select saved values rather than rerun
   analysis over employee rows.
 - Validate all download links and JavaScript syntax before sharing.

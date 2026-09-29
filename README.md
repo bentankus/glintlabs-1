@@ -8,10 +8,13 @@ This plugin provides a set of focused skills that share a common analysis contra
 
 1. `analyze-survey` accepts CSV or Excel survey exports directly, runs a
    standard set of `vivaglint` codebooks, writes an `analysis-manifest.json`,
-   and packages the required interactive HTML report and privacy-safe ZIP.
-2. `analysis-qa` reviews output validity, privacy thresholds, and interpretation readiness.
-3. `interpret-analysis` turns codebook outputs into People Science findings and caveats.
-4. `people-science-knowledge-vault` finds and synthesizes externally published People Science knowledge using a strict two-tier source hierarchy.
+   and packages the required interactive HTML report and privacy-safe ZIP
+   without AI-generated summaries.
+2. `analyze-survey-ai-preview` adds staged, evidence-grounded People Science
+   summaries to the same shared report pipeline.
+3. `analysis-qa` reviews output validity, privacy thresholds, and interpretation readiness.
+4. `interpret-analysis` turns codebook outputs into People Science findings and caveats.
+5. `people-science-knowledge-vault` finds and synthesizes externally published People Science knowledge using a strict two-tier source hierarchy.
 
 The plugin deliberately does not duplicate the `vivaglint` analysis package. It calls a pinned package version and treats the output manifest as the stable interface between execution and interpretation.
 
@@ -83,6 +86,7 @@ Schema: `schemas/analysis-manifest.schema.json`
 | Skill | Use when |
 |---|---|
 | `analyze-survey` | The user has survey data and wants the standard analysis package run. |
+| `analyze-survey-ai-preview` | The user explicitly wants the staged AI-summary report experience. |
 | `analysis-qa` | The user needs to know whether outputs are valid and safe to interpret. |
 | `interpret-analysis` | The user has output files/manifests and wants People Science interpretation. |
 | `people-science-knowledge-vault` | The user wants externally shareable People Science articles or an evidence-backed synthesis of published guidance. |

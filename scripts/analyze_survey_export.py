@@ -240,9 +240,9 @@ def sidecar_config(source: Path) -> dict[str, Any]:
 
     registry = (
         Path(__file__).resolve().parents[1]
-        / "references"
         / "skills"
         / "analyze-survey"
+        / "references"
         / "linked-dataset.json"
     )
     if registry.exists():

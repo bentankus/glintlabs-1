@@ -1000,10 +1000,10 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "Comment themes:" in report_text
     assert ".ai-summary{display:none" in report_text
     for guidance in (
-        "Compare two survey cycles to see where scores moved",
-        "Use them to spot overlapping content",
-        "A .70 loading is stronger than .60",
-        "Start with the manifest",
+        "Differences with a high p-value or a small n are unconfirmed",
+        "don't belong cleanly to either",
+        "using only one item reintroduces that item's own noise",
+        "Any number cited without its matching file is unverified",
     ):
         assert guidance in report_text
     assert "id=themeCycle" in report_text

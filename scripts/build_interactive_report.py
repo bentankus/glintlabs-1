@@ -1188,7 +1188,7 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
     html = replace_live_alert_summary(html)
     html = remove_section(html, "alerts", "factors")
     html = html.replace(
-        '<button class="tab" data-id="alerts" aria-selected="false">Alerts</button>',
+        '<button class="tab" data-id="alerts" aria-selected="false">Attrition alerts</button>',
         "",
         1,
     )
@@ -1232,10 +1232,20 @@ def inject_attrition_report(
 ) -> str:
     old_section = (
         "<section class=panel id=attrition role=tabpanel hidden><h2>Attrition analysis</h2>"
-        "<p class=tab-intro>Compare later exit rates for respondents with favorable "
-        "and unfavorable item responses. Focus on multipliers that are statistically "
-        "significant and repeat across outcome windows, then investigate the employee "
-        "experience behind those items without predicting individual departures.</p>"
+        "<p class=tab-intro>This chart ranks survey items by how strongly they're "
+        "associated with later attrition based on actual outcomes — not assumed risk "
+        "factors. Each bar shows a multiplier: how much more often an unfavorable "
+        "respondent left within the selected window compared to a favorable "
+        "respondent, centered on a 1.00x reference line. A multiplier of 2.00x means "
+        "unfavorable respondents left twice as often as favorable ones; a multiplier "
+        "of 1.10x is a weak, near-baseline signal. You can't read a high multiplier "
+        "as a prediction for any one person — a multiplier is a group-level "
+        "screening association across many respondents, not a forecast (even a "
+        "strong multiplier still describes a minority of respondents who eventually "
+        "left, not a certainty); applying it to an individual reintroduces the noise "
+        "the aggregate was built to remove. Multipliers that aren't statistically "
+        "significant or don't repeat across the 90-, 180-, and 365-day windows are "
+        "weak signals — read these with extra care.</p>"
         "<div class=ai-summary data-summary=attrition></div>"
         "<div class=notice id=attritionStatus></div></section>"
     )

@@ -1673,6 +1673,9 @@ def main() -> int:
         "question"
     ].tolist()
     normalize_items(frame, questions, int(config["scale_points"]))
+    frame = frame.loc[frame[questions].notna().any(axis=1)].copy()
+    if frame.empty:
+        raise ValueError("No respondents have a value for any selected survey item.")
     progress.update(8, "Survey responses normalized")
     emp_id = config["emp_id_col"]
     frame["__employee_id"] = frame[emp_id]

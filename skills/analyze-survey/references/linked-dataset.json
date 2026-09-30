@@ -1,0 +1,21 @@
+{
+  "name": "Demo Viva Glint Dataset with Attributes - Exit survey research guided",
+  "source_url": "https://raw.githubusercontent.com/microsoft/glintlabs/main/skills/analyze-survey/references/sample-data/Demo%20Viva%20Glint%20Dataset%20with%20Attributes%20-%20Exit%20survey%20research%20guided.xlsx",
+  "source_path": "skills/analyze-survey/references/sample-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx",
+  "worksheet": "Sheet1",
+  "attribute_worksheet": "user_properties",
+  "input_format": "wide_items",
+  "emp_id_col": "user_id",
+  "scale_points": 5,
+  "attrition": {
+    "cycle_column": "survey_cycle_id",
+    "predictor_cycle": 1002,
+    "outcome_cycle": 1003,
+    "termination_date_column": "attrition date",
+    "predictor_completion_date_column": "survey_completion_date",
+    "time_periods": [90, 180, 365],
+    "minimum_category_n": 5
+  },
+  "description": "The sole registered sample survey source for analyze-survey when the user does not provide another export.",
+  "intake_prompt": "Do you have your own survey data you would like to analyze? If not, I can use the linked Viva Glint workbook."
+}

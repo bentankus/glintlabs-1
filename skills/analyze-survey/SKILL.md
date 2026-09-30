@@ -8,46 +8,44 @@ allowed-tools: Bash, Read, Write, Glob, Grep, WebFetch
 
 Turn a provided survey export into a repeatable local analysis and the standard
 interactive report. The skill owns export inspection, safe configuration,
-`vivaglint` execution, repeatability validation, HTML generation, tab-level
-People Science summaries, and packaging. It does not own a broader customer
-readout or manager action plan.
+`vivaglint` execution, repeatability validation, HTML generation, and
+packaging. It does not generate AI interpretation, a broader customer readout,
+or a manager action plan.
 
 ## Start here
 
 Ask:
 
-> Do you have your own survey data you would like to analyze? If not, I can use the included Viva Glint demo workbook.
+> Do you have your own survey data you would like to analyze? If not, I can use the linked Viva Glint workbook.
 
 Accept `.csv`, `.xlsx`, and `.xlsm` exports. Keep respondent-level data local
 and never paste employee rows into chat.
 
-If the user does not provide another export, use this repository workbook:
+If the user does not provide another export, use this workbook, which is
+checked directly into this repository so any user can access it without
+additional permissions:
 
 ```text
-examples/demo-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
+Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
+references/sample-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
 ```
 
 Use worksheet `Sheet1`, join worksheet `user_properties` by `user_id`, and use
-a 5-point scale. The included workbook is synthetic demo data and is the only
-registered fallback source. Do not substitute another bundled or generated
-dataset.
+a 5-point scale. The checked-in workbook is the only registered sample source. Do
+not substitute bundled, generated, or synthetic survey data.
 
 ## Required grounding
 
 Read these references in order:
 
-1. `references/design/glint-ui-system.md`
-2. `references/skills/analyze-survey/README.md`
-3. `references/skills/analyze-survey/linked-dataset.json`
-4. `references/skills/analyze-survey/golden-report.html`
-5. `references/skills/analyze-survey/scores-change-format.png`
-6. `references/skills/analyze-survey/interactive-report-contract.md`
-7. `references/skills/analyze-survey/people-science-summaries.schema.json`
-8. `references/skills/analyze-survey/people-science-source-index.json`
-9. `references/skills/people-science-knowledge-vault/`
-10. `references/general/interpretation-guardrails.md`
-11. `references/general/privacy-and-minimum-n.md`
-12. `references/general/codebook-catalog.md`
+1. `../../references/design/glint-ui-system.md`
+2. `references/README.md`
+3. `references/linked-dataset.json`
+4. `references/golden-report.html`
+5. `references/scores-change-format.png`
+6. `references/interactive-report-contract.md`
+7. `../../references/general/privacy-and-minimum-n.md`
+8. `../../references/general/codebook-catalog.md`
 
 The Glint UI system is mandatory for all color, typography, spacing, component,
 and accessibility decisions. Do not invent report colors or visual patterns.
@@ -55,9 +53,28 @@ and accessibility decisions. Do not invent report colors or visual patterns.
 `golden-report.html` is the canonical report shell. Future reports must preserve
 its markup, styling, tab order, labels, and browser interactions exactly while
 replacing its embedded aggregate data payload with the current analysis.
-The required tabs are Scores change, Relationships, Alerts, Factors,
-Attrition analysis, and Downloads. Do not add Overview, Item results, or
-Heatmap tabs.
+The required base tabs are Scores change, Correlation, Thematic analysis,
+Factors, and Downloads.
+When attrition analysis completes, add Attrition analysis followed immediately
+by Attrition alerts between Factors and Downloads. If attrition is unavailable,
+omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
+
+Before the navigation, show a deterministic, filter-aware current-survey
+summary. Use the latest privacy-eligible cycle for the selected population and
+describe its average item score, three high-scoring items, three low-scoring items,
+and movement from the prior cycle when available. Add up to three
+privacy-safe aggregate comment themes for each displayed item when linked
+comments meet the minimum threshold. Prefer score-ranked items with sufficient
+comment coverage when at least six are available; otherwise retain the score
+ranking and state when themes are unavailable. Never include raw comments in
+the report, AI context, share ZIP, or chat. Treat scores and themes as
+descriptive within-survey signals rather than benchmarks or causal findings.
+This summary must render in standard no-AI reports as well as AI-preview
+reports.
+
+Keep all tab-level AI summary cards hidden. Every tab instead begins with one
+concise narrative paragraph that explains what the analysis means and how to
+use it.
 
 The Scores change tab must follow `scores-change-format.png`: grouped old/new
 cycle columns with Mean, Stddev, and n, followed by P-Value and Score
@@ -67,7 +84,7 @@ All respondents and Repeat respondents. Repeat respondents are employees with
 responses in both selected cycles; never infer repeat status from aggregate
 counts.
 
-The Relationships tab must classify absolute Pearson relationship strength as
+The Correlation tab must classify absolute Pearson relationship strength as
 Low (`|r| < .30`), Medium (`.30-.49`), High (`.50-.69`), or Very high
 (`>= .70`). Preserve controls for minimum strength, strength-color visibility,
 statistical-significance visibility, and adding/removing multiple highlighted
@@ -85,15 +102,24 @@ through 15, capped below the item count. Show a concise recommendation blurb
 and a dropdown from 3 through 10 clusters, extending through the recommendation
 when it is higher. Reorder both axes and show cluster labels/boundaries.
 Describe clusters as exploratory rather than validated survey constructs.
+Explain that clustered items share response patterns and may indicate
+overlapping content. Item reduction must preserve content coverage and be
+validated for reliability and stability across groups and cycles.
 
-The Alerts tab must use the triage model in the report contract: Critical,
-Watch, Improving, Stable, and Suppressed counts; raw and company-adjusted
-change; Welch significance; severity/search/threshold filters; sorting; and
-expandable top-five item declines. Keep alert language screening-oriented and
-non-causal. Suppress every alert group unless both compared cycles have at
-least 20 responses; apply the same threshold after report filtering.
+The Attrition alerts tab must use the attrition-priority model in the report
+contract. For each report attribute and outcome window, rank items by the
+median privacy-eligible attrition multiplier across its groups and retain the
+top five. Compare each eligible group's item score with company overall. At
+company level, show the lowest-scoring group for each top item and attribute;
+under a report filter, show the selected group's top-five results. Keep the
+language screening-oriented and non-causal.
 
 ## Primary workflow
+
+Before starting the runner, give the user a concise estimated completion time.
+Base the estimate on the export size and prior runs when available, and state
+that correlation clustering, attrition-alert aggregation, and repeatability are the
+most variable phases. Do this in the first response that starts the run.
 
 Use the direct export runner:
 
@@ -108,9 +134,16 @@ The runner automatically:
 - shows a live percentage, progress bar, elapsed time, and current phase
 - detects standard employee ID columns
 - detects numeric `Q_*` survey items
+- excludes outcome-style `Q_*` fields that do not match the configured scale
 - reads `Sheet1` or the first worksheet from Excel workbooks
 - joins a `user_properties` or attributes worksheet when present
 - selects privacy-safe categorical report attributes
+- excludes identifier-like employee, manager, team, client, UUID, and GUID
+  fields from report filters and aggregate downloads
+- runs attrition whenever valid Exit or termination outcomes are present; for
+  the registered demo, H2 (`survey_cycle_id = 1002`) is linked to Exit
+  (`survey_cycle_id = 1003`) using H2's `survey_completion_date`
+  (`2026-06-01`) and 90-, 180-, and 365-day windows
 - creates an internal `analysis-config.json`
 - runs the standard `vivaglint` analyses twice
 - requires SHA-256 repeatability
@@ -119,49 +152,65 @@ The runner automatically:
 
 Long-running phases must provide visible progress rather than appearing idle.
 Keep updates concise and identify expensive work such as the repeatability
-verification, relationship clustering, alert aggregation, and ZIP packaging.
+verification, correlation clustering, attrition-alert aggregation, and ZIP packaging.
 
-If the export or joined attributes contain attrition, termination-date, or
-Exit survey outcome data, always configure and run attrition analysis. Do not
-finish with attrition marked as unavailable or not requested when usable
-outcome data is present. Use the latest pre-exit survey as the predictor cycle
-and keep Exit-only questions out of the shared engagement factor model.
+The standard workflow uses `--summary-mode off`, which is also the runner
+default. It still writes `people-science-summary-context.json` so the same
+completed analysis can be used later by the explicitly invoked
+`analyze-survey-ai-preview` skill. A stale `people-science-summaries.json` in
+the output directory must not appear in the report or share ZIP when summary
+mode is off.
 
-For the included demo workbook, use H2 (`survey_cycle_id` 1002) as the
-predictor survey, Exit survey (`survey_cycle_id` 1003) as the outcome cohort,
-`attrition date` as the termination date, and December 15, 2025 as the H2
-completion date. The Attrition analysis tab must include all 27 H2 items,
-90/180/365-day windows, and the same live report filters as the other tabs.
+For Factors, use the company solution's factor count and varimax rotation to
+re-estimate loadings for every eligible attribute/value cut. Require at least
+the greater of 100 complete responses or five complete responses per survey
+item. Suppress smaller or failed cuts. Show the selected cut's complete N,
+loading-dimension cards, and clustered horizontal bar small multiples. Repeat
+the loading axis for each dimension and show the shared vertical question
+labels once. Plot positive loading magnitudes from 0 to 1 and reuse the
+Correlation Low, Medium, High, and Very high thresholds and colors. State
+Sort questions high to low by MR1 loading only; do not combine loading
+values across dimensions for ordering. Add a high-contrast outline to every
+bar plus a contrasting outline around each two-decimal data label. State that
+factor labels are exploratory working hypotheses,
+dimensions can rotate or reorder across cuts, and this is not evidence of
+measurement invariance.
 
-After the deterministic analysis completes:
+Explain factor loadings as item-to-dimension alignment on a 0-to-1 scale.
+Clarify that .70 is more closely aligned than .60, but a .10 difference is not
+automatically practically meaningful without considering the full loading
+pattern, item content, and cross-loadings.
 
-1. Inspect `analysis-manifest.json` and
-   `people-science-summary-context.json`.
-2. Apply the `interpret-analysis` guardrails to distinguish observation,
-   interpretation, recommendation, and caveat.
-3. Use `people-science-knowledge-vault` to retrieve relevant externally
-   published article bodies. Cite only claims supported by those sources.
-4. Write `people-science-summaries.json` using
-   `people-science-summaries.schema.json`. Include all six tabs.
-5. Rerun `scripts/build_interactive_report.py` with the existing config and
-   output directory so the summaries are embedded in the HTML and share ZIP.
+For Attrition, rank all eligible items by the unfavorable-to-favorable
+attrition-rate multiplier. Default to 180 days and allow 90-, 180-, and
+365-day windows. Show the item text and a horizontal multiplier bar with a
+clearly marked 1.00x reference line; do not display favorable or unfavorable
+counts or percentages in the report. Apply the shared report filter, suppress
+cells with fewer than five favorable or unfavorable respondents, and describe
+associations as screening signals rather than causal estimates. Never report
+individual flight-risk predictions.
+Flag multipliers with a two-sided Fisher exact test p-value below .05 as
+statistically significant while retaining the multiplier and non-causal
+interpretation.
 
-Every tab must begin with an AI-generated People Science perspective containing
-a headline, what the results show, a professional interpretation, a recommended
-next step, a caveat, and relevant published-source links. Keep the narrative
-concise, non-causal, privacy-safe, and explicit when evidence is unavailable.
-The summary must recalculate whenever the report attribute or value changes.
-Recompute its headline and observation from the selected filter's aggregate
-cycle, relationship, and alert results. Preserve the grounded interpretation,
-recommendation, caveat, and source links unless an authored filter-specific
-narrative is available. For tabs without filter-specific analysis, explicitly
-state that the displayed evidence remains company-wide or unavailable.
+The Thematic analysis tab must use only privacy-safe deterministic aggregate
+comment themes. Provide cycle, survey-question, comparison-attribute, and
+focus-group controls. Show direct favorable-versus-unfavorable comparisons for
+both themes and survey items. Put the row label first, followed by unfavorable
+and favorable columns, and sort descending by the percentage of unfavorable
+coded mentions. Add a separate theme favorability profile showing how each
+theme's mentions are distributed across unfavorable, neutral, and favorable
+responses. Apply the question control to all three visuals. Do not show a
+selected-favorability-mix ranking, group heatmap, or item-theme chips. Never
+expose raw comment text.
 
 Use the checked-in People Science source index to select references from key
-terms in the current headline and observation. Show three distinct references
-for every summary. Prefer exact analytical or item-theme matches over generic
-survey resources, and never reuse a source merely because it is broadly about
-employee surveys.
+terms across the current headline, observation, interpretation,
+recommendation, and caveat. Show three distinct references for every summary.
+Prefer exact analytical or item-theme matches over generic survey resources,
+and never reuse a source merely because it is broadly about employee surveys.
+Use neutral score-based language for item rankings and avoid company-specific
+classification vocabulary.
 
 Use explicit options only when automatic detection is wrong:
 
@@ -173,6 +222,7 @@ Use explicit options only when automatic detection is wrong:
 --question-cols <item1> <item2> ...
 --attribute-cols <attribute1> <attribute2> ...
 --min-group-size <5-or-higher>
+--summary-mode off
 ```
 
 ## Successful output
@@ -186,12 +236,14 @@ response_distribution.csv
 correlations.csv
 factor_analysis_summary.csv
 by_attribute.csv
+attrition.csv
 <output-directory-name>-report.html
 <output-directory-name>-share.zip
 ```
 
 Only completed analysis CSVs are required. The HTML report and ZIP are always
-required after repeatability passes. Open the HTML report before finishing.
+required after repeatability passes. The standard report contains no AI summary
+cards. Open the HTML report before finishing.
 
 ## Failure handling
 
@@ -201,8 +253,6 @@ required after repeatability passes. Open the HTML report before finishing.
 - If an analysis fails, preserve the explicit failure in the manifest.
 - If cycle, alert, or attrition inputs are unavailable, keep the
   corresponding report tab and explain what is missing.
-- If attrition inputs are present, a skipped or missing attrition artifact is a
-  failed run and must be corrected before returning the report.
 - Never substitute synthetic attrition outcomes.
 
 ## Boundaries

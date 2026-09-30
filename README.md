@@ -8,10 +8,13 @@ This plugin provides a set of focused skills that share a common analysis contra
 
 1. `analyze-survey` accepts CSV or Excel survey exports directly, runs a
    standard set of `vivaglint` codebooks, writes an `analysis-manifest.json`,
-   and packages the required interactive HTML report and privacy-safe ZIP.
-2. `analysis-qa` reviews output validity, privacy thresholds, and interpretation readiness.
-3. `interpret-analysis` turns codebook outputs into People Science findings and caveats.
-4. `people-science-knowledge-vault` finds and synthesizes externally published People Science knowledge using a strict two-tier source hierarchy.
+   and packages the required interactive HTML report and privacy-safe ZIP
+   without AI-generated summaries.
+2. `analyze-survey-ai-preview` adds staged, evidence-grounded People Science
+   summaries to the same shared report pipeline.
+3. `analysis-qa` reviews output validity, privacy thresholds, and interpretation readiness.
+4. `interpret-analysis` turns codebook outputs into People Science findings and caveats.
+5. `people-science-knowledge-vault` finds and synthesizes externally published People Science knowledge using a strict two-tier source hierarchy.
 
 The plugin deliberately does not duplicate the `vivaglint` analysis package. It calls a pinned package version and treats the output manifest as the stable interface between execution and interpretation.
 
@@ -46,7 +49,7 @@ appropriate skill. Examples:
 Each skill has a first-priority reference collection at:
 
 ```text
-references/skills/<skill-name>/
+skills/<skill-name>/references/
 ```
 
 Shared, second-priority context lives at:
@@ -55,7 +58,9 @@ Shared, second-priority context lives at:
 references/general/
 ```
 
-When a skill runs, inspect its own reference folder first, then inspect `references/general/`. Skill-specific references take precedence for that skill unless they violate privacy, safety, or the manifest contract.
+When a skill runs, inspect its colocated `references/` folder first, then
+inspect `references/general/`. Skill-specific references take precedence for
+that skill unless they violate privacy, safety, or the manifest contract.
 
 ## Shared contract
 
@@ -81,6 +86,7 @@ Schema: `schemas/analysis-manifest.schema.json`
 | Skill | Use when |
 |---|---|
 | `analyze-survey` | The user has survey data and wants the standard analysis package run. |
+| `analyze-survey-ai-preview` | The user explicitly wants the staged AI-summary report experience. |
 | `analysis-qa` | The user needs to know whether outputs are valid and safe to interpret. |
 | `interpret-analysis` | The user has output files/manifests and wants People Science interpretation. |
 | `people-science-knowledge-vault` | The user wants externally shareable People Science articles or an evidence-backed synthesis of published guidance. |
@@ -97,17 +103,20 @@ tests without changing this source hierarchy.
 
 Survey-analysis workflows should begin by asking:
 
-> Do you have your own survey data you would like to analyze? If not, I can use the included Viva Glint demo workbook.
+> Do you have your own survey data you would like to analyze? If not, I can use the linked Viva Glint workbook.
 
-If the user does not provide another export, use:
+If the user does not provide another export, use this workbook, which is
+checked directly into this repository so any user can access it without
+additional permissions:
 
 ```text
-examples/demo-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
+Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
+skills/analyze-survey/references/sample-data/Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
 ```
 
 Use `Sheet1`, join `user_properties` by `user_id`, and use a 5-point scale.
-This synthetic workbook is the only registered fallback source. Do not
-silently substitute another bundled or generated dataset.
+This is the only registered sample source. Do not silently substitute bundled,
+generated, or synthetic survey data.
 
 ## Analyze-survey report output
 
@@ -115,7 +124,7 @@ Every successful, repeatable survey analysis produces the standardized report
 defined in:
 
 ```text
-references/skills/analyze-survey/interactive-report-contract.md
+skills/analyze-survey/references/interactive-report-contract.md
 ```
 
 The report uses the fixed six-tab Glint layout, shared attribute filtering,

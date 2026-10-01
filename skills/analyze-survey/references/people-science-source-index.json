@@ -3,6 +3,7 @@
   "defaults": {
     "changes": ["interpret-survey-data", "benchmark-documentation", "continuous-improvement"],
     "relationships": ["interpret-survey-data", "template-research", "people-success"],
+    "impact": ["interpret-survey-data", "propel-action-taking", "focus-areas"],
     "alerts": ["propel-action-taking", "focus-areas", "psychological-safety"],
     "factors": ["survey-program-design", "template-research", "interpret-survey-data"],
     "attrition": ["people-success", "program-types", "privacy-protection"],

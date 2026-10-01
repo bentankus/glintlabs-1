@@ -35,6 +35,7 @@ FACTOR_RESPONDENTS_PER_ITEM = 5
 SUMMARY_TABS = (
     "changes",
     "relationships",
+    "impact",
     "alerts",
     "factors",
     "attrition",
@@ -609,6 +610,77 @@ def correlation_rows(frame: pd.DataFrame, questions: list[str]) -> list[list[Any
             p = float(2 * student_t.sf(abs(statistic), n - 2))
             rows.append([first, second, round(r, 6), p, n])
     return rows
+
+
+def impact_strength(value: float) -> str:
+    magnitude = abs(value)
+    if magnitude >= 0.70:
+        return "very-high"
+    if magnitude >= 0.50:
+        return "high"
+    if magnitude >= 0.30:
+        return "medium"
+    return "low"
+
+
+def impact_cube(
+    questions: list[str],
+    overall: list[list[float | int]],
+    relationship_rows: list[list[Any]],
+    anchor_question: str | None,
+) -> dict[str, Any]:
+    """Plot each item's current score against its relationship to an anchor item.
+
+    Reuses the already-computed overall score and relationship matrices so no
+    additional correlation pass is required.
+    """
+    if len(questions) < 2:
+        return {"anchor_question": None, "rows": []}
+    pair_lookup: dict[tuple[int, int], list[Any]] = {
+        (row[0], row[1]): row for row in relationship_rows
+    }
+
+    def pair(first: int, second: int) -> list[Any] | None:
+        return pair_lookup.get((first, second)) or pair_lookup.get((second, first))
+
+    anchor_index = questions.index(anchor_question) if anchor_question in questions else None
+    if anchor_index is None:
+        mean_abs: dict[int, list[float]] = {index: [] for index in range(len(questions))}
+        for first, second, r, _, _ in relationship_rows:
+            mean_abs[first].append(abs(r))
+            mean_abs[second].append(abs(r))
+        anchor_index = max(
+            range(len(questions)),
+            key=lambda index: sum(mean_abs[index]) / len(mean_abs[index]) if mean_abs[index] else 0,
+        )
+    anchor_question = questions[anchor_index]
+    overall_mean_score = sum(row[0] for row in overall) / len(overall)
+
+    rows = []
+    for index, question in enumerate(questions):
+        if index == anchor_index:
+            continue
+        row = pair(anchor_index, index)
+        if row is None:
+            continue
+        glint_score = overall[index][0]
+        correlation = float(row[2])
+        rows.append(
+            {
+                "question": question,
+                "glint_score": glint_score,
+                "correlation": correlation,
+                "p_value": float(row[3]),
+                "n": int(row[4]),
+                "strength": impact_strength(correlation),
+                "score_level": "above" if glint_score >= overall_mean_score else "below",
+            }
+        )
+    return {
+        "anchor_question": anchor_question,
+        "overall_mean_score": round(overall_mean_score, 2),
+        "rows": rows,
+    }
 
 
 def silhouette_score(distance: np.ndarray, assignments: np.ndarray) -> float:
@@ -1462,6 +1534,7 @@ def summary_context(
     factors: dict[str, Any],
     attrition: str,
     downloads: list[str],
+    impact: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     labels = {question: label(question) for question in questions}
     cycle_names = cycles.get("cycles", [])
@@ -1549,6 +1622,28 @@ def summary_context(
         "attributes": len(default_alerts),
         "alerts": sorted(alert_rows, key=lambda row: row["gap"])[:12],
     }
+    impact = impact or {}
+    impact_rows = sorted(
+        impact.get("rows", []),
+        key=lambda row: abs(row.get("correlation", 0)),
+        reverse=True,
+    )[:8]
+    impact_context = {
+        "anchor_question": labels.get(
+            impact.get("anchor_question"), impact.get("anchor_question")
+        ),
+        "overall_mean_score": impact.get("overall_mean_score"),
+        "strongest_impact_items": [
+            {
+                "question": labels[row["question"]],
+                "glint_score": row["glint_score"],
+                "correlation": row["correlation"],
+                "p_value": row["p_value"],
+                "n": row["n"],
+            }
+            for row in impact_rows
+        ],
+    }
     return {
         "schema_version": "1.0.0",
         "privacy": (
@@ -1558,6 +1653,7 @@ def summary_context(
         "tabs": {
             "changes": changes,
             "relationships": relationship_context,
+            "impact": impact_context,
             "alerts": alert_context,
             "factors": {
                 "overall": {
@@ -1744,6 +1840,12 @@ def main() -> int:
     progress.update(45, "Clustering relationship matrices for each filter view")
     relationships = relationship_cube(frame, questions, attributes)
     progress.update(60, "Relationship matrices and cluster recommendations prepared")
+    impact = impact_cube(
+        questions,
+        overall,
+        relationships["overall"],
+        config.get("engagement_anchor_question"),
+    )
     factors_path = output / "factor_analysis_summary.csv"
     overall_factor_rows = (
         pd.read_csv(factors_path).to_dict("records") if factors_path.exists() else []
@@ -1837,6 +1939,7 @@ def main() -> int:
         factors,
         attrition_status,
         downloads,
+        impact,
     )
     context_path = output / "people-science-summary-context.json"
     context_path.write_text(
@@ -1864,6 +1967,7 @@ def main() -> int:
         "cycles": cycles,
         "commentThemes": comment_themes,
         "relationships": relationships,
+        "impact": impact,
         "alerts": alert_data,
         "factors": factors,
         "attrition": attrition_status,

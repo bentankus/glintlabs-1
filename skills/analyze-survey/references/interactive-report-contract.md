@@ -10,10 +10,10 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`4ae3127813e58aa5714dd5b400731392b6644ed835ac238f3d25a9461c640158`.
+`6e2accc1c8d920e277fd47d15d5d25f5df5c302987945f243c3ffb76f76b5b1a`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
-mode, the six empty AI summary containers are also removed from the generated
+mode, the seven empty AI summary containers are also removed from the generated
 report.
 
 ## AI-generated People Science summary modes
@@ -111,9 +111,10 @@ staging data from the ZIP.
 - Keep analytical tables and charts dense enough for comparison; apply the
   editorial treatment around them rather than weakening statistical encodings.
 - Do not substitute a generic dashboard theme.
-- Give every primary visual (Scores change table, Correlation matrix, theme
-  and item comparison rows, theme favorability profile, Alerts table, and the
-  Factors chart/card group) a top-right toolbar with two icon buttons: export
+- Give every primary visual (Scores change table, Correlation matrix, Impact
+  analysis chart/table, theme and item comparison rows, theme favorability
+  profile, Alerts table, and the Factors chart/card group) a top-right
+  toolbar with two icon buttons: export
   the visual's aggregated data as CSV, and copy the visual as an image to the
   clipboard (falling back to a PNG download when clipboard image write is
   unavailable). Toolbars must remain accessible (labeled, focus-visible) and
@@ -125,11 +126,12 @@ Keep this tab order and naming:
 
 1. **Scores change**
 2. **Correlation**
-3. **Thematic analysis**
-4. **Factors**
-5. **Attrition analysis** (only when attrition completes)
-6. **Attrition alerts** (only when attrition completes)
-7. **Downloads**
+3. **Impact analysis**
+4. **Thematic analysis**
+5. **Factors**
+6. **Attrition analysis** (only when attrition completes)
+7. **Attrition alerts** (only when attrition completes)
+8. **Downloads**
 
 If attrition cannot run, omit both attrition tabs. Never fabricate attrition
 data. For other analyses, keep the tab and explain why results are unavailable.
@@ -214,6 +216,29 @@ exploratory, and attrition results are not individual predictions.
 - State how many unique relationships are significant and nonsignificant.
 - Emphasize practical magnitude when large N makes most results significant.
 - Save segment matrices only where there are at least 30 response rows.
+
+### Impact analysis
+
+- Build this tab from the already-computed correlation and descriptive
+  results; it does not run a separate `vivaglint` analysis.
+- Plot each survey item's current score against the absolute strength of its
+  relationship to a single engagement anchor question, so leaders can see
+  which low-scoring items also carry the strongest relationship to
+  engagement, not just which ones score lowest.
+- Resolve the anchor question from the registered dataset's
+  `engagement_anchor_question` configuration when present and valid;
+  otherwise auto-select the question with the highest mean absolute
+  relationship across all other items.
+- Classify absolute relationship strength with the same Low/Medium/High/Very
+  high bands and thresholds used in Correlation, and reuse the same strength
+  legend and colors.
+- Show a scatter chart (item score on one axis, relationship strength on the
+  other) and a supporting table listing every plotted item's score,
+  relationship to the anchor, strength band, and N.
+- This tab is company-wide and is not affected by the shared report filter.
+- State plainly that a relationship to the anchor question is not evidence
+  that changing one item causes a change in the anchor; treat it as a
+  screening signal for prioritization, not a causal claim.
 
 ### Attrition alerts
 

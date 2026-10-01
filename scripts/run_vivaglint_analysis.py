@@ -38,6 +38,7 @@ DEFAULT_ANALYSES = [
     "response_distribution",
     "correlations",
     "factor_analysis",
+    "impact_analysis",
     "cycle_comparisons",
     "by_attribute",
     "attrition",
@@ -103,6 +104,66 @@ def write_csv(output_dir: Path, name: str, frame: pd.DataFrame) -> str:
 
 def skip(name: str, reason: str) -> StepResult:
     return StepResult(name=name, status="skipped", message=reason)
+
+
+def strength_band(value: float) -> str:
+    magnitude = abs(value)
+    if magnitude >= 0.70:
+        return "Very high"
+    if magnitude >= 0.50:
+        return "High"
+    if magnitude >= 0.30:
+        return "Medium"
+    return "Low"
+
+
+def build_impact_analysis(
+    correlations: pd.DataFrame,
+    descriptives: pd.DataFrame,
+    anchor_question: str | None,
+) -> pd.DataFrame:
+    """Combine correlations and descriptives into an item-level impact view.
+
+    Plots each item's current score against how strongly it relates to a
+    designated engagement anchor question, so items can be screened by both
+    standing and relationship strength rather than score alone.
+    """
+    pairs = correlations.loc[correlations["question1"] != correlations["question2"]].copy()
+    questions = descriptives["question"].tolist()
+
+    if not anchor_question or anchor_question not in questions:
+        mean_abs = (
+            pairs.groupby("question1")["correlation"].apply(lambda values: values.abs().mean())
+        )
+        anchor_question = mean_abs.idxmax() if len(mean_abs) else questions[0]
+
+    anchor_rows = pairs.loc[pairs["question1"] == anchor_question].set_index("question2")
+    overall_mean_score = float(descriptives["glint_score"].mean())
+
+    rows = []
+    for question in questions:
+        if question == anchor_question:
+            continue
+        if question not in anchor_rows.index:
+            continue
+        anchor_row = anchor_rows.loc[question]
+        item = descriptives.loc[descriptives["question"] == question].iloc[0]
+        correlation = float(anchor_row["correlation"])
+        score_level = "Above average" if item["glint_score"] >= overall_mean_score else "Below average"
+        relationship_level = "Strong" if abs(correlation) >= 0.50 else "Weak"
+        rows.append(
+            {
+                "question": question,
+                "glint_score": item["glint_score"],
+                "engagement_correlation": round(correlation, 6),
+                "p_value": float(anchor_row["p_value"]),
+                "n": int(anchor_row["n"]),
+                "strength": strength_band(correlation),
+                "quadrant": f"{score_level} score, {relationship_level.lower()} relationship",
+                "anchor_question": anchor_question,
+            }
+        )
+    return pd.DataFrame(rows)
 
 
 def run_step(name: str, func: Callable[[], str]) -> StepResult:
@@ -602,6 +663,29 @@ def main() -> int:
         if result.artifact:
             artifacts["factor_analysis"] = result.artifact
         step_progress("factor_analysis")
+
+    if "impact_analysis" in requested:
+        start_step("impact_analysis")
+        if "correlations" not in artifacts or "descriptives" not in artifacts:
+            analyses.append(
+                skip(
+                    "impact_analysis",
+                    "Impact analysis requires completed correlations and descriptives steps.",
+                )
+            )
+        else:
+            def impact_analysis() -> str:
+                frame = build_impact_analysis(
+                    pd.read_csv(output_dir / artifacts["correlations"]),
+                    pd.read_csv(output_dir / artifacts["descriptives"]),
+                    config.get("engagement_anchor_question"),
+                )
+                return write_csv(output_dir, "impact_analysis", frame)
+            result = run_step("impact_analysis", impact_analysis)
+            analyses.append(result)
+            if result.artifact:
+                artifacts["impact_analysis"] = result.artifact
+        step_progress("impact_analysis")
 
     if "cycle_comparisons" in requested:
         start_step("cycle_comparisons")

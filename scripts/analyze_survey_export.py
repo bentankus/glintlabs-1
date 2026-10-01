@@ -527,6 +527,7 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         "response_distribution",
         "correlations",
         "factor_analysis",
+        "impact_analysis",
     ]
     if attribute_cols:
         analyses.append("by_attribute")
@@ -568,6 +569,9 @@ def build_config(options: argparse.Namespace, output: Path) -> Path:
         config["attrition_attribute_cols"] = attribute_cols
     if attribute_cols:
         config["attribute_view_mode"] = "separate"
+    engagement_anchor_question = registered_defaults.get("engagement_anchor_question")
+    if engagement_anchor_question and engagement_anchor_question in questions:
+        config["engagement_anchor_question"] = engagement_anchor_question
     if attribute_path:
         config["attribute_file"] = str(attribute_path)
     if comments_path:

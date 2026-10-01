@@ -130,6 +130,7 @@ def test_analyze_survey_points_to_linked_dataset():
     required_tabs = (
         "Scores change",
         "Correlation",
+        "Impact analysis",
         "Thematic analysis",
         "Factors",
         "Attrition analysis",
@@ -199,6 +200,7 @@ def test_analyze_survey_points_to_linked_dataset():
     assert summary_schema["properties"]["tabs"]["required"] == [
         "changes",
         "relationships",
+        "impact",
         "alerts",
         "factors",
         "attrition",
@@ -915,6 +917,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     for tab in (
                         "changes",
                         "relationships",
+                        "impact",
                         "alerts",
                         "factors",
                         "attrition",
@@ -947,6 +950,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     for tab in (
         "Scores change",
         "Correlation",
+        "Impact analysis",
         "Thematic analysis",
         "Factors",
         "Downloads",
@@ -1028,7 +1032,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert "All questions" in report_text
     assert "Unfavorable coded mentions" in report_text
     assert "private career growth wording" not in report_text
-    assert report_text.count("data-summary=") == 4
+    assert report_text.count("data-summary=") == 5
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text
     assert "function attritionSummaryRows()" in report_text
@@ -1074,6 +1078,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert set(summary_context["tabs"]) == {
         "changes",
         "relationships",
+        "impact",
         "alerts",
         "factors",
         "attrition",
@@ -1131,7 +1136,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         text=True,
     )
     report_text = report.read_text(encoding="utf-8")
-    assert report_text.count("data-summary=") == 4
+    assert report_text.count("data-summary=") == 5
     manifest = json.loads(
         (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
     )

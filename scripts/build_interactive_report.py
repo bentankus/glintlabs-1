@@ -35,6 +35,7 @@ FACTOR_RESPONDENTS_PER_ITEM = 5
 SUMMARY_TABS = (
     "changes",
     "relationships",
+    "impact",
     "alerts",
     "factors",
     "attrition",
@@ -503,6 +504,23 @@ def comment_theme_payload(
     }
 
 
+def ordered_cycle_names(frame: pd.DataFrame, cycle_col: str) -> list[str]:
+    """Return cycle titles ordered chronologically, oldest first.
+
+    Prefers the numeric ``survey_cycle_id`` column (lower id = earlier cycle)
+    when present; otherwise falls back to first-appearance order in the
+    export, which is the best available signal without a real date field.
+    """
+    names = list(dict.fromkeys(frame[cycle_col].dropna().astype(str)))
+    if "survey_cycle_id" in frame.columns:
+        ids = frame[[cycle_col, "survey_cycle_id"]].dropna()
+        ids[cycle_col] = ids[cycle_col].astype(str)
+        min_id = ids.groupby(cycle_col)["survey_cycle_id"].min()
+        if set(names) <= set(min_id.index):
+            names = sorted(names, key=lambda name: min_id[name])
+    return names
+
+
 def cycle_cube(
     frame: pd.DataFrame,
     questions: list[str],
@@ -516,7 +534,7 @@ def cycle_cube(
             "segments": {},
             "repeat": {"overall": {}, "segments": {}},
         }
-    cycles = list(dict.fromkeys(frame[cycle_col].dropna().astype(str)))
+    cycles = ordered_cycle_names(frame, cycle_col)
 
     def cycle_metrics(source: pd.DataFrame) -> list[list[float | int]]:
         rows = []
@@ -611,6 +629,155 @@ def correlation_rows(frame: pd.DataFrame, questions: list[str]) -> list[list[Any
     return rows
 
 
+def impact_strength(value: float) -> str:
+    magnitude = abs(value)
+    if magnitude >= 0.70:
+        return "very-high"
+    if magnitude >= 0.50:
+        return "high"
+    if magnitude >= 0.30:
+        return "medium"
+    return "low"
+
+
+def impact_view(
+    questions: list[str],
+    scores: list[list[float | int]],
+    relationship_rows: list[list[Any]],
+    anchor_index: int,
+) -> dict[str, Any] | None:
+    """Build one impact view (score x relationship-to-anchor) for a population."""
+    pair_lookup: dict[tuple[int, int], list[Any]] = {
+        (row[0], row[1]): row for row in relationship_rows
+    }
+
+    def pair(first: int, second: int) -> list[Any] | None:
+        return pair_lookup.get((first, second)) or pair_lookup.get((second, first))
+
+    overall_mean_score = sum(row[0] for row in scores) / len(scores)
+    rows = []
+    for index, question in enumerate(questions):
+        if index == anchor_index:
+            continue
+        row = pair(anchor_index, index)
+        if row is None:
+            continue
+        glint_score = scores[index][0]
+        correlation = float(row[2])
+        rows.append(
+            {
+                "question": question,
+                "glint_score": glint_score,
+                "correlation": correlation,
+                "p_value": float(row[3]),
+                "n": int(row[4]),
+                "strength": impact_strength(correlation),
+                "score_level": "above" if glint_score >= overall_mean_score else "below",
+            }
+        )
+    if not rows:
+        return None
+    return {
+        "overall_mean_score": round(overall_mean_score, 2),
+        "rows": rows,
+    }
+
+
+def impact_cube(
+    questions: list[str],
+    overall: list[list[float | int]],
+    relationships: dict[str, Any],
+    anchor_question: str | None,
+    score_segments: dict[str, Any],
+    cycle_scores: dict[str, Any] | None = None,
+    cycle_score_segments: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Plot each item's current score against its relationship to an anchor item.
+
+    Reuses the already-computed overall/segment score and relationship
+    matrices so no additional correlation pass is required. Segment views
+    (for example, per report attribute, survey cycle, or a combined
+    attribute-and-cycle cut) are built with the same anchor item so the
+    chart stays comparable across filters.
+    """
+    if len(questions) < 2:
+        return {
+            "anchor_question": None,
+            "rows": [],
+            "segments": {},
+            "cycles": {},
+            "segment_cycles": {},
+        }
+    relationship_rows = relationships["overall"]
+    anchor_index = questions.index(anchor_question) if anchor_question in questions else None
+    if anchor_index is None:
+        mean_abs: dict[int, list[float]] = {index: [] for index in range(len(questions))}
+        for first, second, r, _, _ in relationship_rows:
+            mean_abs[first].append(abs(r))
+            mean_abs[second].append(abs(r))
+        anchor_index = max(
+            range(len(questions)),
+            key=lambda index: sum(mean_abs[index]) / len(mean_abs[index]) if mean_abs[index] else 0,
+        )
+    anchor_question = questions[anchor_index]
+
+    overall_view = impact_view(questions, overall, relationship_rows, anchor_index) or {
+        "overall_mean_score": 0,
+        "rows": [],
+    }
+
+    segments: dict[str, Any] = {}
+    for attribute, relationship_values in relationships.get("segments", {}).items():
+        score_values = score_segments.get(attribute, {}).get("values", {})
+        values = {}
+        for value, rows in relationship_values.items():
+            scores = score_values.get(value, {}).get("items")
+            if not scores:
+                continue
+            view = impact_view(questions, scores, rows, anchor_index)
+            if view:
+                values[value] = view
+        if values:
+            segments[attribute] = values
+
+    cycles: dict[str, Any] = {}
+    for cycle_name, rows in relationships.get("cycles", {}).items():
+        scores = (cycle_scores or {}).get(cycle_name, {}).get("items")
+        if not scores:
+            continue
+        view = impact_view(questions, scores, rows, anchor_index)
+        if view:
+            cycles[cycle_name] = view
+
+    segment_cycles: dict[str, Any] = {}
+    for attribute, value_cycles in relationships.get("segment_cycles", {}).items():
+        score_value_cycles = (cycle_score_segments or {}).get(attribute, {})
+        values = {}
+        for value, cycle_rows in value_cycles.items():
+            score_cycles = score_value_cycles.get(value, {})
+            views = {}
+            for cycle_name, rows in cycle_rows.items():
+                scores = score_cycles.get(cycle_name, {}).get("items")
+                if not scores:
+                    continue
+                view = impact_view(questions, scores, rows, anchor_index)
+                if view:
+                    views[cycle_name] = view
+            if views:
+                values[value] = views
+        if values:
+            segment_cycles[attribute] = values
+
+    return {
+        "anchor_question": anchor_question,
+        "overall_mean_score": overall_view["overall_mean_score"],
+        "rows": overall_view["rows"],
+        "segments": segments,
+        "cycles": cycles,
+        "segment_cycles": segment_cycles,
+    }
+
+
 def silhouette_score(distance: np.ndarray, assignments: np.ndarray) -> float:
     scores = []
     for index, cluster in enumerate(assignments):
@@ -666,28 +833,79 @@ def cluster_plan(rows: list[list[Any]], question_count: int) -> dict[str, Any]:
 
 
 def relationship_cube(
-    frame: pd.DataFrame, questions: list[str], attributes: list[str]
+    frame: pd.DataFrame,
+    questions: list[str],
+    attributes: list[str],
+    cycle_col: str | None = None,
 ) -> dict[str, Any]:
     overall = correlation_rows(frame, questions)
     result = {
         "overall": overall,
         "segments": {},
+        "cycles": {},
+        "segment_cycles": {},
         "clusters": {
             "overall": cluster_plan(overall, len(questions)),
             "segments": {},
+            "cycles": {},
+            "segment_cycles": {},
         },
     }
+
+    def fit_rows(group: pd.DataFrame) -> list[list[Any]] | None:
+        if len(group) < RELATIONSHIP_MIN_N:
+            return None
+        rows = correlation_rows(group, questions)
+        if len(rows) != len(questions) * (len(questions) - 1) // 2:
+            return None
+        return rows
+
     for attribute in attributes:
         values = {}
         cluster_values = {}
+        value_cycles = {}
+        cluster_value_cycles = {}
         for value, group in frame.dropna(subset=[attribute]).groupby(attribute):
-            if len(group) >= RELATIONSHIP_MIN_N:
-                rows = correlation_rows(group, questions)
-                if len(rows) == len(questions) * (len(questions) - 1) // 2:
-                    values[str(value)] = rows
-                    cluster_values[str(value)] = cluster_plan(rows, len(questions))
+            rows = fit_rows(group)
+            if rows is not None:
+                values[str(value)] = rows
+                cluster_values[str(value)] = cluster_plan(rows, len(questions))
+            if cycle_col:
+                cycle_rows = {}
+                cycle_cluster_rows = {}
+                for cycle_name, cycle_group in group.dropna(
+                    subset=[cycle_col]
+                ).groupby(cycle_col, sort=False):
+                    cycle_name = str(cycle_name)
+                    cross_rows = fit_rows(cycle_group)
+                    if cross_rows is not None:
+                        cycle_rows[cycle_name] = cross_rows
+                        cycle_cluster_rows[cycle_name] = cluster_plan(
+                            cross_rows, len(questions)
+                        )
+                if cycle_rows:
+                    value_cycles[str(value)] = cycle_rows
+                    cluster_value_cycles[str(value)] = cycle_cluster_rows
         result["segments"][attribute] = values
         result["clusters"]["segments"][attribute] = cluster_values
+        if value_cycles:
+            result["segment_cycles"][attribute] = value_cycles
+            result["clusters"]["segment_cycles"][attribute] = cluster_value_cycles
+    if cycle_col:
+        cycle_values = {}
+        cycle_cluster_values = {}
+        for cycle_name, group in frame.dropna(subset=[cycle_col]).groupby(
+            cycle_col, sort=False
+        ):
+            cycle_name = str(cycle_name)
+            rows = fit_rows(group)
+            if rows is not None:
+                cycle_values[cycle_name] = rows
+                cycle_cluster_values[cycle_name] = cluster_plan(
+                    rows, len(questions)
+                )
+        result["cycles"] = cycle_values
+        result["clusters"]["cycles"] = cycle_cluster_values
     return result
 
 
@@ -747,6 +965,7 @@ def factor_cube(
     progress: ProgressReporter | None = None,
     progress_start: float = 0,
     progress_end: float = 100,
+    cycle_col: str | None = None,
 ) -> dict[str, Any]:
     minimum = max(FACTOR_MIN_N, FACTOR_RESPONDENTS_PER_ITEM * len(questions))
     factor_names = sorted(
@@ -880,11 +1099,21 @@ def factor_cube(
         overall = fit(frame)
 
     total = sum(frame[attribute].nunique(dropna=True) for attribute in attributes)
+    if cycle_col:
+        for attribute in attributes:
+            total += int(
+                frame.dropna(subset=[attribute, cycle_col])
+                .groupby(attribute)[cycle_col]
+                .nunique()
+                .sum()
+            )
     completed = 0
     last_percent = -1
     segments: dict[str, Any] = {}
+    segment_cycles: dict[str, Any] = {}
     for attribute in attributes:
         values = {}
+        value_cycles = {}
         for value, group in frame.dropna(subset=[attribute]).groupby(
             attribute, sort=True
         ):
@@ -903,10 +1132,58 @@ def factor_cube(
                     ),
                 )
                 last_percent = percent
+            if cycle_col:
+                cycle_fits = {}
+                for cycle_name, cycle_group in group.dropna(
+                    subset=[cycle_col]
+                ).groupby(cycle_col, sort=False):
+                    cycle_fits[str(cycle_name)] = fit(cycle_group)
+                    completed += 1
+                    percent = int(
+                        progress_start
+                        + (progress_end - progress_start) * completed / max(1, total)
+                    )
+                    if progress is not None and percent != last_percent:
+                        progress.update(
+                            percent,
+                            (
+                                "Estimating filter-specific factor models "
+                                f"({completed:,}/{total:,} cuts)"
+                            ),
+                        )
+                        last_percent = percent
+                if cycle_fits:
+                    value_cycles[str(value)] = cycle_fits
         segments[attribute] = values
+        if value_cycles:
+            segment_cycles[attribute] = value_cycles
+    cycles: dict[str, Any] = {}
+    if cycle_col:
+        cycle_names = frame[cycle_col].dropna().astype(str).unique().tolist()
+        total += len(cycle_names)
+        for cycle_name, group in frame.dropna(subset=[cycle_col]).groupby(
+            cycle_col, sort=False
+        ):
+            cycles[str(cycle_name)] = fit(group)
+            completed += 1
+            percent = int(
+                progress_start
+                + (progress_end - progress_start) * completed / max(1, total)
+            )
+            if progress is not None and percent != last_percent:
+                progress.update(
+                    percent,
+                    (
+                        "Estimating filter-specific factor models "
+                        f"({completed:,}/{total:,} cuts)"
+                    ),
+                )
+                last_percent = percent
     return {
         "overall": overall,
         "segments": segments,
+        "cycles": cycles,
+        "segment_cycles": segment_cycles,
         "minimumN": minimum,
         "respondentsPerItem": FACTOR_RESPONDENTS_PER_ITEM,
         "rotation": "varimax",
@@ -1462,6 +1739,7 @@ def summary_context(
     factors: dict[str, Any],
     attrition: str,
     downloads: list[str],
+    impact: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     labels = {question: label(question) for question in questions}
     cycle_names = cycles.get("cycles", [])
@@ -1549,6 +1827,28 @@ def summary_context(
         "attributes": len(default_alerts),
         "alerts": sorted(alert_rows, key=lambda row: row["gap"])[:12],
     }
+    impact = impact or {}
+    impact_rows = sorted(
+        impact.get("rows", []),
+        key=lambda row: abs(row.get("correlation", 0)),
+        reverse=True,
+    )[:8]
+    impact_context = {
+        "anchor_question": labels.get(
+            impact.get("anchor_question"), impact.get("anchor_question")
+        ),
+        "overall_mean_score": impact.get("overall_mean_score"),
+        "strongest_impact_items": [
+            {
+                "question": labels[row["question"]],
+                "glint_score": row["glint_score"],
+                "correlation": row["correlation"],
+                "p_value": row["p_value"],
+                "n": row["n"],
+            }
+            for row in impact_rows
+        ],
+    }
     return {
         "schema_version": "1.0.0",
         "privacy": (
@@ -1558,6 +1858,7 @@ def summary_context(
         "tabs": {
             "changes": changes,
             "relationships": relationship_context,
+            "impact": impact_context,
             "alerts": alert_context,
             "factors": {
                 "overall": {
@@ -1742,8 +2043,17 @@ def main() -> int:
         config.get("comments_text_col", "comment"),
     )
     progress.update(45, "Clustering relationship matrices for each filter view")
-    relationships = relationship_cube(frame, questions, attributes)
+    relationships = relationship_cube(frame, questions, attributes, cycle_col)
     progress.update(60, "Relationship matrices and cluster recommendations prepared")
+    impact = impact_cube(
+        questions,
+        overall,
+        relationships,
+        config.get("engagement_anchor_question"),
+        segments,
+        cycles.get("overall"),
+        cycles.get("segments"),
+    )
     factors_path = output / "factor_analysis_summary.csv"
     overall_factor_rows = (
         pd.read_csv(factors_path).to_dict("records") if factors_path.exists() else []
@@ -1757,6 +2067,7 @@ def main() -> int:
         progress,
         62,
         84,
+        cycle_col,
     )
     progress.update(84, "Filter-specific factor models prepared")
     attrition_status = next(
@@ -1837,6 +2148,7 @@ def main() -> int:
         factors,
         attrition_status,
         downloads,
+        impact,
     )
     context_path = output / "people-science-summary-context.json"
     context_path.write_text(
@@ -1864,6 +2176,7 @@ def main() -> int:
         "cycles": cycles,
         "commentThemes": comment_themes,
         "relationships": relationships,
+        "impact": impact,
         "alerts": alert_data,
         "factors": factors,
         "attrition": attrition_status,

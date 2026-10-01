@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`6e2accc1c8d920e277fd47d15d5d25f5df5c302987945f243c3ffb76f76b5b1a`.
+`743c6f60f8a1586a9c1ff8a9c59bb871664c6314dc9a3eacb049438924442bf0`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -138,10 +138,26 @@ data. For other analyses, keep the tab and explain why results are unavailable.
 
 ## Shared report filter
 
-Place one report-level attribute/value filter above the tabs.
+Place one report-level attribute/value filter above the tabs, plus a separate
+**Survey cycle** selector for tabs whose underlying data is computed per
+survey cycle.
 
-- Apply it to Scores change, Correlation, Attrition analysis, and Attrition
-  alerts.
+- Apply the attribute/value filter to Scores change, Correlation, Attrition
+  analysis, and Attrition alerts.
+- Apply the separate Survey cycle selector to Correlation, Impact analysis,
+  and Factors. It defaults to the most recently completed cycle.
+- Exclude `survey_cycle_title` from the generic report-attribute dropdown;
+  the dedicated Survey cycle selector is the only control for cycle scoping.
+- Treat the report attribute and Survey cycle selectors as additive: both
+  controls stay independently enabled, and selecting both narrows Correlation,
+  Impact analysis, and Factors to the precomputed attribute-value-by-cycle
+  cross-cut. Never disable one control because the other has a value. State
+  this additive behavior in on-page help text next to the filters.
+- Scores change, Attrition analysis, Attrition alerts, Thematic analysis, and
+  Downloads do not wire into the Survey cycle selector: Scores change and
+  Attrition alerts already manage explicit cycle-pair comparisons, Attrition
+  analysis is anchored to one fixed baseline cycle by construction, and
+  Thematic analysis has its own dedicated cycle control.
 - Treat it as a parent filter. Attrition alerts must select their displayed
   dimensions within the selected segment.
 - Use saved aggregate values in the browser. Do not embed or recalculate from
@@ -235,7 +251,11 @@ exploratory, and attrition results are not individual predictions.
 - Show a scatter chart (item score on one axis, relationship strength on the
   other) and a supporting table listing every plotted item's score,
   relationship to the anchor, strength band, and N.
-- This tab is company-wide and is not affected by the shared report filter.
+- Apply the shared report attribute/value filter and the separate Survey
+  cycle selector additively: when both are selected, use the precomputed
+  attribute-value-by-cycle cross-cut. Explicitly suppress the chart and table
+  when that cross-cut does not meet minimum-N requirements rather than
+  silently reverting to company-wide or attribute-only results.
 - State plainly that a relationship to the anchor question is not evidence
   that changing one item causes a change in the anchor; treat it as a
   screening signal for prioritization, not a causal claim.

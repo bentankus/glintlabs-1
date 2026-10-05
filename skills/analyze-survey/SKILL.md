@@ -14,16 +14,51 @@ or a manager action plan.
 
 ## Start here
 
-Ask:
+This skill never assumes a data source. Always ask the user, with the
+`ask_user` tool when available, which data ingest method to use before doing
+anything else:
 
-> Do you have your own survey data you would like to analyze? If not, I can use the linked Viva Glint workbook.
+> How would you like to bring in survey data?
+> 1. Upload my own CSV/XLSX export
+> 2. Pull live data from the Glint API
+> 3. Use the demo/sample dataset to test the skill
 
-Accept `.csv`, `.xlsx`, and `.xlsm` exports. Keep respondent-level data local
-and never paste employee rows into chat.
+Do not proceed past this question with an assumed default. Branch on the
+answer:
 
-If the user does not provide another export, use this workbook, which is
-checked directly into this repository so any user can access it without
-additional permissions:
+### 1. CSV/XLSX upload
+
+Ask for the file path. Accept `.csv`, `.xlsx`, and `.xlsm` exports. Keep
+respondent-level data local and never paste employee rows into chat. Confirm
+the file exists before starting the runner.
+
+### 2. Glint API
+
+Pull data live via Microsoft Graph using the `vivaglint` MCP tools instead of
+a file upload:
+
+1. If credentials are not already configured for this session, ask the user
+   for `tenant_id`, `client_id`, `client_secret`, and `experience_name`, then
+   call `vivaglint-configure_api_credentials`. Never paste the client secret
+   back into chat or write it into a committed file.
+2. Ask which survey to pull and how: a specific `cycle_id`, a `survey_uuid`
+   (which may span several cycles), or a `start_date`/`end_date` range. Also
+   confirm `emp_id_col` and `scale_points` if they are not obvious.
+3. Call `vivaglint-import_survey_api` with those inputs and a `save_zip_to`
+   path so the pulled export lands on local disk. Survey/date-range mode may
+   return several cycles; treat each as its own session.
+4. Use the resulting local file as the `--survey-export` input to the runner
+   below. All analysis still runs locally from that point on exactly like the
+   upload path.
+
+If the API call fails or credentials are missing, report the failure and ask
+the user to re-enter credentials or switch to another ingest method; do not
+silently fall back to the demo dataset.
+
+### 3. Demo/sample dataset
+
+Use this workbook, which is checked directly into this repository so any user
+can access it without additional permissions:
 
 ```text
 Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx
@@ -32,7 +67,8 @@ references/sample-data/Demo Viva Glint Dataset with Attributes - Exit survey res
 
 Use worksheet `Sheet1`, join worksheet `user_properties` by `user_id`, and use
 a 5-point scale. The checked-in workbook is the only registered sample source. Do
-not substitute bundled, generated, or synthetic survey data.
+not substitute bundled, generated, or synthetic survey data, and only use it
+when the user explicitly chose the demo/sample option.
 
 ## Required grounding
 

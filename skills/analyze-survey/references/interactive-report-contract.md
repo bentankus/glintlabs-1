@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`743c6f60f8a1586a9c1ff8a9c59bb871664c6314dc9a3eacb049438924442bf0`.
+`07b4340f71fe734d0f317bc4dcd8b4cb3a9ee45da677036b03157acf92fbc83c`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -250,7 +250,15 @@ exploratory, and attrition results are not individual predictions.
   legend and colors.
 - Show a scatter chart (item score on one axis, relationship strength on the
   other) and a supporting table listing every plotted item's score,
-  relationship to the anchor, strength band, and N.
+  relationship to the anchor, strength band, N, and linked comment themes.
+- Reuse the same deterministic aggregate comment themes Thematic analysis
+  assigns to each item (pooled across cycles for the company-overall view,
+  or matched to the selected survey cycle and/or report attribute value) so
+  the table and chart tooltips show the theme -> item -> engagement chain:
+  which comment theme is coded to an item, and how strongly that item
+  relates to engagement. Do not recompute or re-code themes for this tab,
+  and never show an item's themes without the same minimum-comment and
+  recurrence thresholds Thematic analysis applies.
 - Apply the shared report attribute/value filter and the separate Survey
   cycle selector additively: when both are selected, use the precomputed
   attribute-value-by-cycle cross-cut. Explicitly suppress the chart and table

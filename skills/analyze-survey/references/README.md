@@ -1,8 +1,21 @@
 # Analyze Survey reference
 
-`analyze-survey` accepts a survey export directly and deterministically creates
-the analysis manifest, aggregate artifacts, interactive HTML report, and safe
-share ZIP.
+`analyze-survey` always asks the user which data ingest method to use — CSV/XLSX
+upload, the live Glint API, or the demo/sample dataset — before doing anything
+else, then deterministically creates the analysis manifest, aggregate
+artifacts, interactive HTML report, and safe share ZIP from whichever export
+results.
+
+## Ingest methods
+
+1. **CSV/XLSX upload** — the user provides a file path directly.
+2. **Glint API** — `vivaglint-configure_api_credentials` stores Microsoft
+   Graph credentials for the session, then `vivaglint-import_survey_api`
+   (mode `cycle`, `survey`, or `daterange`) pulls the data and writes it to a
+   local file via `save_zip_to`. That local file is then used exactly like an
+   upload for every step below.
+3. **Demo/sample dataset** — the checked-in sample workbook, used only when
+   explicitly selected.
 
 ## Supported input
 

@@ -75,10 +75,13 @@ def test_analyze_survey_points_to_linked_dataset():
         "Demo Viva Glint Dataset with Attributes - Exit survey research guided.xlsx"
     )
 
-    assert (
-        "Do you have your own survey data you would like to analyze? "
-        "If not, I can use the linked Viva Glint workbook."
-    ) in skill
+    assert "Upload my own CSV/XLSX export" in skill
+    assert "Pull live data from the Glint API" in skill
+    assert "Use the demo/sample dataset to test the skill" in skill
+    assert "Do not proceed past this question with an assumed default" in skill
+    assert "vivaglint-configure_api_credentials" in skill
+    assert "vivaglint-import_survey_api" in skill
+    assert "save_zip_to" in skill
     assert source["source_url"] == source_url
     assert source["source_path"] == source_file_path
     assert source["worksheet"] == "Sheet1"

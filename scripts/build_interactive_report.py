@@ -303,6 +303,8 @@ def comment_theme_payload(
     empty = {
         "overall": {},
         "segments": {},
+        "allCycles": {},
+        "segmentsAllCycles": {},
         "minimumComments": COMMENT_THEME_MIN_N,
         "favorability": {"available": [], "default": [], "views": {}},
     }
@@ -481,6 +483,24 @@ def comment_theme_payload(
         return {"overall": overall, "segments": filtered}
 
     default_view = build_view(comments)
+    # Pooled-across-cycles theme lookups let Impact analysis (which plots a
+    # single cross-cycle anchor relationship) show the same linked themes
+    # that Thematic analysis already assigns per cycle.
+    all_cycles_themes = themes(comments)
+    segments_all_cycles: dict[str, Any] = {}
+    for attribute, segment in segments.items():
+        if attribute not in comments.columns:
+            continue
+        values = {}
+        for value in segment["values"]:
+            group = comments[comments[attribute].astype(str) == value]
+            if len(group) < COMMENT_THEME_MIN_N:
+                continue
+            value_themes = themes(group)
+            if value_themes:
+                values[value] = value_themes
+        if values:
+            segments_all_cycles[attribute] = values
     available = [
         value
         for value in COMMENT_FAVORABILITY
@@ -495,6 +515,8 @@ def comment_theme_payload(
             )
     return {
         **default_view,
+        "allCycles": all_cycles_themes,
+        "segmentsAllCycles": segments_all_cycles,
         "minimumComments": COMMENT_THEME_MIN_N,
         "favorability": {
             "available": available,
@@ -645,8 +667,14 @@ def impact_view(
     scores: list[list[float | int]],
     relationship_rows: list[list[Any]],
     anchor_index: int,
+    theme_lookup: dict[str, list[list[Any]]] | None = None,
 ) -> dict[str, Any] | None:
-    """Build one impact view (score x relationship-to-anchor) for a population."""
+    """Build one impact view (score x relationship-to-anchor) for a population.
+
+    ``theme_lookup`` maps a question to its linked aggregate comment themes
+    (the same themes Thematic analysis shows), so each row can carry a
+    theme -> item -> engagement chain without a separate pass.
+    """
     pair_lookup: dict[tuple[int, int], list[Any]] = {
         (row[0], row[1]): row for row in relationship_rows
     }
@@ -673,6 +701,7 @@ def impact_view(
                 "n": int(row[4]),
                 "strength": impact_strength(correlation),
                 "score_level": "above" if glint_score >= overall_mean_score else "below",
+                "themes": (theme_lookup or {}).get(question, []),
             }
         )
     if not rows:
@@ -691,6 +720,7 @@ def impact_cube(
     score_segments: dict[str, Any],
     cycle_scores: dict[str, Any] | None = None,
     cycle_score_segments: dict[str, Any] | None = None,
+    comment_themes: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Plot each item's current score against its relationship to an anchor item.
 
@@ -699,6 +729,12 @@ def impact_cube(
     (for example, per report attribute, survey cycle, or a combined
     attribute-and-cycle cut) are built with the same anchor item so the
     chart stays comparable across filters.
+
+    When ``comment_themes`` (the Thematic analysis payload) is supplied, each
+    row is annotated with its linked aggregate comment themes so the tab can
+    show the theme -> item -> engagement chain alongside relationship
+    strength, reusing the same deterministic themes rather than recomputing
+    them.
     """
     if len(questions) < 2:
         return {
@@ -721,7 +757,15 @@ def impact_cube(
         )
     anchor_question = questions[anchor_index]
 
-    overall_view = impact_view(questions, overall, relationship_rows, anchor_index) or {
+    comment_themes = comment_themes or {}
+    overall_theme_lookup = comment_themes.get("allCycles", {})
+    segment_theme_lookup = comment_themes.get("segmentsAllCycles", {})
+    cycle_theme_lookup = comment_themes.get("overall", {})
+    segment_cycle_theme_lookup = comment_themes.get("segments", {})
+
+    overall_view = impact_view(
+        questions, overall, relationship_rows, anchor_index, overall_theme_lookup
+    ) or {
         "overall_mean_score": 0,
         "rows": [],
     }
@@ -734,7 +778,13 @@ def impact_cube(
             scores = score_values.get(value, {}).get("items")
             if not scores:
                 continue
-            view = impact_view(questions, scores, rows, anchor_index)
+            view = impact_view(
+                questions,
+                scores,
+                rows,
+                anchor_index,
+                segment_theme_lookup.get(attribute, {}).get(value, {}),
+            )
             if view:
                 values[value] = view
         if values:
@@ -745,7 +795,9 @@ def impact_cube(
         scores = (cycle_scores or {}).get(cycle_name, {}).get("items")
         if not scores:
             continue
-        view = impact_view(questions, scores, rows, anchor_index)
+        view = impact_view(
+            questions, scores, rows, anchor_index, cycle_theme_lookup.get(cycle_name, {})
+        )
         if view:
             cycles[cycle_name] = view
 
@@ -755,12 +807,19 @@ def impact_cube(
         values = {}
         for value, cycle_rows in value_cycles.items():
             score_cycles = score_value_cycles.get(value, {})
+            value_theme_lookup = segment_cycle_theme_lookup.get(attribute, {}).get(value, {})
             views = {}
             for cycle_name, rows in cycle_rows.items():
                 scores = score_cycles.get(cycle_name, {}).get("items")
                 if not scores:
                     continue
-                view = impact_view(questions, scores, rows, anchor_index)
+                view = impact_view(
+                    questions,
+                    scores,
+                    rows,
+                    anchor_index,
+                    value_theme_lookup.get(cycle_name, {}),
+                )
                 if view:
                     views[cycle_name] = view
             if views:
@@ -2053,6 +2112,7 @@ def main() -> int:
         segments,
         cycles.get("overall"),
         cycles.get("segments"),
+        comment_themes,
     )
     factors_path = output / "factor_analysis_summary.csv"
     overall_factor_rows = (

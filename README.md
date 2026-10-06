@@ -44,6 +44,9 @@ appropriate skill. Examples:
 - "Interpret the strongest findings and caveats in these survey results."
 - "What published People Science guidance exists on this topic?"
 
+See `references/general/recommended-prompts.md` for a fuller list of
+recommended prompts, grouped by skill, that you can suggest to end users.
+
 ## Reference priority
 
 Each skill has a first-priority reference collection at:

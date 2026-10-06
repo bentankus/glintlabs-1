@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`43ec563a94821f5ee93caad11ab5ddb1107cd930473005e826c39bcc8ce56fcc`.
+`90bc1a243084b7d0606fcc1af24324b3a38ddf1381434d184414727a2e2ddf42`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -128,6 +128,7 @@ Keep this tab order and naming:
 4. **Attrition analysis** (only when attrition completes)
 5. **Attrition alerts** (only when attrition completes)
 6. **Downloads**
+7. **Methodology**
 
 If attrition cannot run, omit both attrition tabs. Never fabricate attrition
 data. For other analyses, keep the tab and explain why results are unavailable.
@@ -294,6 +295,47 @@ exploratory, and attrition results are not individual predictions.
 
 Link the manifest and every completed aggregate artifact, including derived
 correlation matrices, score-change, and alert outputs when available.
+
+### Methodology
+
+- Always include a final **Methodology** tab after Downloads. It is reference
+  documentation for analysts, not a filter-reactive data tab.
+- Begin the tab with one short sentence explaining that it documents how the
+  report's analyses work so analysts can interpret and explain results.
+- Render one subsection for every analysis present in the report: Scores
+  change, Correlation, Factors, Attrition analysis, and Attrition alerts.
+  Omit the two attrition methodology subsections when attrition tabs are not
+  present in that report instance.
+- Each subsection must contain exactly these three labeled parts:
+  **Method**, **Example interpretation**, and **Example action**.
+- Keep the prose concise but analyst-depth: a few sentences for Method and one
+  realistic sentence each for the interpretation and action example.
+- Ground every Method description in the real implementation from
+  `scripts/run_vivaglint_analysis.py` and
+  `scripts/build_interactive_report.py`, including the actual thresholds,
+  formulas, suppression rules, and defaults used in the shipped report.
+- For Scores change, document the stored mean/stddev/n values, client-side
+  p-value calculation, difference bars, repeat-respondent logic based on
+  matched employee IDs across cycles, and minimum-N suppression.
+- For Correlation, document Pearson `r`, the strength bands, the optional
+  significance markers at `p < .05`, deterministic average-linkage
+  hierarchical clustering over positive-correlation distance (`1 - r`), the
+  silhouette-based recommendation search from 3 through 15 clusters capped
+  below the item count, and the exploratory nature of clusters.
+- For Factors, document the reuse of the company factor count, varimax
+  re-estimation for each eligible cut, the minimum complete-response rule
+  (greater of 100 or 5 per item), communality/loadings on the 0-1 display
+  scale, MR1-based question sorting, and the cautions about factor labels and
+  cross-cut factor-number matching.
+- For Attrition analysis, document the unfavorable-to-favorable attrition-rate
+  multiplier, the standard 90/180/365-day windows and 180-day default when
+  present, the 1.00x reference line, minimum-category suppression, the
+  two-sided Fisher exact test at `p < .05`, and the non-causal, non-predictive
+  framing.
+- For Attrition alerts, document ranking by the median privacy-eligible
+  attrition multiplier across groups per attribute and window, retention of the
+  top five items per attribute, the company view's lowest-scoring group logic,
+  the filtered view's selected-group logic, and the same non-causal framing.
 
 ## Privacy and performance
 

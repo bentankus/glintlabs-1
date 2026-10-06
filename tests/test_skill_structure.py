@@ -137,6 +137,7 @@ def test_analyze_survey_points_to_linked_dataset():
         "Attrition analysis",
         "Attrition alerts",
         "Downloads",
+        "Methodology",
     )
     positions = [report_contract.index(f"**{name}**") for name in required_tabs]
     assert positions == sorted(positions)
@@ -157,6 +158,8 @@ def test_analyze_survey_points_to_linked_dataset():
     assert "median" in report_contract
     assert "lowest-scoring privacy-eligible group" in report_contract
     assert "favorable or unfavorable category N" in report_contract
+    assert "Always include a final **Methodology** tab after Downloads." in report_contract
+    assert "**Method**, **Example interpretation**, and **Example action**" in report_contract
     assert "deterministic keyword coding" in report_contract
     assert "Raw comments must never enter HTML" in report_contract
     assert "`off`: render no AI summary cards" in report_contract
@@ -593,6 +596,9 @@ def test_attrition_report_injection_adds_live_filtered_table(tmp_path):
     assert "id=attritionTableBody" in report
     assert "id=alertsList" in report
     assert ">Attrition alerts</button>" in report
+    assert ">Methodology</button>" in report
+    assert 'data-methodology-section="attrition-analysis"' in report
+    assert 'data-methodology-section="attrition-alerts"' in report
     assert "<option value=1 selected>180 days (6 months)</option>" in report
     assert "ATTRITION_DATA" in report
     assert "attr.addEventListener(\"change\"" in report
@@ -939,10 +945,16 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         "Correlation",
         "Factors",
         "Downloads",
+        "Methodology",
     ):
         assert f">{tab}</button>" in report_text
     for unavailable_tab in ("Attrition analysis", "Attrition alerts", "Alerts"):
         assert f">{unavailable_tab}</button>" not in report_text
+    assert 'data-methodology-section="scores-change"' in report_text
+    assert 'data-methodology-section="correlation"' in report_text
+    assert 'data-methodology-section="factors"' in report_text
+    assert 'data-methodology-section="attrition-analysis"' not in report_text
+    assert 'data-methodology-section="attrition-alerts"' not in report_text
     for removed_tab in ("Overview", "Item results", "Heatmap"):
         assert f">{removed_tab}</button>" not in report_text
     for heading in (

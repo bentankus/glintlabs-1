@@ -1220,6 +1220,12 @@ def remove_section(html: str, section_id: str, next_section_id: str) -> str:
     return html[:start] + html[end:]
 
 
+def remove_between_markers(html: str, start_marker: str, end_marker: str) -> str:
+    start = html.index(start_marker)
+    end = html.index(end_marker, start) + len(end_marker)
+    return html[:start] + html[end:]
+
+
 def replace_live_alert_summary(html: str) -> str:
     start = html.index('else if(tab==="alerts"){')
     end_marker = '}else if(tab==="factors"){'
@@ -1243,6 +1249,10 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
         1,
     )
     if has_attrition:
+        html = html.replace("<!-- methodology-attrition-start -->", "").replace(
+            "<!-- methodology-attrition-end -->",
+            "",
+        )
         old_navigation = (
             '<button class="tab" data-id="factors" aria-selected="false">Factors</button>'
             '<button class="tab" data-id="attrition" aria-selected="false">'
@@ -1262,6 +1272,11 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
         'Attrition analysis</button>',
         "",
         1,
+    )
+    html = remove_between_markers(
+        html,
+        "<!-- methodology-attrition-start -->",
+        "<!-- methodology-attrition-end -->",
     )
     attrition_start = html.index("<section class=panel id=attrition")
     downloads_start = html.index("<section class=panel id=downloads", attrition_start)

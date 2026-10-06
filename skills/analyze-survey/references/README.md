@@ -135,9 +135,13 @@ rows, and high-contrast closing section. The Glint UI system remains the source
 of truth for tokens, typography, interaction states, and accessibility.
 
 The golden report intentionally excludes Overview, Item results, and Heatmap.
-Generated reports use Scores change, Correlation, Factors, and Downloads.
-When attrition is available, they insert Attrition analysis and Attrition
-alerts after Factors; otherwise both tabs are absent.
+Generated reports use Scores change, Correlation, Factors, Downloads, and a
+final Methodology reference tab. When attrition is available, they insert
+Attrition analysis and Attrition alerts after Factors; otherwise both tabs are
+absent, and Methodology omits its attrition subsections. The Methodology tab
+documents the actual shipped calculations, thresholds, and interpretation
+guardrails for each visible analysis so analysts can explain the report
+accurately.
 
 The top of every report contains a deterministic current-survey summary before
 the navigation. It responds to the shared attribute/value filter and presents

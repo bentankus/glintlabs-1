@@ -92,3 +92,54 @@ a time.
 - **Stay within Viva Glint data.** Copilot only sees what's on the current
   dashboard/report; it can't compare across employee groups or survey cycles
   yet, and it won't answer questions outside the survey data.
+
+## Prompts by persona and use case
+
+A curated starter set for client-facing teams to hand to end users, grouped
+by what the user is trying to accomplish rather than by product feature.
+Every prompt stays within the sidecar's supported scope: single-survey,
+current-session comments, and report filters that are already enabled.
+
+### Start with the big picture (after reading Copilot Highlights)
+
+- "What are people saying about [top opportunity from Highlights]?"
+- "Why did [team] score lower this cycle on [item/outcome]?"
+- "What's driving the increase in [key outcome score]?"
+
+### Understand themes and sentiment in comments
+
+- "Summarize all comments for me."
+- "What are the top five themes in the comments from this survey?"
+- "What are employees saying that's positive about the organization?"
+- "What are the most common concerns raised in the comments?"
+
+### Turn feedback into action
+
+- "Provide three actions based on the comments from my employees."
+- "What are employees recommending leadership do to improve [topic]?"
+- "Summarize the comment themes, then suggest two concrete next steps for me
+  as a manager."
+
+### Segment by team or demographic
+
+- "Summarize comments from [highest/lowest scoring team]."
+- "What are people in the [department] saying about [item]?"
+- "Show comments from employees who've worked here less than one year."
+- "Tell me what employees in [region] are saying about [topic, e.g.,
+  work-life balance]."
+
+### Topic-specific deep dives
+
+- "What are the common themes in feedback about senior leadership?"
+- "What feedback do employees give about the performance review process?"
+- "What reasons do employees give for considering leaving the company?"
+- "What are the main concerns about the current work environment or
+  culture?"
+
+### Persona starter sets
+
+| Persona | Suggested starting prompts |
+| --- | --- |
+| Manager | "What are people saying about [top opportunity from Highlights]?", "Tell me what employees in [region] are saying about [topic]?", "Provide three actions based on the comments from my employees.", "Summarize comments from [highest/lowest scoring team]." |
+| HR leader | "What are employees saying that's positive about the organization?", "What are employees recommending leadership do to improve [topic]?", "What are the common themes in feedback about senior leadership?", "What reasons do employees give for considering leaving the company?" |
+| Executive / org leader | "What are the top five themes in the comments from this survey?", "Why did [team] score lower this cycle on [item/outcome]?", "Summarize the comment themes, then suggest two concrete next steps for me as a manager.", "What are the main concerns about the current work environment or culture?" |

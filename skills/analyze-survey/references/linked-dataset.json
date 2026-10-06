@@ -7,7 +7,6 @@
   "input_format": "wide_items",
   "emp_id_col": "user_id",
   "scale_points": 5,
-  "engagement_anchor_question": "Q_ESAT_RECOMMEND",
   "attrition": {
     "cycle_column": "survey_cycle_id",
     "predictor_cycle": 1002,

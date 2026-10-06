@@ -12,7 +12,6 @@
       "required": [
         "changes",
         "relationships",
-        "impact",
         "alerts",
         "factors",
         "attrition",
@@ -22,7 +21,6 @@
       "properties": {
         "changes": {"$ref": "#/$defs/tab"},
         "relationships": {"$ref": "#/$defs/tab"},
-        "impact": {"$ref": "#/$defs/tab"},
         "alerts": {"$ref": "#/$defs/tab"},
         "factors": {"$ref": "#/$defs/tab"},
         "attrition": {"$ref": "#/$defs/tab"},

@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`07b4340f71fe734d0f317bc4dcd8b4cb3a9ee45da677036b03157acf92fbc83c`.
+`90bc1a243084b7d0606fcc1af24324b3a38ddf1381434d184414727a2e2ddf42`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -111,10 +111,8 @@ staging data from the ZIP.
 - Keep analytical tables and charts dense enough for comparison; apply the
   editorial treatment around them rather than weakening statistical encodings.
 - Do not substitute a generic dashboard theme.
-- Give every primary visual (Scores change table, Correlation matrix, Impact
-  analysis chart/table, theme and item comparison rows, theme favorability
-  profile, Alerts table, and the Factors chart/card group) a top-right
-  toolbar with two icon buttons: export
+- Give every primary visual (Scores change table, Correlation matrix, Alerts
+  table, and the Factors chart/card group) a top-right toolbar with two icon buttons: export
   the visual's aggregated data as CSV, and copy the visual as an image to the
   clipboard (falling back to a PNG download when clipboard image write is
   unavailable). Toolbars must remain accessible (labeled, focus-visible) and
@@ -126,12 +124,11 @@ Keep this tab order and naming:
 
 1. **Scores change**
 2. **Correlation**
-3. **Impact analysis**
-4. **Thematic analysis**
-5. **Factors**
-6. **Attrition analysis** (only when attrition completes)
-7. **Attrition alerts** (only when attrition completes)
-8. **Downloads**
+3. **Factors**
+4. **Attrition analysis** (only when attrition completes)
+5. **Attrition alerts** (only when attrition completes)
+6. **Downloads**
+7. **Methodology**
 
 If attrition cannot run, omit both attrition tabs. Never fabricate attrition
 data. For other analyses, keep the tab and explain why results are unavailable.
@@ -144,20 +141,19 @@ survey cycle.
 
 - Apply the attribute/value filter to Scores change, Correlation, Attrition
   analysis, and Attrition alerts.
-- Apply the separate Survey cycle selector to Correlation, Impact analysis,
-  and Factors. It defaults to the most recently completed cycle.
+- Apply the separate Survey cycle selector to Correlation and Factors. It
+  defaults to the most recently completed cycle.
 - Exclude `survey_cycle_title` from the generic report-attribute dropdown;
   the dedicated Survey cycle selector is the only control for cycle scoping.
 - Treat the report attribute and Survey cycle selectors as additive: both
-  controls stay independently enabled, and selecting both narrows Correlation,
-  Impact analysis, and Factors to the precomputed attribute-value-by-cycle
-  cross-cut. Never disable one control because the other has a value. State
-  this additive behavior in on-page help text next to the filters.
-- Scores change, Attrition analysis, Attrition alerts, Thematic analysis, and
-  Downloads do not wire into the Survey cycle selector: Scores change and
-  Attrition alerts already manage explicit cycle-pair comparisons, Attrition
-  analysis is anchored to one fixed baseline cycle by construction, and
-  Thematic analysis has its own dedicated cycle control.
+  controls stay independently enabled, and selecting both narrows Correlation
+  and Factors to the precomputed attribute-value-by-cycle cross-cut. Never
+  disable one control because the other has a value. State this additive
+  behavior in on-page help text next to the filters.
+- Scores change, Attrition analysis, Attrition alerts, and Downloads do not
+  wire into the Survey cycle selector: Scores change and Attrition alerts
+  already manage explicit cycle-pair comparisons, and Attrition analysis is
+  anchored to one fixed baseline cycle by construction.
 - Treat it as a parent filter. Attrition alerts must select their displayed
   dimensions within the selected segment.
 - Use saved aggregate values in the browser. Do not embed or recalculate from
@@ -233,41 +229,6 @@ exploratory, and attrition results are not individual predictions.
 - Emphasize practical magnitude when large N makes most results significant.
 - Save segment matrices only where there are at least 30 response rows.
 
-### Impact analysis
-
-- Build this tab from the already-computed correlation and descriptive
-  results; it does not run a separate `vivaglint` analysis.
-- Plot each survey item's current score against the absolute strength of its
-  relationship to a single engagement anchor question, so leaders can see
-  which low-scoring items also carry the strongest relationship to
-  engagement, not just which ones score lowest.
-- Resolve the anchor question from the registered dataset's
-  `engagement_anchor_question` configuration when present and valid;
-  otherwise auto-select the question with the highest mean absolute
-  relationship across all other items.
-- Classify absolute relationship strength with the same Low/Medium/High/Very
-  high bands and thresholds used in Correlation, and reuse the same strength
-  legend and colors.
-- Show a scatter chart (item score on one axis, relationship strength on the
-  other) and a supporting table listing every plotted item's score,
-  relationship to the anchor, strength band, N, and linked comment themes.
-- Reuse the same deterministic aggregate comment themes Thematic analysis
-  assigns to each item (pooled across cycles for the company-overall view,
-  or matched to the selected survey cycle and/or report attribute value) so
-  the table and chart tooltips show the theme -> item -> engagement chain:
-  which comment theme is coded to an item, and how strongly that item
-  relates to engagement. Do not recompute or re-code themes for this tab,
-  and never show an item's themes without the same minimum-comment and
-  recurrence thresholds Thematic analysis applies.
-- Apply the shared report attribute/value filter and the separate Survey
-  cycle selector additively: when both are selected, use the precomputed
-  attribute-value-by-cycle cross-cut. Explicitly suppress the chart and table
-  when that cross-cut does not meet minimum-N requirements rather than
-  silently reverting to company-wide or attribute-only results.
-- State plainly that a relationship to the anchor question is not evidence
-  that changing one item causes a change in the anchor; treat it as a
-  screening signal for prioritization, not a causal claim.
-
 ### Attrition alerts
 
 - For each report attribute and outcome window, calculate each item's median
@@ -330,37 +291,51 @@ exploratory, and attrition results are not individual predictions.
   exit counts. Visually flag multipliers with `p < .05`, show the p-value, and
   retain the non-causal screening language.
 
-### Thematic analysis
-
-- Use only deterministic aggregate labels derived from linked comments; never
-  embed or display raw comment text.
-- Provide survey-cycle, survey-question, comparison-attribute, and focus-group
-  controls.
-- Precompute each exact favorability combination locally and reapply the
-  five-comment and recurrence thresholds. Do not combine thresholded category
-  totals in the browser.
-- Add direct favorable-versus-unfavorable comparisons for both themes and
-  survey items. Put the row label first, followed by unfavorable and favorable
-  columns. Show both percentages and coded-mention counts, sort descending by
-  unfavorable percentage, and state that each percentage uses its own
-  favorability group's coded mentions as denominator.
-- Add a theme favorability profile where each stacked row sums to 100% across
-  unfavorable, neutral, and favorable mentions for that theme.
-- Apply the survey-question filter to all three visuals.
-- Do not show a selected-favorability-mix ranking, group heatmap, or item-theme
-  chips.
-- Show ranked horizontal bars for leading coded themes, a heatmap comparing
-  each theme's share of coded mentions across attribute groups, and item-level
-  theme chips.
-- Keep the five-comment and approximate 2% recurrence thresholds active for
-  every displayed group and cycle.
-- Describe themes as a guide for deeper listening, not a complete or causal
-  account of employee experience.
-
 ### Downloads
 
 Link the manifest and every completed aggregate artifact, including derived
 correlation matrices, score-change, and alert outputs when available.
+
+### Methodology
+
+- Always include a final **Methodology** tab after Downloads. It is reference
+  documentation for analysts, not a filter-reactive data tab.
+- Begin the tab with one short sentence explaining that it documents how the
+  report's analyses work so analysts can interpret and explain results.
+- Render one subsection for every analysis present in the report: Scores
+  change, Correlation, Factors, Attrition analysis, and Attrition alerts.
+  Omit the two attrition methodology subsections when attrition tabs are not
+  present in that report instance.
+- Each subsection must contain exactly these three labeled parts:
+  **Method**, **Example interpretation**, and **Example action**.
+- Keep the prose concise but analyst-depth: a few sentences for Method and one
+  realistic sentence each for the interpretation and action example.
+- Ground every Method description in the real implementation from
+  `scripts/run_vivaglint_analysis.py` and
+  `scripts/build_interactive_report.py`, including the actual thresholds,
+  formulas, suppression rules, and defaults used in the shipped report.
+- For Scores change, document the stored mean/stddev/n values, client-side
+  p-value calculation, difference bars, repeat-respondent logic based on
+  matched employee IDs across cycles, and minimum-N suppression.
+- For Correlation, document Pearson `r`, the strength bands, the optional
+  significance markers at `p < .05`, deterministic average-linkage
+  hierarchical clustering over positive-correlation distance (`1 - r`), the
+  silhouette-based recommendation search from 3 through 15 clusters capped
+  below the item count, and the exploratory nature of clusters.
+- For Factors, document the reuse of the company factor count, varimax
+  re-estimation for each eligible cut, the minimum complete-response rule
+  (greater of 100 or 5 per item), communality/loadings on the 0-1 display
+  scale, MR1-based question sorting, and the cautions about factor labels and
+  cross-cut factor-number matching.
+- For Attrition analysis, document the unfavorable-to-favorable attrition-rate
+  multiplier, the standard 90/180/365-day windows and 180-day default when
+  present, the 1.00x reference line, minimum-category suppression, the
+  two-sided Fisher exact test at `p < .05`, and the non-causal, non-predictive
+  framing.
+- For Attrition alerts, document ranking by the median privacy-eligible
+  attrition multiplier across groups per attribute and window, retention of the
+  top five items per attribute, the company view's lowest-scoring group logic,
+  the filtered view's selected-group logic, and the same non-causal framing.
 
 ## Privacy and performance
 

@@ -89,8 +89,7 @@ and accessibility decisions. Do not invent report colors or visual patterns.
 `golden-report.html` is the canonical report shell. Future reports must preserve
 its markup, styling, tab order, labels, and browser interactions exactly while
 replacing its embedded aggregate data payload with the current analysis.
-The required base tabs are Scores change, Correlation, Thematic analysis,
-Factors, and Downloads.
+The required base tabs are Scores change, Correlation, Factors, and Downloads.
 When attrition analysis completes, add Attrition analysis followed immediately
 by Attrition alerts between Factors and Downloads. If attrition is unavailable,
 omit both attrition tabs. Do not add Overview, Item results, or Heatmap tabs.
@@ -228,17 +227,6 @@ individual flight-risk predictions.
 Flag multipliers with a two-sided Fisher exact test p-value below .05 as
 statistically significant while retaining the multiplier and non-causal
 interpretation.
-
-The Thematic analysis tab must use only privacy-safe deterministic aggregate
-comment themes. Provide cycle, survey-question, comparison-attribute, and
-focus-group controls. Show direct favorable-versus-unfavorable comparisons for
-both themes and survey items. Put the row label first, followed by unfavorable
-and favorable columns, and sort descending by the percentage of unfavorable
-coded mentions. Add a separate theme favorability profile showing how each
-theme's mentions are distributed across unfavorable, neutral, and favorable
-responses. Apply the question control to all three visuals. Do not show a
-selected-favorability-mix ranking, group heatmap, or item-theme chips. Never
-expose raw comment text.
 
 Use the checked-in People Science source index to select references from key
 terms across the current headline, observation, interpretation,

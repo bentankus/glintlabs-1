@@ -93,9 +93,6 @@ with summary mode `required`.
   roughly 2% theme recurrence are required for a theme. Raw comment text stays
   in `_input`, never enters the HTML, AI context, share ZIP, or chat, and is
   never shown to report recipients.
-- When comment favorability is available, the Thematic analysis tab can filter
-  to favorable, neutral, unfavorable, or any non-empty combination. Each
-  combination is thresholded locally before aggregate results enter the HTML.
 - Identifier-like employee, manager, team, client, UUID, and GUID fields are
   excluded from report filters and aggregate downloads. Manager-defined alert
   groups receive deterministic generic team labels before entering the report.
@@ -138,8 +135,7 @@ rows, and high-contrast closing section. The Glint UI system remains the source
 of truth for tokens, typography, interaction states, and accessibility.
 
 The golden report intentionally excludes Overview, Item results, and Heatmap.
-Generated reports use Scores change, Correlation, Thematic analysis, Factors,
-and Downloads.
+Generated reports use Scores change, Correlation, Factors, and Downloads.
 When attrition is available, they insert Attrition analysis and Attrition
 alerts after Factors; otherwise both tabs are absent.
 
@@ -151,13 +147,6 @@ three privacy-safe aggregate comment themes for each displayed item. When at
 least six scored items have sufficient linked comment coverage, the cards rank
 within those items; otherwise they retain the full score ranking and identify
 items without eligible themes. It remains present when AI summary mode is off.
-
-The Thematic analysis tab provides cycle, survey-question,
-comparison-attribute, and focus-group controls. It compares unfavorable and
-favorable coded-mention shares for themes and survey items, with rows sorted
-from the highest unfavorable share. A separate stacked profile shows each
-theme's unfavorable, neutral, and favorable composition. The question
-selector filters all three visuals.
 
 The Scores change table layout is grounded in `scores-change-format.png`.
 Preserve its grouped old/new cycle headers, Mean/Stddev/n columns, p-value

@@ -130,10 +130,13 @@ defined in:
 skills/analyze-survey/references/interactive-report-contract.md
 ```
 
-The report uses the fixed six-tab Glint layout, shared attribute filtering,
+The report uses the fixed Glint tab layout, shared attribute filtering,
 precomputed privacy-safe aggregates, and a ZIP containing
 `OPEN_REPORT.html`. Raw respondent and employee-property files are excluded
 from the shareable package.
+Base tabs are Scores change, Correlation, Factors, and Downloads; when
+attrition completes, Attrition analysis and Attrition alerts are inserted
+between Factors and Downloads.
 
 ## Analysis engine
 

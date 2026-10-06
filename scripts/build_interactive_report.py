@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import itertools
 import json
 import math
 import re
@@ -35,7 +34,6 @@ FACTOR_RESPONDENTS_PER_ITEM = 5
 SUMMARY_TABS = (
     "changes",
     "relationships",
-    "impact",
     "alerts",
     "factors",
     "attrition",
@@ -52,7 +50,6 @@ IDENTIFIER_ATTRIBUTE_NAMES = {
     "surveycycleid",
 }
 COMMENT_THEME_MIN_N = 5
-COMMENT_FAVORABILITY = ("favorable", "neutral", "unfavorable")
 QUESTION_LABEL_OVERRIDES = {
     "Q_ROLE_STRENGTHS": "Role fit",
 }
@@ -303,10 +300,7 @@ def comment_theme_payload(
     empty = {
         "overall": {},
         "segments": {},
-        "allCycles": {},
-        "segmentsAllCycles": {},
         "minimumComments": COMMENT_THEME_MIN_N,
-        "favorability": {"available": [], "default": [], "views": {}},
     }
     if not path or not path.exists():
         return empty
@@ -372,62 +366,6 @@ def comment_theme_payload(
         if cycle_col and cycle_col in comments.columns
         else "__all__"
     )
-    normalized_columns = {
-        re.sub(r"[^a-z0-9]+", "", str(column).casefold()): str(column)
-        for column in comments.columns
-    }
-    favorability_col = next(
-        (
-            normalized_columns[candidate]
-            for candidate in ("sentiment", "favorability", "commentfavorability")
-            if candidate in normalized_columns
-        ),
-        None,
-    )
-    if favorability_col:
-        favorability_aliases = {
-            "favorable": "favorable",
-            "positive": "favorable",
-            "neutral": "neutral",
-            "unfavorable": "unfavorable",
-            "negative": "unfavorable",
-        }
-        comments["__favorability"] = comments[favorability_col].map(
-            lambda value: favorability_aliases.get(str(value).strip().casefold())
-        )
-    else:
-        score_col = normalized_columns.get("score")
-        numeric_scores = (
-            pd.to_numeric(comments[score_col], errors="coerce")
-            if score_col
-            else pd.Series(np.nan, index=comments.index)
-        )
-        if numeric_scores.notna().any():
-            hundred_point_scale = numeric_scores.max() > 5
-
-            def score_favorability(value: float) -> str | None:
-                if pd.isna(value):
-                    return None
-                if hundred_point_scale:
-                    if value >= 75:
-                        return "favorable"
-                    if value == 50:
-                        return "neutral"
-                    if value <= 25:
-                        return "unfavorable"
-                else:
-                    if value >= 4:
-                        return "favorable"
-                    if value == 3:
-                        return "neutral"
-                    if value <= 2:
-                        return "unfavorable"
-                return None
-
-            comments["__favorability"] = numeric_scores.map(score_favorability)
-        else:
-            comments["__favorability"] = None
-
     def normalize_text(value: Any) -> str:
         return " " + re.sub(
             r"[^a-z0-9]+", " ", str(value).casefold()
@@ -482,47 +420,9 @@ def comment_theme_payload(
                 filtered[attribute] = values
         return {"overall": overall, "segments": filtered}
 
-    default_view = build_view(comments)
-    # Pooled-across-cycles theme lookups let Impact analysis (which plots a
-    # single cross-cycle anchor relationship) show the same linked themes
-    # that Thematic analysis already assigns per cycle.
-    all_cycles_themes = themes(comments)
-    segments_all_cycles: dict[str, Any] = {}
-    for attribute, segment in segments.items():
-        if attribute not in comments.columns:
-            continue
-        values = {}
-        for value in segment["values"]:
-            group = comments[comments[attribute].astype(str) == value]
-            if len(group) < COMMENT_THEME_MIN_N:
-                continue
-            value_themes = themes(group)
-            if value_themes:
-                values[value] = value_themes
-        if values:
-            segments_all_cycles[attribute] = values
-    available = [
-        value
-        for value in COMMENT_FAVORABILITY
-        if comments["__favorability"].eq(value).any()
-    ]
-    favorability_views = {}
-    for size in range(1, len(available) + 1):
-        for selected in itertools.combinations(available, size):
-            key = "|".join(selected)
-            favorability_views[key] = build_view(
-                comments[comments["__favorability"].isin(selected)]
-            )
     return {
-        **default_view,
-        "allCycles": all_cycles_themes,
-        "segmentsAllCycles": segments_all_cycles,
+        **build_view(comments),
         "minimumComments": COMMENT_THEME_MIN_N,
-        "favorability": {
-            "available": available,
-            "default": available,
-            "views": favorability_views,
-        },
     }
 
 
@@ -649,192 +549,6 @@ def correlation_rows(frame: pd.DataFrame, questions: list[str]) -> list[list[Any
             p = float(2 * student_t.sf(abs(statistic), n - 2))
             rows.append([first, second, round(r, 6), p, n])
     return rows
-
-
-def impact_strength(value: float) -> str:
-    magnitude = abs(value)
-    if magnitude >= 0.70:
-        return "very-high"
-    if magnitude >= 0.50:
-        return "high"
-    if magnitude >= 0.30:
-        return "medium"
-    return "low"
-
-
-def impact_view(
-    questions: list[str],
-    scores: list[list[float | int]],
-    relationship_rows: list[list[Any]],
-    anchor_index: int,
-    theme_lookup: dict[str, list[list[Any]]] | None = None,
-) -> dict[str, Any] | None:
-    """Build one impact view (score x relationship-to-anchor) for a population.
-
-    ``theme_lookup`` maps a question to its linked aggregate comment themes
-    (the same themes Thematic analysis shows), so each row can carry a
-    theme -> item -> engagement chain without a separate pass.
-    """
-    pair_lookup: dict[tuple[int, int], list[Any]] = {
-        (row[0], row[1]): row for row in relationship_rows
-    }
-
-    def pair(first: int, second: int) -> list[Any] | None:
-        return pair_lookup.get((first, second)) or pair_lookup.get((second, first))
-
-    overall_mean_score = sum(row[0] for row in scores) / len(scores)
-    rows = []
-    for index, question in enumerate(questions):
-        if index == anchor_index:
-            continue
-        row = pair(anchor_index, index)
-        if row is None:
-            continue
-        glint_score = scores[index][0]
-        correlation = float(row[2])
-        rows.append(
-            {
-                "question": question,
-                "glint_score": glint_score,
-                "correlation": correlation,
-                "p_value": float(row[3]),
-                "n": int(row[4]),
-                "strength": impact_strength(correlation),
-                "score_level": "above" if glint_score >= overall_mean_score else "below",
-                "themes": (theme_lookup or {}).get(question, []),
-            }
-        )
-    if not rows:
-        return None
-    return {
-        "overall_mean_score": round(overall_mean_score, 2),
-        "rows": rows,
-    }
-
-
-def impact_cube(
-    questions: list[str],
-    overall: list[list[float | int]],
-    relationships: dict[str, Any],
-    anchor_question: str | None,
-    score_segments: dict[str, Any],
-    cycle_scores: dict[str, Any] | None = None,
-    cycle_score_segments: dict[str, Any] | None = None,
-    comment_themes: dict[str, Any] | None = None,
-) -> dict[str, Any]:
-    """Plot each item's current score against its relationship to an anchor item.
-
-    Reuses the already-computed overall/segment score and relationship
-    matrices so no additional correlation pass is required. Segment views
-    (for example, per report attribute, survey cycle, or a combined
-    attribute-and-cycle cut) are built with the same anchor item so the
-    chart stays comparable across filters.
-
-    When ``comment_themes`` (the Thematic analysis payload) is supplied, each
-    row is annotated with its linked aggregate comment themes so the tab can
-    show the theme -> item -> engagement chain alongside relationship
-    strength, reusing the same deterministic themes rather than recomputing
-    them.
-    """
-    if len(questions) < 2:
-        return {
-            "anchor_question": None,
-            "rows": [],
-            "segments": {},
-            "cycles": {},
-            "segment_cycles": {},
-        }
-    relationship_rows = relationships["overall"]
-    anchor_index = questions.index(anchor_question) if anchor_question in questions else None
-    if anchor_index is None:
-        mean_abs: dict[int, list[float]] = {index: [] for index in range(len(questions))}
-        for first, second, r, _, _ in relationship_rows:
-            mean_abs[first].append(abs(r))
-            mean_abs[second].append(abs(r))
-        anchor_index = max(
-            range(len(questions)),
-            key=lambda index: sum(mean_abs[index]) / len(mean_abs[index]) if mean_abs[index] else 0,
-        )
-    anchor_question = questions[anchor_index]
-
-    comment_themes = comment_themes or {}
-    overall_theme_lookup = comment_themes.get("allCycles", {})
-    segment_theme_lookup = comment_themes.get("segmentsAllCycles", {})
-    cycle_theme_lookup = comment_themes.get("overall", {})
-    segment_cycle_theme_lookup = comment_themes.get("segments", {})
-
-    overall_view = impact_view(
-        questions, overall, relationship_rows, anchor_index, overall_theme_lookup
-    ) or {
-        "overall_mean_score": 0,
-        "rows": [],
-    }
-
-    segments: dict[str, Any] = {}
-    for attribute, relationship_values in relationships.get("segments", {}).items():
-        score_values = score_segments.get(attribute, {}).get("values", {})
-        values = {}
-        for value, rows in relationship_values.items():
-            scores = score_values.get(value, {}).get("items")
-            if not scores:
-                continue
-            view = impact_view(
-                questions,
-                scores,
-                rows,
-                anchor_index,
-                segment_theme_lookup.get(attribute, {}).get(value, {}),
-            )
-            if view:
-                values[value] = view
-        if values:
-            segments[attribute] = values
-
-    cycles: dict[str, Any] = {}
-    for cycle_name, rows in relationships.get("cycles", {}).items():
-        scores = (cycle_scores or {}).get(cycle_name, {}).get("items")
-        if not scores:
-            continue
-        view = impact_view(
-            questions, scores, rows, anchor_index, cycle_theme_lookup.get(cycle_name, {})
-        )
-        if view:
-            cycles[cycle_name] = view
-
-    segment_cycles: dict[str, Any] = {}
-    for attribute, value_cycles in relationships.get("segment_cycles", {}).items():
-        score_value_cycles = (cycle_score_segments or {}).get(attribute, {})
-        values = {}
-        for value, cycle_rows in value_cycles.items():
-            score_cycles = score_value_cycles.get(value, {})
-            value_theme_lookup = segment_cycle_theme_lookup.get(attribute, {}).get(value, {})
-            views = {}
-            for cycle_name, rows in cycle_rows.items():
-                scores = score_cycles.get(cycle_name, {}).get("items")
-                if not scores:
-                    continue
-                view = impact_view(
-                    questions,
-                    scores,
-                    rows,
-                    anchor_index,
-                    value_theme_lookup.get(cycle_name, {}),
-                )
-                if view:
-                    views[cycle_name] = view
-            if views:
-                values[value] = views
-        if values:
-            segment_cycles[attribute] = values
-
-    return {
-        "anchor_question": anchor_question,
-        "overall_mean_score": overall_view["overall_mean_score"],
-        "rows": overall_view["rows"],
-        "segments": segments,
-        "cycles": cycles,
-        "segment_cycles": segment_cycles,
-    }
 
 
 def silhouette_score(distance: np.ndarray, assignments: np.ndarray) -> float:
@@ -1798,7 +1512,6 @@ def summary_context(
     factors: dict[str, Any],
     attrition: str,
     downloads: list[str],
-    impact: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     labels = {question: label(question) for question in questions}
     cycle_names = cycles.get("cycles", [])
@@ -1886,28 +1599,6 @@ def summary_context(
         "attributes": len(default_alerts),
         "alerts": sorted(alert_rows, key=lambda row: row["gap"])[:12],
     }
-    impact = impact or {}
-    impact_rows = sorted(
-        impact.get("rows", []),
-        key=lambda row: abs(row.get("correlation", 0)),
-        reverse=True,
-    )[:8]
-    impact_context = {
-        "anchor_question": labels.get(
-            impact.get("anchor_question"), impact.get("anchor_question")
-        ),
-        "overall_mean_score": impact.get("overall_mean_score"),
-        "strongest_impact_items": [
-            {
-                "question": labels[row["question"]],
-                "glint_score": row["glint_score"],
-                "correlation": row["correlation"],
-                "p_value": row["p_value"],
-                "n": row["n"],
-            }
-            for row in impact_rows
-        ],
-    }
     return {
         "schema_version": "1.0.0",
         "privacy": (
@@ -1917,7 +1608,6 @@ def summary_context(
         "tabs": {
             "changes": changes,
             "relationships": relationship_context,
-            "impact": impact_context,
             "alerts": alert_context,
             "factors": {
                 "overall": {
@@ -2104,16 +1794,6 @@ def main() -> int:
     progress.update(45, "Clustering relationship matrices for each filter view")
     relationships = relationship_cube(frame, questions, attributes, cycle_col)
     progress.update(60, "Relationship matrices and cluster recommendations prepared")
-    impact = impact_cube(
-        questions,
-        overall,
-        relationships,
-        config.get("engagement_anchor_question"),
-        segments,
-        cycles.get("overall"),
-        cycles.get("segments"),
-        comment_themes,
-    )
     factors_path = output / "factor_analysis_summary.csv"
     overall_factor_rows = (
         pd.read_csv(factors_path).to_dict("records") if factors_path.exists() else []
@@ -2208,7 +1888,6 @@ def main() -> int:
         factors,
         attrition_status,
         downloads,
-        impact,
     )
     context_path = output / "people-science-summary-context.json"
     context_path.write_text(
@@ -2236,7 +1915,6 @@ def main() -> int:
         "cycles": cycles,
         "commentThemes": comment_themes,
         "relationships": relationships,
-        "impact": impact,
         "alerts": alert_data,
         "factors": factors,
         "attrition": attrition_status,

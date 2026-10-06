@@ -133,8 +133,6 @@ def test_analyze_survey_points_to_linked_dataset():
     required_tabs = (
         "Scores change",
         "Correlation",
-        "Impact analysis",
-        "Thematic analysis",
         "Factors",
         "Attrition analysis",
         "Attrition alerts",
@@ -203,7 +201,6 @@ def test_analyze_survey_points_to_linked_dataset():
     assert summary_schema["properties"]["tabs"]["required"] == [
         "changes",
         "relationships",
-        "impact",
         "alerts",
         "factors",
         "attrition",
@@ -740,20 +737,8 @@ def test_comment_themes_require_privacy_threshold_and_follow_filters(tmp_path):
     assert "Q_TWO" not in payload["overall"]["H2"]
     assert payload["segments"]["segment"]["A"]["H2"]["Q_ONE"]
     assert "B" not in payload["segments"]["segment"]
-    assert payload["favorability"]["available"] == [
-        "favorable",
-        "neutral",
-        "unfavorable",
-    ]
-    assert len(payload["favorability"]["views"]) == 7
-    assert payload["favorability"]["views"]["favorable"]["overall"]["H2"][
-        "Q_ONE"
-    ][0][0] == "Career growth and development"
-    assert not payload["favorability"]["views"]["neutral"]["overall"].get("H2")
-    assert (
-        payload["favorability"]["views"]["favorable|neutral|unfavorable"]["overall"]
-        == payload["overall"]
-    )
+    assert payload["minimumComments"] == 5
+    assert set(payload) == {"overall", "segments", "minimumComments"}
     assert "private career growth wording" not in serialized
     assert "private manager coaching wording" not in serialized
 
@@ -920,7 +905,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
                     for tab in (
                         "changes",
                         "relationships",
-                        "impact",
                         "alerts",
                         "factors",
                         "attrition",
@@ -953,8 +937,6 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     for tab in (
         "Scores change",
         "Correlation",
-        "Impact analysis",
-        "Thematic analysis",
         "Factors",
         "Downloads",
     ):
@@ -1013,29 +995,28 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         "Any number cited without its matching file is unverified",
     ):
         assert guidance in report_text
-    assert "id=themeCycle" in report_text
-    assert "id=themeQuestion" in report_text
-    assert "id=themeAttribute" in report_text
-    assert "id=themeGroup" in report_text
-    assert "id=themeFavorabilityControl" not in report_text
-    assert "Leading themes for selected mix" not in report_text
-    assert "Theme pattern by group" not in report_text
-    assert "function themeSource(" in report_text
-    assert "function aggregateThemeItems(" in report_text
-    assert "function comparisonRows(" in report_text
-    assert "function renderComparison(" in report_text
-    assert "function renderThemeProfile(" in report_text
-    assert "function renderThemes()" in report_text
-    assert "Favorable vs. unfavorable themes" in report_text
-    assert "Favorable vs. unfavorable survey items" in report_text
-    assert "Theme favorability profile" in report_text
-    assert "Sorted by descending share of unfavorable coded mentions" in report_text
-    assert "Unfavorable comments" in report_text
-    assert "Favorable comments" in report_text
-    assert "All questions" in report_text
-    assert "Unfavorable coded mentions" in report_text
+    for removed in (
+        "id=themeCycle",
+        "id=themeQuestion",
+        "id=themeAttribute",
+        "id=themeGroup",
+        "function themeSource(",
+        "function aggregateThemeItems(",
+        "function comparisonRows(",
+        "function renderComparison(",
+        "function renderThemeProfile(",
+        "function renderThemes()",
+        "Favorable vs. unfavorable themes",
+        "Favorable vs. unfavorable survey items",
+        "Theme favorability profile",
+        "Unfavorable coded mentions",
+        'data-id="impact"',
+        "function renderImpact()",
+        '"impact":',
+    ):
+        assert removed not in report_text
     assert "private career growth wording" not in report_text
-    assert report_text.count("data-summary=") == 5
+    assert report_text.count("data-summary=") == 4
     assert '"aiSummaries":{"changes"' in report_text
     assert "function liveFilterSummary(tab,base)" in report_text
     assert "function attritionSummaryRows()" in report_text
@@ -1067,21 +1048,20 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert report_payload["commentThemes"]["overall"]["H2"]["Q_ONE"][0][0] == (
         "Career growth and development"
     )
-    assert report_payload["commentThemes"]["favorability"]["available"] == [
-        "favorable",
-        "neutral",
-        "unfavorable",
-    ]
-    assert len(report_payload["commentThemes"]["favorability"]["views"]) == 7
+    assert set(report_payload["commentThemes"]) == {
+        "overall",
+        "segments",
+        "minimumComments",
+    }
     assert len(report_payload["knowledgeSources"]["sources"]) >= 10
     assert set(report_payload["segments"]) == {"survey_cycle_title", "segment"}
+    assert "impact" not in report_payload
     summary_context = json.loads(
         (tmp_path / "people-science-summary-context.json").read_text(encoding="utf-8")
     )
     assert set(summary_context["tabs"]) == {
         "changes",
         "relationships",
-        "impact",
         "alerts",
         "factors",
         "attrition",
@@ -1139,7 +1119,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
         text=True,
     )
     report_text = report.read_text(encoding="utf-8")
-    assert report_text.count("data-summary=") == 5
+    assert report_text.count("data-summary=") == 4
     manifest = json.loads(
         (tmp_path / "analysis-manifest.json").read_text(encoding="utf-8")
     )

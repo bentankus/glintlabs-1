@@ -1264,13 +1264,13 @@ def replace_live_alert_summary(html: str) -> str:
 
 def prepare_report_shell(html: str, has_attrition: bool) -> str:
     html = html.replace(
-        'data-id="relationships" aria-selected="false">Relationships</button>',
-        'data-id="relationships" aria-selected="false">Correlation</button>',
+        'data-id="relationships" aria-selected="true">Relationships</button>',
+        'data-id="relationships" aria-selected="true">Correlation</button>',
         1,
     ).replace("<h2>Relationships</h2>", "<h2>Correlation</h2>", 1)
     html = remove_legacy_alert_script(html)
     html = replace_live_alert_summary(html)
-    html = remove_section(html, "alerts", "factors")
+    html = remove_section(html, "alerts", "attrition")
     html = html.replace(
         '<button class="tab" data-id="alerts" aria-selected="false">Attrition alerts</button>',
         "",
@@ -1307,8 +1307,13 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
         "<!-- methodology-attrition-end -->",
     )
     attrition_start = html.index("<section class=panel id=attrition")
-    downloads_start = html.index("<section class=panel id=downloads", attrition_start)
-    html = html[:attrition_start] + html[downloads_start:]
+    next_section_match = re.search(
+        r"<section class=panel id=\w+", html[attrition_start + 1 :]
+    )
+    if not next_section_match:
+        raise ValueError("No section follows the attrition section to anchor removal.")
+    next_section_start = attrition_start + 1 + next_section_match.start()
+    html = html[:attrition_start] + html[next_section_start:]
     return html.replace(
         'function renderStatic(){document.querySelector("#attritionStatus").textContent='
         'D.attrition;document.querySelector("#downloadList").innerHTML=',

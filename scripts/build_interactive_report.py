@@ -1281,6 +1281,10 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
             "<!-- methodology-attrition-end -->",
             "",
         )
+        html = html.replace("<!-- methodology-attrition-nav-start -->", "").replace(
+            "<!-- methodology-attrition-nav-end -->",
+            "",
+        )
         old_navigation = (
             '<button class="tab" data-id="factors" aria-selected="false">Factors</button>'
             '<button class="tab" data-id="attrition" aria-selected="false">'
@@ -1300,6 +1304,11 @@ def prepare_report_shell(html: str, has_attrition: bool) -> str:
         'Attrition analysis</button>',
         "",
         1,
+    )
+    html = remove_between_markers(
+        html,
+        "<!-- methodology-attrition-nav-start -->",
+        "<!-- methodology-attrition-nav-end -->",
     )
     html = remove_between_markers(
         html,

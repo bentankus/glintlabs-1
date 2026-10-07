@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`7ae55a2ffb790c0a8ec0f77824bc2f77208e0bdf05923549ac891b7f44b3ae29`.
+`c908bfc55f446299f39f7a8586e18a0dd56f8b4eb12e6b4e1472ef52753a5906`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -336,6 +336,13 @@ correlation matrices, score-change, and alert outputs when available.
   attrition multiplier across groups per attribute and window, retention of the
   top five items per attribute, the company view's lowest-scoring group logic,
   the filtered view's selected-group logic, and the same non-causal framing.
+- Present each subsection as a numbered card with a small-caps label above
+  each of the three parts (not inline bold text run into the paragraph), and
+  render **Example interpretation** and **Example action** as distinct tinted
+  callouts so they are visually separable from **Method**. Render inline
+  formulas and code-like expressions with `<code>` styling rather than raw
+  backticks. Precede the subsections with a compact jump-to-section nav, kept
+  in sync with whichever subsections are present in that report instance.
 
 ## Privacy and performance
 

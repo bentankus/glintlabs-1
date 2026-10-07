@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`bad6fe8e597f86f8ae45f76b024ea25f3140dabf491eaf23d38ff59c4b20b3b3`.
+`7ae55a2ffb790c0a8ec0f77824bc2f77208e0bdf05923549ac891b7f44b3ae29`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated
@@ -122,11 +122,11 @@ staging data from the ZIP.
 
 Keep this tab order and naming:
 
-1. **Scores change**
-2. **Correlation**
-3. **Factors**
-4. **Attrition analysis** (only when attrition completes)
-5. **Attrition alerts** (only when attrition completes)
+1. **Correlation**
+2. **Factors**
+3. **Attrition analysis** (only when attrition completes)
+4. **Attrition alerts** (only when attrition completes)
+5. **Scores change**
 6. **Downloads**
 7. **Methodology**
 

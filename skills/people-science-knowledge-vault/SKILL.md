@@ -136,6 +136,15 @@ coverage for exploratory reasoning, so it carries its own rules:
 5. If the user's answers point strongly toward one hypothesis, say so
    plainly, but keep the overall framing hedged (e.g., "the working
    hypothesis forming here, still speculative, not a confirmed finding...").
+6. When extrapolating about why a specific group/score pattern exists and
+   the underlying survey dataset is available, check whether verbatim
+   comments are available for that group/question before relying solely on
+   vault articles and quantitative deltas. If no comment export is present
+   in the available data, ask the user whether they have one to provide.
+   Comments can corroborate or rule out a hypothesis faster than external
+   research alone — but flag any data-quality concerns (e.g., templated or
+   role-inconsistent text) plainly rather than treating comments as
+   automatically reliable signal.
 
 ## Output format
 

@@ -10,7 +10,7 @@ golden-report.html
 ```
 
 Its SHA-256 at adoption, calculated from canonical LF-normalized bytes, is
-`c908bfc55f446299f39f7a8586e18a0dd56f8b4eb12e6b4e1472ef52753a5906`.
+`5ec86ba84dccacd38f1a843956ed35b7246b573a7cbea9854db657fd3de6d691`.
 Generated reports in `required` mode must match its static HTML shell exactly.
 The intended substitution is the JSON value assigned to `const D`. In `off`
 mode, the seven empty AI summary containers are also removed from the generated

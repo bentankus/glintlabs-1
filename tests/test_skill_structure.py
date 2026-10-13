@@ -1002,7 +1002,7 @@ def test_interactive_report_builder_creates_dashboard_and_safe_zip(tmp_path):
     assert ".ai-summary{display:none" in report_text
     for guidance in (
         "Differences with a high p-value or a small n are unconfirmed",
-        "don't belong cleanly to either",
+        "not a labeled construct",
         "using only one item reintroduces that item's own noise",
         "Any number cited without its matching file is unverified",
     ):
